@@ -1,0 +1,84 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.accordionItem {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.accordionItem:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.accordionItem::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 5px;
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+}
+
+.open.accordionItem::before {
+  background-color: var(--color-gold);
+}
+
+.accordionHeader {
+  width: 100%;
+  padding: 1.75rem 2.5rem;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-left: 1rem;
+  color: var(--color-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg {
+  transition: transform 0.3s ease;
+}
+
+.accordionContentWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.open .accordionContentWrapper {
+  grid-template-rows: 1fr;
+}
+
+.accordionContent {
+  overflow: hidden;
+}
+
+.accordionContentInner {
+  padding: 0 2.5rem 1.75rem 2.5rem;
+  color: var(--color-text-main);
+  line-height: 1.6;
+}
