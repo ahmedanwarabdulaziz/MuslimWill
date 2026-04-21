@@ -754,6 +754,47 @@
   font-weight: 700 !important;
 }
 
+.heroMicrocopy {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+.heroEmotionalIntro {
+  opacity: 0.9;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.emotionalBridgeSection {
+  padding-bottom: 2rem;
+  padding-top: 4rem;
+  background-color: var(--color-cream);
+  text-align: center;
+}
+
+.emotionalBridgeText {
+  max-width: 800px;
+  margin: 0 auto;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--color-green-dark);
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.ctaSupportLine {
+  margin-top: -1rem;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  color: #ffffff;
+  opacity: 0.9;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
 /* Legacy Link Utilites */
 
 .faqLink {

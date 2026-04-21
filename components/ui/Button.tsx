@@ -33,7 +33,7 @@ export function Button({
   }
 
   return (
-    <button className={classes} {...(props as any)}>
+    <button className={classes} {...(props as React.ButtonHTMLAttributes<HTMLButtonElement>)}>
       {children}
     </button>
   );

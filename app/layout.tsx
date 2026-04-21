@@ -10,6 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://themuslimwill.com'),
   title: "Islamic Will Canada | Family Planning With Clarity | Muslim Will",
   description:
     "A guided pathway for Muslim families in Canada to prepare wills with legal structure, Islamic inheritance guidance, and clear next steps.",

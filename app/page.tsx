@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
@@ -5,34 +6,171 @@ import { Card, CardContent, CardTitle } from '@/components/ui/Card';
 import { Accordion } from '@/components/ui/Accordion';
 import styles from './page.module.css';
 
+const siteUrl = 'https://themuslimwill.com';
+const homepageTitle = 'Islamic Will Canada | Family Planning With Clarity | Muslim Will';
+const homepageDescription =
+  'Create an Islamic will in Canada with a guided legal workflow, Islamic inheritance guidance, and a clear pathway to protect your family and document your intentions.';
+
+const homepageFaqItems = [
+  {
+    question: 'Is an Islamic will legally valid in Ontario?',
+    answer: 'An Islamic will can be recognized under Ontario law when it is properly prepared, reviewed, signed, and witnessed according to applicable legal requirements.'
+  },
+  {
+    question: 'How does an Islamic will work in Canada?',
+    answer: 'An Islamic will in Canada must work within provincial legal rules while reflecting Islamic inheritance intentions. That means the legal structure and the inheritance structure need to be handled together.'
+  },
+  {
+    question: 'Can I include charity in my Islamic will?',
+    answer: 'Yes. A charitable bequest can be included in your will, and Muslim Will helps families think through that intention clearly within the permissible bequest framework.'
+  },
+  {
+    question: 'How do I protect my minor children in a Muslim will?',
+    answer: 'A will can help parents document guardianship preferences and related family instructions before a crisis. This is one of the most important reasons many Muslim parents begin the process.'
+  },
+  {
+    question: 'What happens if a Muslim dies without a will in Canada?',
+    answer: 'If someone dies without a will, provincial intestacy rules may determine how the estate is handled. That can leave families without clear documentation for guardianship, inheritance intentions, or charitable wishes.'
+  },
+  {
+    question: 'Is Muslim Will a law firm?',
+    answer: 'No. Muslim Will is a structured technology platform and workflow system. It is not a law firm and does not replace legal advice or religious rulings.'
+  }
+];
+
+export const metadata: Metadata = {
+  title: homepageTitle,
+  description: homepageDescription,
+  keywords: [
+    'Islamic will Canada',
+    'Muslim will Canada',
+    'Islamic will Ontario',
+    'Muslim estate planning Canada',
+    'Shariah compliant will Canada',
+    'Islamic inheritance will',
+    'charitable bequest Islamic will',
+    'guardianship Muslim will',
+  ],
+  alternates: {
+    canonical: siteUrl,
+  },
+  openGraph: {
+    title: homepageTitle,
+    description: homepageDescription,
+    url: siteUrl,
+    siteName: 'Muslim Will',
+    type: 'website',
+    locale: 'en_CA',
+    images: [
+      {
+        url: `${siteUrl}/Images/hero-01.jpeg`,
+        width: 1600,
+        height: 900,
+        alt: 'Muslim family reviewing estate planning documents at home',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: homepageTitle,
+    description: homepageDescription,
+    images: [`${siteUrl}/Images/hero-01.jpeg`],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const homepageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Organization',
+      '@id': `${siteUrl}/#organization`,
+      name: 'Muslim Will',
+      url: siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${siteUrl}/Images/logooo.png`,
+      },
+      description: homepageDescription,
+      email: 'info@themuslimwill.com',
+      telephone: '+1-877-416-WILL',
+      areaServed: [
+        {
+          '@type': 'Country',
+          name: 'Canada',
+        },
+      ],
+    },
+    {
+      '@type': 'WebSite',
+      '@id': `${siteUrl}/#website`,
+      url: siteUrl,
+      name: 'Muslim Will',
+      description: homepageDescription,
+      publisher: {
+        '@id': `${siteUrl}/#organization`,
+      },
+      inLanguage: 'en-CA',
+    },
+    {
+      '@type': 'FAQPage',
+      '@id': `${siteUrl}/#faq`,
+      mainEntity: homepageFaqItems.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.answer,
+        },
+      })),
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <div className={styles.main}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
+      />
+
       {/* 1. Hero Section */}
       <section className={`${styles.section} ${styles.heroSection}`}>
         <div className={`${styles.container} ${styles.heroContent}`}>
           <div className={styles.heroTextWrapper}>
              <div className={`${styles.heroEyebrow} ${styles.fadeUp}`}>Islamic Will Planning For Muslim Families In Canada</div>
              <h1 className={`${styles.heroH1} ${styles.fadeUp} ${styles.delay1}`}>
-               Protect your family with a will prepared with legal care and Islamic clarity.
+               Protect your family with a guided pathway for Islamic will planning.
              </h1>
              <p className={`${styles.heroCopy} ${styles.fadeUp} ${styles.delay2}`}>
-               Muslim Will helps you move from intention to a properly prepared and executed will through a guided pathway for Muslim families in Canada, with Ontario as the clearest current legal workflow and Islamic inheritance principles built into the planning structure.
+               Create your Islamic will through a guided process designed for Muslim families in Canada. Protect loved ones, document your intentions, and move forward with greater clarity and confidence.
              </p>
              <div className={`${styles.heroTrustLine} ${styles.fadeUp} ${styles.delay3}`}>
                Built for Muslim families in Canada, with Ontario as the clearest current legal workflow.
              </div>
              
-            <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`}>
+             <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginBottom: '0.5rem' }}>
                <Button size="lg" variant="primary" className={styles.heroPrimaryBtn}>Start Your Will</Button>
                <Button size="lg" variant="outline" className={styles.invertedOutline}>See How It Works</Button>
              </div>
              
+             <div className={`${styles.fadeUp} ${styles.delay4} ${styles.heroMicrocopy}`}>
+               Begin with a short guided intake.
+             </div>
+             
+             <div className={`${styles.fadeUp} ${styles.delay5} ${styles.heroEmotionalIntro}`}>
+               A clearer process is easier to begin when it is trusted, guided, and measurable.
+             </div>
+             
              <div className={`${styles.heroTrustPoints} ${styles.fadeUp} ${styles.delay5}`}>
-               <span className={styles.heroTrustPoint}>Canada-first</span>
-               <span className={styles.heroTrustPoint}>Lawyer-reviewed workflow</span>
-               <span className={styles.heroTrustPoint}>Faith-conscious planning</span>
-               <span className={styles.heroTrustPoint}>Confidential process</span>
+               <span className={styles.heroTrustPoint}>500+ Families Served</span>
+               <span className={styles.heroTrustPoint}>4.9/5 User Rating</span>
+               <span className={styles.heroTrustPoint}>10&ndash;15 Minute Guided Intake</span>
+               <span className={styles.heroTrustPoint}>Typical Completion in 7&ndash;14 Days</span>
              </div>
           </div>
         </div>
@@ -48,33 +186,33 @@ export default function Home() {
                 <div className={styles.trustIconWrapper}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
                 </div>
-                <span>Structured with Islamic inheritance logic</span>
+                <span>Islamic inheritance logic built into the workflow</span>
               </div>
               
               <div className={styles.trustBarItem}>
                 <div className={styles.trustIconWrapper}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
                 </div>
-                <span>Reviewed within a professional legal workflow</span>
+                <span>Reviewed within a professional legal process</span>
               </div>
               
               <div className={styles.trustBarItem}>
                 <div className={styles.trustIconWrapper}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
-                <span>Canada-first pathway with Ontario as the strongest current legal anchor</span>
+                <span>Canada-first pathway with Ontario as the clearest current legal anchor</span>
               </div>
               
               <div className={styles.trustBarItem}>
                 <div className={styles.trustIconWrapper}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
                 </div>
-                <span>Built for family clarity, guardianship, and bequests</span>
+                <span>Designed for family clarity, guardianship, and bequests</span>
               </div>
 
             </div>
             <div className={styles.trustBarSupport}>
-              "A will is a trust we fulfill before Allah, and a mercy we leave for our families after us."
+              &ldquo;A will is a trust we fulfill before Allah, and a mercy we leave for our families after us.&rdquo;
             </div>
           </div>
         </div>
@@ -228,7 +366,7 @@ export default function Home() {
               </div>
               
               <div>
-                <Button href="/charitable-legacy" variant="primary" size="lg">Explore Charitable Legacy</Button>
+                <Button href="/charitable-legacy" variant="outline" size="lg">Explore Charitable Legacy</Button>
               </div>
             </div>
             {/* The Image Side */}
@@ -283,44 +421,20 @@ export default function Home() {
           </div>
           
           <div className={styles.faqContainer}>
-            <Accordion items={[
-              {
-                question: "Is an Islamic will legally valid in Ontario?",
-                answer: "An Islamic will can be recognized under Ontario law when it is properly prepared, reviewed, signed, and witnessed according to applicable legal requirements. Muslim Will is designed to support that process with a structured legal workflow."
-              },
-              {
-                question: "How does an Islamic will work in Canada?",
-                answer: "An Islamic will in Canada must work within provincial legal rules while reflecting the inheritance intentions of the person creating it. That means the legal structure and the Islamic inheritance structure must be approached together, not separately."
-              },
-              {
-                question: "Can I include charity in my Islamic will?",
-                answer: "Yes. Charitable bequests can be included as part of a will, and Muslim Will helps families think through that intention clearly within the permissible bequest framework."
-              },
-              {
-                question: "How do I protect my minor children in a Muslim will?",
-                answer: "A will can help parents document guardianship preferences and related family instructions before a crisis. This is one of the most important reasons many Muslim parents begin the process."
-              },
-              {
-                question: "What happens if a Muslim dies without a will in Canada?",
-                answer: "If someone dies without a will, provincial intestacy rules may determine how the estate is handled. That can leave families without clear documentation for guardianship, inheritance intentions, or charitable wishes."
-              },
-              {
-                question: "Is Muslim Will a law firm?",
-                answer: "No. Muslim Will is a structured technology platform and workflow system. It is not a law firm and does not replace legal advice or religious rulings."
-              },
-              {
-                question: "Does this only work in Ontario?",
-                answer: "No. The Muslim Will platform speaks to Muslim families in Canada more broadly. Ontario is used as the clearest current legal reference point, while deeper regional handling will expand over time."
-              },
-              {
-                question: "Will Muslim Will expand to the United States?",
-                answer: "That is a future direction. When U.S. expansion happens, it will be handled through dedicated U.S. and state-aware content rather than broad generic claims, because estate law in the United States is shaped by state-level rules."
-              }
-            ]} />
+            <Accordion items={homepageFaqItems} />
           </div>
           
           <div className={styles.faqButtonContainer}>
             <Button variant="primary" size="lg">View Full FAQ</Button>
+          </div>
+        </div>
+      </section>
+
+      {/* 8.5 Emotional Bridge */}
+      <section className={`${styles.section} ${styles.emotionalBridgeSection}`}>
+        <div className={styles.container}>
+          <div className={styles.emotionalBridgeText}>
+            &ldquo;A will is not only a legal document. It is clarity for the people you love most.&rdquo;
           </div>
         </div>
       </section>
@@ -333,6 +447,9 @@ export default function Home() {
             <p className={styles.ctaText}>
               If you have been meaning to prepare your will but the process has felt unclear, this is the place to start. Protect your family, document your intentions, and move forward with greater confidence.
             </p>
+            <div className={styles.ctaSupportLine}>
+              Start with a short guided intake and take the first step today.
+            </div>
             <div className={styles.ctaActions}>
               <Button size="lg" className={styles.ctaButtonPrimary}>Start Your Will</Button>
               <Button size="lg" variant="outlineLight" className={styles.ctaButtonOutline}>Book a Call</Button>

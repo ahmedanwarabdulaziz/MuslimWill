@@ -15,7 +15,7 @@ export function Footer() {
               A guided pathway for Muslim families in Canada to prepare wills with legal structure, Islamic inheritance guidance, and clearer next steps.
             </p>
             <div className={styles.trustLine}>
-              "A will is a trust we fulfill before Allah, and a mercy we leave for our families after us."
+              &ldquo;A will is a trust we fulfill before Allah, and a mercy we leave for our families after us.&rdquo;
             </div>
           </div>
 
