@@ -12,11 +12,27 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Islamic Will Canada | Family Planning With Clarity | Muslim Will",
   description:
-    "Create an Islamic will for Ontario with lawyer review, Islamic inheritance guidance, and a clear pathway to protect your family and document intentions.",
+    "A guided pathway for Muslim families in Canada to prepare wills with legal structure, Islamic inheritance guidance, and clear next steps.",
+  icons: {
+    icon: "/Images/09.png",
+    apple: "/Images/09.png",
+  },
   openGraph: {
-    title: "Protect Your Family With Legal and Islamic Clarity | Muslim Will",
+    title: "Protect Your Family With Legal & Islamic Clarity | Muslim Will",
     description:
       "A guided pathway for Muslim families in Canada to prepare wills with legal structure, Islamic inheritance guidance, and clear next steps.",
+    url: "https://themuslimwill.com",
+    siteName: "Muslim Will",
+    images: [
+      {
+        url: "/Images/08.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Muslim Will Guided Pathway",
+      },
+    ],
+    locale: "en_CA",
+    type: "website",
   },
 };
 

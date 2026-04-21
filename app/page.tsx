@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardTitle } from '@/components/ui/Card';
 import { Accordion } from '@/components/ui/Accordion';
@@ -6,9 +7,9 @@ import styles from './page.module.css';
 
 export default function Home() {
   return (
-    <main>
+    <div className={styles.main}>
       {/* 1. Hero Section */}
-      <section className={styles.heroSection}>
+      <section className={`${styles.section} ${styles.heroSection}`}>
         <div className={`${styles.container} ${styles.heroContent}`}>
           <div className={styles.heroTextWrapper}>
              <div className={`${styles.heroEyebrow} ${styles.fadeUp}`}>Islamic Will Planning For Muslim Families In Canada</div>
@@ -153,7 +154,7 @@ export default function Home() {
             </div>
           </div>
           
-          <div style={{ textAlign: 'center', marginTop: '2rem', fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>
+          <div className={styles.legalNoteLayout}>
             Note: Legal validity depends on accurate information, proper review, and correct signing and witnessing.
           </div>
         </div>
@@ -164,7 +165,7 @@ export default function Home() {
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionH2}>A platform with clear professional boundaries.</h2>
-            <p className={styles.sectionIntro} style={{ opacity: 0.9 }}>
+            <p className={`${styles.sectionIntro} ${styles.introOpacityMuted}`}>
               What makes Muslim Will distinctive is not a vague promise of compliance. It is the structure of the workflow itself. Each layer has a defined role, and no single layer overreaches into another.
             </p>
           </div>
@@ -192,21 +193,21 @@ export default function Home() {
             </Card>
           </div>
           
-          <div style={{ textAlign: 'center', marginTop: '3rem', fontStyle: 'italic', color: 'var(--color-gold-light)', maxWidth: '800px', margin: '3rem auto 0', borderTop: '1px solid rgba(212, 175, 55, 0.3)', paddingTop: '2rem' }}>
-             <p style={{ marginBottom: '1rem', fontWeight: 500 }}>Muslim Will is not a law firm and does not issue legal advice or fatwas. It provides a structured planning pathway designed to bring the right layers together responsibly.</p>
-             <p style={{ opacity: 0.8, fontSize: '0.875rem', color: 'rgba(255,255,255,0.7)' }}>The current workflow is positioned Canada-first, with Ontario as the clearest legal reference point. Future regional expansion will be handled through distinct country and state content.</p>
+          <div className={styles.disclaimerContainer}>
+             <p className={styles.disclaimerText}>Muslim Will is not a law firm and does not issue legal advice or fatwas. It provides a structured planning pathway designed to bring the right layers together responsibly.</p>
+             <p className={styles.disclaimerSubtext}>The current workflow is positioned Canada-first, with Ontario as the clearest legal reference point. Future regional expansion will be handled through distinct country and state content.</p>
           </div>
         </div>
       </section>
 
       {/* 6. Charitable Legacy Preview */}
-      <section className={`${styles.section} ${styles.sectionLight}`} style={{ paddingBottom: '4rem' }}>
+      <section className={`${styles.section} ${styles.sectionLight} ${styles.legacySectionPadding}`}>
         <div className={styles.container}>
           <div className={styles.legacyCard}>
             <div className={styles.legacyContent}>
-              <div className={styles.sectionHeader} style={{ marginBottom: 0, textAlign: 'left', margin: 0 }}>
+              <div className={`${styles.sectionHeader} ${styles.legacySectionHeader}`}>
                 <h2 className={styles.sectionH2}>Legacy giving does not need to compete with family responsibility.</h2>
-                <p className={styles.sectionIntro} style={{ maxWidth: '100%', margin: 0 }}>
+                <p className={`${styles.sectionIntro} ${styles.legacySectionIntro}`}>
                   A will can protect loved ones first while also making room for documented charitable intention. Muslim Will helps families think clearly about charitable bequests within the permissible bequest framework, so generosity becomes part of a structured legacy rather than an informal hope.
                 </p>
               </div>
@@ -237,7 +238,7 @@ export default function Home() {
       </section>
 
       {/* 7. Meet The Experts */}
-      <section className={styles.section} style={{ backgroundColor: 'var(--color-cream)' }}>
+      <section className={`${styles.section} ${styles.sectionCream}`}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionH2}>Built by people who understand both systems and community trust.</h2>
@@ -249,26 +250,26 @@ export default function Home() {
           <div className={styles.expertGrid}>
             <div className={styles.expertCard}>
               <div className={styles.expertImageWrapper}>
-                <img src="/Images/05.jpeg" alt="Ahmed Gohar" className={styles.expertImage} />
+                <Image src="/Images/05.jpeg" width={300} height={300} alt="Ahmed Gohar" className={styles.expertImage} />
               </div>
               <h3 className={styles.expertName}>Ahmed Gohar</h3>
               <div className={styles.expertTitle}>Founder & CEO, Patriva / The Muslim Will</div>
               <p className={styles.expertBio}>
                 Ahmed Gohar is the founder of Patriva and The Muslim Will, where he builds structured technology systems for Shariah-conscious estate planning. His work focuses on making legally grounded, professionally coordinated will planning more accessible to Muslim families across the West.
               </p>
-              <Link href="/about/ahmed-gohar" className={styles.expertLink}>Read Full Bio →</Link>
+              <Link href="/about/ahmed-gohar" className={styles.expertLink}>Read Full Bio &rarr;</Link>
             </div>
             
             <div className={styles.expertCard}>
               <div className={styles.expertImageWrapper}>
-                <img src="/Images/04.jpeg" alt="Dr. Yasser Aboutaha" className={styles.expertImage} />
+                <Image src="/Images/04.jpeg" width={300} height={300} alt="Dr. Yasser Aboutaha" className={styles.expertImage} />
               </div>
               <h3 className={styles.expertName}>Dr. Yasser Aboutaha</h3>
               <div className={styles.expertTitle}>Executive Adviser</div>
               <p className={styles.expertBio}>
                 Dr. Yasser Aboutaha is Executive Adviser at Muslim Will, where he helps build trusted relationships with families, masajid, charities, and community leaders. His work brings community credibility, practical communication, and partnership depth to the Muslim Will mission across Canada.
               </p>
-              <Link href="/about/dr-yasser-aboutaha" className={styles.expertLink}>Read Full Bio →</Link>
+              <Link href="/about/dr-yasser-aboutaha" className={styles.expertLink}>Read Full Bio &rarr;</Link>
             </div>
           </div>
         </div>
@@ -281,7 +282,7 @@ export default function Home() {
             <h2 className={styles.sectionH2}>Common questions, answered clearly.</h2>
           </div>
           
-          <div style={{ maxWidth: '850px', margin: '0 auto' }}>
+          <div className={styles.faqContainer}>
             <Accordion items={[
               {
                 question: "Is an Islamic will legally valid in Ontario?",
@@ -318,27 +319,27 @@ export default function Home() {
             ]} />
           </div>
           
-          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
+          <div className={styles.faqButtonContainer}>
             <Button variant="primary" size="lg">View Full FAQ</Button>
           </div>
         </div>
       </section>
 
       {/* 9. Final CTA */}
-      <section className={styles.section} style={{ paddingBottom: '6rem' }}>
+      <section className={`${styles.section} ${styles.ctaSectionPadding}`}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
             <h2>A clearer pathway makes responsible planning easier to begin.</h2>
-            <p style={{ maxWidth: '650px', fontSize: '1.25rem', lineHeight: '1.6', position: 'relative', zIndex: 1, color: '#ffffff', textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}>
+            <p className={styles.ctaText}>
               If you have been meaning to prepare your will but the process has felt unclear, this is the place to start. Protect your family, document your intentions, and move forward with greater confidence.
             </p>
             <div className={styles.ctaActions}>
-              <Button size="lg" style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-green)', border: 'none', fontWeight: 'bold' }}>Start Your Will</Button>
-              <Button size="lg" variant="outlineLight" style={{ fontWeight: 'bold' }}>Book a Call</Button>
+              <Button size="lg" className={styles.ctaButtonPrimary}>Start Your Will</Button>
+              <Button size="lg" variant="outlineLight" className={styles.ctaButtonOutline}>Book a Call</Button>
             </div>
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
