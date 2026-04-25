@@ -24,6 +24,7 @@ export function Footer() {
             <div className={styles.colHeading}>Explore</div>
             <div className={styles.linkList}>
               <Link href="/how-it-works" className={styles.footerLink}>How It Works</Link>
+              <Link href="/pricing" className={styles.footerLink}>Pricing</Link>
               <Link href="/charitable-legacy" className={styles.footerLink}>Charitable Legacy</Link>
               <Link href="/faq" className={styles.footerLink}>FAQ</Link>
               <Link href="/for-charities" className={styles.footerLink}>For Charities</Link>
@@ -37,8 +38,8 @@ export function Footer() {
             <div className={styles.linkList}>
               <Link href="/about/ahmed-gohar" className={styles.footerLink}>Ahmed Gohar</Link>
               <Link href="/about/dr-yasser-aboutaha" className={styles.footerLink}>Dr. Yasser Aboutaha</Link>
-              <Link href="/compliance" className={styles.footerLink}>Legal & Islamic Compliance</Link>
-              <Link href="#contact" className={styles.footerLink}>Contact</Link>
+              <Link href="/legal-islamic-compliance" className={styles.footerLink}>Legal & Islamic Compliance</Link>
+              <Link href="/contact" className={styles.footerLink}>Contact</Link>
             </div>
           </div>
 
@@ -47,7 +48,7 @@ export function Footer() {
             <div className={styles.colHeading}>Start Planning</div>
             <div className={styles.linkList}>
               <Link href="/start" className={styles.footerLink} style={{ color: 'var(--color-gold)', fontWeight: 'bold' }}>Start Your Will</Link>
-              <Link href="#book" className={styles.footerLink}>Book a Call</Link>
+              <Link href="/contact#book" className={styles.footerLink}>Book a Call</Link>
               <a href="mailto:info@themuslimwill.com" className={styles.footerLink}>info@themuslimwill.com</a>
               <a href="tel:+18774169455" className={styles.footerLink}>+1-877-416-WILL</a>
             </div>

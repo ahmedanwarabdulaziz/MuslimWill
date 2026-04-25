@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { TrackingScripts } from "@/components/analytics/TrackingScripts";
 import { Header } from "@/components/ui/Header";
 import { Footer } from "@/components/ui/Footer";
 
@@ -48,6 +49,7 @@ export default function RootLayout({
         <Header />
         <main style={{ flex: 1 }}>{children}</main>
         <Footer />
+        <TrackingScripts />
       </body>
     </html>
   );

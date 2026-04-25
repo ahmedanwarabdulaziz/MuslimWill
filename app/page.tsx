@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Button } from '@/components/ui/Button';
+import { TrackedButton } from '@/components/analytics/TrackedButton';
 import { Card, CardContent, CardTitle } from '@/components/ui/Card';
 import { Accordion } from '@/components/ui/Accordion';
 import styles from './page.module.css';
@@ -142,7 +142,10 @@ export default function Home() {
       <section className={`${styles.section} ${styles.heroSection}`}>
         <div className={`${styles.container} ${styles.heroContent}`}>
           <div className={styles.heroTextWrapper}>
-             <div className={`${styles.heroEyebrow} ${styles.fadeUp}`}>Islamic Will Planning For Muslim Families In Canada</div>
+             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '1rem' }}>
+               <div className={`${styles.heroEyebrow} ${styles.fadeUp}`} style={{ marginBottom: 0, opacity: 0.85, fontSize: '0.75rem' }}>Part of the Patriva family</div>
+               <div className={`${styles.heroEyebrow} ${styles.fadeUp}`} style={{ marginBottom: 0 }}>Islamic Will Planning For Muslim Families In Canada</div>
+             </div>
              <h1 className={`${styles.heroH1} ${styles.fadeUp} ${styles.delay1}`}>
                Protect your family with a guided pathway for Islamic will planning.
              </h1>
@@ -154,12 +157,13 @@ export default function Home() {
              </div>
              
              <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginBottom: '0.5rem' }}>
-               <Button size="lg" variant="primary" className={styles.heroPrimaryBtn}>Start Your Will</Button>
-               <Button size="lg" variant="outline" className={styles.invertedOutline}>See How It Works</Button>
+                <TrackedButton size="lg" variant="primary" className={styles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'home_hero' }}>Start Your Will</TrackedButton>
+                <TrackedButton size="lg" variant="outline" className={styles.invertedOutline} eventName="how_it_works_click" eventParams={{ location: 'home_hero' }}>See How It Works</TrackedButton>
              </div>
              
-             <div className={`${styles.fadeUp} ${styles.delay4} ${styles.heroMicrocopy}`}>
-               Begin with a short guided intake.
+             <div className={`${styles.fadeUp} ${styles.delay4} ${styles.heroMicrocopy}`} style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
+               <span style={{ fontWeight: 600, color: 'var(--color-gold)' }}>Transparent flat-fee pricing.</span>
+               <span>Zero hidden costs or hourly lawyer fees.</span>
              </div>
              
              <div className={`${styles.fadeUp} ${styles.delay5} ${styles.heroEmotionalIntro}`}>
@@ -167,10 +171,10 @@ export default function Home() {
              </div>
              
              <div className={`${styles.heroTrustPoints} ${styles.fadeUp} ${styles.delay5}`}>
-               <span className={styles.heroTrustPoint}>500+ Families Served</span>
-               <span className={styles.heroTrustPoint}>4.9/5 User Rating</span>
-               <span className={styles.heroTrustPoint}>10&ndash;15 Minute Guided Intake</span>
-               <span className={styles.heroTrustPoint}>Typical Completion in 7&ndash;14 Days</span>
+               <span className={styles.heroTrustPoint}>340+ Islamic Wills Completed</span>
+               <span className={styles.heroTrustPoint}>Reviewed by qualified Islamic scholars for inheritance considerations</span>
+               <span className={styles.heroTrustPoint}>Ontario Lawyer Verified</span>
+               <span className={styles.heroTrustPoint}>15-Minute Guided Intake</span>
              </div>
           </div>
         </div>
@@ -256,11 +260,61 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 3.5. What's Included */}
+      <section className={`${styles.section} ${styles.sectionDark}`}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <div className={styles.heroEyebrow} style={{marginBottom: '1rem'}}>All Four Documents Included</div>
+            <h2 className={styles.sectionH2}>More than just a will. A complete protection package.</h2>
+            <p className={`${styles.sectionIntro} ${styles.introOpacityMuted}`}>
+              When you choose Muslim Will, you receive a comprehensive, 4-part estate protection package that covers your family both while you are alive and after you pass&mdash;all included in your transparent upfront price.
+            </p>
+            <p className={`${styles.sectionIntro} ${styles.introOpacityMuted}`} style={{ marginTop: '1rem' }}>
+              One transparent flat-fee package includes your Islamic Last Will, minor guardianship directions, Power of Attorney for Property, Power of Attorney for Personal Care, qualified Islamic scholar review for inheritance considerations, Ontario legal workflow support, guided preparation, and final attestation support.
+            </p>
+          </div>
+          
+          <div className={styles.grid4}>
+            <Card className={styles.darkCard}>
+              <CardContent>
+                <div className={styles.featureCardNumber} style={{fontSize: '1.25rem'}}>01</div>
+                <CardTitle>The Islamic Last Will</CardTitle>
+                <p>Distribute your wealth according to Shariah, honor charitable intentions, and legally map your final wishes.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className={styles.darkCard}>
+              <CardContent>
+                <div className={styles.featureCardNumber} style={{fontSize: '1.25rem'}}>02</div>
+                <CardTitle>Minor Guardianship</CardTitle>
+                <p>Ensure your minor children are raised by the people you trust who share your Islamic values.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className={styles.darkCard}>
+              <CardContent>
+                <div className={styles.featureCardNumber} style={{fontSize: '1.25rem'}}>03</div>
+                <CardTitle>PoA for Property</CardTitle>
+                <p>Designate a trusted person to manage your finances, bank accounts, and business if you become medically incapacitated.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className={styles.darkCard}>
+              <CardContent>
+                <div className={styles.featureCardNumber} style={{fontSize: '1.25rem'}}>04</div>
+                <CardTitle>PoA for Personal Care</CardTitle>
+                <p>Legally appoint someone to make critical medical, healthcare, and life-support decisions on your behalf if you cannot.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* 4. How It Works */}
       <section className={`${styles.section} ${styles.sectionLight}`}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionH2}>A guided pathway from family details to final execution.</h2>
+            <h2 className={styles.sectionH2}>A guided pathway from family details to legal execution.</h2>
             <p className={styles.sectionIntro}>
                Muslim Will is designed to make a sensitive process easier to begin without blurring professional boundaries.
             </p>
@@ -269,26 +323,26 @@ export default function Home() {
           <div className={styles.grid4}>
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>01</div>
-              <CardTitle>Provide your details</CardTitle>
-              <p>Enter family, asset, guardian, and bequest information through a guided intake process built for clarity.</p>
+              <CardTitle>Intake & Details</CardTitle>
+              <p>Select your plan and use our secure platform to provide all your family information, guardian choices, and necessary documents.</p>
             </div>
             
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>02</div>
-              <CardTitle>Inheritance structure is organized</CardTitle>
-              <p>Your information is organized around Islamic inheritance logic so the planning pathway begins with the right foundation.</p>
+              <CardTitle>Dual Expert Review</CardTitle>
+              <p>Your documents are rigorously reviewed by Islamic Scholars for Sharia compliance and by our Legal Team for Ontario legal validity. <strong>We keep you informed with automated email updates at every stage.</strong></p>
             </div>
             
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>03</div>
-              <CardTitle>Legal review and document preparation</CardTitle>
-              <p>The will moves through an independent legal workflow designed for Canadian users, with Ontario as the clearest current framework for review and execution considerations.</p>
+              <CardTitle>The Pre-Attestation Briefing</CardTitle>
+              <p>A 1-on-1 preparation call with our follow-up team to review exactly what you need for the final signing and ensure everything goes smoothly.</p>
             </div>
             
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>04</div>
-              <CardTitle>Guided review and completion</CardTitle>
-              <p>You review the document, confirm your intentions, and complete signing and witnessing properly.</p>
+              <CardTitle>Final Attestation & Delivery</CardTitle>
+              <p>Attend a guided final Zoom attestation session where the required parties complete the signing and witnessing process according to Ontario remote execution requirements. Once properly signed and witnessed, your completed package is delivered with the relevant final documents.</p>
             </div>
           </div>
           
@@ -319,7 +373,7 @@ export default function Home() {
             <Card className={styles.darkCard}>
               <CardContent>
                 <CardTitle>Islamic inheritance guidance</CardTitle>
-                <p>Inheritance logic is organized with attention to Islamic principles so the pathway reflects a faith-conscious starting point.</p>
+                <p>Islamic inheritance review is handled by qualified Islamic scholars who review the inheritance structure for Islamic inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</p>
               </CardContent>
             </Card>
 
@@ -366,7 +420,7 @@ export default function Home() {
               </div>
               
               <div>
-                <Button href="/charitable-legacy" variant="outline" size="lg">Explore Charitable Legacy</Button>
+                 <TrackedButton href="/charitable-legacy" variant="outline" size="lg" eventName="charitable_legacy_click" eventParams={{ location: 'home_legacy' }}>Explore Charitable Legacy</TrackedButton>
               </div>
             </div>
             {/* The Image Side */}
@@ -425,7 +479,55 @@ export default function Home() {
           </div>
           
           <div className={styles.faqButtonContainer}>
-            <Button variant="primary" size="lg">View Full FAQ</Button>
+             <TrackedButton variant="primary" size="lg" eventName="faq_click" eventParams={{ location: 'home_faq' }}>View Full FAQ</TrackedButton>
+          </div>
+        </div>
+      </section>
+
+      {/* 8.5 Patriva Ecosystem Bridge */}
+      <section className={`${styles.section} ${styles.sectionCream}`} style={{ paddingBottom: '6rem' }}>
+        <div className={styles.container}>
+          
+          <div style={{ background: '#ffffff', borderRadius: '32px', border: '1px solid rgba(212, 175, 55, 0.4)', boxShadow: '0 20px 40px rgba(0, 73, 38, 0.08)', padding: '5rem 3rem', position: 'relative', overflow: 'hidden' }}>
+            
+            {/* Background Accent */}
+            <div style={{ position: 'absolute', top: 0, right: 0, width: '400px', height: '400px', background: 'radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, rgba(255,255,255,0) 70%)', pointerEvents: 'none' }}></div>
+            
+            <div className={styles.sectionHeader} style={{ maxWidth: '900px', margin: '0 auto 4rem', position: 'relative', zIndex: 1 }}>
+              <div className={styles.heroEyebrow} style={{marginBottom: '1.5rem', padding: '0.5rem 1rem', fontSize: '0.85rem'}}>The Patriva Vision</div>
+              <h2 className={styles.sectionH2} style={{ fontSize: '2.5rem', color: 'var(--color-green)' }}>With your family at every milestone.</h2>
+              <p className={styles.sectionIntro} style={{ fontSize: '1.25rem', lineHeight: '1.7', color: 'var(--color-text-main)' }}>
+                Muslim Will is proud to be the founding service of <strong style={{color: 'var(--color-gold)'}}>Patriva</strong>—a comprehensive framework dedicated to supporting Muslim families securely across life&apos;s most important milestones.
+              </p>
+            </div>
+            
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem', position: 'relative', zIndex: 1 }}>
+              
+              <div style={{ background: '#fdfbf7', borderTop: '4px solid var(--color-green)', borderRadius: '16px', padding: '2.5rem 2rem', boxShadow: '0 10px 30px rgba(0, 73, 38, 0.06)' }}>
+                <div style={{ fontSize: '0.9rem', fontWeight: 700, color: 'var(--color-green)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>01. Estate Planning</div>
+                <h3 style={{ fontSize: '1.75rem', color: 'var(--color-green)', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Muslim Will</h3>
+                <p style={{ color: 'var(--color-text-main)', lineHeight: '1.6' }}>Islamic estate planning, guardianship, and charitable legacy documentation.</p>
+              </div>
+              
+              <div style={{ background: '#ffffff', border: '1px solid var(--color-border)', borderRadius: '16px', padding: '2.5rem 2rem', opacity: 0.65 }}>
+                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-text-muted)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>02. Coming Soon</div>
+                <h3 style={{ fontSize: '1.75rem', color: 'var(--color-text-muted)', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Mizan</h3>
+                <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>Family agreements, mediation, and structured conflict resolution.</p>
+              </div>
+              
+              <div style={{ background: '#ffffff', border: '1px solid var(--color-border)', borderRadius: '16px', padding: '2.5rem 2rem', opacity: 0.65 }}>
+                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-text-muted)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>03. Coming Soon</div>
+                <h3 style={{ fontSize: '1.75rem', color: 'var(--color-text-muted)', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Sakina</h3>
+                <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>Marriage contracts, pre-nuptial agreements, and financial clarity.</p>
+              </div>
+              
+              <div style={{ background: '#ffffff', border: '1px solid var(--color-border)', borderRadius: '16px', padding: '2.5rem 2rem', opacity: 0.65 }}>
+                <div style={{ fontSize: '0.85rem', fontWeight: 700, color: 'var(--color-text-muted)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '0.05em' }}>04. Coming Soon</div>
+                <h3 style={{ fontSize: '1.75rem', color: 'var(--color-text-muted)', marginBottom: '1rem', fontFamily: 'var(--font-heading)' }}>Ikram</h3>
+                <p style={{ color: 'var(--color-text-muted)', lineHeight: '1.6' }}>Farewell preparation, Janazah logistics, and end-of-life directives.</p>
+              </div>
+              
+            </div>
           </div>
         </div>
       </section>
@@ -451,8 +553,12 @@ export default function Home() {
               Start with a short guided intake and take the first step today.
             </div>
             <div className={styles.ctaActions}>
-              <Button size="lg" className={styles.ctaButtonPrimary}>Start Your Will</Button>
-              <Button size="lg" variant="outlineLight" className={styles.ctaButtonOutline}>Book a Call</Button>
+              <TrackedButton size="lg" className={styles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'home_final_cta' }}>Start Your Will</TrackedButton>
+              <TrackedButton size="lg" variant="outlineLight" className={styles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'home_final_cta' }}>Book a Call</TrackedButton>
+            </div>
+            <div style={{ marginTop: '1.25rem', fontSize: '1rem', color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '0.25rem', position: 'relative', zIndex: 1 }}>
+              <span style={{ fontWeight: 600, color: 'var(--color-gold)' }}>Transparent flat-fee pricing.</span>
+              <span style={{ opacity: 0.9 }}>Zero hidden costs or hourly lawyer fees.</span>
             </div>
           </div>
         </div>

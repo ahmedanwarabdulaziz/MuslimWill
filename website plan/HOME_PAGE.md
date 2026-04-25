@@ -220,7 +220,7 @@ Reinforce immediate credibility in one scan.
 #### Card 2
 **Title:** `Islamic inheritance guidance`
 
-**Copy:** `Inheritance logic is organized with attention to Islamic principles so the pathway reflects a faith-conscious starting point.`
+**Copy:** `Islamic inheritance review is handled by qualified Islamic scholars who review the inheritance structure for Islamic inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.`
 
 #### Card 3
 **Title:** `Independent legal review`

@@ -1,0 +1,130 @@
+/* compliance.module.css */
+
+/* Policy Grid (From about/how-it-works) */
+.policyGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.policyItem {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.5rem;
+  border-top: 3px solid var(--color-gold);
+}
+
+.policyItem:nth-child(2) {
+  border-top-color: var(--color-green);
+}
+
+.policyItem:nth-child(3) {
+  border-top-color: var(--color-text-main);
+}
+
+.policyTitle {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin: 0 0 1rem 0;
+  line-height: 1.25;
+}
+
+.policyIntro {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+/* Split Pane */
+.splitPane {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .splitPane {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.paneHalf {
+  flex: 1;
+  background: white;
+  border: 1px solid var(--color-border);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.paneTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.paneText {
+  color: var(--color-text-main);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Custom Warning Pane for "What we are NOT" */
+.warningPane {
+  background-color: #fafafa;
+  border: 1px solid rgba(156, 63, 66, 0.3);
+  border-top: 4px solid #9c3f42;
+}
+
+.warningPane .paneTitle {
+  color: #9c3f42;
+}
+
+.glossyGreenCard {
+  background: linear-gradient(135deg, rgba(0, 73, 38, 0.95), rgba(0, 45, 20, 1));
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.glossyGreenCard .paneTitle {
+  color: white;
+}
+
+.glossyGreenCard .paneText {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Ontario Anchor Block */
+.anchorBox {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-gold);
+  padding: 3rem;
+  border-radius: var(--radius-md);
+  margin-top: 4rem;
+  text-align: left;
+}
+
+.anchorBox h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+}
+
+.anchorBox p {
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 800px;
+  margin: 0 0 1rem 0;
+}
