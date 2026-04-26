@@ -95,8 +95,11 @@ export default function PricingPage() {
              <h1 className={`${sharedStyles.heroH1} ${sharedStyles.fadeUp} ${sharedStyles.delay1}`}>
                One flat-fee package for complete Islamic estate protection.
              </h1>
-             <p className={`${sharedStyles.heroCopy} ${sharedStyles.fadeUp} ${sharedStyles.delay2}`}>
+             <p className={`${sharedStyles.heroCopy} ${sharedStyles.fadeUp} ${sharedStyles.delay2}`} style={{ marginBottom: '1rem' }}>
                Muslim Will gives families a clear, guided pathway to prepare a complete 4-document estate protection package without hidden hourly lawyer fees or unclear add-ons.
+             </p>
+             <p className={`${sharedStyles.heroCopy} ${sharedStyles.fadeUp} ${sharedStyles.delay2}`} style={{ fontSize: '1.125rem', opacity: 0.85, marginTop: 0 }}>
+               This is more than a flat fee. It is a clearer way to protect your family, document your intentions, and move forward with confidence.
              </p>
              <div className={`${sharedStyles.heroTrustLine} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
                Includes your Islamic Last Will, guardianship directions, both Powers of Attorney, scholar review, and attestation support.
@@ -225,7 +228,7 @@ export default function PricingPage() {
           <div className={sharedStyles.sectionHeader}>
             <h2 className={sharedStyles.sectionH2}>Choose the package that matches your household.</h2>
             <p className={sharedStyles.sectionIntro}>
-              Clear pricing makes it obvious that the individual package is priced per person, while married couples can choose a dedicated couples package so both spouses complete their documents through a coordinated process.
+              Planning together should feel clear from the start. The individual package is designed for one person, while the couples package helps spouses complete their planning through one coordinated household process.
             </p>
           </div>
           
@@ -255,11 +258,11 @@ export default function PricingPage() {
             <div className={`${styles.priceCard} ${styles.priceCardRecommended}`}>
               <div className={styles.cardLabel}>Couples Estate Protection Package</div>
               <div className={styles.priceAmount}>$550 <span style={{fontSize: '1.25rem'}}>CAD</span></div>
-              <div className={styles.paymentNote}>One-time flat fee for two spouses</div>
+              <div className={styles.paymentNote}>One coordinated package for both spouses</div>
               
               <ul className={styles.checklist}>
                 <li className={styles.checklistItem}><CheckIcon/> <span><strong>Two individual</strong> Islamic Last Will &amp; Testament documents</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Minor guardianship directions coordinated for the household</span></li>
+                <li className={styles.checklistItem}><CheckIcon/> <span>Household guardianship planning coordinated together</span></li>
                 <li className={styles.checklistItem}><CheckIcon/> <span>Power of Attorney for Property for <strong>each spouse</strong></span></li>
                 <li className={styles.checklistItem}><CheckIcon/> <span>Power of Attorney for Personal Care for <strong>each spouse</strong></span></li>
                 <li className={styles.checklistItem}><CheckIcon/> <span>Qualified Islamic scholar review for inheritance considerations</span></li>
@@ -275,10 +278,64 @@ export default function PricingPage() {
           
           <div className={styles.pricingFootnote}>
             <p style={{marginBottom: '0.5rem'}}>Legal validity depends on accurate information, appropriate review, and correct signing and witnessing under applicable Ontario requirements.</p>
-            <p><strong>Couples Legal Note:</strong> Each spouse needs their own will and supporting documents. A couples package coordinates shared family information where appropriate, but it should not imply that spouses receive one joint will.</p>
+            <p><strong>Couples Legal Note:</strong> Each spouse receives their own will and supporting documents. The couples package makes the household process clearer, more coordinated, and easier to complete together while still providing individual documents for each spouse.</p>
           </div>
         </div>
       </section>
+      {/* 3.5. Client Testimonials */}
+      <section className={`${sharedStyles.section}`} style={{ backgroundColor: '#ffffff' }}>
+        <div className={sharedStyles.container}>
+          <div className={sharedStyles.sectionHeader}>
+            <h2 className={sharedStyles.sectionH2}>Families who completed the process often say the same thing: it finally felt clear enough to begin.</h2>
+            <p className={sharedStyles.sectionIntro}>
+              Two of the strongest reactions we hear are relief and clarity. Families often tell us the process felt more guided, more manageable, and easier to begin than they expected.
+            </p>
+          </div>
+          
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
+            <Card variant="premium">
+              <CardContent style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '2.5rem' }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="var(--color-gold)" stroke="none" style={{ opacity: 0.6, marginBottom: '1.5rem' }}>
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <div style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--color-text-main)', flexGrow: 1, fontWeight: 400, fontStyle: 'italic', marginBottom: '2rem' }}>
+                  &ldquo;The process felt much clearer than I expected. It helped me stop delaying and finally put my wishes in writing with confidence.&rdquo;
+                </div>
+                <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '1.5rem' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-green)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
+                    AM
+                  </div>
+                  <div>
+                    <strong style={{ display: 'block', color: 'var(--color-heading)' }}>Ahmed Mohamed</strong>
+                    <span style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Muslim Will Client</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card variant="premium">
+              <CardContent style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '2.5rem' }}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="var(--color-gold)" stroke="none" style={{ opacity: 0.6, marginBottom: '1.5rem' }}>
+                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                </svg>
+                <div style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--color-text-main)', flexGrow: 1, fontWeight: 400, fontStyle: 'italic', marginBottom: '2rem' }}>
+                  &ldquo;What stood out most was how guided and manageable everything felt. It gave me confidence that my family&rsquo;s documents were being handled with real care.&rdquo;
+                </div>
+                <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '1.5rem' }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-green)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
+                    AM
+                  </div>
+                  <div>
+                    <strong style={{ display: 'block', color: 'var(--color-heading)' }}>Abdullah Mahmoud</strong>
+                    <span style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Muslim Will Client</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
 
       {/* 4. Comparison Table Section */}
       <section className={`${sharedStyles.section} ${sharedStyles.sectionLight}`}>
@@ -432,10 +489,13 @@ export default function PricingPage() {
       <section className={`${sharedStyles.section} ${sharedStyles.ctaSectionPadding}`}>
         <div className={sharedStyles.container}>
           <div className={sharedStyles.ctaBox}>
-            <h2>Start with a clear price and a complete package.</h2>
+            <h2>Start with clear pricing and a complete package.</h2>
             <p className={sharedStyles.ctaText}>
-              If you have delayed your will because the process felt expensive, unclear, or incomplete, Muslim Will gives you a guided pathway with transparent pricing and the four core documents included.
+              Move forward with a guided Islamic will process, transparent pricing, and the four core documents your family may need.
             </p>
+            <div style={{ marginBottom: '1.5rem', fontSize: '1.125rem', opacity: 0.9 }}>
+              Clear pricing. Clear next steps.
+            </div>
             <div className={sharedStyles.ctaActions}>
               <TrackedButton size="lg" className={sharedStyles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'pricing_final_cta' }}>Start Your Will</TrackedButton>
               <TrackedButton size="lg" variant="outlineLight" className={sharedStyles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'pricing_final_cta' }}>See How It Works</TrackedButton>

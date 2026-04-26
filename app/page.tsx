@@ -147,7 +147,7 @@ export default function Home() {
                <div className={`${styles.heroEyebrow} ${styles.fadeUp}`} style={{ marginBottom: 0 }}>Islamic Will Planning For Muslim Families In Canada</div>
              </div>
              <h1 className={`${styles.heroH1} ${styles.fadeUp} ${styles.delay1}`}>
-               Protect your family with a guided pathway for Islamic will planning.
+               Leave your family more than memories.
              </h1>
              <p className={`${styles.heroCopy} ${styles.fadeUp} ${styles.delay2}`}>
                Create your Islamic will through a guided process designed for Muslim families in Canada. Protect loved ones, document your intentions, and move forward with greater clarity and confidence.
@@ -228,7 +228,7 @@ export default function Home() {
           <div className={styles.sectionHeader}>
             <h2 className={styles.sectionH2}>For many Muslim families, preparing a will is not rejected. It is delayed.</h2>
             <p className={styles.sectionIntro}>
-              The concern is usually not whether a will matters. It is whether the process feels clear enough to begin. When a will is missing or out of date, important decisions around family protection, guardianship, inheritance, and charitable intentions can be left uncertain.
+              Most Muslim families already want to put these decisions in writing. What often gets in the way is not intention, but knowing where to begin. Muslim Will makes the process clearer, more guided, and easier to start with confidence.
             </p>
           </div>
           
@@ -244,8 +244,8 @@ export default function Home() {
             <Card variant="premium" className={styles.featureCard}>
               <CardContent>
                 <div className={styles.featureCardNumber}>02</div>
-                <CardTitle>Reduce legal and family uncertainty</CardTitle>
-                <p>A clearer will-planning pathway helps reduce confusion, avoid preventable disputes, and protect what should not be left vague.</p>
+                <CardTitle>Give your family greater clarity</CardTitle>
+                <p>A clearer planning process helps reduce confusion, prevent avoidable tension, and document what matters with care.</p>
               </CardContent>
             </Card>
 
@@ -352,47 +352,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Legal and Islamic Accountability */}
-      <section className={`${styles.section} ${styles.sectionDark}`}>
-        <div className={styles.container}>
-          <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionH2}>A platform with clear professional boundaries.</h2>
-            <p className={`${styles.sectionIntro} ${styles.introOpacityMuted}`}>
-              What makes Muslim Will distinctive is not a vague promise of compliance. It is the structure of the workflow itself. Each layer has a defined role, and no single layer overreaches into another.
-            </p>
-          </div>
-          
-          <div className={styles.grid3}>
-            <Card className={styles.darkCard}>
-              <CardContent>
-                <CardTitle>The platform</CardTitle>
-                <p>Muslim Will is a structured technology system that guides user input, workflow coordination, document generation, and review steps.</p>
-              </CardContent>
-            </Card>
-            
-            <Card className={styles.darkCard}>
-              <CardContent>
-                <CardTitle>Islamic inheritance guidance</CardTitle>
-                <p>Islamic inheritance review is handled by qualified Islamic scholars who review the inheritance structure for Islamic inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</p>
-              </CardContent>
-            </Card>
-
-            <Card className={styles.darkCard}>
-              <CardContent>
-                <CardTitle>Independent legal review</CardTitle>
-                <p>Licensed legal professionals review and oversee the legal document workflow and execution requirements.</p>
-              </CardContent>
-            </Card>
-          </div>
-          
-          <div className={styles.disclaimerContainer}>
-             <p className={styles.disclaimerText}>Muslim Will is not a law firm and does not issue legal advice or fatwas. It provides a structured planning pathway designed to bring the right layers together responsibly.</p>
-             <p className={styles.disclaimerSubtext}>The current workflow is positioned Canada-first, with Ontario as the clearest legal reference point. Future regional expansion will be handled through distinct country and state content.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Charitable Legacy Preview */}
+      {/* 5. Charitable Legacy Preview */}
       <section className={`${styles.section} ${styles.sectionLight} ${styles.legacySectionPadding}`}>
         <div className={styles.container}>
           <div className={styles.legacyCard}>
@@ -429,7 +389,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 7. Meet The Experts */}
+      {/* 6. Meet The Experts */}
       <section className={`${styles.section} ${styles.sectionCream}`}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
@@ -463,6 +423,46 @@ export default function Home() {
               </p>
               <Link href="/about/dr-yasser-aboutaha" className={styles.expertLink}>Read Full Bio &rarr;</Link>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 7. Legal and Islamic Accountability */}
+      <section className={`${styles.section} ${styles.sectionDark}`}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionH2}>A platform with clear professional boundaries.</h2>
+            <p className={`${styles.sectionIntro} ${styles.introOpacityMuted}`}>
+              What makes Muslim Will distinctive is not a vague promise of compliance. It is the structure of the workflow itself. Each layer has a defined role, and no single layer overreaches into another.
+            </p>
+          </div>
+          
+          <div className={styles.grid3}>
+            <Card className={styles.darkCard}>
+              <CardContent>
+                <CardTitle>The platform</CardTitle>
+                <p>Muslim Will is a structured technology system that guides user input, workflow coordination, document generation, and review steps.</p>
+              </CardContent>
+            </Card>
+            
+            <Card className={styles.darkCard}>
+              <CardContent>
+                <CardTitle>Islamic inheritance guidance</CardTitle>
+                <p>Islamic inheritance review is handled by qualified Islamic scholars who review the inheritance structure for Islamic inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</p>
+              </CardContent>
+            </Card>
+
+            <Card className={styles.darkCard}>
+              <CardContent>
+                <CardTitle>Independent legal review</CardTitle>
+                <p>Licensed legal professionals review and oversee the legal document workflow and execution requirements.</p>
+              </CardContent>
+            </Card>
+          </div>
+          
+          <div className={styles.disclaimerContainer}>
+             <p className={styles.disclaimerText}>Muslim Will is not a law firm and does not issue legal advice or fatwas. It provides a structured planning pathway designed to bring the right layers together responsibly.</p>
+             <p className={styles.disclaimerSubtext}>The current workflow is positioned Canada-first, with Ontario as the clearest legal reference point. Future regional expansion will be handled through distinct country and state content.</p>
           </div>
         </div>
       </section>
@@ -545,12 +545,12 @@ export default function Home() {
       <section className={`${styles.section} ${styles.ctaSectionPadding}`}>
         <div className={styles.container}>
           <div className={styles.ctaBox}>
-            <h2>A clearer pathway makes responsible planning easier to begin.</h2>
+            <h2>Your family deserves clarity. Start your will today.</h2>
             <p className={styles.ctaText}>
-              If you have been meaning to prepare your will but the process has felt unclear, this is the place to start. Protect your family, document your intentions, and move forward with greater confidence.
+              Start your Islamic will through a guided process built for Muslim families in Canada, with legal care, Islamic clarity, and clear next steps.
             </p>
             <div className={styles.ctaSupportLine}>
-              Start with a short guided intake and take the first step today.
+              Your Bridge to a clearer legacy.
             </div>
             <div className={styles.ctaActions}>
               <TrackedButton size="lg" className={styles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'home_final_cta' }}>Start Your Will</TrackedButton>

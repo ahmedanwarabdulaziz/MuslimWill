@@ -19,10 +19,11 @@ export function Card({ children, className = '', variant = 'default', style }: C
 interface CardContentProps {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export function CardContent({ children, className = '' }: CardContentProps) {
-  return <div className={`${styles.content} ${className}`}>{children}</div>;
+export function CardContent({ children, className = '', style }: CardContentProps) {
+  return <div className={`${styles.content} ${className}`} style={style}>{children}</div>;
 }
 
 interface CardTitleProps {

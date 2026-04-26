@@ -185,11 +185,14 @@ export default function FAQPage() {
         <div className={sharedStyles.container}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ fontSize: '3rem', fontFamily: 'var(--font-heading)', color: 'var(--color-gold)', marginBottom: '1.5rem', lineHeight: '1.1', fontWeight: 700 }}>
-              The answers are clear. So is the next step.
+              Have the answers you need. Start with confidence.
             </h2>
-            <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', marginBottom: '3rem', lineHeight: '1.6' }}>
-              Stop leaving these critical decisions to chance or statutory formulas. Protect your family and document your intentions today.
+            <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', marginBottom: '1rem', lineHeight: '1.6' }}>
+              When the process is clear, it becomes easier to protect your family and document your intentions properly.
             </p>
+            <div style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.8)', marginBottom: '2rem' }}>
+              Clarity should make action easier.
+            </div>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
               <TrackedButton variant="primary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'faq' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_footer_click" eventParams={{ location: 'faq' }}>View Pricing</TrackedButton>

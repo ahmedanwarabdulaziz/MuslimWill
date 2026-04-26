@@ -125,11 +125,14 @@ export default function LegalCompliancePage() {
         <div className={sharedStyles.container}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ fontSize: '3rem', fontFamily: 'var(--font-heading)', color: 'var(--color-gold)', marginBottom: '1.5rem', lineHeight: '1.1', fontWeight: 700 }}>
-              Establish your legacy.
+              Clarity matters. Boundaries matter. So does trust.
             </h2>
-            <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', marginBottom: '3rem', lineHeight: '1.6' }}>
-              Protect your family, document your charitable intentions, and move forward with greater clarity.
+            <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', marginBottom: '1rem', lineHeight: '1.6' }}>
+              Start your will through a process built to respect legal care, Islamic considerations, and clear professional roles.
             </p>
+            <div style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.8)', marginBottom: '2rem' }}>
+              Trust begins with clarity.
+            </div>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
               <TrackedButton variant="primary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'compliance' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_footer_click" eventParams={{ location: 'compliance' }}>View Pricing</TrackedButton>

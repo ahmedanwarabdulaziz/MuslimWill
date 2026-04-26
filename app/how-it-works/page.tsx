@@ -451,10 +451,13 @@ export default function HowItWorksPage() {
       <section className={`${sharedStyles.section} ${sharedStyles.sectionDark}`}>
         <div className={sharedStyles.container}>
           <div className={sharedStyles.ctaCentered}>
-            <h2 className={sharedStyles.sectionH2} style={{ color: 'white' }}>A clearer process makes responsible planning easier to complete.</h2>
+            <h2 className={sharedStyles.sectionH2} style={{ color: 'white' }}>A clear process makes it easier to begin.</h2>
             <p className={sharedStyles.sectionIntro} style={{ color: 'rgba(255,255,255,0.8)' }}>
-              If you have delayed your will because the process felt unclear, Muslim Will gives you a guided pathway from family details to final execution.
+              From guided intake to final execution, Muslim Will helps your family move forward with clarity, care, and confidence.
             </p>
+            <div style={{ marginBottom: '1.5rem', fontSize: '1.125rem', color: 'rgba(255,255,255,0.9)', textAlign: 'center' }}>
+              Know the next step, then take it.
+            </div>
             <div className={sharedStyles.ctaButtonGroup}>
               <TrackedButton variant="primary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'how_it_works' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_footer_click" eventParams={{ location: 'how_it_works' }}>View Pricing</TrackedButton>

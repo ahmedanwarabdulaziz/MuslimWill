@@ -54,9 +54,12 @@ export default function ContactPage() {
                 &bull; You want the bulk of your estate distributed according to Islamic inheritance mandates.<br/>
                 &bull; You are looking for a complete, legally executed Ontario document without the friction of hourly law firm billing.
               </p>
+              <div style={{ marginBottom: '1.25rem', fontWeight: 500 }}>
+                If you are ready to begin, you can start your will today.
+              </div>
               <div>
                 <TrackedButton variant="primary" size="md" eventName="start_will_pane_click" eventParams={{ location: 'contact_page' }} style={{ backgroundColor: 'white', color: 'var(--color-green)' }}>
-                  Start Workflow
+                  Start Your Will
                 </TrackedButton>
               </div>
             </div>
@@ -72,9 +75,12 @@ export default function ContactPage() {
                 &bull; You have severe, documented family disputes that require bespoke litigation mapping.<br/>
                 &bull; You just need to speak with a human to confirm how our independent Ontario legal review is handled.
               </p>
+              <div style={{ marginBottom: '1.25rem', fontWeight: 500 }}>
+                If you need reassurance first, book a call with our team.
+              </div>
               <div>
                 <TrackedButton variant="primary" size="md" eventName="book_call_pane_click" eventParams={{ location: 'contact_page' }}>
-                  Schedule Consultation
+                  Book a Call
                 </TrackedButton>
               </div>
             </div>

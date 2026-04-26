@@ -151,13 +151,14 @@ export default function AhmedGoharPage() {
         <div className={sharedStyles.container}>
           <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
             <h2 style={{ fontSize: '3rem', fontFamily: 'var(--font-heading)', color: 'var(--color-gold)', marginBottom: '1.5rem', lineHeight: '1.1', fontWeight: 700 }}>
-              Establish your legacy.
+              Build your will on a process designed for clarity.
             </h2>
             <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', marginBottom: '3rem', lineHeight: '1.6' }}>
-              Protect your family, document your charitable intentions, and move forward with greater clarity.
+              Start with a guided pathway that brings structure, care, and faith-conscious planning together.
             </p>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
               <TrackedButton variant="primary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'ahmed_landing' }}>Start Your Will</TrackedButton>
+              <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/about" eventName="view_about_footer_click" eventParams={{ location: 'ahmed_landing' }}>Back to About</TrackedButton>
             </div>
           </div>
         </div>
