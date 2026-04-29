@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: "Muslim Will",
     images: [
       {
-        url: "/Images/05.jpeg",
+        url: "https://muslim-will-drab.vercel.app/Images/05.jpeg",
         width: 1200,
         height: 630,
         alt: "Ahmed Gohar - Muslim Will",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ahmed Gohar | Founder & CEO",
     description: "Connect directly with Ahmed Gohar, Founder & CEO of Patriva and Creator of The Muslim Will.",
-    images: ["/Images/05.jpeg"],
+    images: ["https://muslim-will-drab.vercel.app/Images/05.jpeg"],
   },
 };
 
