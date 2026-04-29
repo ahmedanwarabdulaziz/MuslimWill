@@ -63,7 +63,7 @@ export const metadata: Metadata = {
     locale: 'en_CA',
     images: [
       {
-        url: `${siteUrl}/Images/hero-01.jpeg`,
+        url: `${siteUrl}/Images/12.jpeg`,
         width: 1600,
         height: 900,
         alt: 'Muslim family reviewing estate planning documents at home',
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: homepageTitle,
     description: homepageDescription,
-    images: [`${siteUrl}/Images/hero-01.jpeg`],
+    images: [`${siteUrl}/Images/12.jpeg`],
   },
   robots: {
     index: true,
