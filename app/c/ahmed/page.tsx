@@ -1,7 +1,35 @@
 import React from 'react';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../DigitalCard.module.css';
+
+export const metadata: Metadata = {
+  title: "Ahmed Gohar | Muslim Will",
+  description: "Connect directly with Ahmed Gohar, Founder & CEO of Patriva and Creator of The Muslim Will. Save contact details, book a call, or start your Shariah-compliant estate plan.",
+  openGraph: {
+    title: "Ahmed Gohar | Founder & CEO",
+    description: "Connect directly with Ahmed Gohar, Founder & CEO of Patriva and Creator of The Muslim Will.",
+    url: "https://themuslimwill.com/c/ahmed",
+    siteName: "Muslim Will",
+    images: [
+      {
+        url: "/Images/05.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Ahmed Gohar - Muslim Will",
+      },
+    ],
+    locale: "en_CA",
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ahmed Gohar | Founder & CEO",
+    description: "Connect directly with Ahmed Gohar, Founder & CEO of Patriva and Creator of The Muslim Will.",
+    images: ["/Images/05.jpeg"],
+  },
+};
 
 export default function AhmedPremiumCardPage() {
   return (
