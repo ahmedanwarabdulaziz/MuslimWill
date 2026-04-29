@@ -1,0 +1,61 @@
+/* faq.module.css */
+
+.faqContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.faqCategoryGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+  padding-bottom: 5rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.faqCategoryGroup:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .faqCategoryGroup {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.faqCategoryHeader {
+  flex: 0 0 300px;
+}
+
+.faqCategoryTitle {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text-main);
+  margin: 0 0 1rem 0;
+  line-height: 1.2;
+}
+
+.faqCategoryDesc {
+  color: var(--color-text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Optional: Keep sticky logic to make scrolling beautiful */
+.stickyHeader {
+  position: sticky;
+  top: 2rem;
+}
+
+.faqList {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}

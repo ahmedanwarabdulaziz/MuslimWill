@@ -1,0 +1,246 @@
+/* charitable-legacy.module.css */
+
+/* Glossy Green Card for Highlighting Rules */
+.glossyGreenCard {
+  background: linear-gradient(135deg, rgba(0, 73, 38, 0.95), rgba(0, 45, 20, 1));
+  padding: 3rem 2.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 40px rgba(0, 73, 38, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  color: white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.glossyGreenCard h2, .glossyGreenCard h3 {
+  color: white;
+}
+
+.glossyGreenCard p {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+}
+
+/* Split Pane for Family vs Charity Separation */
+.splitPane {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+@media (min-width: 768px) {
+  .splitPane {
+    flex-direction: row;
+    gap: 3rem;
+  }
+}
+
+.paneHalf {
+  flex: 1;
+  background: white;
+  border: 1px solid var(--color-border);
+  padding: 3rem;
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+}
+
+.paneTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-main);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.paneTitle.green {
+  color: var(--color-green);
+}
+
+.paneText {
+  color: var(--color-text-main);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+/* Editorial Ledger System for Sadaqah Jariyah */
+.ledgerWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+  border-top: 2px solid var(--color-gold);
+}
+
+.ledgerRow {
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 0;
+  border-bottom: 1px solid var(--color-border);
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .ledgerRow {
+    flex-direction: row;
+    gap: 4rem;
+  }
+}
+
+.ledgerColLeft {
+  flex: 0 0 35%;
+  position: relative;
+}
+
+.ledgerTitle {
+  font-size: 2.25rem;
+  font-family: var(--font-heading);
+  color: var(--color-text-main);
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+  line-height: 1.1;
+}
+
+.ledgerIntro {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.ledgerColRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ledgerItem {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 73, 38, 0.1);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.ledgerItemNum {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  line-height: 1.35;
+  width: 2rem;
+}
+
+.ledgerItemContent {
+  flex: 1;
+}
+
+.ledgerItem:first-child {
+  padding-top: 0;
+}
+
+.ledgerItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ledgerItemTitle {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-green);
+  margin: 0 0 0.5rem 0;
+  line-height: 1.3;
+}
+
+.ledgerItemDesc {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Partnership High-Impact Banner */
+.partnershipBanner {
+  background: var(--color-green);
+  border-radius: var(--radius-xl);
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 25px 50px rgba(0, 73, 38, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+@media (min-width: 900px) {
+  .partnershipBanner {
+    padding: 5rem;
+    flex-direction: row;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.partnershipBanner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+
+.partnershipLeft {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.partnershipEyebrow {
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  font-size: 0.85rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.partnershipBanner h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 2.25rem;
+  color: white;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.partnershipRight {
+  flex: 1;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .partnershipRight {
+    padding-left: 4rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+  }
+}
+
+.partnershipBanner p {
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  margin: 0;
+}

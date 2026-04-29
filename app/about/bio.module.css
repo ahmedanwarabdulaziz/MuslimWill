@@ -1,0 +1,99 @@
+/* bio.module.css */
+
+.bioContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 4rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  margin-top: -6rem; /* Overlaps the hero slightly */
+  position: relative;
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  .bioContainer {
+    padding: 2rem;
+    margin-top: -2rem;
+  }
+}
+
+.bioHeader {
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+}
+
+.bioName {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  color: var(--color-text-main);
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.1;
+}
+
+.bioRole {
+  color: var(--color-green);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.bioContent p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--color-text-main);
+  margin-bottom: 1.5rem;
+}
+
+.bioContent p:last-child {
+  margin-bottom: 0;
+}
+
+.highlightsSection {
+  margin-top: 4rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.highlightsTitle {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-text-main);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.highlightsList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .highlightsList {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.highlightsList li {
+  position: relative;
+  padding-left: 2rem;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+}
+
+.highlightsList li::before {
+  content: "→";
+  color: var(--color-gold);
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-weight: bold;
+}
