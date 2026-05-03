@@ -158,7 +158,7 @@ export default function Home() {
              
              <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginBottom: '0.5rem' }}>
                 <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" variant="secondary" className={styles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'home_hero' }}>Start Your Will</TrackedButton>
-                <TrackedButton size="lg" variant="outline" className={styles.invertedOutline} eventName="how_it_works_click" eventParams={{ location: 'home_hero' }}>See How It Works</TrackedButton>
+                <TrackedButton href="/how-it-works" size="lg" variant="outline" className={styles.invertedOutline} eventName="how_it_works_click" eventParams={{ location: 'home_hero' }}>See How It Works</TrackedButton>
              </div>
              
              <div className={`${styles.fadeUp} ${styles.delay4} ${styles.heroMicrocopy}`} style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
@@ -479,7 +479,7 @@ export default function Home() {
           </div>
           
           <div className={styles.faqButtonContainer}>
-             <TrackedButton variant="primary" size="lg" eventName="faq_click" eventParams={{ location: 'home_faq' }}>View Full FAQ</TrackedButton>
+             <TrackedButton href="/faq" variant="primary" size="lg" eventName="faq_click" eventParams={{ location: 'home_faq' }}>View Full FAQ</TrackedButton>
           </div>
         </div>
       </section>
@@ -554,7 +554,7 @@ export default function Home() {
             </div>
             <div className={styles.ctaActions}>
               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" className={styles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'home_final_cta' }}>Start Your Will</TrackedButton>
-              <TrackedButton size="lg" variant="outlineLight" className={styles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'home_final_cta' }}>Book a Call</TrackedButton>
+              <TrackedButton href="/contact" size="lg" variant="outlineLight" className={styles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'home_final_cta' }}>Book a Call</TrackedButton>
             </div>
             <div style={{ marginTop: '1.25rem', fontSize: '1rem', color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '0.25rem', position: 'relative', zIndex: 1 }}>
               <span style={{ fontWeight: 600, color: 'var(--color-gold)' }}>Transparent flat-fee pricing.</span>

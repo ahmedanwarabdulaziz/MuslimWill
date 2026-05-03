@@ -79,7 +79,7 @@ export default function ContactPage() {
                 If you need reassurance first, book a call with our team.
               </div>
               <div>
-                <TrackedButton variant="primary" size="md" eventName="book_call_pane_click" eventParams={{ location: 'contact_page' }}>
+                <TrackedButton href="#book" variant="primary" size="md" eventName="book_call_pane_click" eventParams={{ location: 'contact_page' }}>
                   Book a Call
                 </TrackedButton>
               </div>

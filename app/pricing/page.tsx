@@ -272,7 +272,7 @@ export default function PricingPage() {
                 <li className={styles.checklistItem}><CheckIcon/> <span>Final document delivery for both spouses</span></li>
               </ul>
               
-              <TrackedButton variant="primary" size="lg" style={{ width: '100%' }} eventName="start_will_couples_click" eventParams={{ location: 'pricing_cards' }}>Start As A Couple</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="primary" size="lg" style={{ width: '100%' }} eventName="start_will_couples_click" eventParams={{ location: 'pricing_cards' }}>Start As A Couple</TrackedButton>
             </div>
           </div>
           
@@ -501,7 +501,7 @@ export default function PricingPage() {
             </div>
             <div className={sharedStyles.ctaActions}>
               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" className={sharedStyles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'pricing_final_cta' }}>Start Your Will</TrackedButton>
-              <TrackedButton size="lg" variant="outlineLight" className={sharedStyles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'pricing_final_cta' }}>See How It Works</TrackedButton>
+              <TrackedButton href="/how-it-works" size="lg" variant="outlineLight" className={sharedStyles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'pricing_final_cta' }}>See How It Works</TrackedButton>
             </div>
             <div style={{ marginTop: '1.25rem', fontSize: '1rem', color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '0.25rem', position: 'relative', zIndex: 1 }}>
               <span style={{ opacity: 0.9 }}>Your family comes first. Your planning can begin clearly.</span>
