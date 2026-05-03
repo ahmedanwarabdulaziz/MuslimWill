@@ -27,7 +27,7 @@
 
 .secondary {
   background-color: var(--color-gold);
-  color: var(--color-text-main);
+  color: var(--color-green);
   font-weight: 600;
 }
 .secondary:hover {

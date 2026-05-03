@@ -76,7 +76,7 @@ export default function HowItWorksPage() {
              </p>
              
              <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`} style={{ marginBottom: '1.5rem' }}>
-               <TrackedButton variant="primary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'how_it_works' }}>Start Your Will</TrackedButton>
+               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'how_it_works' }}>Start Your Will</TrackedButton>
                <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_hero_click" eventParams={{ location: 'how_it_works' }}>View Pricing</TrackedButton>
              </div>
 
@@ -371,7 +371,7 @@ export default function HowItWorksPage() {
               Know the next step, then take it.
             </div>
             <div className={sharedStyles.ctaButtonGroup}>
-              <TrackedButton variant="primary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'how_it_works' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'how_it_works' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_footer_click" eventParams={{ location: 'how_it_works' }}>View Pricing</TrackedButton>
             </div>
             <p style={{ marginTop: '2rem', fontSize: '0.9rem', color: 'var(--color-gold)' }}>Your family comes first. Your planning can begin clearly.</p>

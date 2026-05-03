@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Muslim Will - v1.0 Production (Ontario)</title>
+    <!-- Google Fonts for typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-green: #0a4f32;
+            --text-color: #2F3633;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 0;
+            background-color: #e5e5e5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 40px;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .page {
+            width: 210mm;
+            height: 297mm;
+            background-image: url('https://i.ibb.co/bqkPL68/muslim-will-background.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #fdfdfc;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            position: relative;
+            box-sizing: border-box;
+            padding: 40mm 25mm 60mm 25mm;
+            color: var(--text-color);
+            overflow: hidden;
+            page-break-after: always;
+        }
+
+        @page {
+            size: A4;
+            margin: 0;
+        }
+
+        @media print {
+            body { 
+                background: none; 
+                margin: 0;
+                padding: 0;
+                display: block; 
+            }
+            .page { 
+                margin: 0; 
+                box-shadow: none; 
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+
+        .header {
+            position: absolute;
+            top: 25mm;
+            left: 25mm;
+            right: 25mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding-bottom: 5px;
+        }
+
+        .header-line {
+            flex-grow: 1;
+            height: 2px;
+            background-color: var(--primary-green);
+            margin-right: 15px;
+            margin-bottom: 6px;
+        }
+
+        .header-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            color: var(--primary-green);
+            font-size: 10pt;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 25mm;
+            left: 25mm;
+            right: 25mm;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .footer-logo {
+            height: 70px;
+            margin-bottom: -5px;
+        }
+
+        .footer-right {
+           flex-grow: 1;
+           margin-left: 20px;
+           display: flex;
+           flex-direction: column;
+           align-items: flex-end;
+           margin-bottom: 5px;
+        }
+
+        .footer-line {
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-green);
+            margin-bottom: 5px;
+        }
+
+        .footer-url {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 8pt;
+            color: var(--primary-green);
+            font-weight: 500;
+        }
+
+        /* Typography & Content Layout */
+        .bismillah {
+            font-family: 'Great Vibes', cursive;
+            font-size: 20pt; /* Reduced from 26pt */
+            color: var(--primary-green);
+            text-align: center;
+            margin-top: 5mm;
+            margin-bottom: 5mm; /* reduced from 12mm */
+            line-height: 1.2;
+        }
+
+        h1.main-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16pt;
+            font-weight: 700;
+            color: var(--primary-green);
+            text-align: center;
+            margin-bottom: 5mm; /* reduced from 8mm */
+            line-height: 1.4;
+        }
+
+        p {
+            font-size: 11pt;
+            line-height: 1.7;
+            margin-bottom: 8mm;
+            text-align: justify;
+        }
+
+        .bold {
+            font-weight: 600;
+            color: black;
+        }
+
+        .section {
+            margin-bottom: 8mm;
+            page-break-inside: avoid;
+        }
+
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 11.5pt;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            margin-bottom: 4mm;
+            border-bottom: 1.5px solid var(--primary-green);
+            padding-bottom: 3px;
+            letter-spacing: 0.5px;
+        }
+
+        .section-content {
+            font-size: 11pt;
+            line-height: 1.6;
+        }
+
+        .section-item {
+            display: flex;
+            margin-bottom: 3mm;
+            text-align: justify;
+        }
+
+        .item-number {
+            width: 10mm;
+            flex-shrink: 0;
+            font-weight: 500;
+        }
+
+        .item-text {
+            flex-grow: 1;
+        }
+
+        .indent-margin {
+            margin-left: 10mm;
+            margin-top: 2mm;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 1 of 16</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="bismillah">
+            In the Name of Allah, the Most Merciful, the Most Compassionate
+        </div>
+
+        <h1 class="main-title">LAST WILL AND TESTAMENT OF<br>{{TESTATOR_FULL_NAME}}</h1>
+
+        <p style="margin-bottom: 3mm;">
+            This is the Last Will and Testament (the “Will”) of me, <span class="bold">{{TESTATOR_FULL_NAME}}</span>, born on <span class="bold">{{TESTATOR_DOB}}</span>, currently residing at <span class="bold">{{TESTATOR_ADDRESS}}</span> (the “Testator”).
+        </p>
+
+        <p>
+            I make this Will while of sound mind and disposing capacity, intending it to take effect upon my death, in accordance with the laws of the Province of Ontario, Canada and, to the extent compatible with those laws, Islamic inheritance principles as reflected in this Will based on my declared intentions.
+        </p>
+
+        <div class="section">
+            <div class="section-title">1. IDENTIFICATION OF THE TESTATOR</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">1.1</div>
+                    <div class="item-text">My full legal name is <span class="bold">{{TESTATOR_FULL_NAME}}</span>.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">1.2</div>
+                    <div class="item-text">My date of birth is <span class="bold">{{TESTATOR_DOB}}</span>.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">1.3</div>
+                    <div class="item-text">My address is <span class="bold">{{TESTATOR_ADDRESS}}</span>.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">1.4</div>
+                    <div class="item-text">My marital status for the purposes of this Will is: <br>
+                    <span class="bold">{{TESTATOR_MARITAL_STATUS}}</span>.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">2. DECLARATION OF INTENT</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">2.1</div>
+                    <div class="item-text">This document is my Last Will and Testament.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">2.2</div>
+                    <div class="item-text">I revoke any intention that any prior testamentary document or informal expression of wishes should govern the distribution of my estate, except as expressly incorporated in this Will.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">2.3</div>
+                    <div class="item-text">I intend this Will to be interpreted and applied in accordance with:<br>
+                    <div class="indent-margin">(a) applicable laws of Ontario; and</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 2 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 2 of 16</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number" style="visibility:hidden">2.3</div>
+                    <div class="item-text">
+                    <div class="indent-margin">(b) Islamic inheritance principles, to the extent they are compatible with such laws and as intended by me.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">3. REVOCATION OF PREVIOUS WILLS</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">3.1</div>
+                    <div class="item-text">I hereby revoke all former wills, codicils, and other testamentary dispositions previously made by me.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">4. APPOINTMENT OF EXECUTOR</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">4.1</div>
+                    <div class="item-text">I appoint <span class="bold">{{EXECUTOR_NAME}}</span> of <span class="bold">{{EXECUTOR_ADDRESS}}</span> (the “Primary Executor”) to be the Estate Trustee with or without a Will (Executor) of my estate.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">4.2</div>
+                    <div class="item-text">If the Primary Executor is unwilling or unable to act, I appoint <span class="bold">{{ALT_EXECUTOR_1_NAME}}</span> of <span class="bold">{{ALT_EXECUTOR_1_ADDRESS}}</span> as Alternate Executor.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">4.3</div>
+                    <div class="item-text">If the above-named Alternate Executor is unwilling or unable to act, I appoint <span class="bold">{{ALT_EXECUTOR_2_NAME}}</span> of <span class="bold">{{ALT_EXECUTOR_2_ADDRESS}}</span> as further Alternate Executor.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">4.4</div>
+                    <div class="item-text">If reference is made in this Will to the “Executor”, that term includes the Primary Executor and any duly appointed alternate or replacement estate trustee acting under this Will.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">4.5</div>
+                    <div class="item-text">If at any time there is no acting Executor appointed under this Will, then such person or persons as may be appointed by a court of competent jurisdiction in Ontario shall act as Estate Trustee(s), subject to the terms of this Will.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">5. APPOINTMENT OF GUARDIANS</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">5.1</div>
+                    <div class="item-text">If at my death I have one or more minor children for whom I have legal responsibility, I appoint <span class="bold">{{GUARDIAN_NAME}}</span> of <span class="bold">{{GUARDIAN_ADDRESS}}</span> as guardian of the person of such minor children.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 3 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 3 of 16</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">5.2</div>
+                    <div class="item-text">If <span class="bold">{{GUARDIAN_NAME}}</span> is unwilling or unable to act, I appoint <span class="bold">{{ALT_GUARDIAN_NAME}}</span> of <span class="bold">{{ALT_GUARDIAN_ADDRESS}}</span> as alternate guardian.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">5.3</div>
+                    <div class="item-text">I request, but do not legally require, that any guardian appointed under this clause:<br>
+                    <div class="indent-margin">(a) makes reasonable efforts to raise my children with knowledge of and respect for Islam; and</div>
+                    <div class="indent-margin">(b) consults with suitable family members or community advisors as reasonably appropriate for their welfare.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">6. PAYMENT OF DEBTS, EXPENSES, AND OBLIGATIONS</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">6.1</div>
+                    <div class="item-text">My Executor shall, in accordance with applicable law, pay from my estate my legally enforceable debts, funeral and burial expenses, and the proper costs of administering my estate, including reasonable professional fees and estate administration taxes.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">6.2</div>
+                    <div class="item-text">I acknowledge that I may have identified certain debts, liabilities, and other obligations during my lifetime. A summary of such debts and obligations, as declared by me, may be set out in Appendix (A) to this Will for reference and administrative support only.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">6.3</div>
+                    <div class="item-text">The Appendix referenced above is informational in nature, may not be exhaustive, and does not constitute legally binding instructions on its own. The Executor is responsible for verifying, prioritizing, and settling all debts and obligations in accordance with applicable law and the terms of this Will, and legal requirements shall prevail in the event of any conflict.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">6.4</div>
+                    <div class="item-text">Subject to applicable law and after payment of legally enforceable debts and expenses, I request that my Executor may, in their discretion and after taking appropriate professional advice where necessary, make reasonable efforts to settle any religious or personal obligations that I may have identified, to the extent permitted by my estate.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 4 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 4 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">6.5</div>
+                    <div class="item-text">All payments under this section shall be made before any distribution of my estate to the beneficiaries under this Will.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">7. SPECIFIC BEQUESTS (WITHIN ONE-THIRD LIMIT)</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">7.1</div>
+                    <div class="item-text">Subject always to:<br>
+                    <div class="indent-margin">(a) Payment of my debts, expenses, and obligations under Section 6; and</div>
+                    <div class="indent-margin">(b) The Islamic principle that no more than one-third of my estate may be disposed of by discretionary bequests,</div>
+                    <br>I make the following specific gifts (bequests), which may include gifts to individuals who are not Islamic heirs, to adopted children, or to charitable causes:<br><br>
+                    {{#SPECIFIC_BEQUESTS}}
+                    <div style="margin-bottom: 5px;">
+                        - Beneficiary: <span class="bold">{{BEQUEST_BENEFICIARY_NAME}}</span><br>
+                        Relationship/Description: <span class="bold">{{BEQUEST_BENEFICIARY_RELATIONSHIP}}</span><br>
+                        Asset or Amount: <span class="bold">{{BEQUEST_DESCRIPTION}}</span>
+                    </div>
+                    {{/SPECIFIC_BEQUESTS}}
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">7.2</div>
+                    <div class="item-text">I intend that the combined value of my specific bequests and any charitable allocations under this Will be taken into account when assessing the one-third discretionary limit in accordance with Islamic inheritance principles. The Executor is responsible for assessing and applying this intention in compliance with applicable law.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">7.3</div>
+                    <div class="item-text">If any named beneficiary under this section predeceases me, unless otherwise expressly stated for that bequest, the specific gift shall lapse and form part of the residue of my estate to be administered and distributed in accordance with this Will.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 5 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 5 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-title">8. CHARITABLE ALLOCATIONS (WITHIN ONE-THIRD LIMIT)</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">8.1</div>
+                    <div class="item-text">As part of my discretionary one-third allowance, I may allocate gifts to charitable or religious causes as follows:<br><br>
+                    {{#CHARITY_ALLOCATIONS}}
+                    <div style="margin-bottom: 5px;">
+                        - Charity: <span class="bold">{{CHARITY_NAME}}</span><br>
+                        Registration (if applicable): <span class="bold">{{CHARITY_REGISTRATION}}</span><br>
+                        Amount or Percentage: <span class="bold">{{CHARITY_AMOUNT_OR_PERCENTAGE}}</span>
+                    </div>
+                    {{/CHARITY_ALLOCATIONS}}
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">8.2</div>
+                    <div class="item-text">I intend that any charitable allocations made under this section be taken into account together with my specific bequests when assessing the one-third discretionary limit in accordance with Islamic inheritance principles. The Executor is responsible for assessing and applying this intention in compliance with applicable law.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">9. ISLAMIC DISTRIBUTION FRAMEWORK</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">9.1</div>
+                    <div class="item-text">I intend that, after payment of my debts, expenses, and obligations under Section 6 and after giving effect to Sections 7 and 8 of this Will, my estate be administered and distributed in a manner consistent with Islamic inheritance principles, to the extent permitted by applicable Ontario law.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">9.2</div>
+                    <div class="item-text">I acknowledge that any inheritance distribution, allocation, or guidance reflected in this Will is based solely on information provided by me (or on my behalf). Such information has not been independently verified by The Muslim Will Platform.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">9.3</div>
+                    <div class="item-text">I further acknowledge that I was provided an opportunity to review the inheritance distribution output generated based on my provided information, and that I voluntarily accepted and submitted that output for inclusion in this Will as an expression of my intentions.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 6 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 6 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">9.4</div>
+                    <div class="item-text">The Muslim Will Platform is a technology-based document generation service. It does not provide legal advice, does not provide religious rulings or fatwas, and does not verify, validate, or guarantee the accuracy, completeness, or legal enforceability of any inheritance distribution, allocation, or calculation included in this Will.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">9.5</div>
+                    <div class="item-text">The inheritance distribution accepted by me for inclusion in this Will is set out below as a reference expression of my intentions:<br><br>
+                    <span class="bold">{{ISLAMIC_DISTRIBUTION_OUTPUT_ACCEPTED}}</span>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">9.6</div>
+                    <div class="item-text">The Executor is responsible for administering and distributing my estate in compliance with applicable law. If there is any inconsistency between the inheritance distribution reflected above and applicable legal requirements, applicable law shall prevail. The Executor is encouraged to obtain qualified legal and professional advice where necessary prior to implementation.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">10. RESIDUAL ESTATE DISTRIBUTION AND WAQF FALLBACK</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">10.1</div>
+                    <div class="item-text">“Residue” or “residual estate” means all property of mine, of every kind and wherever situated, that remains after:<br>
+                    <div class="indent-margin">(a) payment of my debts, expenses, and obligations under Section 6;</div>
+                    <div class="indent-margin">(b) satisfaction of any specific bequests and charitable allocations under Sections 7 and 8; and</div>
+                    <div class="indent-margin">(c) fulfillment of any other prior provisions of this Will.</div>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">10.2</div>
+                    <div class="item-text">I intend that the residue of my estate be administered and distributed by my Executor in accordance with applicable Ontario law, having regard to the Islamic inheritance intentions and accepted distribution output set out in Section 9 of this Will. The Executor is responsible for implementing such distribution in compliance with applicable law and may obtain qualified legal and professional advice where necessary.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 7 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 7 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">10.3</div>
+                    <div class="item-text"><span class="bold">No Surviving Eligible Beneficiaries — Waqf Fallback</span><br><br>
+                    If, at the time of my death, my Executor determines, acting reasonably and in good faith, that:<br>
+                    <div class="indent-margin">(a) there are no eligible beneficiaries to whom the residue of my estate can be distributed in accordance with applicable law and my expressed intentions; or</div>
+                    <div class="indent-margin">(b) all such beneficiaries have predeceased me, disclaimed their interests, or are otherwise unable to receive their entitlements,</div>
+                    <br>then I direct that the residue of my estate be devoted as an ongoing charitable endowment (Waqf), to be applied for general Islamic charitable purposes, including but not limited to:<br>
+                    <div class="indent-margin">- support of mosques and Islamic educational institutions;</div>
+                    <div class="indent-margin">- relief of the poor and needy; and</div>
+                    <div class="indent-margin">- religious education and community welfare initiatives,</div>
+                    <br>as my Executor, acting in good faith and subject to applicable Ontario law, may determine.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">10.4</div>
+                    <div class="item-text"><span class="bold">Insufficient Estate</span><br><br>
+                    If the value of my estate is insufficient to satisfy all specific bequests, charitable allocations, and other dispositions under this Will, my Executor shall:<br>
+                    <div class="indent-margin">(a) first pay legally enforceable debts, obligations, and necessary administration expenses;</div>
+                    <div class="indent-margin">(b) then reduce discretionary bequests and charitable allocations proportionately as required; and</div>
+                    <div class="indent-margin">(c) administer any remaining residue in accordance with this Will and applicable law.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 8 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 8 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-content">
+                {{#INCLUDE_NO_CONTEST_CLAUSE}}
+                <div class="section-item">
+                    <div class="item-number">10.5</div>
+                    <div class="item-text"><span class="bold">No Contest Provision (Optional)</span><br><br>
+                    If any beneficiary under this Will directly contests or challenges the validity of this Will or any of its material provisions, other than in good-faith proceedings for interpretation, that beneficiary’s entitlement under this Will may, to the extent permitted by law, be reduced or forfeited, and any such forfeited interest shall fall into the residue of my estate.
+                    </div>
+                </div>
+                {{/INCLUDE_NO_CONTEST_CLAUSE}}
+                <div class="section-item">
+                    <div class="item-number">10.6</div>
+                    <div class="item-text"><span class="bold">Severability of Distribution Provisions</span><br><br>
+                    If any part of the distribution provisions in this section is found to be invalid or unenforceable, the remaining provisions shall continue to operate to the fullest extent permitted by law, consistent with my expressed intentions.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">11. CONTINGENCY FOR BENEFICIARY DEATH</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">11.1</div>
+                    <div class="item-text">Subject to Sections 12 and 13 and unless otherwise expressly stated in this Will, if a beneficiary entitled to a share of my estate (including an Islamic heir) dies before me, then:<br>
+                    <div class="indent-margin">(a) that beneficiary shall be treated, for the purposes of this Will, as having predeceased me; and</div>
+                    <div class="indent-margin">(b) the share or interest that would otherwise have been allocated to that beneficiary shall be administered and redistributed by my Executor in accordance with applicable law and with due regard to the inheritance intentions expressed in this Will.</div>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">11.2</div>
+                    <div class="item-text">Unless Ontario law specifically requires otherwise, the issue (children or other descendants) of a deceased beneficiary shall not inherit that beneficiary’s share by right of representation, except to the extent that such entitlement arises under applicable law or pursuant to a specific bequest validly made in their favour under this Will.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 9 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 9 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-title">12. SIMULTANEOUS DEATH OR UNCERTAINTY OF ORDER</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">12.1</div>
+                    <div class="item-text">Where it is not possible to determine the order of death between myself and any beneficiary, the administration of my estate shall proceed in accordance with applicable Ontario law.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">12.2</div>
+                    <div class="item-text">To the extent permitted by applicable law and solely for administrative purposes, it shall be presumed that such beneficiary predeceased me. This presumption is not intended to be applied in a manner inconsistent with the inheritance intentions expressed in this Will.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">13. SURVIVORSHIP AND ORDER OF DEATH</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">13.1</div>
+                    <div class="item-text"><span class="bold">General Principle (Priority of Islamic Inheritance Intent)</span><br><br>
+                    For the avoidance of doubt, I intend that all mandatory inheritance distributions governed by Islamic inheritance principles (Faraid) be determined based on those beneficiaries who are alive at the time of my death. No survivorship period is intended to apply to such entitlements, and no provision in this Will is intended to create, modify, or override those fixed inheritance shares.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">13.2</div>
+                    <div class="item-text"><span class="bold">Administrative Survivorship (Limited Application)</span><br><br>
+                    Except where otherwise required by applicable law or expressly stated in this Will, a beneficiary of any discretionary gift, bequest, or portion of my estate not forming part of the mandatory Islamic inheritance (including any Wasiyyah portion not exceeding one-third (1/3) of my estate) must survive me by a period of thirty (30) days to be entitled to receive such benefit. This survivorship requirement is intended solely as an administrative convenience.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">13.3</div>
+                    <div class="item-text"><span class="bold">Failure to Satisfy Survivorship Period</span><br><br>
+                    If a beneficiary of a discretionary gift does not survive me for the specified thirty (30) day period, that beneficiary shall be treated as having predeceased me solely for the purpose of administering that discretionary gift, and such gift shall be administered and distributed in accordance with this Will and applicable law.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 10 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 10 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-title">14. EXECUTOR POWERS</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">14.1</div>
+                    <div class="item-text">In addition to all powers conferred by applicable law, my Executor shall have full authority to administer my estate and to do all acts that my Executor considers necessary or advisable for the proper administration of my estate, subject always to the terms of this Will and applicable Ontario law.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">14.2</div>
+                    <div class="item-text">Without limiting the generality of the foregoing, my Executor may, in their discretion and without court approval except where required by law:<br>
+                    <div class="indent-margin">(a) collect, take possession of, manage, insure, lease, maintain, improve, sell, exchange, or otherwise deal with any real or personal property forming part of my estate;</div>
+                    <div class="indent-margin">(b) open, operate, and close bank accounts and investment accounts in the name of my estate;</div>
+                    <div class="indent-margin">(c) invest and reinvest estate assets in any manner permitted by law, having regard to applicable trustee investment standards;</div>
+                    <div class="indent-margin">(d) settle, compromise, or defend any claims for or against my estate;</div>
+                    <div class="indent-margin">(e) engage and rely upon legal counsel, accountants, investment advisors, appraisers, or other professional advisors, and pay their reasonable fees from my estate;</div>
+                    <div class="indent-margin">(f) make such elections, allocations, or determinations as may be required or permitted under applicable tax laws; and</div>
+                    <div class="indent-margin">(g) do all other acts necessary or incidental to the proper administration and distribution of my estate.</div>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">14.3</div>
+                    <div class="item-text">My Executor shall exercise the powers granted under this section in good faith and in accordance with applicable law. Nothing in this section is intended to expand or limit any fiduciary duties imposed on my Executor by law.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">14.4</div>
+                    <div class="item-text">The powers granted under this section are intended to facilitate the efficient administration of my estate and do not authorize my Executor to act in a manner inconsistent with the express provisions of this Will or mandatory rules of applicable law.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 11 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 11 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-title">15. DIGITAL ASSETS</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">15.1</div>
+                    <div class="item-text">I acknowledge that I may own or control certain digital assets and online accounts at the time of my death, including but not limited to:<br>
+                    <div class="indent-margin">- email accounts;</div>
+                    <div class="indent-margin">- social media profiles;</div>
+                    <div class="indent-margin">- cloud storage;</div>
+                    <div class="indent-margin">- online financial and investment accounts;</div>
+                    <div class="indent-margin">- cryptocurrency wallets and keys; and</div>
+                    <div class="indent-margin">- any other online or electronic records.</div>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">15.2</div>
+                    <div class="item-text">I authorize my Executor, to the fullest extent permitted by applicable Ontario law and subject to the lawful terms of service governing such assets, to access, manage, retrieve, archive, transfer, or delete my digital assets and digital accounts as my Executor considers reasonably necessary for the administration of my estate.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">15.3</div>
+                    <div class="item-text">Any list of digital assets, access information, or account references that I may have maintained during my lifetime, whether separately or through an online platform, is provided for reference and administrative assistance only, may not be exhaustive, and does not impose any obligation on my Executor to locate or access any specific account.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">15.4</div>
+                    <div class="item-text">My Executor is not required to access, maintain, or preserve any digital asset except to the extent necessary to administer my estate in accordance with this Will and applicable law, and shall not be liable for any loss, deletion, or inaccessibility of digital assets resulting from compliance with applicable laws, service provider policies, or technological limitations.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">15.5</div>
+                    <div class="item-text">Nothing in this section authorizes my Executor to act in a manner that would violate applicable law or the lawful terms of service of any digital service provider.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 12 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 12 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-title">16. FUNERAL AND BURIAL INSTRUCTIONS</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">16.1</div>
+                    <div class="item-text">I request that my funeral, burial, and associated rites be conducted in accordance with Islamic practice, to the extent permitted by applicable law. These instructions express my wishes and are not intended to impose any legal obligation where compliance is not reasonably possible or is restricted by law.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">16.2</div>
+                    <div class="item-text">Without limiting the generality of the foregoing, I request that, where reasonably practicable:<br>
+                    <div class="indent-margin">(a) my body be handled by Muslims and prepared in accordance with Islamic customs, including washing (ghusl) and shrouding (kafan);</div>
+                    <div class="indent-margin">(b) funeral prayers (Salat al-Janazah) be performed;</div>
+                    <div class="indent-margin">(c) my body be buried in a Muslim cemetery or designated Muslim burial section, with my body oriented toward the Qiblah where reasonably possible; and</div>
+                    <div class="indent-margin">(d) burial be conducted without cremation or unnecessary delay, embalming, or autopsy, unless required by applicable law.</div>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">16.3</div>
+                    <div class="item-text">I request that my funeral and burial be kept modest and free from prohibited religious symbols or practices.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">16.4</div>
+                    <div class="item-text">I recognize that certain circumstances, including legal requirements, public health considerations, or other factors beyond the control of my Executor, may affect the manner or timing of my funeral and burial. In such cases, I direct my Executor to act in good faith, with due regard to my wishes, while complying with applicable law.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">16.5</div>
+                    <div class="item-text">Additional instructions (if any): <span class="bold">{{FUNERAL_ADDITIONAL_INSTRUCTIONS}}</span></div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">16.6</div>
+                    <div class="item-text">These funeral and burial instructions are intended as guidance only and do not override mandatory legal requirements or impose personal liability on my Executor for any inability to carry them out.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 13 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 13 of 14</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-title">17. PLATFORM GOVERNANCE AND PROFESSIONAL BOUNDARIES</div>
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">17.1</div>
+                    <div class="item-text">I acknowledge that this Will may have been prepared with assistance from The Muslim Will Platform, which is a technology-based document generation service that supports data collection, document automation, and workflow facilitation.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">17.2</div>
+                    <div class="item-text">I understand and acknowledge that The Muslim Will Platform:<br>
+                    <div class="indent-margin">(a) is not a law firm and does not provide legal advice or legal representation;</div>
+                    <div class="indent-margin">(b) does not provide religious rulings, fatwas, or binding interpretations of Islamic law;</div>
+                    <div class="indent-margin">(c) does not verify, validate, or independently confirm the accuracy, completeness, or legal or religious effect of any information, selections, or instructions provided by me; and</div>
+                    <div class="indent-margin">(d) is not involved in the execution, administration, or enforcement of this Will.</div>
+                    </div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">17.3</div>
+                    <div class="item-text">I acknowledge that all personal, family, asset, and other information used to generate this Will was supplied by me (or on my behalf), and that the Platform relies entirely on such inputs without independent verification.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">17.4</div>
+                    <div class="item-text">I understand that any errors, omissions, or inaccuracies in the information I provided may affect the resulting inheritance guidance, allocations, or document content, and I accept responsibility for reviewing this Will carefully prior to execution.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">17.5</div>
+                    <div class="item-text">I further acknowledge that any inheritance guidance, distributions, or allocations reflected in this Will are expressions of my intentions based on the information I provided and my review and acceptance of the resulting output, and do not constitute legal advice or religious rulings by The Muslim Will Platform.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">17.6</div>
+                    <div class="item-text">I understand that I may choose, independently and at my discretion, to consult with qualified Islamic scholars or religious advisors regarding the inheritance intentions expressed in this Will, including matters of general Shariah compliance.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 14 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 14 of 15</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 5mm;">
+            <div class="section-content">
+                <div class="section-item">
+                    <div class="item-number">17.7</div>
+                    <div class="item-text">Any such consultation or review by Islamic scholars or religious advisors is religious in nature only and does not address legal validity, enforceability, or compliance with applicable law. The Muslim Will Platform does not endorse, supervise, or assume responsibility for any religious advice, commentary, or opinion provided by any such scholar or advisor.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">17.8</div>
+                    <div class="item-text">I acknowledge and agree that only a licensed legal professional in the Province of Ontario can provide legal advice or confirm the legal validity, enforceability, or proper execution of this Will. I understand that The Muslim Will Platform and any non-lawyer personnel associated with it do not act as my legal representatives.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">17.9</div>
+                    <div class="item-text">I am strongly encouraged to have this Will reviewed and, if necessary, amended or supplemented by a licensed Ontario lawyer prior to execution. I further understand that the formal execution and witnessing of wills in Ontario may be governed by specific statutory requirements, and that I should seek legal advice if I am uncertain about current execution formalities.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">17.10</div>
+                    <div class="item-text">Nothing in this section is intended to limit or replace the duties, authority, or discretion of my Executor, nor to restrict the application of mandatory rules of applicable law.</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 15 ========================================== -->
+    <div class="page">
+        <div class="header">
+            <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 15 of 16</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 20px;">
+            <div class="section-title">EXECUTION AND WITNESS SIGNATURES</div>
+            <div class="section-content" style="margin-top: 10px;">
+                <p>I, <span class="bold">{{TESTATOR_FULL_NAME}}</span>, declare that I have read this Will or have had it read to me, that I understand its contents and effect, and that I am signing this Will voluntarily and without undue influence.</p>
+                <p style="margin-bottom: 4mm;">I sign this Will as my Last Will and Testament on the date written below, in the presence of the two witnesses whose names and signatures appear below, who are both present at the same time and who sign this Will in my presence and in the presence of each other.</p>
+                <p>Signed by me, <span class="bold">{{TESTATOR_FULL_NAME}}</span>, as my Last Will and Testament on this <span class="bold">{{SIGNING_DAY}}</span> day of <span class="bold">{{SIGNING_MONTH}}</span>, <span class="bold">{{SIGNING_YEAR}}</span>, at <span class="bold">{{SIGNING_CITY}}, Ontario, Canada</span>.</p>
+                <table style="width: 100%; margin-top: 20px;">
+                    <tr>
+                        <td style="width: 100%;" class="center">
+                            Testator Signature: <div class="signature-line" style="width: 300px;"></div><br><br>
+                            Name (printed): {{TESTATOR_FULL_NAME}}
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== PAGE 16 (AFFIDAVIT) ========================================== -->
+    <div class="page">
+        <div class="header">
+             <div class="page-number" style="font-family: 'Montserrat', sans-serif; font-size: 10pt; color: var(--primary-green); font-weight: 500; margin-right: 15px;">Page 16 of 16</div>
+            <div class="header-line"></div>
+            <div class="header-title">Last Will & Testament</div>
+        </div>
+
+        <div class="section" style="margin-top: 10px;">
+            <h1 class="main-title" style="margin-bottom: 20px; font-size: 14pt;">OPTIONAL: AFFIDAVIT OF EXECUTION (ONTARIO)</h1>
+            <p class="center" style="font-size: 9pt; color: #555; margin-bottom: 30px;">(This section is for completion by a witness before a Commissioner for Oaths or Notary Public in Ontario. It may be provided as a separate document.)</p>
+
+            <div class="section-content">
+                <p>Province of Ontario<br>To Wit:</p>
+                
+                <p>I, <span class="bold">{{AFFIANT_NAME}}</span>, of the City of <span class="bold">{{AFFIANT_CITY}}</span>, in the Province of Ontario, MAKE OATH AND SAY THAT:</p>
+
+                <div class="section-item">
+                    <div class="item-number">1.</div>
+                    <div class="item-text">I was personally present and did see <span class="bold">{{TESTATOR_FULL_NAME}}</span>, who is personally known to me, sign the attached instrument as their Last Will and Testament.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">2.</div>
+                    <div class="item-text">The Will was signed at <span class="bold">{{SIGNING_CITY}}, Ontario</span>.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">3.</div>
+                    <div class="item-text">I am one of the subscribing witnesses to the said Will.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">4.</div>
+                    <div class="item-text">The Testator was personally present and did see me and the other witness sign the Will in the presence of the Testator and of each other.</div>
+                </div>
+                <div class="section-item">
+                    <div class="item-number">5.</div>
+                    <div class="item-text">I believe that the Testator was of the age of majority and of sound mind at the time of signing.</div>
+                </div>
+
+                <p style="margin-top: 30px;">SWORN before me at the City of ______________________<br>
+                in the Province of Ontario, this ______ day of ______________, ______.</p>
+                
+                <table style="width: 100%; margin-top: 50px;">
+                    <tr>
+                        <td style="width: 50%;">
+                            <div class="signature-line" style="width: 250px;"></div><br>
+                            A Commissioner for Oaths / Notary Public<br>
+                            in and for the Province of Ontario
+                        </td>
+                        <td style="width: 50%;">
+                            <div class="signature-line" style="width: 250px;"></div><br>
+                            {{AFFIANT_NAME}}
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="footer">
+            <img src="https://i.ibb.co/99PvWcHp/logooo.png" class="footer-logo" alt="Muslim Will Logo">
+            <div class="footer-right">
+                <div class="footer-line"></div>
+                <div class="footer-url">themuslimwill.com</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

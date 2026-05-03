@@ -1,0 +1,38 @@
+[
+  {
+    "url": "/contacts/ahmed-gohar.vcf",
+    "status": "Not Found",
+    "isBroken": true,
+    "internal": true
+  },
+  {
+    "url": "/start",
+    "status": "Not Found",
+    "isBroken": true,
+    "internal": true
+  },
+  {
+    "url": "https://patriva.com",
+    "status": "Client network socket disconnected before secure TLS connection was established",
+    "isBroken": true,
+    "internal": false
+  },
+  {
+    "url": "/privacy",
+    "status": "Not Found",
+    "isBroken": true,
+    "internal": true
+  },
+  {
+    "url": "/terms",
+    "status": "Not Found",
+    "isBroken": true,
+    "internal": true
+  },
+  {
+    "url": "/disclaimer",
+    "status": "Not Found",
+    "isBroken": true,
+    "internal": true
+  }
+]

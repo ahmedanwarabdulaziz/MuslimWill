@@ -60,7 +60,7 @@ export default function CharitableLegacyPage() {
              </p>
              
              <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`} style={{ marginBottom: '1.5rem' }}>
-               <TrackedButton variant="primary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'charitable_legacy' }}>Start Your Will</TrackedButton>
+               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'charitable_legacy' }}>Start Your Will</TrackedButton>
                <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_hero_click" eventParams={{ location: 'charitable_legacy' }}>View Pricing</TrackedButton>
              </div>
 
@@ -195,7 +195,7 @@ export default function CharitableLegacyPage() {
               A clearer legacy begins with a written plan.
             </div>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
-              <TrackedButton variant="primary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'charitable_legacy' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'charitable_legacy' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_footer_click" eventParams={{ location: 'charitable_legacy' }}>View Pricing</TrackedButton>
             </div>
           </div>

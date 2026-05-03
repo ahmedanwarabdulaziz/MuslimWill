@@ -157,7 +157,7 @@ export default function Home() {
              </div>
              
              <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginBottom: '0.5rem' }}>
-                <TrackedButton size="lg" variant="primary" className={styles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'home_hero' }}>Start Your Will</TrackedButton>
+                <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" variant="secondary" className={styles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'home_hero' }}>Start Your Will</TrackedButton>
                 <TrackedButton size="lg" variant="outline" className={styles.invertedOutline} eventName="how_it_works_click" eventParams={{ location: 'home_hero' }}>See How It Works</TrackedButton>
              </div>
              
@@ -171,9 +171,9 @@ export default function Home() {
              </div>
              
              <div className={`${styles.heroTrustPoints} ${styles.fadeUp} ${styles.delay5}`}>
-               <span className={styles.heroTrustPoint}>340+ Islamic Wills Completed</span>
+               <span className={styles.heroTrustPoint}>Guided for Muslim families who want a clearer process</span>
                <span className={styles.heroTrustPoint}>Reviewed by qualified Islamic scholars for inheritance considerations</span>
-               <span className={styles.heroTrustPoint}>Ontario Lawyer Verified</span>
+               <span className={styles.heroTrustPoint}>Ontario legal workflow supported</span>
                <span className={styles.heroTrustPoint}>15-Minute Guided Intake</span>
              </div>
           </div>
@@ -330,7 +330,7 @@ export default function Home() {
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>02</div>
               <CardTitle>Dual Expert Review</CardTitle>
-              <p>Your documents are rigorously reviewed by Islamic Scholars for Sharia compliance and by our Legal Team for Ontario legal validity. <strong>We keep you informed with automated email updates at every stage.</strong></p>
+              <p>Your documents are reviewed by qualified Islamic scholars for inheritance considerations and then move through an Ontario legal workflow for execution-related oversight. <strong>We keep you informed with automated email updates at every stage.</strong></p>
             </div>
             
             <div className={styles.stepCard}>
@@ -553,7 +553,7 @@ export default function Home() {
               Your Bridge to a clearer legacy.
             </div>
             <div className={styles.ctaActions}>
-              <TrackedButton size="lg" className={styles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'home_final_cta' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" className={styles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'home_final_cta' }}>Start Your Will</TrackedButton>
               <TrackedButton size="lg" variant="outlineLight" className={styles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'home_final_cta' }}>Book a Call</TrackedButton>
             </div>
             <div style={{ marginTop: '1.25rem', fontSize: '1rem', color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '0.25rem', position: 'relative', zIndex: 1 }}>

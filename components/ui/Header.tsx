@@ -56,7 +56,7 @@ export function Header() {
         {/* Desktop CTA */}
         <div className={styles.ctaGroup}>
           <Link href="/contact" className={styles.secondaryCta} onClick={() => trackBookCallClick('header_desktop')}>Book a Call</Link>
-          <Button variant="primary" onClick={() => trackStartYourWillClick('header_desktop')}>Start Your Will</Button>
+          <Button href="https://app.themuslimwill.com/Account/Login" variant="primary" onClick={() => trackStartYourWillClick('header_desktop')}>Start Your Will</Button>
         </div>
 
         {/* Mobile Toggle */}
@@ -77,7 +77,7 @@ export function Header() {
       {mobileMenuOpen && (
         <div className={styles.mobileDrawer}>
           <div className={styles.mobileCtaBox} style={{ borderTop: 'none', borderBottom: '1px solid var(--color-border)', paddingBottom: '1.5rem', marginBottom: '1rem' }}>
-            <Button variant="primary" style={{ width: '100%' }} onClick={() => {
+            <Button href="https://app.themuslimwill.com/Account/Login" variant="primary" style={{ width: '100%' }} onClick={() => {
               trackStartYourWillClick('header_mobile');
               setMobileMenuOpen(false);
             }}>Start Your Will</Button>

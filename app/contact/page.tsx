@@ -27,11 +27,11 @@ export default function ContactPage() {
              </h1>
              
              <p className={`${sharedStyles.heroCopy} ${sharedStyles.fadeUp} ${sharedStyles.delay2}`}>
-               Book a call with our team or begin your state-specific legal and Islamic workflow directly.
+               Book a call with our team or begin the current Ontario-focused legal and Islamic workflow directly.
              </p>
              
              <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-               <TrackedButton variant="primary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'contact_page' }}>Start Your Will</TrackedButton>
+               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'contact_page' }}>Start Your Will</TrackedButton>
                <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="#book" eventName="book_call_hero_click" eventParams={{ location: 'contact_page' }}>Book A Call</TrackedButton>
              </div>
           </div>
@@ -52,13 +52,13 @@ export default function ContactPage() {
                 &bull; You are ready to designate guardians for minor children.<br/>
                 &bull; You want to allocate your Wasiyyah (up to 1/3) for charity or non-heirs.<br/>
                 &bull; You want the bulk of your estate distributed according to Islamic inheritance mandates.<br/>
-                &bull; You are looking for a complete, legally executed Ontario document without the friction of hourly law firm billing.
+                &bull; You are looking for an Ontario-focused document pathway with structured execution support and less friction than a traditional hourly-billing process.
               </p>
               <div style={{ marginBottom: '1.25rem', fontWeight: 500 }}>
                 If you are ready to begin, you can start your will today.
               </div>
               <div>
-                <TrackedButton variant="primary" size="md" eventName="start_will_pane_click" eventParams={{ location: 'contact_page' }} style={{ backgroundColor: 'white', color: 'var(--color-green)' }}>
+                <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="md" eventName="start_will_pane_click" eventParams={{ location: 'contact_page' }} style={{ backgroundColor: 'white', color: 'var(--color-green)' }}>
                   Start Your Will
                 </TrackedButton>
               </div>

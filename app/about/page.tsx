@@ -36,7 +36,7 @@ export default function AboutPage() {
              </p>
              
              <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`} style={{ marginBottom: '1.5rem' }}>
-               <TrackedButton variant="primary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'about' }}>Start Your Will</TrackedButton>
+               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'about' }}>Start Your Will</TrackedButton>
                <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/charitable-legacy" eventName="view_charity_hero_click" eventParams={{ location: 'about' }}>The 1/3 Rule</TrackedButton>
              </div>
           </div>
@@ -147,7 +147,7 @@ export default function AboutPage() {
               A better process for an important responsibility.
             </div>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
-              <TrackedButton variant="primary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'about' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'about' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_footer_click" eventParams={{ location: 'about' }}>View Pricing</TrackedButton>
             </div>
           </div>

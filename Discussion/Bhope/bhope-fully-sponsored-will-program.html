@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BHOPE is fully sponsoring Muslim Will packages so eligible families can prepare their will at no cost and document a future charitable legacy with intention.">
+  <title>BHOPE Fully Sponsored Will Program | Muslim Will</title>
+  <style>
+    :root {
+      --green-950: #002f1a;
+      --green-900: #004926;
+      --green-800: #08623a;
+      --green-100: #e7f3ec;
+      --gold-600: #b88a19;
+      --gold-500: #d4af37;
+      --ink: #17201b;
+      --muted: #5f6964;
+      --line: #dfe6e1;
+      --paper: #ffffff;
+      --soft: #f5f8f6;
+      --cream: #eeeedd;
+      --teal: #0f7b7b;
+      --rose: #9c3f42;
+      --shadow: 0 18px 50px rgba(0, 47, 26, 0.14);
+      --radius: 8px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: var(--paper);
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(223, 230, 225, 0.9);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 40px));
+      min-height: 72px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      font-weight: 800;
+      color: var(--green-950);
+    }
+
+    .brand-logos {
+      display: flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .logo-img {
+      display: block;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-mw {
+      height: 36px;
+    }
+
+    .logo-bhope {
+      height: 38px;
+    }
+
+    .logo-divider {
+      width: 1px;
+      height: 30px;
+      background: var(--line);
+    }
+
+    .brand-text {
+      display: block;
+      white-space: nowrap;
+    }
+
+    .brand-text small {
+      display: block;
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 600;
+      margin-top: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 650;
+    }
+
+    .nav-links a:hover {
+      color: var(--green-900);
+    }
+
+    .btn {
+      min-height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 18px;
+      border-radius: 8px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      transition: transform 160ms ease, box-shadow 160ms ease, background 160ms ease;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+
+    .btn-primary {
+      color: #fff;
+      background: var(--green-900);
+      box-shadow: 0 10px 22px rgba(0, 73, 38, 0.18);
+    }
+
+    .btn-primary:hover {
+      background: var(--green-800);
+    }
+
+    .btn-gold {
+      color: var(--green-950);
+      background: var(--gold-500);
+      box-shadow: 0 10px 22px rgba(184, 138, 25, 0.22);
+    }
+
+    .btn-white {
+      color: var(--green-950);
+      background: #fff;
+      border-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .btn-outline {
+      color: var(--green-950);
+      border-color: var(--line);
+      background: #fff;
+    }
+
+    .hero {
+      min-height: 88svh;
+      position: relative;
+      isolation: isolate;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      background-image:
+        linear-gradient(90deg, rgba(0, 47, 26, 0.9) 0%, rgba(0, 47, 26, 0.72) 46%, rgba(0, 47, 26, 0.28) 100%),
+        url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=84");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-inner {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      padding: 80px 0 64px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 2px;
+      background: var(--gold-500);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 780px;
+      margin: 22px 0 18px;
+      font-size: 4.45rem;
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .hero-lede {
+      max-width: 690px;
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 1.2rem;
+      margin-bottom: 28px;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(150px, 210px));
+      gap: 12px;
+      max-width: 690px;
+    }
+
+    .hero-point {
+      min-height: 74px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 8px;
+      padding: 13px 14px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .hero-point strong {
+      display: block;
+      color: var(--gold-500);
+      font-size: 1rem;
+    }
+
+    .hero-point span {
+      color: rgba(255, 255, 255, 0.82);
+      font-size: 0.9rem;
+    }
+
+    .trust-strip {
+      background: var(--green-950);
+      color: #fff;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .trust-grid {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      min-height: 92px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      align-items: center;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+    }
+
+    .trust-icon {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: rgba(212, 175, 55, 0.16);
+      color: var(--gold-500);
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .section.soft {
+      background: var(--soft);
+    }
+
+    .section.green {
+      background: var(--green-900);
+      color: #fff;
+    }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .section-head {
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .tag {
+      color: var(--gold-600);
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+      margin-bottom: 10px;
+    }
+
+    .green .tag {
+      color: var(--gold-500);
+    }
+
+    h2 {
+      font-size: 2.65rem;
+      line-height: 1.08;
+      letter-spacing: 0;
+      margin-bottom: 14px;
+      color: var(--green-950);
+    }
+
+    .green h2,
+    .green h3 {
+      color: #fff;
+    }
+
+    .section-head p,
+    .lead {
+      color: var(--muted);
+      font-size: 1.08rem;
+      margin-bottom: 0;
+    }
+
+    .green .section-head p,
+    .green .lead {
+      color: rgba(255, 255, 255, 0.82);
+    }
+
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .offer-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .offer-card-head {
+      padding: 24px 24px 22px;
+      color: #fff;
+      background: var(--green-950);
+    }
+
+    .offer-card-head .label {
+      color: var(--gold-500);
+      font-size: 0.78rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .offer-card-head h3 {
+      color: #fff;
+      font-size: 1.65rem;
+      margin-bottom: 6px;
+    }
+
+    .offer-card-head p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 0;
+    }
+
+    .price-block {
+      padding: 28px 24px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 20px;
+      background: linear-gradient(135deg, #fff 0%, var(--green-100) 100%);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .price {
+      color: var(--gold-600);
+      font-size: 5rem;
+      line-height: 0.9;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .price-copy strong {
+      display: block;
+      color: var(--green-950);
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+
+    .price-copy span {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .offer-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .offer-row:last-child {
+      border-bottom: 0;
+    }
+
+    .offer-row span {
+      color: var(--muted);
+      font-weight: 700;
+    }
+
+    .offer-row strong {
+      color: var(--green-950);
+      text-align: right;
+    }
+
+    .offer-row .gold {
+      color: var(--gold-600);
+      font-size: 1.1rem;
+    }
+
+    .free-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .free-panel {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: var(--shadow);
+      padding: 28px;
+    }
+
+    .proof-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .proof-item {
+      min-height: 140px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 20px;
+    }
+
+    .proof-item strong {
+      display: block;
+      color: var(--green-950);
+      margin-bottom: 8px;
+    }
+
+    .proof-item span {
+      color: var(--muted);
+    }
+
+    .image-panel {
+      min-height: 470px;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: var(--shadow);
+      background: var(--green-100);
+    }
+
+    .image-panel img {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      object-fit: cover;
+    }
+
+    .image-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.94);
+      padding: 16px 18px;
+      color: var(--green-950);
+      font-weight: 850;
+      box-shadow: 0 10px 28px rgba(0, 47, 26, 0.16);
+    }
+
+    .benefit-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+
+    .why-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .why-image {
+      min-height: 100%;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      background: var(--green-100);
+    }
+
+    .why-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 470px;
+      object-fit: cover;
+    }
+
+    .why-layout .benefit-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .benefit-card,
+    .step-card,
+    .choice-card,
+    .program-card,
+    .faq-item {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+    }
+
+    .benefit-card {
+      padding: 22px;
+      min-height: 210px;
+    }
+
+    .benefit-card .num {
+      width: 38px;
+      height: 38px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: var(--green-900);
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .benefit-card:nth-child(2) .num {
+      background: var(--teal);
+    }
+
+    .benefit-card:nth-child(3) .num {
+      background: var(--gold-600);
+    }
+
+    .benefit-card:nth-child(4) .num {
+      background: var(--rose);
+    }
+
+    h3 {
+      color: var(--green-950);
+      font-size: 1.18rem;
+      line-height: 1.2;
+      margin-bottom: 9px;
+      letter-spacing: 0;
+    }
+
+    .benefit-card p,
+    .step-card p,
+    .choice-card p,
+    .program-card p,
+    .faq-answer {
+      color: var(--muted);
+      margin-bottom: 0;
+    }
+
+    .access-box {
+      background: #fff;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      padding: 30px;
+    }
+
+    .access-top {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: start;
+      padding-bottom: 26px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 24px;
+    }
+
+    .status-pill {
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      padding: 10px 12px;
+      color: var(--green-950);
+      background: var(--green-100);
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .choice-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .choice-card {
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .choice-label {
+      color: var(--gold-600);
+      font-weight: 900;
+      text-transform: uppercase;
+      font-size: 0.78rem;
+    }
+
+    .note {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .step-card {
+      padding: 22px;
+      min-height: 200px;
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.18);
+    }
+
+    .green .step-card p {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .step-number {
+      color: var(--gold-500);
+      font-size: 0.9rem;
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .program-layout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .program-image {
+      border-radius: 8px;
+      overflow: hidden;
+      min-height: 430px;
+      box-shadow: var(--shadow);
+      background: var(--green-100);
+    }
+
+    .program-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 430px;
+      object-fit: cover;
+    }
+
+    .program-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .program-card {
+      padding: 22px;
+      border-left: 5px solid var(--green-900);
+    }
+
+    .program-card:nth-child(2) {
+      border-left-color: var(--gold-500);
+    }
+
+    .program-card:nth-child(3) {
+      border-left-color: var(--teal);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .faq-item {
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      min-height: 66px;
+      border: 0;
+      background: #fff;
+      color: var(--green-950);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 18px 20px;
+      text-align: left;
+      font: inherit;
+      font-weight: 850;
+      cursor: pointer;
+      letter-spacing: 0;
+    }
+
+    .faq-question span {
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      display: grid;
+      place-items: center;
+      background: var(--green-100);
+      color: var(--green-900);
+      flex: 0 0 auto;
+    }
+
+    .faq-answer {
+      display: none;
+      padding: 0 20px 20px;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .cta {
+      background: var(--green-950);
+      color: #fff;
+      padding: 84px 0;
+    }
+
+    .cta-box {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .cta h2 {
+      color: #fff;
+      max-width: 760px;
+    }
+
+    .cta p {
+      color: rgba(255, 255, 255, 0.82);
+      max-width: 720px;
+      margin-bottom: 0;
+    }
+
+    .footer {
+      padding: 34px 0;
+      background: #fff;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .footer-grid {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer strong {
+      color: var(--green-950);
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .footer-brand img {
+      width: auto;
+      object-fit: contain;
+    }
+
+    .footer-brand .footer-mw {
+      height: 30px;
+    }
+
+    .footer-brand .footer-bhope {
+      height: 32px;
+    }
+
+    @media (max-width: 980px) {
+      .nav-links a:not(.nav-cta) {
+        display: none;
+      }
+
+      h1 {
+        font-size: 3.25rem;
+      }
+
+      h2 {
+        font-size: 2.2rem;
+      }
+
+      .hero-points,
+      .trust-grid,
+      .offer-grid,
+      .free-grid,
+      .proof-grid,
+      .why-layout,
+      .benefit-grid,
+      .program-layout,
+      .faq-grid,
+      .cta-box {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid {
+        padding: 20px 0;
+      }
+
+      .steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .access-top {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .brand-text small {
+        display: none;
+      }
+
+      .brand-text {
+        font-size: 0.95rem;
+      }
+
+      .brand {
+        gap: 10px;
+      }
+
+      .brand-logos {
+        gap: 0;
+      }
+
+      .logo-mw {
+        height: 28px;
+      }
+
+      .logo-bhope {
+        height: 30px;
+      }
+
+      .logo-divider {
+        height: 24px;
+      }
+
+      .nav-links .nav-cta {
+        display: none;
+      }
+
+      .hero {
+        min-height: 86svh;
+        background-position: center right;
+      }
+
+      .hero-inner,
+      .wrap,
+      .trust-grid,
+      .footer-grid {
+        width: min(100% - 28px, var(--max));
+      }
+
+      .hero-inner {
+        padding: 58px 0 46px;
+      }
+
+      h1 {
+        font-size: 2.45rem;
+        line-height: 1.04;
+      }
+
+      h2 {
+        font-size: 1.9rem;
+      }
+
+      .hero-lede,
+      .section-head p,
+      .lead {
+        font-size: 1rem;
+      }
+
+      .hero-actions,
+      .choice-grid,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .offer-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+
+      .offer-row strong {
+        text-align: left;
+      }
+
+      .price-block {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .price {
+        font-size: 4rem;
+      }
+
+      .access-box {
+        padding: 22px;
+      }
+
+      .image-panel,
+      .why-image img,
+      .program-image,
+      .image-panel img,
+      .program-image img {
+        min-height: 330px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="BHOPE and Muslim Will">
+        <span class="brand-logos" aria-hidden="true">
+          <img class="logo-img logo-mw" src="assets/muslim-will-logo.png" alt="">
+        </span>
+        <span class="brand-text">
+          Fully Sponsored Will Program
+          <small>No cost to eligible families</small>
+        </span>
+        <span class="logo-divider" aria-hidden="true"></span>
+        <img class="logo-img logo-bhope" src="assets/bhope-logo.png" alt="" aria-hidden="true">
+      </a>
+      <div class="nav-links">
+        <a class="btn btn-primary nav-cta" href="#access">Check My Eligibility</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-label="BHOPE Fully Sponsored Will Program">
+      <div class="hero-inner">
+        <div class="eyebrow">BHOPE Fully Sponsored Will Program</div>
+        <h1>Prepare your Muslim Will at no cost.</h1>
+        <p class="hero-lede">Fully sponsored by BHOPE for eligible members and approved supporters. Protect your family today, and document a future legacy with intention.</p>
+        <div class="hero-actions">
+          <a class="btn btn-gold" href="#access">Check My Eligibility</a>
+          <a class="btn btn-white" href="#steps">How It Works</a>
+        </div>
+        <div class="hero-points" aria-label="Program highlights">
+          <div class="hero-point">
+            <strong>$0 personal cost</strong>
+            <span>BHOPE covers the sponsored package.</span>
+          </div>
+          <div class="hero-point">
+            <strong>Eligibility path</strong>
+            <span>Start with BHOPE access or membership.</span>
+          </div>
+          <div class="hero-point">
+            <strong>Family first</strong>
+            <span>Plan guardianship, inheritance, and final wishes.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Trust highlights">
+      <div class="trust-grid">
+        <div class="trust-item"><span class="trust-icon">1</span>BHOPE sponsored access</div>
+        <div class="trust-item"><span class="trust-icon">2</span>Family-first planning</div>
+        <div class="trust-item"><span class="trust-icon">3</span>Islamic inheritance considerations</div>
+        <div class="trust-item"><span class="trust-icon">4</span>Private guided process</div>
+      </div>
+    </section>
+
+    <section class="section" id="offer">
+      <div class="wrap offer-grid">
+        <div>
+          <div class="section-head">
+            <div class="tag">The offer</div>
+            <h2>A sponsored will today. A planned legacy for tomorrow.</h2>
+            <p>BHOPE is removing the cost barrier so eligible families can begin responsible will planning with Muslim Will. The program helps you protect loved ones while documenting a future charitable bequest to BHOPE within applicable legal and Islamic limits.</p>
+          </div>
+        </div>
+
+        <div class="offer-panel" aria-label="Program snapshot">
+          <div class="offer-card-head">
+            <div class="label">Your sponsored access</div>
+            <h3>BHOPE covers the cost.</h3>
+            <p>You prepare with intention.</p>
+          </div>
+          <div class="price-block">
+            <div class="price">$0</div>
+            <div class="price-copy">
+              <strong>Your personal payment</strong>
+              <span>Regular package value: $350 CAD</span>
+            </div>
+          </div>
+          <div class="offer-row">
+            <span>BHOPE sponsorship</span>
+            <strong>Fully covers the package for eligible participants</strong>
+          </div>
+          <div class="offer-row">
+            <span>Program</span>
+            <strong>BHOPE Fully Sponsored Will Program</strong>
+          </div>
+          <div class="offer-row">
+            <span>You receive</span>
+            <strong>A guided Muslim Will pathway</strong>
+          </div>
+          <div class="offer-row">
+            <span>Planning focus</span>
+            <strong>Family protection + charitable legacy</strong>
+          </div>
+          <div class="offer-row">
+            <span>Future gift</span>
+            <strong>Choose a BHOPE program, with final terms confirmed before you proceed</strong>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="why-free">
+      <div class="wrap free-grid">
+        <div class="free-panel">
+          <div class="tag">Why is it free?</div>
+          <h2>BHOPE is sponsoring the cost as a community benefit.</h2>
+          <p class="lead">Your personal payment is $0 because BHOPE is covering the regular $350 CAD package for eligible members and approved supporters. You still receive a guided Muslim Will pathway with family protection at the center.</p>
+        </div>
+
+        <div class="proof-grid" aria-label="Program trust points">
+          <div class="proof-item">
+            <strong>Not a discount</strong>
+            <span>This is fully sponsored access for eligible participants, not a coupon or limited price reduction.</span>
+          </div>
+          <div class="proof-item">
+            <strong>Family comes first</strong>
+            <span>The will-planning pathway begins with loved ones, guardianship, responsibilities, and final wishes.</span>
+          </div>
+          <div class="proof-item">
+            <strong>Legacy with clarity</strong>
+            <span>The charitable gift step is explained before you proceed, with final terms confirmed clearly.</span>
+          </div>
+          <div class="proof-item">
+            <strong>Clear roles</strong>
+            <span>Muslim Will provides the pathway. BHOPE sponsors access as a community benefit.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-label="Why families begin">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="tag">Why this matters</div>
+          <h2>The intention is there. The pathway is often unclear.</h2>
+          <p>Many families know a will matters, but delay because the process feels sensitive, expensive, or difficult to navigate. This program makes the first step clearer.</p>
+        </div>
+
+        <div class="why-layout">
+          <figure class="why-image">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&w=1200&q=84" alt="A family spending time together at home">
+          </figure>
+
+          <div class="benefit-grid">
+            <article class="benefit-card">
+              <div class="num">1</div>
+              <h3>Protect loved ones</h3>
+              <p>Document important decisions before your family needs them during a difficult time.</p>
+            </article>
+            <article class="benefit-card">
+              <div class="num">2</div>
+              <h3>Clarify guardianship</h3>
+              <p>Record your preferences for minor children and reduce uncertainty for relatives.</p>
+            </article>
+            <article class="benefit-card">
+              <div class="num">3</div>
+              <h3>Plan with Islamic principles</h3>
+              <p>Use a guided process designed to reflect Islamic inheritance considerations.</p>
+            </article>
+            <article class="benefit-card">
+              <div class="num">4</div>
+              <h3>Continue sadaqah jariyah</h3>
+              <p>Include a future charitable bequest while keeping family responsibility at the center.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="access">
+      <div class="wrap">
+        <div class="access-box">
+          <div class="access-top">
+            <div>
+              <div class="tag">Start with the right path</div>
+              <h2>Not a BHOPE member yet? You can still become eligible.</h2>
+              <p class="lead">This fully sponsored pathway is available to BHOPE members and approved supporters. If you are not connected to BHOPE yet, become a member first, then return to begin your sponsored Muslim Will.</p>
+            </div>
+            <div class="status-pill">Membership path available</div>
+          </div>
+
+          <div class="choice-grid">
+            <article class="choice-card">
+              <div class="choice-label">Path 1</div>
+              <h3>I have BHOPE access</h3>
+              <p>Use this path if you are a current BHOPE member, supporter, or approved participant in this sponsored program.</p>
+              <a class="btn btn-primary" href="https://app.themuslimwill.com/">Start My Sponsored Will</a>
+            </article>
+
+            <article class="choice-card" id="membership-access">
+              <div class="choice-label">Path 2</div>
+              <h3>I need BHOPE access</h3>
+              <p>Join BHOPE first, then return to begin your fully sponsored Muslim Will once your access is confirmed.</p>
+              <a class="btn btn-outline" href="https://www.bhope.ca/">Become a BHOPE Member</a>
+            </article>
+
+            <article class="choice-card">
+              <div class="choice-label">Path 3</div>
+              <h3>I am not sure</h3>
+              <p>If you are unsure whether you qualify, start here and confirm the right access path before completing your will intake.</p>
+              <a class="btn btn-outline" href="mailto:info@themuslimwill.com?subject=BHOPE%20Fully%20Sponsored%20Will%20Program%20eligibility">Ask About Eligibility</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section green" id="steps">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="tag">How it works</div>
+          <h2>A clear path from eligibility to completion.</h2>
+          <p>Every step should feel simple, guided, and professional. The goal is to help you move from intention to a completed will package without confusion.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step-card">
+            <div class="step-number">Step 1</div>
+            <h3>Confirm BHOPE access</h3>
+            <p>Use your existing BHOPE access or become a BHOPE member before starting the sponsored pathway.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">Step 2</div>
+            <h3>Start your intake</h3>
+            <p>Enter family details, executor choices, guardianship preferences, assets, and final wishes.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">Step 3</div>
+            <h3>Choose your BHOPE legacy</h3>
+            <p>Document a charitable bequest to BHOPE or one of its focus areas according to the program terms.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">Step 4</div>
+            <h3>Complete review</h3>
+            <p>Your package moves through the Muslim Will review pathway for family details, Islamic inheritance considerations, and preparation.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">Step 5</div>
+            <h3>Prepare for signing</h3>
+            <p>Receive instructions for IDs, witnesses, and any required signing or attestation steps.</p>
+          </article>
+          <article class="step-card">
+            <div class="step-number">Step 6</div>
+            <h3>Receive your package</h3>
+            <p>Keep your completed documents safely and review them when major life changes happen.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="legacy">
+      <div class="wrap program-layout">
+        <figure class="program-image">
+          <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=84" alt="Volunteers preparing community support packages">
+        </figure>
+
+        <div>
+          <div class="section-head">
+            <div class="tag">Your future gift</div>
+            <h2>Choose the kind of hope your legacy supports.</h2>
+            <p>A charitable bequest can support the causes that matter to you while keeping loved ones at the center of your estate planning.</p>
+          </div>
+
+          <div class="program-list">
+            <article class="program-card">
+              <h3>Healing Hands</h3>
+              <p>Support medical aid and healthcare access for communities facing urgent need.</p>
+            </article>
+            <article class="program-card">
+              <h3>Bright Futures</h3>
+              <p>Support education, learning resources, and opportunity-building programs.</p>
+            </article>
+            <article class="program-card">
+              <h3>Hope in Crisis</h3>
+              <p>Support emergency response and relief when families face disaster or hardship.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section soft" id="faq">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="tag">Questions</div>
+          <h2>Clear answers before you begin.</h2>
+          <p>Here are the key details to help you choose the right path with confidence.</p>
+        </div>
+
+        <div class="faq-grid">
+          <article class="faq-item open">
+            <button class="faq-question" type="button">Is this really no cost to me? <span>+</span></button>
+            <div class="faq-answer">Yes. BHOPE covers the sponsored Muslim Will package for eligible members and approved supporters. Your personal payment is $0 once your access is confirmed.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button">Do I have to be a BHOPE member? <span>+</span></button>
+            <div class="faq-answer">BHOPE access is required for this sponsored pathway. If you are not a member or approved supporter yet, use the membership path first, then return to start your sponsored will.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button">What is the BHOPE bequest? <span>+</span></button>
+            <div class="faq-answer">The program includes a charitable legacy step where participants can document a future gift to BHOPE or one of its programs, with final terms confirmed before they proceed and within applicable legal and Islamic limits.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button">Does this replace family responsibility? <span>+</span></button>
+            <div class="faq-answer">No. The message is family first. Charitable legacy planning should be considered in a way that keeps loved ones and legal obligations at the center.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button">Can I update my will later? <span>+</span></button>
+            <div class="faq-answer">A will may need review after major life changes such as marriage, divorce, children, property purchase, relocation, or changes in executor, guardian, or charitable intentions.</div>
+          </article>
+
+          <article class="faq-item">
+            <button class="faq-question" type="button">Who provides the will pathway? <span>+</span></button>
+            <div class="faq-answer">Muslim Will provides the guided will-planning pathway. BHOPE sponsors access as a community benefit and does not provide legal advice, religious rulings, or will-drafting services.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-label="Final call to action">
+      <div class="wrap cta-box">
+        <div>
+          <div class="tag">Sponsored access</div>
+          <h2>Check your eligibility and take the next step.</h2>
+          <p>Your Muslim Will can be fully sponsored by BHOPE. Confirm your access now, or become a BHOPE member first so you can continue with the right path.</p>
+        </div>
+        <a class="btn btn-gold" href="#access">Check My Eligibility</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand" aria-label="Muslim Will and BHOPE">
+          <img class="footer-mw" src="assets/muslim-will-logo.png" alt="Muslim Will">
+          <img class="footer-bhope" src="assets/bhope-logo.png" alt="BHOPE">
+        </div>
+        <strong>Muslim Will x BHOPE</strong><br>
+        Professional will planning, guided by Islamic principles.
+      </div>
+      <div>Legal validity depends on accurate information, appropriate review, and proper signing and witnessing.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll(".faq-question").forEach(function (button) {
+      button.addEventListener("click", function () {
+        var item = button.closest(".faq-item");
+        item.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>

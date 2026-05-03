@@ -35,7 +35,7 @@ export default function LegalCompliancePage() {
              </p>
              
              <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`} style={{ marginBottom: '1.5rem' }}>
-               <TrackedButton variant="primary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'compliance' }}>Start Your Will</TrackedButton>
+               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'compliance' }}>Start Your Will</TrackedButton>
              </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function LegalCompliancePage() {
                 <br/><br/>
                 <strong>Faith-Conscious Integration:</strong> We ensure that your deeply held religious convictions regarding guardianship, inheritance, and Sadaqah Jariyah are structurally integrated into your legal documents.
                 <br/><br/>
-                <strong>Legally Executed:</strong> By bridging the gap to a formal Ontario legal workflow, we ensure you don’t just get a template—you get a fully executed, witnessed, and reliable Canadian document.
+                <strong>Execution-Supported:</strong> By bridging the gap to a formal Ontario legal workflow, we aim to move families beyond a generic template and toward a document process that supports proper review, signing, witnessing, and delivery.
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function LegalCompliancePage() {
               In Canada, succession and substitute decision-making laws are governed provincially, not federally. An enduring Power of Attorney in one province has different statutory requirements than in another. 
             </p>
             <p style={{ margin: 0 }}>
-              To guarantee the highest level of legal enforceability, <strong>Muslim Will's legal workflow is currently anchored specifically to the Province of Ontario</strong> (under the Succession Law Reform Act and the Substitute Decisions Act). We do not provide documents for jurisdictions where our independent legal workflow cannot actively support the final execution.
+              To keep the process grounded in a real legal framework, <strong>Muslim Will&apos;s current legal workflow is anchored specifically to the Province of Ontario</strong> (under the Succession Law Reform Act and the Substitute Decisions Act). We do not present unsupported jurisdictions as fully covered where our workflow cannot actively support the final execution steps.
             </p>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function LegalCompliancePage() {
               Trust begins with clarity.
             </div>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
-              <TrackedButton variant="primary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'compliance' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'compliance' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_footer_click" eventParams={{ location: 'compliance' }}>View Pricing</TrackedButton>
             </div>
           </div>

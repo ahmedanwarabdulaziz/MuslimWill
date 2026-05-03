@@ -1,0 +1,180 @@
+The Muslim Will (themuslimwill.com) — Professional Business Summary (Detailed)
+Last updated: 28 Feb 2026 (based on public website content)
+
+
+brand colors 
+#eeeedd 
+#004926
+#d4af37
+
+
+1) What the business is
+The Muslim Will is a North America–focused Islamic estate planning platform that helps users create wills aligned with both:
+• Regional legal requirements (Canada and the United States), and
+• Recognised Islamic inheritance principles (fara’id), including madhhab-aware calculations.
+
+The platform positions itself as a guided, end-to-end process where users provide key inputs, and professional teams handle the complex legal drafting and Shariah-compliance review, with the end goal of a completed, legally valid will (especially emphasising Canada/Ontario legal validity). The brand slogan: "Professional will planning, guided by Islamic principles."
+
+Primary site: https://themuslimwill.com/
+Primary onboarding/app link: https://app.themuslimwill.com/ (also referenced as Join Now)
+
+2) The problem it solves
+For many Muslim families in North America, estate planning is fragmented and risky:
+• If someone dies without a will, local intestacy rules—not Islamic inheritance rules—typically determine distribution.
+• DIY templates can miss local legal execution requirements (witnessing/notarisation rules vary by province/state).
+• Islamic inheritance shares are non-trivial to calculate, and many families struggle to apply the one‑third bequest rule correctly.
+• Coordinating lawyers + scholars can be time-consuming and expensive.
+
+The Muslim Will aims to reduce:
+• Legal risk (invalid documents or improper execution),
+• Religious uncertainty (incorrect heir shares / bequest limits),
+• Family disputes (ambiguity, contestability, unclear instructions), and
+• Operational friction (multiple visits and uncoordinated stakeholders).
+
+3) Who it’s for (target customers)
+Core audience:
+• Muslim adults (18+) living in Canada or the United States who want a will consistent with Shariah inheritance principles and local legal requirements.
+
+Secondary audiences:
+• Muslim families with dependents (guardianship planning).
+• Users with charitable goals (integrating charity bequests within the one‑third rule).
+• Communities/organizations seeking group pricing or partnerships.
+• Non‑Muslims are stated to be able to use the service for a standard legal will (with Islamic calculations not applying).
+
+Geographic focus:
+• Optimised for Canada and the U.S.; Canada/Ontario is especially emphasized in compliance messaging.
+• Global expansion is stated as a future intention.
+
+4) Core offering (products & services)
+A) Islamic Will Preparation Service (primary paid service)
+An end-to-end service to prepare a legally valid Islamic will in Canada (and positioned for North America), combining:
+• Legal drafting/finalisation by licensed Canadian lawyers (Ontario legal requirements highlighted).
+• Islamic inheritance structuring and review by qualified Islamic scholars.
+• School-of-thought selection (madhhab selection supported).
+• A review meeting (online or in person, described as mandatory in the process description).
+• Final signing / completion steps to make the will legally enforceable.
+
+B) Free Tools & Resources (lead generation + preparation)
+The site describes free tools intended for education and readiness, explicitly stating they do not create a legal will or replace professional review. Examples mentioned:
+• Inheritance calculator (educational estimates; “Coming Soon”)
+• Readiness checklist
+• Educational content
+• Secure account to save inputs
+
+C) Support, consultations, and follow-ups
+• Human review & communication is emphasized (real lawyers and scholars).
+• Optional periodic reviews every 6–12 months are suggested; updates are available and fees apply only when changes are made (described as complimentary reviews; fees only for actual updates).
+
+5) How the process works (customer journey)
+The journey is described as a structured flow:
+Step 1 — Provide details (10–15 minutes)
+• User enters family details, assets, and guardianship preferences via a guided form.
+
+Step 2 — Islamic inheritance structuring
+• The Islamic review team structures allocations according to established Islamic inheritance rules.
+• User selects a madhhab; allocations are applied accordingly.
+• Qualified scholars review the structure before legal drafting.
+
+Step 3 — Legal drafting
+• Licensed Canadian lawyers draft the will to meet provincial requirements (Ontario highlighted; province-specific handling is also mentioned).
+
+Step 4 — Review with guidance (~30 minutes if needed)
+• User reviews the draft via an online meeting (or in person) to confirm accuracy and ask questions.
+• Legal and Islamic reviewers participate as needed.
+
+Step 5 — Final signing & completion
+• The will is finalised and executed (signed/witnessed per local law) to become legally valid.
+
+Timeline:
+• Typical completion is stated as 7–14 days, depending on complexity, beneficiaries, revisions, meeting scheduling, and responsiveness.
+
+6) Legal & Shariah compliance position (and boundaries)
+The business communicates compliance as a central trust pillar:
+• Wills prepared/finalised by licensed Canadian lawyers and reviewed to meet Ontario legal requirements.
+• Islamic inheritance review by qualified scholars.
+• Support for multiple schools of thought: Hanafi, Maliki, Shafi’i, Hanbali, and also Ja’fari is referenced in the compliance page.
+• The service explicitly defines professional boundaries:
+  – The platform is not a law firm and not a religious authority.
+  – It does not provide binding legal advice or fatwas/religious rulings.
+  – It aims to apply verified Shariah logic + legal templates, but full legal/religious compliance cannot be guaranteed due to unique circumstances.
+  – Users remain responsible for accurate inputs and for completing legal execution steps where applicable.
+
+Endorsements:
+• The compliance page notes that formal endorsements from leading Islamic institutions are “in progress,” with Saudi Arabia and Egypt (Al‑Azhar) listed as in progress.
+
+7) Key features & claims (as presented publicly)
+Trust & accountability
+• Drafted and finalised by licensed Canadian lawyers (Ontario legal requirements highlighted).
+• Reviewed by qualified Islamic scholars; written confirmation of Islamic compliance is mentioned in the compliance page.
+• “Trusted by 500+ families” and a “4.9/5 rating” are displayed on the homepage.
+
+User experience
+• Guided form to avoid requiring users to interpret legal or Islamic rules.
+• Human review meeting to reduce mistakes and increase confidence.
+
+Inheritance logic rules highlighted
+• Fixed shares for Qur’anic heirs (e.g., spouse, children, parents).
+• One‑third rule: users can allocate up to 33% to non-heirs/charity; remaining goes to fixed heirs.
+• Debts and funeral expenses are addressed before distribution (mentioned in FAQ).
+
+Charity & bequests
+• Ability to add charities; “verified Islamic charities” are referenced in FAQ, with user ability to add their own.
+• Ability to establish a waqf via one‑third bequest allocation.
+
+Security & privacy
+• AES‑256 encryption and secure storage are cited, with TLS 1.3 for data in transit.
+• Compliance claimed with PIPEDA (Canada) and GDPR, plus applicable U.S. privacy laws.
+• Data is not sold/rented/shared for marketing purposes (as stated in the privacy policy).
+
+Languages
+• FAQ states support for English, French, and Arabic.
+
+8) Business model (revenue + packaging)
+The site describes tiered plans and a mix of:
+• Free tools/resources (top-of-funnel),
+• A one-time payment for full will preparation (core monetisation),
+• Optional subscription/support elements (e.g., updates, reminders, follow-ups; positioned as optional), and
+• Organization/group pricing (“Call for details”).
+
+The FAQ references plan tiers such as:
+• Basic (one-time will),
+• Premium (updates + charity integration),
+• Family (multiple wills).
+The pricing page emphasises “no hidden fees” and “no auto subscriptions,” with “secure online payments,” but does not display specific dollar amounts in the text content captured.
+
+9) Differentiation (how it’s positioned vs alternatives)
+Key differentiators in the public messaging:
+• “One guided flow” replacing separate coordination with lawyers and scholars.
+• Professional accountability: licensed lawyers + scholar review + (optional) consultations for complexity.
+• Madhhab selection.
+• Designed to be legally defensible in Canada (Ontario-specific emphasis) while respecting Islamic inheritance principles.
+• Claims of cost efficiency by bundling steps (homepage notes typical savings vs traditional methods).
+
+10) Operations, compliance, and risk notes
+Operational dependencies implied:
+• Access to licensed Canadian lawyers (province-specific where needed).
+• A qualified Islamic review team covering multiple schools of thought.
+• Secure infrastructure for sensitive personal and estate data.
+• Customer support channels (email, live chat during business hours mentioned in FAQ).
+
+Risk/limitations communicated:
+• The platform does not verify user input accuracy.
+• Compliance cannot be guaranteed for every unique scenario.
+• Wills can be contested, though the platform states it is designed to minimise disputes through guidelines.
+• Some legal execution steps may be the user’s responsibility (witnessing/notarisation), depending on jurisdiction.
+
+11) Roadmap signals
+• “App coming soon” is shown across pages; the FAQ states an app launches in early 2026 for iOS and Android.
+• “Islamic Inheritance Calculator — Coming Soon” is referenced as an educational tool.
+
+12) Contact / public-facing channels
+Website: https://themuslimwill.com/
+Email: info@themuslimwill.com
+Phone: +1-877-416-WILL
+Social: Facebook and Instagram links are shown in the site footer.
+
+13) Quick “one-paragraph” elevator pitch (copy-ready)
+The Muslim Will is a North America–focused Islamic estate planning platform that helps Muslims create wills aligned with both local legal requirements and Islamic inheritance rules. Users provide their family, asset, and guardianship details through a guided form, then a team of qualified Islamic scholars structures and reviews the inheritance allocation (with madhhab selection), while licensed Canadian lawyers draft and finalise the will to meet provincial legal requirements—especially Ontario. The process includes human review and execution guidance, emphasising confidentiality (AES‑256 encryption), and aims to reduce legal risk, religious uncertainty, and family disputes through a single accountable workflow.
+
+Notes / Source basis
+This summary is derived from publicly accessible pages on themuslimwill.com including Home, Our Process, Pricing, FAQ, Legal & Islamic Compliance, Terms of Service, Privacy Policy, and Disclaimer, accessed on 28 Feb 2026.

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
-import { Card, CardContent, CardTitle } from '@/components/ui/Card';
+import { Card, CardContent } from '@/components/ui/Card';
 import { Accordion } from '@/components/ui/Accordion';
 import sharedStyles from '../page.module.css';
 import styles from './pricing.module.css';
@@ -106,7 +106,7 @@ export default function PricingPage() {
              </div>
              
              <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay4}`} style={{ marginBottom: '0.5rem' }}>
-                <TrackedButton size="lg" variant="primary" className={sharedStyles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'pricing_hero' }}>Start Your Will</TrackedButton>
+                <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" variant="secondary" className={sharedStyles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'pricing_hero' }}>Start Your Will</TrackedButton>
                 <TrackedButton href="#included" size="lg" variant="outline" className={sharedStyles.invertedOutline} eventName="pricing_whats_included_click" eventParams={{ location: 'pricing_hero' }}>See What Is Included</TrackedButton>
              </div>
              
@@ -251,7 +251,7 @@ export default function PricingPage() {
                 <li className={styles.checklistItem}><CheckIcon/> <span>Final document delivery</span></li>
               </ul>
               
-              <TrackedButton variant="outline" size="lg" style={{ width: '100%' }} eventName="start_will_individual_click" eventParams={{ location: 'pricing_cards' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" style={{ width: '100%' }} eventName="start_will_individual_click" eventParams={{ location: 'pricing_cards' }}>Start Your Will</TrackedButton>
             </div>
 
             {/* Couples Card (Recommended) */}
@@ -282,13 +282,13 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-      {/* 3.5. Client Testimonials */}
+      {/* 3.5. Common Feedback Themes */}
       <section className={`${sharedStyles.section}`} style={{ backgroundColor: '#ffffff' }}>
         <div className={sharedStyles.container}>
           <div className={sharedStyles.sectionHeader}>
-            <h2 className={sharedStyles.sectionH2}>Families who completed the process often say the same thing: it finally felt clear enough to begin.</h2>
+            <h2 className={sharedStyles.sectionH2}>What families often value most is clarity, structure, and momentum.</h2>
             <p className={sharedStyles.sectionIntro}>
-              Two of the strongest reactions we hear are relief and clarity. Families often tell us the process felt more guided, more manageable, and easier to begin than they expected.
+              These are the themes our pricing and process are designed to support. Your experience will depend on your circumstances, responsiveness, and file complexity.
             </p>
           </div>
           
@@ -298,16 +298,16 @@ export default function PricingPage() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="var(--color-gold)" stroke="none" style={{ opacity: 0.6, marginBottom: '1.5rem' }}>
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <div style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--color-text-main)', flexGrow: 1, fontWeight: 400, fontStyle: 'italic', marginBottom: '2rem' }}>
-                  &ldquo;The process felt much clearer than I expected. It helped me stop delaying and finally put my wishes in writing with confidence.&rdquo;
+                <div style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--color-text-main)', flexGrow: 1, fontWeight: 400, marginBottom: '2rem' }}>
+                  Families often want enough clarity to stop delaying and move their wishes from intention into written, reviewable documents.
                 </div>
                 <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '1.5rem' }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-green)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
                     AM
                   </div>
                   <div>
-                    <strong style={{ display: 'block', color: 'var(--color-heading)' }}>Ahmed Mohamed</strong>
-                    <span style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Muslim Will Client</span>
+                    <strong style={{ display: 'block', color: 'var(--color-heading)' }}>Clarity first</strong>
+                    <span style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>A common reason families decide to begin</span>
                   </div>
                 </div>
               </CardContent>
@@ -318,20 +318,23 @@ export default function PricingPage() {
                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="var(--color-gold)" stroke="none" style={{ opacity: 0.6, marginBottom: '1.5rem' }}>
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <div style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--color-text-main)', flexGrow: 1, fontWeight: 400, fontStyle: 'italic', marginBottom: '2rem' }}>
-                  &ldquo;What stood out most was how guided and manageable everything felt. It gave me confidence that my family&rsquo;s documents were being handled with real care.&rdquo;
+                <div style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--color-text-main)', flexGrow: 1, fontWeight: 400, marginBottom: '2rem' }}>
+                  Families also want a process that feels guided and manageable, especially when document review, witnessing, and final steps are unfamiliar.
                 </div>
                 <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '1.5rem' }}>
                   <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-green)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
                     AM
                   </div>
                   <div>
-                    <strong style={{ display: 'block', color: 'var(--color-heading)' }}>Abdullah Mahmoud</strong>
-                    <span style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Muslim Will Client</span>
+                    <strong style={{ display: 'block', color: 'var(--color-heading)' }}>Guided support</strong>
+                    <span style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Why many families prefer a managed workflow over DIY</span>
                   </div>
                 </div>
               </CardContent>
             </Card>
+          </div>
+          <div style={{ marginTop: '1.25rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>
+            These are generalized planning themes, not guarantees of outcome or testimonials for every user.
           </div>
         </div>
       </section>
@@ -497,7 +500,7 @@ export default function PricingPage() {
               Clear pricing. Clear next steps.
             </div>
             <div className={sharedStyles.ctaActions}>
-              <TrackedButton size="lg" className={sharedStyles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'pricing_final_cta' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" className={sharedStyles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'pricing_final_cta' }}>Start Your Will</TrackedButton>
               <TrackedButton size="lg" variant="outlineLight" className={sharedStyles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'pricing_final_cta' }}>See How It Works</TrackedButton>
             </div>
             <div style={{ marginTop: '1.25rem', fontSize: '1rem', color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '0.25rem', position: 'relative', zIndex: 1 }}>
