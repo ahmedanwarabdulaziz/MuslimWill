@@ -1,5 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
 import sharedStyles from '../page.module.css';
 import styles from './compliance.module.css';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
@@ -65,6 +67,32 @@ export default function LegalCompliancePage() {
             <div className={styles.policyItem}>
               <h3 className={styles.policyTitle}>3. Independent Legal Workflow</h3>
               <p className={styles.policyIntro}>A will is only useful if a Canadian court will enforce it. Muslim Will utilizes an independent Ontario legal workflow. Your documents are legally evaluated, and the final attestation and witnessing are hosted remotely by a qualified, practicing legal professional or licensee.</p>
+            </div>
+          </div>
+
+          <div className={styles.scholarFeatureBlock}>
+            <div className={styles.scholarFeatureImageWrapper}>
+              <Image src="/Images/Dr.Soliman.png" alt="Sulayman Hasan Muhammad Al-Murayr" width={160} height={160} className={styles.scholarFeatureImage} />
+            </div>
+            <div className={styles.scholarFeatureContent}>
+              <div className={styles.scholarFeatureEyebrow}>Islamic Review Authority</div>
+              <h3 className={styles.scholarFeatureName}>Sulayman Hasan Muhammad Al-Murayr</h3>
+              <div className={styles.scholarFeatureRole}>Islamic Scholar & Academic Instructor</div>
+              <p className={styles.scholarFeatureDesc}>
+                Sulayman Al-Murayr provides the scholarly anchor for the Islamic review of inheritance structures at Muslim Will. With extensive experience teaching Quran, Tafsir, and Hadith sciences across North America and internationally, he ensures the platform&apos;s standard logic aligns with established Islamic principles.
+              </p>
+              
+              <ul className={styles.scholarFeatureCredentials}>
+                <li>Holds traditional ijazat in Quran, Tafsir, and major Hadith collections</li>
+                <li>Experienced academic instructor in Saudi Arabia, Malaysia, Canada, and the US</li>
+                <li>Provides structural oversight, clearly separated from legal execution</li>
+              </ul>
+              
+              <div className={styles.scholarFeatureBoundaryNote}>
+                <strong>Note:</strong> Scholar review supports the platform&apos;s inheritance considerations but does not replace the need for a personal fatwa in highly complex or exceptional family cases.
+              </div>
+              
+              <Link href="/about/sulayman-al-murayr" className={styles.scholarFeatureLink}>Read full scholar bio &rarr;</Link>
             </div>
           </div>
         </div>

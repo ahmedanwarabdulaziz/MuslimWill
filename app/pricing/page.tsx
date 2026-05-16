@@ -1,4 +1,6 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import { Card, CardContent } from '@/components/ui/Card';
 import { Accordion } from '@/components/ui/Accordion';
@@ -176,12 +178,21 @@ export default function PricingPage() {
                    <p className={styles.ledgerIntro}>
                      Expert checks to ensure your documents meet faith principles and secular laws.
                    </p>
+
+                   <div className={sharedStyles.scholarMiniBlockLight} style={{ marginTop: '1.5rem' }}>
+                     <Image src="/Images/Dr.Soliman.png" alt="Dr. Sulayman Al-Murayr" width={48} height={48} className={sharedStyles.scholarMiniPhoto} />
+                     <div className={sharedStyles.scholarMiniInfo}>
+                       <span className={sharedStyles.scholarMiniNameLight}>Islamic Review Authority</span>
+                       <span className={sharedStyles.scholarMiniCredentialLight}>Sulayman Al-Murayr</span>
+                       <Link href="/about/sulayman-al-murayr" className={sharedStyles.scholarMiniLinkLight}>Read scholar bio &rarr;</Link>
+                     </div>
+                   </div>
                  </div>
                </div>
                <div className={styles.ledgerColRight}>
                   <div className={styles.ledgerItem}>
                     <h4 className={styles.ledgerItemTitle}>Qualified Islamic Scholar Review</h4>
-                    <p className={styles.ledgerItemDesc}>Reviewed by qualified Islamic scholars for inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</p>
+                    <p className={styles.ledgerItemDesc}>Reviewed by <Link href="/about/sulayman-al-murayr" style={{ color: 'var(--color-gold)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>qualified Islamic scholars</Link> for inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</p>
                   </div>
                   <div className={styles.ledgerItem}>
                     <h4 className={styles.ledgerItemTitle}>Ontario Legal Workflow Support</h4>
@@ -273,6 +284,12 @@ export default function PricingPage() {
               </ul>
               
               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="primary" size="lg" style={{ width: '100%' }} eventName="start_will_couples_click" eventParams={{ location: 'pricing_cards' }}>Start As A Couple</TrackedButton>
+            </div>
+          </div>
+          
+          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
+            <div style={{ display: 'inline-block', padding: '1rem 1.5rem', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
+              <span style={{ fontWeight: 600, color: 'var(--color-text-main)' }}>✓ Includes scholar-reviewed inheritance considerations.</span> <Link href="/about/sulayman-al-murayr" style={{ color: 'var(--color-green)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '2px', marginLeft: '0.5rem' }}>Read scholar bio &rarr;</Link>
             </div>
           </div>
           

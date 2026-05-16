@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import sharedStyles from '../page.module.css';
 import styles from './faq.module.css';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
@@ -72,6 +73,10 @@ export default function FAQPage() {
     {
       question: "Is Muslim Will a law firm?",
       answer: "No. Muslim Will is a technology platform designed to streamline estate planning for Muslim families. We provide the workflow, coordinate Islamic scholar review, and utilize an independent Ontario legal workflow to review and arrange for the execution of your documents. We do not provide direct legal advice."
+    },
+    {
+      question: "Who reviews the Islamic inheritance structure?",
+      answer: <>The standard inheritance logic used by the platform is reviewed by qualified Islamic scholars, including our primary Islamic Review Authority, <Link href="/about/sulayman-al-murayr" style={{color: 'var(--color-green)', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 500}}>Dr. Sulayman Al-Murayr</Link>, to ensure alignment with general Shariah principles.</>
     },
     {
       question: "Do you issue personal fatwas?",

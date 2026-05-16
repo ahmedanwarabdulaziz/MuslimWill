@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import sharedStyles from '../page.module.css';
 import styles from './contact.module.css';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
+import { InquiryForm } from '@/components/forms/InquiryForm';
 
 export const metadata: Metadata = {
   title: 'Contact Muslim Will | Book A Call',
@@ -39,7 +40,7 @@ export default function ContactPage() {
       </section>
 
       {/* 2. When to do what (Split Pane) */}
-      <section className={sharedStyles.section}>
+      <section className={sharedStyles.section} style={{ paddingBottom: '3rem' }}>
         <div className={sharedStyles.container}>
           
           <div className={styles.splitPane}>
@@ -65,7 +66,7 @@ export default function ContactPage() {
             </div>
 
             {/* The Booking Path */}
-            <div className={`${styles.paneHalf} ${styles.bookingPane}`} id="book">
+            <div className={`${styles.paneHalf} ${styles.bookingPane}`}>
               <h3 className={styles.paneTitle}>When to book a call</h3>
               <p className={styles.paneText}>
                 While our platform bridges software and legal formalization securely, it is not a substitute for high-conflict legal advice. You should book a call with our professional team if:
@@ -79,8 +80,8 @@ export default function ContactPage() {
                 If you need reassurance first, book a call with our team.
               </div>
               <div>
-                <TrackedButton href="#book" variant="primary" size="md" eventName="book_call_pane_click" eventParams={{ location: 'contact_page' }}>
-                  Book a Call
+                <TrackedButton href="#book" variant="primary" size="md" eventName="scroll_to_calendar_click" eventParams={{ location: 'contact_page' }}>
+                  View Calendar Below &darr;
                 </TrackedButton>
               </div>
             </div>
@@ -94,8 +95,35 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* 2.5 Zoom Scheduler Section */}
+      <section className={`${sharedStyles.section} ${sharedStyles.sectionLight}`} id="book" style={{ paddingTop: '4rem', paddingBottom: '4rem' }}>
+        <div className={sharedStyles.container}>
+          <div className={sharedStyles.sectionHeader} style={{ marginBottom: '2rem' }}>
+            <h2 className={sharedStyles.sectionH2}>Schedule an Introductory Call</h2>
+            <p className={sharedStyles.sectionIntro}>Select a time that works for you to discuss your family&apos;s needs with our team.</p>
+          </div>
+          <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
+            <div style={{ width: '100%', maxWidth: '800px', borderRadius: '16px', overflow: 'hidden', boxShadow: '0 10px 40px rgba(0,0,0,0.08)', backgroundColor: 'white', border: '1px solid var(--color-border)' }}>
+              <iframe 
+                src="https://scheduler.zoom.us/ahmed-gohar/muslim-will-introductory-call-?embed=true" 
+                frameBorder="0" 
+                style={{ width: '100%', height: '650px', border: 'none', display: 'block' }}
+                title="Schedule a Call with Muslim Will"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 2.75 Contact Form Section */}
+      <section className={sharedStyles.section} style={{ paddingTop: '4rem', paddingBottom: '2rem' }}>
+        <div className={sharedStyles.container}>
+          <InquiryForm variant="general" />
+        </div>
+      </section>
+
       {/* 3. Direct Contact Details */}
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionLight}`} style={{ paddingTop: 0 }}>
+      <section className={sharedStyles.section} style={{ paddingTop: '4rem', paddingBottom: '6rem' }}>
         <div className={sharedStyles.container}>
           <div className={styles.contactBlock}>
             <div className={styles.contactItem}>

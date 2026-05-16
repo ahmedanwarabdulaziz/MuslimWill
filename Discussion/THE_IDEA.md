@@ -41,23 +41,18 @@ The new direction is:
 - keep the `$350` package
 - reposition it as the `premium package`
 - introduce a lower-friction subscription offer called `Muslim Vault`
-- create a tiered structure with free, starter, and premium options
 
-This creates three levels:
+This creates two levels:
 
-### A. Free Tier
+### A. Premium Package
 
-Entry-level access for awareness and lead generation.
+One-time package around `$350`
 
-### B. Starter Subscription
+### B. Subscription Package
 
 Ongoing monthly subscription, currently proposed at:
 
 - `$7 / month`
-
-### C. Premium Package
-
-One-time package around `$350`
 
 ---
 
@@ -77,18 +72,6 @@ It becomes the premium, guided, high-touch package.
 - checking uploaded documents and making sure they match the form
 - notarization / legal finalization support
 - registration in the Canada Will Directory
-- 12 months of Muslim Vault access included
-
-### Working explanation of the premium legal layer
-
-The premium package is where the full legal completion happens.
-
-Current working meaning:
-
-- a paralegal or legal professional hosts the Zoom completion session
-- the user and witnesses complete the process properly
-- the execution event is handled in a professional legal workflow
-- the will is then registered in the Canada Will Directory
 
 ### Strategic purpose of the premium package
 
@@ -117,30 +100,6 @@ It is a:
 - continuity product
 - family-clarity product
 - access-control product
-
-### Working starter subscription features
-
-The current direction is that the starter plan includes:
-
-- the will form
-- full Islamic review
-- administrative review
-- checking that all important fields are completed correctly
-- checking confusing legal terms that the user may misunderstand
-- access to the vault
-- voice notes
-- unlimited updates
-- scheduled reminders to review and update the vault
-
-### Why this may still work at `$7 / month`
-
-The business assumption is that much of the starter process can be handled through:
-
-- automation
-- structured workflows
-- Muslim Will staff support with relatively low delivery cost
-
-This means the starter plan may be viable if the work stays operationally light and standardized.
 
 ### Main promise
 
@@ -236,21 +195,6 @@ The user can keep the will record inside the vault so the executor knows:
 - where the will is
 - which version is current
 - whether supporting documents exist
-- which appendices are intended to be part of the full planning record
-
-### Appendix concept inside the will workflow
-
-One important working idea is that some vault records may also be referenced formally in the will package.
-
-Examples:
-
-- Appendix A: list of debts
-- Appendix B: money to be collected
-- Appendix C: asset reference list
-
-This direction needs careful legal drafting, but the current intention is not to keep the vault completely separate from the will story.
-
-Instead, some parts of the vault may support or connect to the formal will package where appropriate.
 
 #### Messages
 
@@ -327,40 +271,6 @@ It is about:
 - structured emergency notes
 - voice notes
 - private messages
-
-### Medical-wishes handling options
-
-This area should be handled in the most professional way possible.
-
-Current options to consider:
-
-#### Option 1: Guidance only
-
-The vault stores personal wishes and practical instructions, but these are clearly labeled as guidance and not formal medical directives.
-
-#### Option 2: Structured medical-preference section
-
-The user fills a more formal section for:
-
-- preferred hospital
-- who should be consulted
-- who should make decisions
-- travel/contact instructions for relatives
-- religious wishes around treatment and end-of-life care
-
-This still needs clear legal wording about what is guidance versus what is legally operative.
-
-#### Option 3: Premium legal medical-direction workflow
-
-The premium package includes a more formal legal/regulated handling of medical wishes through the proper legal document set and professional review.
-
-### Current recommended direction
-
-The strongest working direction is:
-
-- starter plan stores practical medical and incapacity guidance
-- premium plan handles the stronger legal side
-- the user must be warned that private vault instructions should not conflict with formal legal documents
 
 ---
 
@@ -456,67 +366,32 @@ This feature is important because trust depends on accountability.
 
 ---
 
-## 10. Package Structure
-
-### A. Free Tier
-
-The free tier should exist to reduce friction and introduce the system.
-
-Possible free-tier direction:
-
-- account creation
-- limited educational access
-- limited vault preview
-- limited checklist or setup mode
-- upgrade prompts into starter or premium
-
-### B. Starter Package
+## 10. Starter Package Concept
 
 Current proposed example:
 
+- Starter package
 - monthly subscription
 - `$7 / month`
 
-Current starter direction:
+Current idea behind starter:
 
 - will creation
-- full Islamic review
-- administrative review
-- checking important fields
-- clarifying confusing legal terms
-- After Death Vault
-- POA Vault
-- voice notes
-- unlimited updates
-- scheduled reminders
+- Islamic review
+- administrative revision
+- the vault
 
-### C. Premium Package
+### Important note for next-phase discussion
 
-Current premium direction:
+This may be too much human review for a `$7 / month` product if there is no lock-in, annual commitment, or reduced service scope.
 
-- one-time `$350`
-- includes everything in starter
-- includes full legal completion workflow
-- includes notarization / legal execution support through the professional Zoom process
-- includes Canada Will Directory registration
-- includes 12 months of Vault access
+So this part needs financial and operational testing.
 
-### D. Family Package
+The core strategic principle still makes sense:
 
-This should be considered as a dedicated offer for:
-
-- husband
-- wife
-- adult children
-
-### Family package principles
-
-- each person keeps a separate private account
-- each vault remains private and secure
-- the family receives pricing advantage without merging private data
-- family accounts may be linked commercially, but not exposed to one another by default
-
-This can become a very strong offer for Muslim families who want structured planning across the household.
+- use subscription to reduce resistance
+- create an offer that feels easy to start
+- move profit toward scale and retention
 
 ---
 
@@ -598,10 +473,6 @@ Then the user can later upgrade into:
 - annual reviews
 - document refreshes
 
-### E. Better family adoption
-
-A family package creates a natural household-level offer instead of treating every user as a completely isolated buyer.
-
 ---
 
 ## 13. Trust and Access Logic
@@ -640,41 +511,6 @@ Possible proof:
 - identity verification
 - will/executor supporting records
 
-### Identity verification recommendation
-
-The most professional direction is a multi-layered access model:
-
-- username and password
-- email verification
-- phone verification
-- two-factor authentication
-- identity confirmation at sensitive release moments
-- manual support review for special cases
-
-For high-risk release events, the business should consider a stronger identity process than normal login alone.
-
-### Release-security recommendation
-
-The vault should be sold as a high-security product.
-
-So the working direction should include:
-
-- strong encryption at rest and in transit
-- role-based access controls
-- secure audit logs
-- timestamped access history
-- controlled release workflow
-- manual verification for death and incapacity release events
-
-### Password storage direction
-
-Current business direction:
-
-- users may store passwords and highly sensitive access information
-- this should be treated as a serious security feature, not a casual notes feature
-
-This increases the value of the product, but it also increases the security responsibility of the platform significantly.
-
 ---
 
 ## 14. Product Principles
@@ -707,11 +543,66 @@ The product should feel respectful, serious, and private.
 
 ---
 
-## 15. Draft Positioning Direction
+## 15. Questions and Risks To Discuss Next
 
-This idea suggests a major positioning evolution.
+These are not objections to the idea.
+They are the next important business and product questions.
 
-Muslim Will should still lead with the will category, but the message becomes stronger by pairing the will with the vault.
+### Product questions
+
+- Should the starter package include a will at all, or only the vault?
+the will + - full Islamic review
+- administrative review
+- checking that all important fields are completed correctly
+- checking confusing legal terms that the user may misunderstand
+
+we may add these to the 7$ as these steps is automated by the system and muslim will staff so it cost low 
+- Should the vault include Islamic review, or should that stay premium only? the islamic view is avilable in both ! 
+- Should voice notes be included in all plans? yes and later we can make it an add on for new use foe extra 3$ per month 
+- Should the user be allowed unlimited updates?
+yes 
+- Should the system support scheduled reminders to update the vault?
+yes
+### Legal / compliance questions
+
+- What instructions are legally binding versus personal guidance only?
+the full backage have the legal side 
+- How should medical wishes be handled? with the most professional way you may give me options 
+- Can private instructions conflict with legal POA documents? no - the user should be warned with that as i think there is no way the system can catch somthing like that 
+- How do we avoid the vault being treated like a legal will amendment?
+actually we need it to be treated as legal will amendment for example we can mention in the will that appnndes A is included a list of my debts - Appendex B is money need to collected -- and so on 
+- What exactly does "notarization" mean in the Canadian context for this workflow? 
+means that a paralegal make a zoom call with the will user and the witness to say legally that this happen 
+- Can we truly register the will in the Canada Will Directory as a standard included feature?
+yes 
+
+### Security questions
+
+- Should users store passwords, or only directions and references? yes -- for his emails - mobile - and anythiing 
+- How will encryption and secure release work? with the most secure and professionalmethod this will help us sell 
+- How will identity verification work? password with auth connection or what professional you can recomment 
+- What happens if multiple people dispute access?
+i don't get your point here 
+### Business model questions
+
+- Is `$7 / month` enough? for now yes 
+- Should there be annual billing? yes !! 
+- Should there be a free tier, a starter tier, and a premium tier? yes 
+- Should the `$350` package include 12 months of Vault access? yes of course 
+- Should there be discounts that lock in longer commitment while preserving professionalism? yes maybe 
+
+### Positioning questions
+
+- Is Muslim Will now a will company with a vault feature? yes  
+- Or a vault company with a premium will upgrade?no
+- Should the new hero offer be the vault instead of the will? i think we need to sell the idea that the will + vault is the most secured and professional way to protect your family and your legacy  and then he can select the premium to make it legally egisterd 
+
+also consider making a famly backage disciunt for a family with keep each acount private and secured to target familyes ( husband - wife - adult childers )
+---
+
+## 16. Draft Positioning Direction
+
+This idea suggests a major positioning shift.
 
 From:
 
@@ -720,13 +611,12 @@ From:
 To something closer to:
 
 - "Protect your family with a will and a private legacy vault."
-- "The most secure and professional way to protect your family and your legacy."
 - "Not just a will. A secure vault for what your family must know when the time comes."
 - "Private instructions. Timed access. Family clarity."
 
 ---
 
-## 16. Early Strategic Conclusion
+## 17. Early Strategic Conclusion
 
 This concept has strong potential because it moves Muslim Will away from direct price comparison with:
 
@@ -745,12 +635,12 @@ Instead, it creates a more defensible offer based on:
 The core business hypothesis is:
 
 Users may resist paying `$350` for a will alone,
-but may accept a low monthly subscription for a will-plus-vault relationship,
-and later upgrade into a premium guided legal completion package.
+but may accept a low monthly subscription for an ongoing protected family vault,
+and later upgrade into a premium guided will package.
 
 ---
 
-## 17. Working Next Step
+## 18. Working Next Step
 
 Use this document as the base to refine:
 

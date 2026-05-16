@@ -1,0 +1,131 @@
+.formWrapper {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-border);
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.heading {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.75rem;
+}
+
+.subheading {
+  font-size: 1rem;
+  color: var(--color-text-light);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+.row > div {
+  flex: 1;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  color: var(--color-text);
+}
+
+.input, .select, .textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  background-color: #fafafa;
+}
+
+.input:focus, .select:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--color-green);
+  box-shadow: 0 0 0 3px rgba(11, 75, 54, 0.1);
+  background-color: white;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submitBtn {
+  background-color: var(--color-green);
+  color: white;
+  border: none;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #0d5c41;
+}
+
+.submitBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.privacyText {
+  font-size: 0.75rem;
+  color: var(--color-text-light);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.messageContainer {
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.success {
+  background-color: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #166534;
+}
+
+.error {
+  background-color: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #991b1b;
+}
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .formWrapper {
+    padding: 1.5rem;
+  }
+}

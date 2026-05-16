@@ -1,5 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import Link from 'next/link';
+import Image from 'next/image';
 import sharedStyles from '../page.module.css';
 import styles from './how-it-works.module.css';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
@@ -27,7 +29,7 @@ export default function HowItWorksPage() {
     },
     {
       question: "Who reviews the Islamic inheritance structure?",
-      answer: "The inheritance structure is reviewed by qualified Islamic scholars for inheritance considerations. This supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances."
+      answer: <>The inheritance structure is reviewed by qualified Islamic scholars, including our primary Islamic Review Authority, <Link href="/about/sulayman-al-murayr" style={{color: 'var(--color-green)', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 500}}>Dr. Sulayman Al-Murayr</Link>, for inheritance considerations. This supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</>
     },
     {
       question: "Is the legal workflow Ontario-specific?",
@@ -163,6 +165,12 @@ export default function HowItWorksPage() {
               <p className={styles.timelineText}>
                 Your file undergoes a two-layered review process. First, qualified Islamic scholars review the inheritance structure for faith-conscious planning. Second, your documents move through a workflow designed around Ontario legal execution requirements to ensure structural oversight.
               </p>
+              
+              <Link href="/about/sulayman-al-murayr" className={sharedStyles.scholarProofLine} style={{ margin: '1.5rem 0', display: 'inline-flex' }}>
+                <Image src="/Images/Dr.Soliman.png" alt="Dr. Sulayman Al-Murayr" width={24} height={24} className={sharedStyles.scholarProofPhoto} />
+                <span>Includes inheritance structure review by <strong>Dr. Sulayman Al-Murayr</strong> &rarr;</span>
+              </Link>
+              
               <div className={styles.customerActionBox}>
                 <div className={styles.customerActionLabel}>Customer Action</div>
                 <p className={styles.customerActionText}>No action is usually needed during this stage unless our review teams request clarification on your details.</p>

@@ -129,6 +129,23 @@ export default function AboutPage() {
                 <TrackedButton variant="outline" size="md" href="/about/dr-yasser-aboutaha" eventName="view_bio_aboutaha_click" eventParams={{ location: 'about' }}>Read Biography</TrackedButton>
               </div>
             </div>
+
+            {/* Dr. Sulayman Al-Murayr */}
+            <div className={styles.teamCard}>
+              <div className={styles.teamImageWrapper}>
+                <Image src="/Images/Dr.Soliman.png" alt="Dr. Sulayman Al-Murayr" fill className={styles.teamImage} />
+              </div>
+              <div className={styles.teamHeader}>
+                <h3 className={styles.teamName}>Dr. Sulayman Al-Murayr</h3>
+                <div className={styles.teamRole}>Islamic Review Authority</div>
+              </div>
+              <p className={styles.teamBioSummary}>
+                Sulayman Al-Murayr provides the scholarly anchor for the Islamic review of inheritance structures at Muslim Will. He holds traditional ijazat and ensures the platform&apos;s standard logic aligns with established Islamic principles.
+              </p>
+              <div className={styles.teamFooter}>
+                <TrackedButton variant="outline" size="md" href="/about/sulayman-al-murayr" eventName="view_bio_murayr_click" eventParams={{ location: 'about' }}>Read Biography</TrackedButton>
+              </div>
+            </div>
           </div>
         </div>
       </section>

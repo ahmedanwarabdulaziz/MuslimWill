@@ -166,6 +166,15 @@ export default function Home() {
                <span>Zero hidden costs or hourly lawyer fees.</span>
              </div>
              
+             {/* SCHOLAR TRUST BLOCK */}
+             <div className={`${styles.fadeUp} ${styles.delay5}`} style={{ marginTop: '1.5rem', display: 'flex', alignItems: 'center', gap: '0.75rem', background: 'rgba(255, 255, 255, 0.05)', padding: '0.75rem 1rem', borderRadius: 'var(--radius-md)', border: '1px solid rgba(212, 175, 55, 0.15)', maxWidth: 'max-content' }}>
+               <Image src="/Images/Dr.Soliman.png" alt="Dr. Sulayman Al-Murayr" width={32} height={32} style={{ borderRadius: '50%', border: '1px solid var(--color-gold)' }} />
+               <div style={{ display: 'flex', flexDirection: 'column' }}>
+                 <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--color-gold)', fontWeight: 600 }}>Islamic Review Authority</span>
+                 <Link href="/about/sulayman-al-murayr" style={{ fontSize: '0.85rem', color: 'white', textDecoration: 'underline', textUnderlineOffset: '2px' }}>Read Dr. Sulayman&apos;s Bio &rarr;</Link>
+               </div>
+             </div>
+             
              <div className={`${styles.fadeUp} ${styles.delay5} ${styles.heroEmotionalIntro}`}>
                A clearer process is easier to begin when it is trusted, guided, and measurable.
              </div>
@@ -330,7 +339,7 @@ export default function Home() {
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>02</div>
               <CardTitle>Dual Expert Review</CardTitle>
-              <p>Your documents are reviewed by qualified Islamic scholars for inheritance considerations and then move through an Ontario legal workflow for execution-related oversight. <strong>We keep you informed with automated email updates at every stage.</strong></p>
+              <p>Your documents are reviewed by qualified Islamic scholars, including <Link href="/about/sulayman-al-murayr" style={{ color: 'var(--color-green)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '2px' }}>Dr. Sulayman Al-Murayr</Link>, for inheritance considerations and then move through an Ontario legal workflow for execution-related oversight. <strong>We keep you informed with automated email updates at every stage.</strong></p>
             </div>
             
             <div className={styles.stepCard}>
@@ -448,7 +457,7 @@ export default function Home() {
             <Card className={styles.darkCard}>
               <CardContent>
                 <CardTitle>Islamic inheritance guidance</CardTitle>
-                <p>Islamic inheritance review is handled by qualified Islamic scholars who review the inheritance structure for Islamic inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</p>
+                <p>Islamic inheritance review is handled by qualified Islamic scholars, including our primary Review Authority <Link href="/about/sulayman-al-murayr" style={{ color: 'var(--color-gold)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>Dr. Sulayman Al-Murayr</Link>, who review the inheritance structure for Islamic inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</p>
               </CardContent>
             </Card>
 

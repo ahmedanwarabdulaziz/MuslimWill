@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import sharedStyles from '../page.module.css';
 import styles from './charities.module.css';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
+import { InquiryForm } from '@/components/forms/InquiryForm';
 
 export const metadata: Metadata = {
   title: 'For Charities And Partnerships | Muslim Will',
@@ -31,7 +32,7 @@ export default function ForCharitiesPage() {
              </p>
              
              <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`} style={{ marginBottom: '1.5rem' }}>
-               <TrackedButton variant="primary" size="lg" href="/contact" eventName="request_partnership_hero_click" eventParams={{ location: 'for_charities' }}>Request Partnership Info</TrackedButton>
+               <TrackedButton variant="primary" size="lg" href="#partnership-form" eventName="request_partnership_hero_click" eventParams={{ location: 'for_charities' }}>Request Partnership Info</TrackedButton>
              </div>
           </div>
         </div>
@@ -129,9 +130,16 @@ export default function ForCharitiesPage() {
               Protect your community's intentions and build long-term legacy funding without inheriting legal risk.
             </p>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
-               <TrackedButton variant="primary" size="lg" href="/contact" eventName="request_partnership_footer_click" eventParams={{ location: 'for_charities' }}>Request Partnership Info</TrackedButton>
+               <TrackedButton variant="primary" size="lg" href="#partnership-form" eventName="request_partnership_footer_click" eventParams={{ location: 'for_charities' }}>Request Partnership Info</TrackedButton>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* 6. Partnership Form */}
+      <section id="partnership-form" className={`${sharedStyles.section} ${sharedStyles.sectionLight}`} style={{ paddingBottom: '6rem' }}>
+        <div className={sharedStyles.container}>
+          <InquiryForm variant="partnership" />
         </div>
       </section>
 
