@@ -15,7 +15,7 @@ export default function SulaymanAlMurayrPage() {
       
       {/* 1. Custom Hero Section */}
       <section className={styles.hero} aria-label="Sulayman Hasan Muhammad Al-Murayr">
-        <img className={styles.heroPhoto} src="/Images/Dr.Soliman.png" alt="Sulayman Hasan Muhammad Al-Murayr" />
+        <img className={styles.heroPhoto} src="/Images/13.jpeg" alt="Sulayman Hasan Muhammad Al-Murayr" />
         
         <div className={styles.heroInner}>
           <div className={`${styles.eyebrow} ${sharedStyles.fadeUp}`}>Islamic Scholar & Academic Instructor</div>
