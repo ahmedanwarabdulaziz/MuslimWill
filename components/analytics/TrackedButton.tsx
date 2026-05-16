@@ -15,11 +15,11 @@ export function TrackedButton({
   onClick,
   ...props
 }: TrackedButtonProps) {
-  const handleClick = () => {
+  const handleClick = (e: React.MouseEvent<any, MouseEvent>) => {
     trackEvent(eventName, eventParams);
 
     if (typeof onClick === 'function') {
-      onClick(undefined as never);
+      onClick(e);
     }
   };
 
