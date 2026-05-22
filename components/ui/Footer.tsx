@@ -37,7 +37,7 @@ export function Footer() {
             <div className={styles.colHeading}>Experts & Trust</div>
             <div className={styles.linkList}>
               <Link href="/about/ahmed-gohar" className={styles.footerLink}>Ahmed Gohar</Link>
-              <Link href="/about/mohamed-aly" className={styles.footerLink}>Mohamed Mahmoud Aly</Link>
+              <Link href="/about/mohamed-aly" className={styles.footerLink}>Mohamed Aly</Link>
               <Link href="/about/dr-yasser-aboutaha" className={styles.footerLink}>Dr. Yasser Aboutaha</Link>
               <Link href="/about/sulayman-al-murayr" className={styles.footerLink}>Dr. Sulayman Al-Murayr</Link>
               <Link href="/legal-islamic-compliance" className={styles.footerLink}>Legal & Islamic Compliance</Link>

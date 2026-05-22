@@ -423,12 +423,12 @@ export default function Home() {
 
             <div className={styles.expertCard}>
               <div className={styles.expertImageWrapper}>
-                <Image src="/Images/15.jpeg" width={300} height={300} alt="Mohamed Mahmoud Aly" className={styles.expertImage} />
+                <Image src="/Images/15.jpeg" width={300} height={300} alt="Mohamed Aly" className={styles.expertImage} />
               </div>
-              <h3 className={styles.expertName}>Mohamed Mahmoud Aly</h3>
+              <h3 className={styles.expertName}>Mohamed Aly</h3>
               <div className={styles.expertTitle}>Chief Financial Officer</div>
               <p className={styles.expertBio}>
-                Mohamed Mahmoud Aly is the CFO of Muslim Will, bringing 18+ years of expertise in corporate finance, strategic planning, M&A, and controllership. With a background bridging Computer Science and an MBA in Finance, he oversees the platform&apos;s fiscal governance and growth.
+                Mohamed Aly is the CFO of Muslim Will, bringing 18+ years of expertise in corporate finance, strategic planning, M&A, and controllership. With a background bridging Computer Science and an MBA in Finance, he oversees the platform&apos;s fiscal governance and growth.
               </p>
               <Link href="/about/mohamed-aly" className={styles.expertLink}>Read Full Bio &rarr;</Link>
             </div>

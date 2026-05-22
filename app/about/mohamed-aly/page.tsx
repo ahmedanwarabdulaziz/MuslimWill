@@ -5,8 +5,8 @@ import styles from '../landing-bio.module.css';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 
 export const metadata: Metadata = {
-  title: 'Mohamed Mahmoud Aly | Chief Financial Officer | Muslim Will',
-  description: 'Learn about Mohamed Mahmoud Aly, Chief Financial Officer at Muslim Will, bringing 18+ years of finance and tech leadership to scale Shariah-conscious estate planning.',
+  title: 'Mohamed Aly | Chief Financial Officer | Muslim Will',
+  description: 'Learn about Mohamed Aly, Chief Financial Officer at Muslim Will, bringing 18+ years of finance and tech leadership to scale Shariah-conscious estate planning.',
 };
 
 export default function MohamedAlyPage() {
@@ -14,13 +14,13 @@ export default function MohamedAlyPage() {
     <main style={{ backgroundColor: '#f5f8f6' }}>
       
       {/* 1. Custom Hero Section */}
-      <section className={styles.hero} aria-label="Mohamed Mahmoud Aly">
+      <section className={styles.hero} aria-label="Mohamed Aly">
         {/* Note: We use a standard img here to preserve the exact object-position logic from the CSS */}
-        <img className={styles.heroPhoto} src="/Images/14.jpeg" alt="Mohamed Mahmoud Aly" />
+        <img className={styles.heroPhoto} src="/Images/14.jpeg" alt="Mohamed Aly" />
         
         <div className={styles.heroInner}>
           <div className={`${styles.eyebrow} ${sharedStyles.fadeUp}`}>Chief Financial Officer | Muslim Will</div>
-          <h1 className={`${styles.heroTitle} ${sharedStyles.fadeUp} ${sharedStyles.delay1}`} style={{ color: '#ffffff' }}>Mohamed Mahmoud Aly</h1>
+          <h1 className={`${styles.heroTitle} ${sharedStyles.fadeUp} ${sharedStyles.delay1}`} style={{ color: '#ffffff' }}>Mohamed Aly</h1>
           <p className={`${styles.heroLede} ${sharedStyles.fadeUp} ${sharedStyles.delay2}`}>
             A seasoned executive bridging computer science and financial strategy, bringing 18+ years of expertise in corporate finance, M&A, and controllership to scale faith-conscious financial workflows.
           </p>
@@ -62,7 +62,7 @@ export default function MohamedAlyPage() {
                 <div className={styles.tag}>Biography</div>
                 <h2>Driving financial strategy and governance at the intersection of technology and compliance.</h2>
                 <p style={{ fontSize: '1.2rem', color: 'var(--color-text-main)', marginTop: '1rem' }}>
-                  Mohamed Mahmoud Aly is a multi-disciplinary finance leader with a unique background that spans software engineering, information technology, and corporate finance. With over 18 years of professional experience, he brings deep expertise in strategic planning, business partnering, management reform, mergers and acquisitions (M&A), audit, and controllership.
+                  Mohamed Aly is a multi-disciplinary finance leader with a unique background that spans software engineering, information technology, and corporate finance. With over 18 years of professional experience, he brings deep expertise in strategic planning, business partnering, management reform, mergers and acquisitions (M&A), audit, and controllership.
                 </p>
               </div>
 

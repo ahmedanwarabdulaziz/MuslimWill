@@ -113,13 +113,13 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Mohamed Mahmoud Aly */}
+            {/* Mohamed Aly */}
             <div className={styles.teamCard}>
               <div className={styles.teamImageWrapper}>
-                <Image src="/Images/15.jpeg" alt="Mohamed Mahmoud Aly" fill className={styles.teamImage} />
+                <Image src="/Images/15.jpeg" alt="Mohamed Aly" fill className={styles.teamImage} />
               </div>
               <div className={styles.teamHeader}>
-                <h3 className={styles.teamName}>Mohamed Mahmoud Aly</h3>
+                <h3 className={styles.teamName}>Mohamed Aly</h3>
                 <div className={styles.teamRole}>Chief Financial Officer</div>
               </div>
               <p className={styles.teamBioSummary}>
