@@ -47,6 +47,7 @@ export function Header() {
             <div className={styles.dropdownMenu}>
               <Link href="/about" className={styles.dropdownItem} onClick={() => trackNavigateClick('about', 'header_desktop')}>About Muslim Will</Link>
               <Link href="/about/ahmed-gohar" className={styles.dropdownItem} onClick={() => trackNavigateClick('ahmed_gohar_bio', 'header_desktop')}>Ahmed Gohar</Link>
+              <Link href="/about/mohamed-aly" className={styles.dropdownItem} onClick={() => trackNavigateClick('mohamed_aly_bio', 'header_desktop')}>Mohamed Mahmoud Aly</Link>
               <Link href="/about/dr-yasser-aboutaha" className={styles.dropdownItem} onClick={() => trackNavigateClick('dr_yasser_bio', 'header_desktop')}>Dr. Yasser Aboutaha</Link>
               <Link href="/about/sulayman-al-murayr" className={styles.dropdownItem} onClick={() => trackNavigateClick('dr_sulayman_bio', 'header_desktop')}>Dr. Sulayman Al-Murayr</Link>
               <Link href="/legal-islamic-compliance" className={styles.dropdownItem} onClick={() => trackNavigateClick('compliance', 'header_desktop')}>Legal & Islamic Compliance</Link>
@@ -116,6 +117,10 @@ export function Header() {
               trackNavigateClick('ahmed_gohar_bio', 'header_mobile');
               setMobileMenuOpen(false);
             }}>Ahmed Gohar</Link>
+            <Link href="/about/mohamed-aly" className={styles.mobileLink} onClick={() => {
+              trackNavigateClick('mohamed_aly_bio', 'header_mobile');
+              setMobileMenuOpen(false);
+            }}>Mohamed Mahmoud Aly</Link>
             <Link href="/about/dr-yasser-aboutaha" className={styles.mobileLink} onClick={() => {
               trackNavigateClick('dr_yasser_bio', 'header_mobile');
               setMobileMenuOpen(false);

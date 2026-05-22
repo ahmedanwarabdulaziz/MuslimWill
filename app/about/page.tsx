@@ -113,6 +113,23 @@ export default function AboutPage() {
               </div>
             </div>
 
+            {/* Mohamed Mahmoud Aly */}
+            <div className={styles.teamCard}>
+              <div className={styles.teamImageWrapper}>
+                <Image src="/Images/15.jpeg" alt="Mohamed Mahmoud Aly" fill className={styles.teamImage} />
+              </div>
+              <div className={styles.teamHeader}>
+                <h3 className={styles.teamName}>Mohamed Mahmoud Aly</h3>
+                <div className={styles.teamRole}>Chief Financial Officer</div>
+              </div>
+              <p className={styles.teamBioSummary}>
+                Mohamed brings over 18 years of corporate finance, strategic planning, controllership, and M&A experience. With a background bridging Computer Science and an MBA in Finance, he oversees the platform&apos;s fiscal strategy and operational growth.
+              </p>
+              <div className={styles.teamFooter}>
+                <TrackedButton variant="outline" size="md" href="/about/mohamed-aly" eventName="view_bio_aly_click" eventParams={{ location: 'about' }}>Read Biography</TrackedButton>
+              </div>
+            </div>
+
             {/* Dr. Yasser Aboutaha */}
             <div className={styles.teamCard}>
               <div className={styles.teamImageWrapper}>

@@ -8,6 +8,8 @@ const validInternalRoutes = new Set([
   '/about',
   '/about/ahmed-gohar',
   '/about/dr-yasser-aboutaha',
+  '/about/mohamed-aly',
+  '/about/sulayman-al-murayr',
   '/c/ahmed',
   '/charitable-legacy',
   '/contact',
