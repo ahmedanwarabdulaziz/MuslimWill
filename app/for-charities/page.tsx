@@ -49,7 +49,7 @@ export default function ForCharitiesPage() {
           </div>
 
           <div className={styles.splitPane}>
-            <div className={`${styles.paneHalf} ${styles.glossyGreenCard}`} style={{ padding: '3rem', border: 'none' }}>
+            <div className={`${styles.paneHalf} ${styles.glossyNavyCard}`} style={{ padding: '3rem', border: 'none' }}>
               <h3 className={styles.paneTitle}>The Opportunity</h3>
               <p className={styles.paneText}>
                 <strong>The 1/3 Wasiyyah.</strong>

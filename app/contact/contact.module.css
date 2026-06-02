@@ -46,7 +46,7 @@
 }
 
 .readyPane {
-  background: linear-gradient(135deg, rgba(0, 73, 38, 0.95), rgba(0, 45, 20, 1));
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(5, 22, 38, 1));
   color: white;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
@@ -92,7 +92,7 @@
 }
 
 .contactItem p, .contactItem a {
-  color: var(--color-green);
+  color: var(--color-navy);
   text-decoration: none;
   font-size: 1.05rem;
   font-weight: 600;

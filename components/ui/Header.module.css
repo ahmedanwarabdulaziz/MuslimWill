@@ -41,7 +41,7 @@
 }
 
 .navLink {
-  color: var(--color-green);
+  color: var(--color-navy);
   font-weight: 500;
   font-size: 0.95rem;
   text-decoration: none;
@@ -77,7 +77,7 @@
 }
 
 .dropdownTitle {
-  color: var(--color-green);
+  color: var(--color-navy);
   font-weight: 500;
   font-size: 0.95rem;
   display: flex;
@@ -125,7 +125,7 @@
 
 .dropdownItem:hover {
   background: var(--color-cream-light);
-  color: var(--color-green);
+  color: var(--color-navy);
 }
 
 .ctaGroup {
@@ -135,7 +135,7 @@
 }
 
 .secondaryCta {
-  color: var(--color-green);
+  color: var(--color-navy);
   font-weight: 600;
   font-size: 0.95rem;
   text-decoration: none;
@@ -151,7 +151,7 @@
   display: none;
   background: none;
   border: none;
-  color: var(--color-green);
+  color: var(--color-navy);
   cursor: pointer;
   padding: 0.5rem;
 }
@@ -193,7 +193,7 @@
     font-family: var(--font-heading);
     font-size: 1.25rem;
     font-weight: 500;
-    color: var(--color-green);
+    color: var(--color-navy);
     text-decoration: none;
     display: block;
     border-bottom: 1px solid var(--color-border);

@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--color-green);
+  background-color: var(--color-navy);
   background-image: linear-gradient(rgba(0, 73, 38, 0.75), rgba(0, 73, 38, 0.85)), url("/Images/07.jpeg");
   background-size: cover;
   background-position: center;

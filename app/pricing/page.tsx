@@ -289,7 +289,7 @@ export default function PricingPage() {
           
           <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
             <div style={{ display: 'inline-block', padding: '1rem 1.5rem', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
-              <span style={{ fontWeight: 600, color: 'var(--color-text-main)' }}>✓ Includes scholar-reviewed inheritance considerations.</span> <Link href="/about/sulayman-al-murayr" style={{ color: 'var(--color-green)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '2px', marginLeft: '0.5rem' }}>Read scholar bio &rarr;</Link>
+              <span style={{ fontWeight: 600, color: 'var(--color-text-main)' }}>✓ Includes scholar-reviewed inheritance considerations.</span> <Link href="/about/sulayman-al-murayr" style={{ color: 'var(--color-navy)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '2px', marginLeft: '0.5rem' }}>Read scholar bio &rarr;</Link>
             </div>
           </div>
           
@@ -319,7 +319,7 @@ export default function PricingPage() {
                   Families often want enough clarity to stop delaying and move their wishes from intention into written, reviewable documents.
                 </div>
                 <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '1.5rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-green)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-navy)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
                     AM
                   </div>
                   <div>
@@ -339,7 +339,7 @@ export default function PricingPage() {
                   Families also want a process that feels guided and manageable, especially when document review, witnessing, and final steps are unfamiliar.
                 </div>
                 <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '1.5rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-green)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
+                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-navy)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
                     AM
                   </div>
                   <div>

@@ -76,7 +76,7 @@ export default function FAQPage() {
     },
     {
       question: "Who reviews the Islamic inheritance structure?",
-      answer: <>The standard inheritance logic used by the platform is reviewed by qualified Islamic scholars, including our primary Islamic Review Authority, <Link href="/about/sulayman-al-murayr" style={{color: 'var(--color-green)', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 500}}>Dr. Sulayman Al-Murayr</Link>, to ensure alignment with general Shariah principles.</>
+      answer: <>The standard inheritance logic used by the platform is reviewed by qualified Islamic scholars, including our primary Islamic Review Authority, <Link href="/about/sulayman-al-murayr" style={{color: 'var(--color-navy)', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 500}}>Dr. Sulayman Al-Murayr</Link>, to ensure alignment with general Shariah principles.</>
     },
     {
       question: "Do you issue personal fatwas?",

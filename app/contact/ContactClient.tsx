@@ -66,7 +66,7 @@ export default function ContactClient() {
                 If you are ready to begin, you can start your will today.
               </div>
               <div>
-                <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="md" eventName="start_will_pane_click" eventParams={{ location: 'contact_page' }} style={{ backgroundColor: 'white', color: 'var(--color-green)' }}>
+                <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="md" eventName="start_will_pane_click" eventParams={{ location: 'contact_page' }} style={{ backgroundColor: 'white', color: 'var(--color-navy)' }}>
                   Start Your Will
                 </TrackedButton>
               </div>

@@ -119,7 +119,7 @@ export default function LegalCompliancePage() {
                 <strong>No Tax Advice:</strong> We do not provide accounting or tax optimization strategies.
               </p>
             </div>
-            <div className={`${styles.paneHalf} ${styles.glossyGreenCard}`} style={{ padding: '3rem', border: 'none' }}>
+            <div className={`${styles.paneHalf} ${styles.glossyNavyCard}`} style={{ padding: '3rem', border: 'none' }}>
               <h3 className={styles.paneTitle}>What Muslim Will IS</h3>
               <p className={styles.paneText}>
                 <strong>A Comprehensive Pathway:</strong> We are a streamlined, highly-secure process designed to take the friction out of creating a legally sound, Islamically conscious will.

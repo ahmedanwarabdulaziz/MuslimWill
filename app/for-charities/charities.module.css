@@ -16,7 +16,7 @@
 }
 
 .policyItem:nth-child(2) {
-  border-top-color: var(--color-green);
+  border-top-color: var(--color-navy);
 }
 
 .policyItem:nth-child(3) {
@@ -90,17 +90,17 @@
 }
 
 /* Glossy Action Pane */
-.glossyGreenCard {
-  background: linear-gradient(135deg, rgba(0, 73, 38, 0.95), rgba(0, 45, 20, 1));
+.glossyNavyCard {
+  background: linear-gradient(135deg, rgba(10, 37, 64, 0.95), rgba(5, 22, 38, 1));
   color: white;
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
-.glossyGreenCard .paneTitle {
+.glossyNavyCard .paneTitle {
   color: white;
 }
 
-.glossyGreenCard .paneText {
+.glossyNavyCard .paneText {
   color: rgba(255, 255, 255, 0.85);
 }
 

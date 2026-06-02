@@ -1,7 +1,7 @@
 :root {
   /* Brand Colors */
-  --color-green: #004926;
-  --color-green-light: #006034;
+  --color-navy: #0A2540;
+  --color-navy-light: #153A61;
   --color-cream: #eeeedd;
   --color-cream-light: #f5f5ee;
   --color-gold: #d4af37;
@@ -83,7 +83,7 @@ a {
 
 /* Base Typography */
 h1, h2, h3, h4, h5, h6 {
-  color: var(--color-green);
+  color: var(--color-navy);
   line-height: 1.2;
   font-weight: 600;
   letter-spacing: -0.02em;

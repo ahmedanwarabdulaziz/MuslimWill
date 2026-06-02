@@ -1,6 +1,6 @@
 .hero {
   background:
-    linear-gradient(180deg, rgba(0, 73, 38, 0.97) 0%, rgba(0, 73, 38, 0.94) 100%);
+    linear-gradient(180deg, rgba(10, 37, 64, 0.97) 0%, rgba(10, 37, 64, 0.94) 100%);
   color: #fff;
   padding: 5.5rem 0 4rem;
 }
@@ -44,8 +44,8 @@
 
 .band {
   background: var(--color-cream-light);
-  border-top: 1px solid rgba(0, 73, 38, 0.08);
-  border-bottom: 1px solid rgba(0, 73, 38, 0.08);
+  border-top: 1px solid rgba(10, 37, 64, 0.08);
+  border-bottom: 1px solid rgba(10, 37, 64, 0.08);
 }
 
 .bandInner {
@@ -69,7 +69,7 @@
 }
 
 .bandList a {
-  color: var(--color-green);
+  color: var(--color-navy);
   font-weight: 600;
 }
 
@@ -123,7 +123,7 @@
 }
 
 .contactBox {
-  border-top: 1px solid rgba(0, 73, 38, 0.12);
+  border-top: 1px solid rgba(10, 37, 64, 0.12);
   padding-top: 1.5rem;
 }
 
@@ -135,11 +135,11 @@
 }
 
 .contactList strong {
-  color: var(--color-green);
+  color: var(--color-navy);
 }
 
 .contactList a {
-  color: var(--color-green);
+  color: var(--color-navy);
 }
 
 @media (max-width: 900px) {

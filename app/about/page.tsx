@@ -77,7 +77,7 @@ export default function AboutPage() {
         <div className={sharedStyles.container}>
           <div style={{ background: 'white', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-lg)', padding: '4rem', textAlign: 'center', maxWidth: '900px', margin: '0 auto', boxShadow: '0 10px 30px rgba(0,0,0,0.02)' }}>
             <div style={{ color: 'var(--color-gold)', fontFamily: 'var(--font-heading)', letterSpacing: '0.1em', textTransform: 'uppercase', marginBottom: '1rem', fontWeight: 700, fontSize: '0.85rem' }}>The Technology Engine</div>
-            <h3 style={{ fontSize: '2.25rem', fontFamily: 'var(--font-heading)', color: 'var(--color-green)', marginBottom: '1.5rem', fontWeight: 700 }}>Powered by Patriva</h3>
+            <h3 style={{ fontSize: '2.25rem', fontFamily: 'var(--font-heading)', color: 'var(--color-navy)', marginBottom: '1.5rem', fontWeight: 700 }}>Powered by Patriva</h3>
             <p style={{ fontSize: '1.1rem', color: 'var(--color-text-main)', lineHeight: '1.6', margin: '0 auto', maxWidth: '700px' }}>
               Muslim Will is powered by <strong>Patriva</strong>, a structured document generation and workflow platform. Patriva builds systems that sit at the intersection of software architecture and regulated real-world processes. It handles the secure intake, logic structuring, and document engineering so that legal professionals and Islamic scholars can focus purely on review and execution without system friction.
             </p>

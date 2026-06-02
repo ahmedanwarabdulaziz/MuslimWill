@@ -25,7 +25,7 @@ export default function AhmedGoharPage() {
             Technology founder on a mission to build structured, scalable systems for Shariah-conscious and legally enforceable estate planning across the West.
           </p>
           <div className={`${styles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'ahmed_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-green)' }}>
+             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'ahmed_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
                Start Your Will
              </TrackedButton>
              <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/about" eventName="back_to_leadership" eventParams={{ location: 'ahmed_landing' }}>

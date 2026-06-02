@@ -29,7 +29,7 @@ export default function HowItWorksPage() {
     },
     {
       question: "Who reviews the Islamic inheritance structure?",
-      answer: <>The inheritance structure is reviewed by qualified Islamic scholars, including our primary Islamic Review Authority, <Link href="/about/sulayman-al-murayr" style={{color: 'var(--color-green)', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 500}}>Dr. Sulayman Al-Murayr</Link>, for inheritance considerations. This supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</>
+      answer: <>The inheritance structure is reviewed by qualified Islamic scholars, including our primary Islamic Review Authority, <Link href="/about/sulayman-al-murayr" style={{color: 'var(--color-navy)', textDecoration: 'underline', textUnderlineOffset: '2px', fontWeight: 500}}>Dr. Sulayman Al-Murayr</Link>, for inheritance considerations. This supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</>
     },
     {
       question: "Is the legal workflow Ontario-specific?",
@@ -225,7 +225,7 @@ export default function HowItWorksPage() {
           <div className={styles.ledgerWrapper} style={{ marginTop: 0, borderTop: 'none' }}>
             <div className={styles.ledgerRow}>
                <div className={styles.ledgerColLeft}>
-                 <div className={`${styles.ledgerTitleHeader} ${styles.glossyGreenCard}`}>
+                 <div className={`${styles.ledgerTitleHeader} ${styles.glossyNavyCard}`}>
                    <h2 className={styles.ledgerTitle}>Every package includes the four core documents.</h2>
                    <p className={styles.ledgerIntro}>
                      Muslim Will is not only a single will document. Every package includes a complete estate protection set designed to support your family while you are alive and after you pass.
@@ -284,7 +284,7 @@ export default function HowItWorksPage() {
               <p className={styles.paneText}>The individual package is for one person and includes one full 4-document estate protection package.</p>
             </div>
             <div className={styles.paneHalf}>
-              <h3 className={`${styles.paneTitle} ${styles.green}`}>The Couples Workflow</h3>
+              <h3 className={`${styles.paneTitle} ${styles.navy}`}>The Couples Workflow</h3>
               <p className={styles.paneText}>The couples package is for spouses who want to complete their planning together. Each spouse still receives individual documents. Shared family information can be coordinated where appropriate, but spouses should not be presented as receiving one joint will.</p>
               <TrackedButton variant="outline" size="md" href="/pricing" eventName="view_pricing_couples_click" eventParams={{ location: 'how_it_works' }}>View Couples Pricing</TrackedButton>
             </div>

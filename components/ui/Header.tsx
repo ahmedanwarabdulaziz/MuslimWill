@@ -25,7 +25,7 @@ export function Header() {
   }, []);
 
   return (
-    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`}>
+    <header className={`${styles.header} ${isScrolled ? styles.scrolled : ''}`} suppressHydrationWarning>
       <div className={styles.container}>
         {/* Logo */}
         <Link href="/" className={styles.logoArea}>
@@ -44,10 +44,10 @@ export function Header() {
               About
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
             </span>
-            <div className={styles.dropdownMenu}>
+            <div className={styles.dropdownMenu} suppressHydrationWarning>
               <Link href="/about" className={styles.dropdownItem} onClick={() => trackNavigateClick('about', 'header_desktop')}>About Muslim Will</Link>
               <Link href="/about/ahmed-gohar" className={styles.dropdownItem} onClick={() => trackNavigateClick('ahmed_gohar_bio', 'header_desktop')}>Ahmed Gohar</Link>
-              <Link href="/about/mohamed-aly" className={styles.dropdownItem} onClick={() => trackNavigateClick('mohamed_aly_bio', 'header_desktop')}>Mohamed Aly</Link>
+              <Link href="/about/mohamed-ali" className={styles.dropdownItem} onClick={() => trackNavigateClick('mohamed_bio', 'header_desktop')}>Mohamed Aly</Link>
               <Link href="/about/dr-yasser-aboutaha" className={styles.dropdownItem} onClick={() => trackNavigateClick('dr_yasser_bio', 'header_desktop')}>Dr. Yasser Aboutaha</Link>
               <Link href="/about/sulayman-al-murayr" className={styles.dropdownItem} onClick={() => trackNavigateClick('dr_sulayman_bio', 'header_desktop')}>Dr. Sulayman Al-Murayr</Link>
               <Link href="/legal-islamic-compliance" className={styles.dropdownItem} onClick={() => trackNavigateClick('compliance', 'header_desktop')}>Legal & Islamic Compliance</Link>
@@ -117,8 +117,8 @@ export function Header() {
               trackNavigateClick('ahmed_gohar_bio', 'header_mobile');
               setMobileMenuOpen(false);
             }}>Ahmed Gohar</Link>
-            <Link href="/about/mohamed-aly" className={styles.mobileLink} onClick={() => {
-              trackNavigateClick('mohamed_aly_bio', 'header_mobile');
+            <Link href="/about/mohamed-ali" className={styles.mobileLink} onClick={() => {
+              trackNavigateClick('mohamed_bio', 'header_mobile');
               setMobileMenuOpen(false);
             }}>Mohamed Aly</Link>
             <Link href="/about/dr-yasser-aboutaha" className={styles.mobileLink} onClick={() => {

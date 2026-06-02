@@ -7,7 +7,7 @@
   align-items: flex-end;
   overflow: hidden;
   color: #fff;
-  background: var(--color-green);
+  background: var(--color-navy);
   margin-top: -80px; /* offset the header */
 }
 
@@ -163,7 +163,7 @@
 
 .detailHead {
   padding: 24px;
-  background: var(--color-green);
+  background: var(--color-navy);
   color: #fff;
 }
 
@@ -241,8 +241,8 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 20px;
-  background: rgba(0, 73, 38, 0.08); /* fallback */
-  color: var(--color-green);
+  background: rgba(10, 37, 64, 0.08); /* fallback */
+  color: var(--color-navy);
   align-self: flex-start;
 }
 

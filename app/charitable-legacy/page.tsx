@@ -90,7 +90,7 @@ export default function CharitableLegacyPage() {
                 Your charitable intentions cannot encroach upon this protected majority.
               </p>
             </div>
-            <div className={`${styles.paneHalf} ${styles.glossyGreenCard}`} style={{ padding: '3rem', border: 'none' }}>
+            <div className={`${styles.paneHalf} ${styles.glossyNavyCard}`} style={{ padding: '3rem', border: 'none' }}>
               <h3 className={styles.paneTitle} style={{ color: 'white' }}>The Permissible Bequest (Wasiyyah)</h3>
               <p className={styles.paneText} style={{ color: 'rgba(255,255,255,0.85)' }}>
                 You are granted explicit permission to allocate up to <strong>one-third (33.3%)</strong> of your estate to any individuals who do not inherit automatically, or to charitable causes of your choice.
@@ -172,7 +172,7 @@ export default function CharitableLegacyPage() {
                  We partner with prominent foundations and masajid to help their donors structure legacy giving responsibly. Muslim Will provides a dedicated pathway for your community to fulfill their Islamic will obligations without transferring any legal or advisory risk to your organization.
                </p>
                <div>
-                 <TrackedButton variant="primary" size="lg" style={{ backgroundColor: 'white', color: 'var(--color-green)' }} href="/for-charities" eventName="view_charity_partnerships" eventParams={{ location: 'charitable_legacy' }}>
+                 <TrackedButton variant="primary" size="lg" style={{ backgroundColor: 'white', color: 'var(--color-navy)' }} href="/for-charities" eventName="view_charity_partnerships" eventParams={{ location: 'charitable_legacy' }}>
                    Request Partnership Info
                  </TrackedButton>
                </div>

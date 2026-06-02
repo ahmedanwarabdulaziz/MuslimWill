@@ -25,7 +25,7 @@ export default function MohamedAlyPage() {
             A seasoned executive bridging computer science and financial strategy, bringing 18+ years of expertise in corporate finance, M&A, and controllership to scale faith-conscious financial workflows.
           </p>
           <div className={`${styles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'mohamed_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-green)' }}>
+             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'mohamed_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
                 Start Your Will
              </TrackedButton>
              <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/about" eventName="back_to_leadership" eventParams={{ location: 'mohamed_landing' }}>

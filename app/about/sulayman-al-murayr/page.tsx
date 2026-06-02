@@ -24,7 +24,7 @@ export default function SulaymanAlMurayrPage() {
             Anchoring the faith-conscious trust layer and scholarly review for Muslim Will's inheritance framework.
           </p>
           <div className={`${styles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'sulayman_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-green)' }}>
+             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'sulayman_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
                Start Your Will
              </TrackedButton>
              <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/legal-islamic-compliance" eventName="back_to_compliance" eventParams={{ location: 'sulayman_landing' }}>

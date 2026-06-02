@@ -17,17 +17,17 @@
 
 /* Variants */
 .primary {
-  background-color: var(--color-green);
+  background-color: var(--color-navy);
   color: var(--color-surface);
 }
 .primary:hover {
-  background-color: var(--color-green-light);
+  background-color: var(--color-navy-light);
   box-shadow: var(--shadow-sm);
 }
 
 .secondary {
   background-color: var(--color-gold);
-  color: var(--color-green);
+  color: var(--color-navy);
   font-weight: 600;
 }
 .secondary:hover {
@@ -37,8 +37,8 @@
 
 .outline {
   background-color: transparent;
-  color: var(--color-green);
-  border: 1px solid var(--color-green);
+  color: var(--color-navy);
+  border: 1px solid var(--color-navy);
 }
 .outline:hover {
   background-color: var(--color-surface);
@@ -52,7 +52,7 @@
 }
 .outlineLight:hover {
   background-color: var(--color-surface);
-  color: var(--color-green);
+  color: var(--color-navy);
   box-shadow: var(--shadow-sm);
 }
 
