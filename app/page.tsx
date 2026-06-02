@@ -23,8 +23,11 @@ export default function Home() {
         <div className={`${styles.container} ${styles.heroContent}`}>
           <div className={styles.heroTextWrapper}>
              <h1 className={`${styles.heroH1} ${styles.fadeUp} ${styles.delay1}`}>
-               If something happened to you today, would your family know what to do?
+               Fear of leaving chaos
              </h1>
+             <h2 className={`${styles.heroSubH1} ${styles.fadeUp} ${styles.delay1}`}>
+               If something happened to you today, would your family know what to do?
+             </h2>
              <p className={`${styles.heroCopy} ${styles.fadeUp} ${styles.delay2}`}>
                Muslim Will gives you a complete Islamic will and a private secure vault — reviewed by verified scholars and compliant with Canadian law — so your family is never left without answers.
              </p>
