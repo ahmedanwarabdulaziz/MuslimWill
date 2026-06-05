@@ -630,7 +630,7 @@
 
 /* CTA Block */
 .ctaBox {
-  background: linear-gradient(145deg, rgba(23, 71, 46, 0.85) 0%, rgba(10, 46, 26, 0.95) 100%), url('/Images/06.jpeg');
+  background: linear-gradient(145deg, rgba(10, 37, 64, 0.85) 0%, rgba(10, 37, 64, 0.95) 100%), url('/Images/06.jpeg');
   background-size: cover;
   background-position: center 20%;
   color: var(--color-surface);
@@ -1192,6 +1192,20 @@
   border-color: rgba(212, 175, 55, 0.4);
 }
 
+.branchHeaderContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.branchNumberStylish {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1;
+}
+
 .branchIconWrapper {
   width: 56px;
   height: 56px;
@@ -1201,7 +1215,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
   box-shadow: 0 8px 16px rgba(10, 37, 64, 0.2);
 }
 
