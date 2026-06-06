@@ -1,207 +1,287 @@
-import React from 'react';
 import type { Metadata } from 'next';
-import sharedStyles from '../page.module.css';
-import styles from './charitable-legacy.module.css';
+import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
-import { Accordion } from '@/components/ui/Accordion';
+import styles from './page.module.css';
+
+const siteUrl = 'https://themuslimwill.com';
+const pageTitle = 'Charitable Legacy in an Islamic Will | Sadaqah Jariyah | The Muslim Will';
+const pageDescription = 'Document your charitable intentions as a legally structured bequest in your Islamic will — Sadaqah Jariyah, Waqf, and the 1/3 rule, built into The Bridge from $5.99/month.';
 
 export const metadata: Metadata = {
-  title: 'Charitable Legacy In An Islamic Will | Muslim Will Canada',
-  description: 'Learn how charitable bequests can fit within Islamic will planning in Canada while keeping family responsibility central and intentions clearly documented.',
-  openGraph: {
-    title: 'Charitable Legacy In An Islamic Will | Muslim Will Canada',
-    description: 'Learn how charitable bequests can fit within Islamic will planning in Canada while keeping family responsibility central and intentions clearly documented.',
-  }
+  title: pageTitle,
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/charitable-legacy` },
 };
 
 export default function CharitableLegacyPage() {
-  
-  const faqs = [
-    {
-      question: "Can I give charity through my Islamic will?",
-      answer: "Yes. An Islamic will allows you to direct up to one-third (1/3) of your estate to charitable causes (Sadaqah Jariyah) or individuals who do not automatically inherit under Islamic inheritance structures."
-    },
-    {
-      question: "What is the 1/3 rule in an Islamic will?",
-      answer: "The 'Wasiyyah' (permissible bequest) rule allows you to leave a maximum of one-third of your estate to anyone who is not an automatic heir, including charities, community organizations, or distant relatives. The remaining two-rdhirs is secured for your primary family and heirs."
-    },
-    {
-      question: "Can charitable giving sit alongside family responsibility?",
-      answer: "Absolutely. The very structure of the Wasiyyah (up to 1/3) ensures that your charitable legacy never competes with or deprives your immediate family members of what they are entitled to."
-    },
-    {
-      question: "What happens if my estate value changes?",
-      answer: "Charitable bequests are typically stated as a percentage of your total estate (up to 33.3%) rather than a fixed dollar amount, ensuring that the charity receives a proportionately fair amount regardless of how your estate value changes over time."
-    },
-    {
-      question: "Can I change the charity later?",
-      answer: "Yes. You can update your will to change your selected charity, adjust the percentage, or remove the bequest entirely if your financial circumstances change."
-    }
-  ];
-
   return (
-    <main>
-      {/* 1. Hero Section (Patriva Style) */}
-      <section className={`${sharedStyles.section} ${sharedStyles.heroSection}`}>
-        <div className={`${sharedStyles.container} ${sharedStyles.heroContent}`}>
-          <div className={sharedStyles.heroTextWrapper}>
-             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '1rem' }}>
-               <div className={`${sharedStyles.heroEyebrow} ${sharedStyles.fadeUp}`} style={{ marginBottom: 0 }}>
-                 Charitable Legacy
-               </div>
-             </div>
-             
-             <h1 className={`${sharedStyles.heroH1} ${sharedStyles.fadeUp} ${sharedStyles.delay1}`}>
-               Legacy giving does not need to compete with family responsibility.
-             </h1>
-             
-             <p className={`${sharedStyles.heroCopy} ${sharedStyles.fadeUp} ${sharedStyles.delay2}`}>
-               Learn how charitable bequests can fit seamlessly within your Islamic will planning in Canada. Support ongoing charity (Sadaqah Jariyah) while keeping your family obligations fully secure.
-             </p>
-             
-             <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`} style={{ marginBottom: '1.5rem' }}>
-               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'charitable_legacy' }}>Start Your Will</TrackedButton>
-               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_hero_click" eventParams={{ location: 'charitable_legacy' }}>View Pricing</TrackedButton>
-             </div>
-
-             <div className={`${sharedStyles.fadeUp} ${sharedStyles.delay4}`} style={{ fontSize: '0.85rem', opacity: 0.8, maxWidth: '600px', lineHeight: 1.5, marginTop: '2rem' }}>
-               "When a person dies, their deeds come to an end except for three: Sadaqah Jariyah (a continuous charity), knowledge from which benefit is gained, or a righteous child who prays for them." 
-             </div>
+    <div className={styles.main}>
+      {/* ── HERO SECTION ── */}
+      <section className={styles.heroSection}>
+        <div className={styles.container}>
+          <div className={styles.heroContent}>
+            <div className={styles.heroEyebrow}>My Bridge › Charitable Legacy</div>
+            <h1 className={styles.heroH1}>
+              Legacy giving does not need to compete with family responsibility.
+            </h1>
+            <p className={styles.heroSub}>
+              Islamic inheritance law already made room for your generosity. Up to one third of your estate can be directed to the causes you care about — while your family&apos;s shares remain protected. The Muslim Will helps you document that intention clearly, correctly, and as a permanent part of your estate.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* 2. Family First vs The 1/3 Rule Split */}
-      <section className={sharedStyles.section}>
-        <div className={sharedStyles.container}>
-          <div className={sharedStyles.sectionHeader} style={{ maxWidth: '800px', margin: '0 auto' }}>
-            <h2 className={sharedStyles.sectionH2} style={{ textAlign: 'center' }}>The framework for responsible giving.</h2>
-            <p className={sharedStyles.sectionIntro} style={{ textAlign: 'center' }}>
-              Often, individuals feel they must choose between securing their family's future and leaving a meaningful charitable legacy. The Islamic framework explicitly balances both.
+      {/* ── TRUST ANCHORS ── */}
+      <div className={styles.trustBar}>
+        <div className={styles.trustAnchors}>
+          <div className={styles.trustAnchor}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Built around the Islamic 1/3 bequest framework
+          </div>
+          <div className={styles.trustAnchor}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Family inheritance shares remain fully protected
+          </div>
+          <div className={styles.trustAnchor}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Sadaqah Jariyah documented and legally structured
+          </div>
+          <div className={styles.trustAnchor}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Stored securely in your Vault — your intention protected
+          </div>
+        </div>
+      </div>
+
+      {/* ── SECTION 1: How Charitable Legacy Works in Islamic Law ── */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeaderCenter}>
+            <h2 className={styles.sectionH2}>Islam already made room for your generosity</h2>
+            <p className={styles.sectionIntro}>
+              You do not have to choose between your family and your faith. Islamic inheritance law defines both — and keeps them separate.
             </p>
           </div>
 
-          <div className={styles.splitPane}>
-            <div className={styles.paneHalf}>
-              <h3 className={styles.paneTitle}>Family-First Principle</h3>
-              <p className={styles.paneText}>
-                The core priority of an Islamic will is to ensure that your dependents and primary heirs are not left unsupported. Two-thirds of your estate (or more) is rigidly protected by Islamic inheritance mandates intended to distribute wealth fairly among your spouse, children, and parents.
-                <br/><br/>
-                Your charitable intentions cannot encroach upon this protected majority.
+          <div className={styles.grid4}>
+            <div className={styles.featureCardPremium}>
+              <div className={styles.featureIconWrapper}>⚖️</div>
+              <h3 className={styles.featureTitle}>The 1/3 Rule</h3>
+              <p className={styles.featureDesc}>
+                Under Islamic inheritance principles, up to one third of your estate may be directed outside the Faraid shares — to charitable causes, non-heirs, or specific purposes you have chosen. Your family&apos;s shares are calculated from the remaining two thirds. The two intentions do not conflict. They coexist by design.
               </p>
             </div>
-            <div className={`${styles.paneHalf} ${styles.glossyNavyCard}`} style={{ padding: '3rem', border: 'none' }}>
-              <h3 className={styles.paneTitle} style={{ color: 'white' }}>The Permissible Bequest (Wasiyyah)</h3>
-              <p className={styles.paneText} style={{ color: 'rgba(255,255,255,0.85)' }}>
-                You are granted explicit permission to allocate up to <strong>one-third (33.3%)</strong> of your estate to any individuals who do not inherit automatically, or to charitable causes of your choice.
-                <br/><br/>
-                This is your opportunity to fund masajid, orphanages, water projects, or local community initiatives through an ongoing charity (Sadaqah Jariyah) that benefits you after passing.
+            <div className={styles.featureCardPremium}>
+              <div className={styles.featureIconWrapper}>🛡️</div>
+              <h3 className={styles.featureTitle}>Faraid Stays Protected</h3>
+              <p className={styles.featureDesc}>
+                Your heirs receive what Islamic law designates for them. The charitable bequest does not reduce those shares — it sits alongside them, within the permitted boundary. Your family is not diminished by your generosity.
+              </p>
+            </div>
+            <div className={styles.featureCardPremium}>
+              <div className={styles.featureIconWrapper}>💧</div>
+              <h3 className={styles.featureTitle}>Sadaqah Jariyah</h3>
+              <p className={styles.featureDesc}>
+                The most valued form of ongoing charity in Islam — knowledge shared, a well dug, a child taught — continues to benefit the giver even after death. A charitable bequest in your will can fund causes that carry on in your name, with the intention documented and the direction clear.
+              </p>
+            </div>
+            <div className={styles.featureCardPremium}>
+              <div className={styles.featureIconWrapper}>🏛️</div>
+              <h3 className={styles.featureTitle}>Waqf (Islamic Endowment)</h3>
+              <p className={styles.featureDesc}>
+                For those who want to establish a permanent charitable endowment, a Waqf designation can be included in your estate plan — directing assets toward an ongoing charitable purpose in perpetuity.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 3. Sadaqah Jariyah Examples (Ledger) */}
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionLight}`}>
-        <div className={sharedStyles.container}>
-          <div className={styles.ledgerWrapper} style={{ marginTop: 0, borderTop: 'none' }}>
-            <div className={styles.ledgerRow}>
-               <div className={styles.ledgerColLeft}>
-                 <div className={styles.ledgerTitleHeader}>
-                   <h2 className={styles.ledgerTitle}>Examples of Charitable Intention</h2>
-                   <p className={styles.ledgerIntro}>
-                     Our guided workflow helps you document your exact charitable objectives clearly within the legal scope of the Wasiyyah.
-                   </p>
-                 </div>
-               </div>
-               <div className={styles.ledgerColRight}>
-                  <div className={styles.ledgerItem}>
-                    <div className={styles.ledgerItemNum}>01</div>
-                    <div className={styles.ledgerItemContent}>
-                      <h4 className={styles.ledgerItemTitle}>Educational Endowments</h4>
-                      <p className={styles.ledgerItemDesc}>Allocate a percentage of your estate to fund scholarships, Islamic schools, or institutions that spread beneficial knowledge.</p>
-                    </div>
-                  </div>
-                  <div className={styles.ledgerItem}>
-                    <div className={styles.ledgerItemNum}>02</div>
-                    <div className={styles.ledgerItemContent}>
-                      <h4 className={styles.ledgerItemTitle}>Community Development</h4>
-                      <p className={styles.ledgerItemDesc}>Direct funds toward the construction or maintenance of a local Masjid, ensuring continuous reward for every prayer performed.</p>
-                    </div>
-                  </div>
-                  <div className={styles.ledgerItem}>
-                    <div className={styles.ledgerItemNum}>03</div>
-                    <div className={styles.ledgerItemContent}>
-                      <h4 className={styles.ledgerItemTitle}>Emergency Relief &amp; Healthcare</h4>
-                      <p className={styles.ledgerItemDesc}>Support orphan sponsorships, medical clinics, or the construction of sustainable water wells in developing regions.</p>
-                    </div>
-                  </div>
-               </div>
+      {/* ── SECTION 2: Why Documentation Matters ── */}
+      <section className={styles.section} style={{ backgroundColor: 'var(--color-cream-light)' }}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeaderCenter} style={{ maxWidth: '900px' }}>
+            <h2 className={styles.sectionH2}>A good intention without a document is just a hope.</h2>
+            <div style={{ textAlign: 'left', marginTop: '2.5rem' }}>
+              <p className={styles.sectionIntro} style={{ marginBottom: '1.5rem', color: 'var(--color-navy)' }}>
+                Many Muslim families intend to leave something for charity. Few document it clearly enough for an executor to act on it. Without a written, properly structured charitable bequest in your will, your intention may not survive the estate administration process — regardless of how clearly you expressed it in life.
+              </p>
+              <p className={styles.sectionIntro} style={{ color: 'var(--color-navy)' }}>
+                The Muslim Will builds your charitable bequest into the legal structure of your will — not as a note in the margin, but as a documented, enforceable designation. Your executor knows exactly what to do, and your intention stands.
+              </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 4. FAQ */}
-      <section className={`${sharedStyles.section}`} id="faq">
-        <div className={sharedStyles.container} style={{ maxWidth: '800px' }}>
-          <div className={sharedStyles.sectionHeader}>
-            <h2 className={sharedStyles.sectionH2}>Charitable bequest questions, answered.</h2>
-          </div>
-          
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <Accordion items={faqs.map(faq => ({
-              question: faq.question,
-              answer: <p style={{ margin: 0 }}>{faq.answer}</p>
-            }))} />
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Partnership Bridge */}
-      <section className={sharedStyles.section}>
-        <div className={sharedStyles.container}>
-          <div className={styles.partnershipBanner}>
-            <div className={styles.partnershipLeft}>
-               <span className={styles.partnershipEyebrow}>For Organizations</span>
-               <h3>Are you a charity or community organization?</h3>
-            </div>
-            <div className={styles.partnershipRight}>
-               <p>
-                 We partner with prominent foundations and masajid to help their donors structure legacy giving responsibly. Muslim Will provides a dedicated pathway for your community to fulfill their Islamic will obligations without transferring any legal or advisory risk to your organization.
-               </p>
-               <div>
-                 <TrackedButton variant="primary" size="lg" style={{ backgroundColor: 'white', color: 'var(--color-navy)' }} href="/for-charities" eventName="view_charity_partnerships" eventParams={{ location: 'charitable_legacy' }}>
-                   Request Partnership Info
-                 </TrackedButton>
-               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 6. Final CTA */}
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionDark}`} style={{ padding: '6rem 0' }}>
-        <div className={sharedStyles.container}>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center' }}>
-            <h2 style={{ fontSize: '3rem', fontFamily: 'var(--font-heading)', color: 'var(--color-gold)', marginBottom: '1.5rem', lineHeight: '1.1', fontWeight: 700 }}>
-              Protect your family and leave room for lasting impact.
-            </h2>
-            <p style={{ fontSize: '1.25rem', color: 'rgba(255,255,255,0.9)', marginBottom: '1rem', lineHeight: '1.6' }}>
-              Document your charitable intentions with clarity, while keeping family care at the heart of your planning.
+      {/* ── SECTION 3: The Vault ── */}
+      <section className={`${styles.section} ${styles.vaultSection}`}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeaderCenter}>
+            <h2 className={styles.sectionH2}>Your will documents the gift. Your Vault carries the meaning behind it.</h2>
+            <p className={styles.sectionIntro}>
+              A legal document can say who receives what. It cannot carry the story of why. The Vault lets you go further.
             </p>
-            <div style={{ fontSize: '1.125rem', color: 'rgba(255,255,255,0.8)', marginBottom: '2rem' }}>
-              A clearer legacy begins with a written plan.
+          </div>
+
+          <div className={styles.vaultGrid}>
+            <div className={styles.vaultCardPremium}>
+              <h3 className={styles.vaultItemTitle}>Your Charitable Designation, Secured</h3>
+              <p className={styles.vaultItemDesc}>
+                Your chosen charity, the amount or percentage, and any specific instructions are stored in your Vault — so your executor has clarity at the moment it matters most, alongside the rest of your estate records.
+              </p>
             </div>
-            <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
-              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'charitable_legacy' }}>Start Your Will</TrackedButton>
-              <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/pricing" eventName="view_pricing_footer_click" eventParams={{ location: 'charitable_legacy' }}>View Pricing</TrackedButton>
+            <div className={styles.vaultCardPremium}>
+              <h3 className={styles.vaultItemTitle}>A Message for Your Charity</h3>
+              <p className={styles.vaultItemDesc}>
+                Leave a private message for the organisation you have chosen to support — your reasons, your connection to their work, your hopes for what the gift will do. Delivered by your executor after you are gone.
+              </p>
+            </div>
+            <div className={styles.vaultCardPremium}>
+              <h3 className={styles.vaultItemTitle}>A Message for Your Family</h3>
+              <p className={styles.vaultItemDesc}>
+                Some families may not understand why you chose to give as generously as you did. A voice note or letter stored in your Vault gives you the chance to explain — in your own words, in your own time — before they ever need to read it.
+              </p>
+            </div>
+          </div>
+
+          <div className={styles.bridgeLine}>
+            Your will makes the gift legal. Your Vault makes it personal.
+          </div>
+
+          <div className={styles.vaultCta}>
+            <TrackedButton 
+              href="/vault" 
+              className={styles.ctaButtonOutlineLight}
+              eventName="charity_vault_click" 
+              eventParams={{ location: 'charitable_legacy_vault' }}
+            >
+              See What&apos;s in the Vault →
+            </TrackedButton>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 4: Which Charities Can I Include? ── */}
+      <section className={styles.section}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeaderCenter}>
+            <h2 className={styles.sectionH2}>Your giving, your direction</h2>
+            <p className={styles.sectionIntro} style={{ maxWidth: '800px', margin: '0 auto', marginBottom: '1.5rem' }}>
+              Any registered charity, Islamic organisation, or charitable cause can be named in your bequest — as long as the gift falls within the permitted one third and is clearly documented. The Muslim Will does not restrict your choice of charity.
+            </p>
+            <p className={styles.sectionIntro} style={{ maxWidth: '800px', margin: '0 auto' }}>
+              If you are connected to a charity or masjid that has partnered with The Muslim Will, your bequest can be structured to direct giving to their specific programmes — clearly documented, correctly positioned within your estate.
+            </p>
+          </div>
+
+          <div className={styles.legalNotePremium} style={{ borderLeftColor: 'var(--color-gold)' }}>
+            <strong>Are you a charity or mosque</strong> looking to help your community plan their estates and bequests? See our partnership programmes.
+            <div style={{ marginTop: '1.5rem' }}>
+              <Link href="/community-and-giving" className={styles.stepLink}>Explore Community &amp; Giving →</Link>
             </div>
           </div>
         </div>
       </section>
 
-    </main>
+      {/* ── SECTION 5: Optional Expert Services ── */}
+      <section className={`${styles.section} ${styles.expertServicesSection}`}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeaderCenter}>
+            <h2 className={styles.sectionH2}>When your situation calls for more</h2>
+          </div>
+
+          <div className={styles.grid2} style={{ maxWidth: '1000px', margin: '0 auto' }}>
+            <div className={styles.pricingCardSidePremium}>
+              <div className={styles.pricingHeaderSide}>
+                <h3 className={styles.pricingNamePremiumSide}>Scholar Review</h3>
+                <div className={styles.pricingPricePremiumSide}>$49</div>
+              </div>
+              <p className={styles.pricingTaglinePremiumSide}>
+                Recommended for charitable bequests that involve complex structures, Waqf designations, large percentages of the estate, or situations where the Islamic permissibility of a specific giving arrangement needs personal scholarly review.
+              </p>
+              <Link href="/our-scholars" className={styles.stepLink} style={{ marginTop: 'auto', paddingTop: '1.5rem', fontSize: '1rem' }}>Meet Our Scholars →</Link>
+            </div>
+            <div className={styles.pricingCardSidePremium}>
+              <div className={styles.pricingHeaderSide}>
+                <h3 className={styles.pricingNamePremiumSide}>Digital Attestation</h3>
+                <div className={styles.pricingPricePremiumSide}>$149</div>
+              </div>
+              <p className={styles.pricingTaglinePremiumSide}>
+                Your will — including the charitable bequest — formally witnessed and legally certified over a guided Zoom session with a paralegal and witnesses.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 6: Complete Your Estate Plan (Cross-sell) ── */}
+      <section className={`${styles.section} ${styles.crossSellSection}`}>
+        <div className={styles.container}>
+          <div className={styles.sectionHeaderCenter}>
+            <h2 className={styles.sectionH2}>Your charitable legacy is part of your will — make sure the whole picture is in place.</h2>
+            <p className={styles.sectionIntro}>
+              A charitable bequest is a section of your Last Will &amp; Testament — not a standalone document. If you have not yet prepared your full Islamic will, this is the place to start.
+            </p>
+          </div>
+
+          <div style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <div className={styles.crossSellCard}>
+              <div className={styles.crossSellHeader}>
+                <h3 className={styles.crossSellTitle}>Last Will &amp; Testament</h3>
+                <div className={styles.crossSellPrice} style={{ fontSize: '1.25rem', color: 'var(--color-navy)' }}>Included in The Bridge</div>
+              </div>
+              <p className={styles.crossSellDesc}>
+                Your complete Islamic will — built on Faraid inheritance principles, Ontario-compliant, and including your charitable bequest, guardianship, and executor appointment.
+              </p>
+              <Link href="/last-will" className={styles.crossSellLink}>Learn more →</Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 7: Final CTA ── */}
+      <section className={styles.ctaSection}>
+        <div className={styles.container}>
+          <div className={styles.ctaBox}>
+            <h2>Your generosity deserves to outlast you.</h2>
+            <p className={styles.ctaText}>
+              A will is a trust we fulfil before Allah, and a mercy we leave for our families after us. Charitable giving is the part of that legacy that keeps giving — documented clearly, legally structured, and protected in your Vault until the moment it is needed.
+            </p>
+            
+            <div className={styles.ctaActions}>
+              <TrackedButton 
+                href="https://app.themuslimwill.com/Account/Login" 
+                className={styles.ctaButtonGoldFull}
+                eventName="final_cta_click" 
+                eventParams={{ location: 'charitable_legacy_final_cta' }}
+              >
+                Start My Application
+              </TrackedButton>
+              <TrackedButton 
+                href="/pricing" 
+                className={styles.ctaButtonOutlineLight}
+                eventName="final_cta_pricing_click" 
+                eventParams={{ location: 'charitable_legacy_final_cta' }}
+              >
+                See Pricing
+              </TrackedButton>
+              <TrackedButton 
+                href="/how-it-works" 
+                className={styles.ctaButtonOutlineLight}
+                eventName="final_cta_howitworks_click" 
+                eventParams={{ location: 'charitable_legacy_final_cta' }}
+                style={{ borderColor: 'transparent' }}
+              >
+                How It Works
+              </TrackedButton>
+            </div>
+            
+            <p className={styles.ctaMicrocopy}>
+              Charitable Legacy is built into every will prepared through The Bridge — from $5.99/month. Your giving is part of the plan from the start.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
   );
 }
