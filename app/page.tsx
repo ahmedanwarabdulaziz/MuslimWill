@@ -239,7 +239,6 @@ export default function Home() {
                  <li><span>Compliant with Ontario legal requirements</span></li>
                  <li><span>Lawyer-reviewed document structure</span></li>
                  <li><span>Digital attestation & notarization available (Zoom, paralegal-facilitated)</span></li>
-                 <li><span>Canada Will Directory registration available</span></li>
                </ul>
             </div>
           </div>
@@ -354,16 +353,6 @@ export default function Home() {
                      <td><strong>Digital Attestation</strong></td>
                      <td>Those who need their will formally witnessed and legally certified under Ontario law</td>
                      <td>$149</td>
-                   </tr>
-                   <tr>
-                     <td><strong>Canada Will Directory Registration</strong></td>
-                     <td>Those who want their will officially registered in the national directory</td>
-                     <td>$29</td>
-                   </tr>
-                   <tr>
-                     <td><strong>Annual Will Review</strong></td>
-                     <td>Those whose life circumstances change frequently</td>
-                     <td>$49/year</td>
                    </tr>
                  </tbody>
                </table>

@@ -56,7 +56,10 @@ export function Header() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link href="/" className={styles.logo}>
-            <Image src="/Images/Logo source without background.png" alt="Muslim Will Logo" width={160} height={56} className={styles.logoImage} priority />
+            <div className={styles.logoMarkWrapper}>
+              <Image src="/Images/Logo source without background.png" alt="Muslim Will Logo" width={240} height={80} className={styles.logoImage} priority />
+            </div>
+            <span className={styles.logoText}>The Muslim Will</span>
           </Link>
           
           <nav className={styles.desktopNav}>

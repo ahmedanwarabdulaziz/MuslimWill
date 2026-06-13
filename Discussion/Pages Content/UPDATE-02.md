@@ -1,4 +1,4 @@
-# Update 02 — Bridge Positioning Review
+# Update 02 — Bridge Positioning Review ✅ COMPLETED 2026-06-13
 **Date:** 2026-06-13
 **Focus:** Making sure the $5.99 Bridge subscriber feels complete, not entry-level.
 
@@ -133,3 +133,33 @@ This implies the will is a template that was pre-approved in general, not review
 | 7 | `/app/page.tsx` | "Scholar & lawyer pre-approved template" → correct description |
 
 **All 7 changes are on the homepage only.** The product pages and pricing page are already correctly positioned.
+
+---
+
+## 🔵 New Pages to Build
+
+### 8. My Vault Overview (`/vault`)
+**Brief:** `Discussion/Pages Content/31-vault-overview.md`
+
+Create a new file at `/app/vault/page.tsx`. This is the hub/entry page for the My Vault section. Multiple existing pages link to `/vault` and currently get a 404.
+
+**Key points:**
+- 5 sections: hero → 4 branch cards → release process (3 steps) → amanah Islamic framing → CTA
+- Each branch card links to its existing feature page (`/vault/obligations-register`, `/vault/estate-inventory`, `/vault/sealed-disclosures`, `/vault/final-words`)
+- Nav eyebrow: `My Bridge › My Vault`
+- CTA anchored to The Bridge — no add-on mentions, no upgrade prompts
+- Read the full brief for all copy and design details
+
+---
+
+### 9. Community & Giving Overview (`/community`)
+**Brief:** `Discussion/Pages Content/32-community-overview.md`
+
+Create a new file at `/app/community/page.tsx`. This is the hub/entry page for the Community & Giving section. Currently links to `/community-and-giving` result in 404s.
+
+**Key points:**
+- 5 sections: hero → 5 programme cards → Islamic case for community leaders → request a conversation CTA → individual visitor redirect
+- Each programme card links to its existing page (`/community/mosque-ambassador`, `/community/charity-partnership`, `/community/planned-giving`, `/community/sponsored-seats`, `/community/community-resources`)
+- Nav eyebrow: `Community & Giving`
+- Audience is imams and charity leaders — not individual families
+- Read the full brief for all copy and design details

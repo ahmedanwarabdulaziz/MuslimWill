@@ -28,13 +28,33 @@
   align-items: center;
   text-decoration: none;
   flex-shrink: 0;
+  gap: 6px;
+}
+
+.logoMarkWrapper {
+  width: 65px;
+  height: 80px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 .logoImage {
-  height: 56px;
-  width: 160px;
+  height: 80px;
+  width: 240px;
+  max-width: none;
   object-fit: contain;
   object-position: left center;
+  flex-shrink: 0;
+}
+
+.logoText {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-surface);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
 }
 
 .desktopNav {
