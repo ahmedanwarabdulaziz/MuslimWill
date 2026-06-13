@@ -204,7 +204,7 @@ export default function LastWillPage() {
               <p className={styles.pricingTaglinePremiumSide}>
                 A qualified Islamic scholar personally reviews your inheritance calculation — for large estates, unusual asset structures, or complex family situations that go beyond the standard Faraid framework.
               </p>
-              <Link href="/our-scholars" className={styles.stepLink} style={{ marginTop: 'auto', paddingTop: '1.5rem', fontSize: '1rem' }}>Meet Our Scholars →</Link>
+              <Link href="/about/our-scholars" className={styles.stepLink} style={{ marginTop: 'auto', paddingTop: '1.5rem', fontSize: '1rem' }}>Meet Our Scholars →</Link>
             </div>
             <div className={styles.pricingCardSidePremium}>
               <div className={styles.pricingHeaderSide}>

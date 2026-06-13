@@ -239,7 +239,7 @@ export default function FinancialAdvisorsPage() {
                 <div className={styles.formLinksLabel}>Related pages</div>
                 <Link href="/professionals/estate-planners" className={styles.formLink}>For Estate Planners &amp; Trustees →</Link>
                 <Link href="/legal-islamic-compliance" className={styles.formLink}>Our Compliance Framework →</Link>
-                <Link href="/our-scholars" className={styles.formLink}>Meet Our Scholars →</Link>
+                <Link href="/about/our-scholars" className={styles.formLink}>Meet Our Scholars →</Link>
               </div>
             </div>
             <div className={styles.formWrapper}>

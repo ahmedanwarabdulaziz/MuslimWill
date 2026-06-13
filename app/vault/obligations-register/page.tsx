@@ -163,7 +163,7 @@ export default function ObligationsRegisterPage() {
 
           <div className={styles.vaultCta}>
             <TrackedButton 
-              href="/vault#final-words" 
+              href="/vault/final-words" 
               className={styles.ctaButtonOutlineLight}
               eventName="vault_final_words_click" 
               eventParams={{ location: 'obligations_register' }}

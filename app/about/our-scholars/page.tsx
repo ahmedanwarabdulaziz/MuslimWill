@@ -308,7 +308,7 @@ export default function OurScholarsPage() {
             <h2 className={styles.ctaH2}>Start your application — scholar review included.</h2>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="/apply"
+                href="https://app.themuslimwill.com/Account/Login"
                 className={styles.ctaPrimary}
                 eventName="scholars_start_application"
                 eventParams={{ location: 'our_scholars_footer' }}
@@ -331,7 +331,7 @@ export default function OurScholarsPage() {
               <span>·</span>
               <Link href="/about/our-team" className={styles.ctaInternalLink}>Our Team</Link>
               <span>·</span>
-              <Link href="/vault/last-will-testament" className={styles.ctaInternalLink}>The Will Document</Link>
+              <Link href="/last-will" className={styles.ctaInternalLink}>The Will Document</Link>
             </div>
           </div>
         </div>

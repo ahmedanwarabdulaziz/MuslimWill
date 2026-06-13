@@ -40,7 +40,7 @@ export default function ForScholarsPage() {
                 Contact Our Team →
               </TrackedButton>
               <TrackedButton
-                href="/our-scholars"
+                href="/about/our-scholars"
                 className={styles.ctaSecondary}
                 eventName="our_scholars_click"
                 eventParams={{ location: 'for_scholars_hero' }}
@@ -300,7 +300,7 @@ export default function ForScholarsPage() {
               </p>
               <div className={styles.formLinks}>
                 <div className={styles.formLinksLabel}>Related pages</div>
-                <Link href="/our-scholars" className={styles.formLink}>Our Current Scholar Network →</Link>
+                <Link href="/about/our-scholars" className={styles.formLink}>Our Current Scholar Network →</Link>
                 <Link href="/professionals/for-imams" className={styles.formLink}>For Imams →</Link>
                 <Link href="/legal-islamic-compliance" className={styles.formLink}>Our Compliance Framework →</Link>
               </div>

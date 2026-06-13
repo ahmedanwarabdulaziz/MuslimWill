@@ -126,7 +126,7 @@ export default function OurTeamPage() {
               <p className={styles.scholarsPara}>
                 Every application prepared through The Muslim Will includes access to qualified Islamic scholars who review inheritance calculations and provide guidance on complex estate situations. Our scholar network includes Ijazah-certified scholars with expertise in Fiqh al-Mawarith, representing multiple madhabs and diverse community backgrounds across Canada.
               </p>
-              <Link href="/our-scholars" className={styles.scholarsLink}>
+              <Link href="/about/our-scholars" className={styles.scholarsLink}>
                 Meet our scholars →
               </Link>
             </div>
@@ -214,7 +214,7 @@ export default function OurTeamPage() {
             <p className={styles.ctaSub}>Start your Islamic will application — guided by our platform, reviewed by our scholars, and built to last.</p>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="/apply"
+                href="https://app.themuslimwill.com/Account/Login"
                 className={styles.ctaPrimary}
                 eventName="team_start_application"
                 eventParams={{ location: 'our_team_footer' }}
@@ -233,7 +233,7 @@ export default function OurTeamPage() {
             <div className={styles.ctaLinks}>
               <Link href="/about/our-story" className={styles.ctaInternalLink}>Our Story</Link>
               <span>·</span>
-              <Link href="/our-scholars" className={styles.ctaInternalLink}>Our Scholars</Link>
+              <Link href="/about/our-scholars" className={styles.ctaInternalLink}>Our Scholars</Link>
               <span>·</span>
               <Link href="/legal-islamic-compliance" className={styles.ctaInternalLink}>Compliance</Link>
             </div>

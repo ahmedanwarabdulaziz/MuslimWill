@@ -181,7 +181,7 @@ export default function HowItWorksPage() {
                 You do not need exact figures or legal documents to start. The application guides you through what is needed, one step at a time.
               </p>
               <TrackedButton
-                href="/apply"
+                href="https://app.themuslimwill.com/Account/Login"
                 className={styles.beforeCta}
                 eventName="hiw_start_before"
                 eventParams={{ location: 'how_it_works_before' }}
@@ -328,7 +328,7 @@ export default function HowItWorksPage() {
             </p>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="/apply"
+                href="https://app.themuslimwill.com/Account/Login"
                 className={styles.ctaPrimary}
                 eventName="hiw_start_application_footer"
                 eventParams={{ location: 'how_it_works_footer' }}
@@ -345,7 +345,7 @@ export default function HowItWorksPage() {
               </TrackedButton>
             </div>
             <div className={styles.ctaLinks}>
-              <Link href="/vault/last-will-testament" className={styles.ctaInternalLink}>Last Will &amp; Testament</Link>
+              <Link href="/last-will" className={styles.ctaInternalLink}>Last Will &amp; Testament</Link>
               <span>·</span>
               <Link href="/vault/estate-inventory" className={styles.ctaInternalLink}>The Vault</Link>
               <span>·</span>

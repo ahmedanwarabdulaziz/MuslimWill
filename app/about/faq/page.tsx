@@ -329,7 +329,7 @@ export default function FAQPage() {
               <h2 className={styles.ctaH2}>Ready to start?</h2>
               <p className={styles.ctaSub}>Can&apos;t find your answer here? Our team responds to every question personally.</p>
               <div className={styles.ctaActions}>
-                <Link href="/apply" className={styles.ctaPrimary}>
+                <Link href="https://app.themuslimwill.com/Account/Login" className={styles.ctaPrimary}>
                   Start My Application →
                 </Link>
                 <Link href="/contact" className={styles.ctaSecondary}>

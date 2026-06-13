@@ -177,7 +177,7 @@ export default function CharitableLegacyPage() {
           <div className={styles.legalNotePremium} style={{ borderLeftColor: 'var(--color-gold)' }}>
             <strong>Are you a charity or mosque</strong> looking to help your community plan their estates and bequests? See our partnership programmes.
             <div style={{ marginTop: '1.5rem' }}>
-              <Link href="/community-and-giving" className={styles.stepLink}>Explore Community &amp; Giving →</Link>
+              <Link href="/community/charity-partnership" className={styles.stepLink}>Explore Community &amp; Giving →</Link>
             </div>
           </div>
         </div>
@@ -199,7 +199,7 @@ export default function CharitableLegacyPage() {
               <p className={styles.pricingTaglinePremiumSide}>
                 Recommended for charitable bequests that involve complex structures, Waqf designations, large percentages of the estate, or situations where the Islamic permissibility of a specific giving arrangement needs personal scholarly review.
               </p>
-              <Link href="/our-scholars" className={styles.stepLink} style={{ marginTop: 'auto', paddingTop: '1.5rem', fontSize: '1rem' }}>Meet Our Scholars →</Link>
+              <Link href="/about/our-scholars" className={styles.stepLink} style={{ marginTop: 'auto', paddingTop: '1.5rem', fontSize: '1rem' }}>Meet Our Scholars →</Link>
             </div>
             <div className={styles.pricingCardSidePremium}>
               <div className={styles.pricingHeaderSide}>

@@ -282,7 +282,7 @@ export default function POAPropertyPage() {
             </div>
             
             <p className={styles.ctaMicrocopy}>
-              POA for Property is $99 as a standalone — or included in The Bridge from $5.99/month alongside your Islamic Will and private Vault.
+              POA for Property is $99 as a standalone — or included in the Full Package ($350) alongside your Islamic Will, both POAs, Scholar Review, Admin Review, and Digital Attestation.
             </p>
           </div>
         </div>

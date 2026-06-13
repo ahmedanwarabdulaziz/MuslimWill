@@ -100,7 +100,7 @@ export default function PricingPage() {
                 <p className={styles.bridgeTagline}>
                   Everything your family needs. An Islamic will, a private Vault, and the tools to protect your legacy — in one complete subscription.
                 </p>
-                <Link href="/apply" className={styles.bridgeCta}>
+                <Link href="https://app.themuslimwill.com/Account/Login?plan=bridge" className={styles.bridgeCta}>
                   Start For $5.99/month →
                 </Link>
                 <p className={styles.bridgeMicro}>Free to register. Full access from $5.99/month. Cancel anytime.</p>
@@ -198,7 +198,7 @@ export default function PricingPage() {
                     </div>
                   ))}
                 </div>
-                <Link href="/apply?plan=family" className={styles.secondaryCta}>
+                <Link href="https://app.themuslimwill.com/Account/Login?plan=family" className={styles.secondaryCta}>
                   Protect Your Family →
                 </Link>
                 <p className={styles.secondaryMicro}>Billed per person. Minimum 2 members. Each account stays private.</p>
@@ -236,7 +236,7 @@ export default function PricingPage() {
                     </div>
                   ))}
                 </div>
-                <Link href="/apply?plan=full" className={styles.secondaryCtaFull}>
+                <Link href="https://app.themuslimwill.com/Account/Login?plan=full" className={styles.secondaryCtaFull}>
                   Get The Full Package →
                 </Link>
                 <p className={styles.secondaryMicro}>One-time payment. Includes 12 months of Vault access.</p>
@@ -303,7 +303,7 @@ export default function PricingPage() {
               Free to register. Full access from $5.99/month. No hidden fees. Islamic will and private Vault included.
             </p>
             <div className={styles.ctaActions}>
-              <Link href="/apply" className={styles.ctaPrimary}>
+              <Link href="https://app.themuslimwill.com/Account/Login" className={styles.ctaPrimary}>
                 Start For $5.99/month →
               </Link>
               <Link href="/how-it-works" className={styles.ctaSecondary}>
@@ -313,7 +313,7 @@ export default function PricingPage() {
             <div className={styles.ctaLinks}>
               <Link href="/how-it-works" className={styles.ctaInternalLink}>How It Works</Link>
               <span>·</span>
-              <Link href="/vault/last-will-testament" className={styles.ctaInternalLink}>The Will</Link>
+              <Link href="/last-will" className={styles.ctaInternalLink}>The Will</Link>
               <span>·</span>
               <Link href="/about/faq" className={styles.ctaInternalLink}>FAQ</Link>
               <span>·</span>

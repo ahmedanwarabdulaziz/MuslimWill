@@ -220,7 +220,7 @@ export default function MosqueAmbassadorPage() {
                 You do not need a budget or a dedicated team. You need a commitment to your community — and a trusted partner to make the rest possible.
               </p>
               <div style={{ marginTop: '2.5rem' }}>
-                <Link href="/our-scholars" className={styles.internalLink}>Meet Our Scholars →</Link>
+                <Link href="/about/our-scholars" className={styles.internalLink}>Meet Our Scholars →</Link>
               </div>
             </div>
 
@@ -274,7 +274,7 @@ export default function MosqueAmbassadorPage() {
               <div className={styles.formLinks}>
                 <div className={styles.formLinksLabel}>Related pages</div>
                 <Link href="/community/charity-partnership" className={styles.formLink}>Charity Partnership →</Link>
-                <Link href="/our-scholars" className={styles.formLink}>Our Scholars →</Link>
+                <Link href="/about/our-scholars" className={styles.formLink}>Our Scholars →</Link>
                 <Link href="/community/community-resources" className={styles.formLink}>Community Resources →</Link>
               </div>
             </div>

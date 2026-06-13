@@ -215,7 +215,7 @@ export default function ForImamsPage() {
                 <div className={styles.formLinksLabel}>Related pages</div>
                 <Link href="/community/mosque-ambassador" className={styles.formLink}>Mosque Ambassador Programme →</Link>
                 <Link href="/community/community-resources" className={styles.formLink}>Community Resources →</Link>
-                <Link href="/our-scholars" className={styles.formLink}>Our Scholars →</Link>
+                <Link href="/about/our-scholars" className={styles.formLink}>Our Scholars →</Link>
               </div>
             </div>
             <div className={styles.formWrapper}>

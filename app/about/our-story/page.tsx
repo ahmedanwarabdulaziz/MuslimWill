@@ -249,7 +249,7 @@ export default function OurStoryPage() {
             <h2 className={styles.ctaH2}>The gap is closing. Start here.</h2>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="/apply"
+                href="https://app.themuslimwill.com/Account/Login"
                 className={styles.ctaPrimary}
                 eventName="story_start_application"
                 eventParams={{ location: 'our_story_footer' }}
@@ -268,7 +268,7 @@ export default function OurStoryPage() {
             <div className={styles.ctaLinks}>
               <Link href="/about/our-team" className={styles.ctaInternalLink}>Our Team</Link>
               <span>·</span>
-              <Link href="/our-scholars" className={styles.ctaInternalLink}>Our Scholars</Link>
+              <Link href="/about/our-scholars" className={styles.ctaInternalLink}>Our Scholars</Link>
               <span>·</span>
               <Link href="/legal-islamic-compliance" className={styles.ctaInternalLink}>Compliance</Link>
               <span>·</span>

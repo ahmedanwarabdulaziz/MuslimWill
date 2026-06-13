@@ -221,7 +221,7 @@ export default function EstatePlannersPage() {
                 <Link href="/professionals/financial-advisors" className={styles.formLink}>For Financial Advisors →</Link>
                 <Link href="/professionals/lawyers" className={styles.formLink}>For Lawyers →</Link>
                 <Link href="/legal-islamic-compliance" className={styles.formLink}>Our Compliance Framework →</Link>
-                <Link href="/our-scholars" className={styles.formLink}>Meet Our Scholars →</Link>
+                <Link href="/about/our-scholars" className={styles.formLink}>Meet Our Scholars →</Link>
               </div>
             </div>
             <div className={styles.formWrapper}>
