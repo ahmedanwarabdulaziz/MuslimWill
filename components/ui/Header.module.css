@@ -31,9 +31,10 @@
 }
 
 .logoImage {
-  height: 50px;
-  width: auto;
+  height: 56px;
+  width: 160px;
   object-fit: contain;
+  object-position: left center;
 }
 
 .desktopNav {

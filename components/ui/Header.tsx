@@ -56,7 +56,7 @@ export function Header() {
       <header className={styles.header}>
         <div className={styles.headerInner}>
           <Link href="/" className={styles.logo}>
-            <Image src="/Images/logooo.png" alt="Muslim Will Logo" width={200} height={50} className={styles.logoImage} priority />
+            <Image src="/Images/Logo source without background.png" alt="Muslim Will Logo" width={160} height={56} className={styles.logoImage} priority />
           </Link>
           
           <nav className={styles.desktopNav}>
