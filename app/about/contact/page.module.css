@@ -1,0 +1,540 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+/* ── HERO ── */
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  padding: 10rem 2rem 7rem;
+  background-image: url('/Images/04.jpeg');
+  background-size: cover;
+  background-position: center 35%;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(4, 12, 24, 0.97) 0%,
+    rgba(8, 28, 52, 0.88) 55%,
+    rgba(10, 37, 64, 0.25) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 680px;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  color: var(--color-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 1.75rem;
+  background: rgba(212, 175, 55, 0.15);
+  padding: 0.4rem 1.25rem;
+  border-radius: 100px;
+}
+
+.heroH1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 600;
+  line-height: 1.07;
+  margin-bottom: 1.5rem;
+  color: var(--color-surface);
+}
+
+.heroSub {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.78);
+  max-width: 620px;
+  margin: 0;
+}
+
+/* ── PATHWAY SECTION ── */
+.pathwaySection {
+  padding: 5rem 2rem;
+  background: var(--color-cream-light);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.pathwayH2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  color: var(--color-navy);
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.pathwayGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.pathwayCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pathwayCard:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(10, 37, 64, 0.08);
+}
+
+.pathwayCardIcon {
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  display: block;
+}
+
+.pathwayCardTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.pathwayCardDesc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  flex: 1;
+  margin-bottom: 1.5rem;
+}
+
+.pathwayCtas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-top: auto;
+}
+
+.pathwayCtaPrimary {
+  display: inline-block;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.pathwayCtaPrimary:hover {
+  background: rgba(10, 37, 64, 0.85);
+}
+
+.pathwayCtaSecondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--color-navy);
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--color-border);
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.pathwayCtaSecondary:hover {
+  border-color: var(--color-navy);
+  background: rgba(10, 37, 64, 0.04);
+}
+
+/* ── FORM SECTION ── */
+.formSection {
+  padding: 6rem 2rem 7rem;
+  background: var(--color-surface);
+}
+
+.formLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+/* ── LEFT: FORM ── */
+.formLeft {
+  /* main form column */
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sectionLabel::after {
+  content: '';
+  flex: 1;
+  max-width: 60px;
+  height: 1px;
+  background: var(--color-gold);
+  opacity: 0.4;
+}
+
+.formH2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+.formIntro {
+  font-size: 1.05rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 2.25rem;
+}
+
+/* ── FORM FIELDS ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.formLabel {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  letter-spacing: 0.02em;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  background: var(--color-cream-light);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1.1rem;
+  font-size: 1rem;
+  color: var(--color-navy);
+  font-family: inherit;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  width: 100%;
+  outline: none;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.12);
+}
+
+.formSelect {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230A2540' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 18px;
+  padding-right: 2.75rem;
+  cursor: pointer;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 140px;
+  line-height: 1.6;
+}
+
+.formSubmit {
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 1.2rem 2rem;
+  border-radius: var(--radius-md);
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(10, 37, 64, 0.15);
+  letter-spacing: 0.01em;
+}
+
+.formSubmit:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(10, 37, 64, 0.2);
+}
+
+.formSubmit:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.formDisclaimer {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  font-style: italic;
+  margin: 0;
+}
+
+/* ── FORM SUCCESS ── */
+.formSuccess {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3.5rem 2rem;
+  background: var(--color-cream-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+}
+
+.formSuccessIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.12);
+  border: 2px solid rgba(34, 197, 94, 0.3);
+  color: #22c55e;
+  font-size: 1.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.formSuccessTitle {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  color: var(--color-navy);
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.formSuccessDesc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  max-width: 420px;
+}
+
+/* ── RIGHT: DETAILS CARD ── */
+.formRight {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: sticky;
+  top: 8rem;
+}
+
+.detailsCard {
+  background: var(--color-navy);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(10, 37, 64, 0.12);
+}
+
+.detailsCardAccent {
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-gold), transparent 70%);
+}
+
+.detailsCardBody {
+  padding: 2.5rem;
+}
+
+.detailsSection {
+  padding: 0;
+}
+
+.detailsDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 1.5rem 0;
+}
+
+.detailsSectionLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(212, 175, 55, 0.8);
+  margin-bottom: 0.4rem;
+}
+
+.detailsEmail {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-surface);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-bottom: 0.3rem;
+  transition: color 0.2s ease;
+}
+
+.detailsEmail:hover {
+  color: var(--color-gold);
+}
+
+.detailsValue {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-surface);
+  margin-bottom: 0.3rem;
+}
+
+.detailsSectionNote {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.5;
+}
+
+.detailsTrustNote {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: var(--radius-md);
+  margin-top: 0.5rem;
+}
+
+.detailsTrustNoteBar {
+  width: 3px;
+  align-self: stretch;
+  background: var(--color-gold);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.detailsTrustNoteText {
+  font-size: 0.88rem;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+/* ── QUICK LINKS ── */
+.quickLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quickLinksLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.quickLink {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.9rem 1rem;
+  background: var(--color-cream-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-navy);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1.4;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.quickLink:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  background: rgba(212, 175, 55, 0.04);
+  color: var(--color-navy);
+}
+
+.quickLink svg {
+  width: 16px;
+  height: 16px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1200px) {
+  .formLayout {
+    gap: 4rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .pathwayGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .formLayout {
+    grid-template-columns: 1fr;
+    gap: 3.5rem;
+  }
+  .formRight {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .pathwayGrid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+  }
+  .formRow {
+    grid-template-columns: 1fr;
+  }
+}

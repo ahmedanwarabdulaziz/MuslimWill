@@ -1,0 +1,533 @@
+/* ── Full viewport, no header/footer chrome ── */
+.main {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── SPLIT LAYOUT ── */
+.splitLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  flex: 1;
+}
+
+/* ────────────────────────────────────────
+   LEFT PANEL — navy, trust-building
+──────────────────────────────────────── */
+.leftPanel {
+  background: var(--color-navy);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* subtle geometric background texture */
+.leftPanel::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(ellipse 80% 60% at 20% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.leftInner {
+  position: relative;
+  z-index: 1;
+  padding: 3rem 3.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 560px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Back link */
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-bottom: 3.5rem;
+  transition: color 0.2s ease;
+}
+
+.backLink:hover {
+  color: var(--color-gold);
+}
+
+.backLink svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Eyebrow */
+.leftEyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-gold);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.leftEyebrow::after {
+  content: '';
+  flex: 1;
+  max-width: 50px;
+  height: 1px;
+  background: var(--color-gold);
+  opacity: 0.35;
+}
+
+/* H1 */
+.leftH1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 600;
+  line-height: 1.08;
+  color: var(--color-surface);
+  margin-bottom: 1.25rem;
+}
+
+.leftSub {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 2.5rem;
+  max-width: 460px;
+}
+
+/* ── Three Things ── */
+.threeThings {
+  flex: 1;
+  margin-bottom: 2.5rem;
+}
+
+.threeThingsLabel {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.35);
+  margin-bottom: 1.5rem;
+}
+
+.thingRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.thingRow:last-child {
+  border-bottom: none;
+}
+
+.thingIcon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-gold);
+}
+
+.thingIcon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.thingBody {
+  flex: 1;
+}
+
+.thingTitle {
+  font-size: 0.97rem;
+  font-weight: 700;
+  color: var(--color-surface);
+  margin-bottom: 0.35rem;
+  line-height: 1.2;
+}
+
+.thingDesc {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.6;
+}
+
+/* ── Trust notes ── */
+.trustNotes {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: var(--radius-lg);
+}
+
+.trustRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.trustRow svg {
+  width: 14px;
+  height: 14px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* ── Bottom links ── */
+.leftLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  color: rgba(255, 255, 255, 0.2);
+  font-size: 0.82rem;
+}
+
+.leftLink {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 600;
+  font-size: 0.82rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.leftLink:hover {
+  color: var(--color-gold);
+}
+
+/* ────────────────────────────────────────
+   RIGHT PANEL — white, conversion
+──────────────────────────────────────── */
+.rightPanel {
+  background: var(--color-cream-light);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.rightInner {
+  padding: 4rem 3.5rem;
+  max-width: 520px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-height: 100%;
+}
+
+.rightH2 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.25rem;
+  line-height: 1.1;
+}
+
+/* ── Plan Cards ── */
+.planCard {
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.planCard:hover {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 8px 28px rgba(10, 37, 64, 0.08);
+}
+
+.planCard[data-primary] {
+  border-color: rgba(212, 175, 55, 0.3);
+  box-shadow: 0 12px 36px rgba(10, 37, 64, 0.1);
+}
+
+.planCardAccent {
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-gold) 0%, rgba(212, 175, 55, 0.3) 70%, transparent 100%);
+}
+
+.planCardBody {
+  padding: 2rem;
+}
+
+.planCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.planBadge {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--color-gold);
+  padding: 0.2rem 0.7rem;
+  border-radius: 100px;
+}
+
+.planBadge[data-muted] {
+  background: rgba(10, 37, 64, 0.06);
+  border-color: rgba(10, 37, 64, 0.15);
+  color: var(--color-navy);
+}
+
+.planSavings {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.planName {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin-bottom: 0.25rem;
+  line-height: 1;
+}
+
+.planName[data-secondary] {
+  font-size: 1.25rem;
+}
+
+.planPriceRow {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+  margin-bottom: 0.85rem;
+}
+
+.planPrice {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1;
+}
+
+.planPrice[data-secondary] {
+  font-size: 2.25rem;
+}
+
+.planPricePer {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.planDesc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* feature list */
+.planIncludes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.planIncludeItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--color-navy);
+  padding: 0.5rem 0;
+  line-height: 1.4;
+  border-bottom: 1px solid rgba(10, 37, 64, 0.05);
+}
+
+.planIncludeItem:last-child {
+  border-bottom: none;
+}
+
+.planIncludeItem svg {
+  width: 13px;
+  height: 13px;
+  color: var(--color-gold);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+/* CTAs */
+.planCta {
+  display: block;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(10, 37, 64, 0.15);
+}
+
+.planCta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(10, 37, 64, 0.2);
+}
+
+.planCta[data-primary] {
+  background: var(--color-gold);
+  color: var(--color-navy);
+  font-weight: 800;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25);
+}
+
+.planCta[data-primary]:hover {
+  background: var(--color-gold-light, #e5c84a);
+  box-shadow: 0 12px 32px rgba(212, 175, 55, 0.4);
+}
+
+.planCta[data-secondary] {
+  background: transparent;
+  color: var(--color-navy);
+  border: 1.5px solid var(--color-navy);
+  box-shadow: none;
+}
+
+.planCta[data-secondary]:hover {
+  background: var(--color-navy);
+  color: var(--color-gold);
+}
+
+/* ── Not Sure Card ── */
+.notSureCard {
+  background: var(--color-surface);
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.notSureLabel {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.notSureDesc {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+.notSureLinks {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.notSureLink {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.notSureLink:hover {
+  color: var(--color-gold);
+}
+
+/* ── Sign In Row ── */
+.signinRow {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  padding: 0.5rem 0;
+}
+
+.signinLink {
+  color: var(--color-navy);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.signinLink:hover {
+  color: var(--color-gold);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .splitLayout {
+    grid-template-columns: 1fr;
+  }
+
+  .leftPanel {
+    min-height: auto;
+  }
+
+  .leftInner {
+    min-height: auto;
+    padding: 3rem 2rem 2.5rem;
+  }
+
+  .rightInner {
+    padding: 3rem 2rem 4rem;
+  }
+
+  .threeThings {
+    flex: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .leftInner { padding: 2.5rem 1.5rem 2rem; }
+  .rightInner { padding: 2.5rem 1.5rem 3.5rem; }
+  .notSureLinks { flex-direction: column; gap: 0.75rem; }
+}

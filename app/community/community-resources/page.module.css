@@ -1,0 +1,537 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.section {
+  padding: 6rem 2rem;
+  position: relative;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ── HERO ── */
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  padding: 10rem 2rem 8rem;
+  background-image: url('/Images/09.jpeg');
+  background-size: cover;
+  background-position: center 40%;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    100deg,
+    rgba(6, 22, 40, 0.97) 0%,
+    rgba(10, 37, 64, 0.88) 55%,
+    rgba(10, 37, 64, 0.3) 100%
+  );
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+}
+
+.heroEyebrow {
+  display: inline-block;
+  color: var(--color-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  background: rgba(212, 175, 55, 0.15);
+  padding: 0.4rem 1.25rem;
+  border-radius: 100px;
+}
+
+.heroH1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 3.75rem);
+  font-weight: 600;
+  line-height: 1.08;
+  margin-bottom: 1.75rem;
+  color: var(--color-surface);
+}
+
+.heroSub {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.82);
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+}
+
+.heroActions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* ── TRUST BAR ── */
+.trustBar {
+  background-color: var(--color-surface);
+  padding: 3rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.03);
+  position: relative;
+  z-index: 10;
+}
+
+.trustAnchors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.trustAnchor {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-navy);
+}
+
+.trustAnchor svg {
+  color: var(--color-gold);
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+/* ── SECTION HEADER ── */
+.sectionHeaderCenter {
+  margin-bottom: 4rem;
+  max-width: 760px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.sectionH2 {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.sectionIntro {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+/* ── RESOURCE CARDS (Section 1) ── */
+.resourceGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.resourceCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  box-shadow: 0 8px 24px rgba(10, 37, 64, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease, border-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.resourceCard::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--color-gold);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.resourceCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(10, 37, 64, 0.09);
+  border-color: transparent;
+}
+
+.resourceCard:hover::after {
+  opacity: 1;
+}
+
+.resourceCardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.resourceTag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-navy);
+  background: rgba(10, 37, 64, 0.07);
+  padding: 0.3rem 0.9rem;
+  border-radius: 100px;
+}
+
+.resourceIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(10, 37, 64, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.resourceIcon svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-navy);
+  transition: color 0.3s ease;
+}
+
+.resourceCard:hover .resourceIcon {
+  background: var(--color-navy);
+}
+
+.resourceCard:hover .resourceIcon svg {
+  color: var(--color-gold);
+}
+
+.resourceTitle {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--color-navy);
+  font-weight: 600;
+  line-height: 1.2;
+  flex: 1;
+}
+
+.resourceDesc {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.resourceFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+  margin-top: auto;
+}
+
+.resourceFormat {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.resourceCta {
+  background: transparent !important;
+  color: var(--color-navy) !important;
+  border: 1.5px solid var(--color-navy) !important;
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  padding: 0.5rem 1.25rem !important;
+  border-radius: var(--radius-md) !important;
+  transition: all 0.25s ease !important;
+}
+
+.resourceCta:hover {
+  background: var(--color-navy) !important;
+  color: var(--color-gold) !important;
+}
+
+/* ── HOW TO USE (Section 2) ── */
+.howLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.howText {
+  /* text side */
+}
+
+.howCards {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.howCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 16px rgba(10, 37, 64, 0.03);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.howCard:hover {
+  border-color: rgba(212, 175, 55, 0.35);
+  transform: translateX(6px);
+}
+
+.howCardNum {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.howCardTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-navy);
+  margin-bottom: 0.35rem;
+}
+
+.howCardDesc {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+
+/* ── WANT TO GO FURTHER (Section 3) ── */
+.furtherSection {
+  background: var(--color-surface);
+}
+
+.ambassadorCard {
+  background: var(--color-navy);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(10, 37, 64, 0.15);
+}
+
+.ambassadorCard::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-gold), transparent 80%);
+}
+
+.ambassadorCardHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.ambassadorIcon {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 0.75rem;
+}
+
+.ambassadorTitle {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-surface);
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.ambassadorBadge {
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--color-gold);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ambassadorDesc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.ambassadorLink {
+  color: var(--color-gold);
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.ambassadorLink:hover {
+  opacity: 0.8;
+}
+
+/* ── FORM SECTION ── */
+.formSection {
+  padding: 6rem 2rem;
+  background: var(--color-cream-light);
+  border-top: 1px solid var(--color-border);
+}
+
+.formLayout {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 6rem;
+  align-items: start;
+}
+
+.formH2 {
+  font-family: var(--font-heading);
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  color: var(--color-navy);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.formBody {
+  font-size: 1.15rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+}
+
+.formMicrocopy {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  line-height: 1.7;
+  font-style: italic;
+  padding: 1.25rem 1.75rem;
+  border-left: 3px solid var(--color-gold);
+  background: rgba(212, 175, 55, 0.05);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: 2.5rem;
+}
+
+.formLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.formLinksLabel {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.formLink {
+  color: var(--color-navy);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  font-size: 1rem;
+  transition: color 0.2s ease;
+}
+
+.formLink:hover {
+  color: var(--color-gold);
+}
+
+.formWrapper {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(10, 37, 64, 0.04);
+}
+
+/* ── CTA BUTTON ── */
+.ctaButtonGoldFull {
+  background-color: var(--color-gold) !important;
+  color: var(--color-navy) !important;
+  border-color: var(--color-gold) !important;
+  font-weight: 700 !important;
+  padding: 1.25rem 2rem !important;
+  font-size: 1.1rem !important;
+  border-radius: var(--radius-md) !important;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.25) !important;
+  transition: all 0.3s ease !important;
+}
+
+.ctaButtonGoldFull:hover {
+  background-color: var(--color-gold-light) !important;
+  box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4) !important;
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .formLayout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .howLayout {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .resourceGrid {
+    grid-template-columns: 1fr;
+  }
+  .trustAnchors {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .formWrapper {
+    padding: 2rem;
+  }
+  .ambassadorCard {
+    padding: 2rem;
+  }
+  .ambassadorCardHeader {
+    flex-direction: column;
+  }
+}

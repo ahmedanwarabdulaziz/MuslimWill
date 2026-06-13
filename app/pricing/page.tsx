@@ -1,531 +1,328 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
-import { TrackedButton } from '@/components/analytics/TrackedButton';
-import { Card, CardContent } from '@/components/ui/Card';
-import { Accordion } from '@/components/ui/Accordion';
-import sharedStyles from '../page.module.css';
-import styles from './pricing.module.css';
+import styles from './page.module.css';
 
-const siteUrl = 'https://themuslimwill.com';
-const pageTitle = 'Pricing | Islamic Will Package In Ontario | Muslim Will';
-const pageDescription = 'See Muslim Will\'s transparent $350 CAD flat-fee package, including an Islamic Last Will, guardianship directions, Powers of Attorney, scholar review, Ontario legal workflow support, and guided attestation.';
-
-export const metadata: Metadata = {
-  title: pageTitle,
-  description: pageDescription,
-  alternates: {
-    canonical: `${siteUrl}/pricing`,
-  },
-  openGraph: {
-    title: 'One Transparent Flat-Fee Islamic Will Package | Muslim Will',
-    description: 'A complete 4-document estate protection package for Muslim families in Ontario, with scholar review, legal workflow support, and guided final attestation.',
-    url: `${siteUrl}/pricing`,
-  },
-};
-
-const pricingFaqItems = [
-  {
-    question: 'How much does Muslim Will cost?',
-    answer: 'The complete Muslim Will estate protection package is $350 CAD for one individual. It includes your Islamic Last Will, minor guardianship directions, Power of Attorney for Property, Power of Attorney for Personal Care, scholar review for inheritance considerations, Ontario legal workflow support, guided preparation, final attestation support, and final document delivery.'
-  },
-  {
-    question: 'Does the $350 CAD package cover both husband and wife?',
-    answer: 'No. The $350 CAD package is for one individual. Each spouse needs their own will and supporting documents. Muslim Will offers a dedicated couples package for $550 CAD so spouses can complete their planning together while still receiving individual documents.'
-  },
-  {
-    question: 'Do spouses receive one joint will?',
-    answer: 'No. A husband and wife each receive their own documents. The couples package coordinates shared family information where appropriate, but each spouse has an individual will and supporting documents.'
-  },
-  {
-    question: 'Are all four documents included?',
-    answer: 'Yes. The four core documents are always included: Islamic Last Will & Testament, minor guardianship directions, Power of Attorney for Property, and Power of Attorney for Personal Care.'
-  },
-  {
-    question: 'Are there hidden hourly lawyer fees?',
-    answer: 'No. The package is presented as a transparent flat fee. Future update fees may apply only when changes are requested and confirmed.'
-  },
-  {
-    question: 'What payment methods are accepted?',
-    answer: 'Muslim Will accepts standard secure online payment methods, including major credit cards and debit where available. Any additional payment options will be shown at checkout.'
-  },
-  {
-    question: 'Is Islamic scholar review included?',
-    answer: 'Yes. The inheritance structure is reviewed by qualified Islamic scholars for inheritance considerations. This supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.'
-  },
-  {
-    question: 'Is legal review included?',
-    answer: 'The package includes Ontario legal workflow support and document review within the Muslim Will process. Legal validity depends on accurate information, proper review, and correct signing and witnessing.'
-  },
-  {
-    question: 'Does this include the final Zoom attestation?',
-    answer: 'Yes. The package includes guided final Zoom attestation support, where the required parties complete signing and witnessing according to Ontario remote execution requirements.'
-  },
-  {
-    question: 'Are future updates included?',
-    answer: 'The initial package covers the completed document package. Future update fees may apply if you later request changes because of life events, asset changes, or changes in your wishes.'
-  },
-  {
-    question: 'Why not use a free template?',
-    answer: 'Free templates may help with general preparation, but they usually do not include qualified Islamic scholar review, Ontario legal workflow support, Powers of Attorney, guided attestation, or final document coordination.'
-  },
-  {
-    question: 'When should I use a traditional law firm instead?',
-    answer: 'A traditional law firm may be the right path for complex tax planning, disputes, corporate holdings, trusts, international assets, or unusual family circumstances. Muslim Will is designed for families seeking a guided Islamic estate protection package with clear pricing.'
-  }
+/* ── ADD-ONS TABLE DATA ── */
+const ADD_ONS = [
+  { name: 'Last Will & Testament', context: 'Standalone — no subscription required', price: '$149' },
+  { name: 'Power of Attorney for Personal Care', context: 'Standalone', price: '$99' },
+  { name: 'Power of Attorney for Property', context: 'Standalone', price: '$99' },
+  { name: 'Scholar Review', context: 'Complex estates, unusual inheritance situations', price: '$49' },
+  { name: 'Admin & Legal Review', context: 'Multiple properties, business assets, cross-border', price: '$49' },
+  { name: 'Digital Attestation', context: 'Formal legal execution under Ontario law', price: '$149' },
 ];
 
-function CheckIcon() {
+/* ── PRICING FAQ ── */
+const PRICING_FAQ = [
+  {
+    q: 'Is The Bridge really complete — or will I need add-ons?',
+    a: 'For the vast majority of Muslim families, The Bridge is everything you need. The add-ons exist for specific situations — a complex estate, an unusual inheritance structure, or a family that wants individual expert review. If you are unsure whether your situation calls for an add-on, start with The Bridge and add what you need as the process progresses.',
+  },
+  {
+    q: 'What is included in the $350 Full Package?',
+    a: 'The Full Package includes everything in The Bridge plus 12 months of Vault access, Powers of Attorney for both Personal Care and Property, individual Scholar Review, Admin & Legal Review, and Digital Attestation — a combined value of $594.',
+  },
+  {
+    q: 'Can I add Powers of Attorney to The Bridge?',
+    a: 'Yes. POA for Personal Care and POA for Property are each available as add-ons at $99 each — or both are included in the Full Package.',
+  },
+  {
+    q: 'Is there an annual billing option?',
+    a: 'Yes — annual billing is available at a discounted rate. Details available at checkout.',
+  },
+  {
+    q: 'Can I upgrade from The Bridge to the Full Package later?',
+    a: 'Yes. You can add individual expert services at any point in your journey — they do not need to be purchased upfront.',
+  },
+];
+
+function PricingFaqItem({ q, a, index }: { q: string; a: string; index: number }) {
+  const [open, setOpen] = useState(false);
   return (
-    <svg className={styles.checkIcon} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="20 6 9 17 4 12"></polyline>
-    </svg>
+    <div className={`${styles.faqItem} ${open ? styles.faqItemOpen : ''}`}>
+      <button
+        className={styles.faqBtn}
+        onClick={() => setOpen((p) => !p)}
+        aria-expanded={open}
+        id={`pricing-faq-${index}`}
+      >
+        <span className={styles.faqQ}>{q}</span>
+        <span className={`${styles.faqChevron} ${open ? styles.chevronOpen : ''}`}>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </span>
+      </button>
+      <div className={styles.faqBody} style={{ maxHeight: open ? '400px' : '0px' }}>
+        <p className={styles.faqA}>{a}</p>
+      </div>
+    </div>
   );
 }
 
 export default function PricingPage() {
   return (
-    <main className={sharedStyles.main}>
-      {/* 1. Hero Section */}
-      <section className={`${sharedStyles.section} ${sharedStyles.heroSection}`}>
-        <div className={`${sharedStyles.container} ${sharedStyles.heroContent}`}>
-          <div className={sharedStyles.heroTextWrapper}>
-             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: '0.5rem', marginBottom: '1rem' }}>
-               <div className={`${sharedStyles.heroEyebrow} ${sharedStyles.fadeUp}`} style={{ marginBottom: 0, opacity: 0.85, fontSize: '0.75rem' }}>Transparent Pricing</div>
-               <div className={`${sharedStyles.heroEyebrow} ${sharedStyles.fadeUp}`} style={{ marginBottom: 0 }}>Islamic Will Package In Ontario</div>
-             </div>
-             <h1 className={`${sharedStyles.heroH1} ${sharedStyles.fadeUp} ${sharedStyles.delay1}`}>
-               One flat-fee package for complete Islamic estate protection.
-             </h1>
-             <p className={`${sharedStyles.heroCopy} ${sharedStyles.fadeUp} ${sharedStyles.delay2}`} style={{ marginBottom: '1rem' }}>
-               Muslim Will gives families a clear, guided pathway to prepare a complete 4-document estate protection package without hidden hourly lawyer fees or unclear add-ons.
-             </p>
-             <p className={`${sharedStyles.heroCopy} ${sharedStyles.fadeUp} ${sharedStyles.delay2}`} style={{ fontSize: '1.125rem', opacity: 0.85, marginTop: 0 }}>
-               This is more than a flat fee. It is a clearer way to protect your family, document your intentions, and move forward with confidence.
-             </p>
-             <div className={`${sharedStyles.heroTrustLine} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-               Includes your Islamic Last Will, guardianship directions, both Powers of Attorney, scholar review, and attestation support.
-             </div>
-             
-             <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay4}`} style={{ marginBottom: '0.5rem' }}>
-                <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" variant="secondary" className={sharedStyles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'pricing_hero' }}>Start Your Will</TrackedButton>
-                <TrackedButton href="#included" size="lg" variant="outline" className={sharedStyles.invertedOutline} eventName="pricing_whats_included_click" eventParams={{ location: 'pricing_hero' }}>See What Is Included</TrackedButton>
-             </div>
-             
-             <div className={`${sharedStyles.fadeUp} ${sharedStyles.delay4} ${sharedStyles.heroMicrocopy}`} style={{ display: 'flex', flexDirection: 'column', gap: '0.25rem' }}>
-               <span style={{ fontWeight: 600, color: 'var(--color-gold)', fontSize: '1.25rem' }}>$350 CAD Individual / $550 CAD Couples</span>
-               <span>One-time flat fee. No hidden hourly lawyer fees.</span>
-             </div>
-             
-             <div className={`${sharedStyles.fadeUp} ${sharedStyles.delay5} ${sharedStyles.heroEmotionalIntro}`}>
-               Future update fees apply only when changes are explicitly requested.
-             </div>
-          </div>
-        </div>
-      </section>
+    <div className={styles.main}>
 
-      {/* 2. What Is Included Grid */}
-      <section id="included" className={`${sharedStyles.section} ${sharedStyles.sectionLight}`}>
-        <div className={sharedStyles.container}>
-          <div className={sharedStyles.sectionHeader}>
-            <h2 className={sharedStyles.sectionH2}>Everything your family needs in one complete package.</h2>
-            <p className={sharedStyles.sectionIntro}>
-              This is more than a single will document. Every Muslim Will package includes the four core estate protection documents families commonly need, plus the review and guidance required to move from intention to proper execution.
+      {/* ── HERO ── */}
+      <section className={styles.heroSection}>
+        <div className={styles.heroOverlay} />
+        <div className={styles.container}>
+          <div className={styles.heroContent}>
+            <div className={styles.heroEyebrow}>Individuals &amp; Families › Pricing</div>
+            <h1 className={styles.heroH1}>Clear options for every Muslim family.</h1>
+            <p className={styles.heroSub}>
+              Whether you are starting today with everything most families need, or looking for individual expert review from start to finish — there is an option built for your situation.
             </p>
           </div>
-          
-          <div className={styles.ledgerWrapper}>
-            
-            {/* Ledger Row 1 */}
-            <div className={styles.ledgerRow}>
-               <div className={styles.ledgerColLeft}>
-                 <div className={styles.ledgerNumber}>01</div>
-                 <div className={styles.ledgerTitleHeader}>
-                   <span className={styles.ledgerEyebrow}>Hard Assets</span>
-                   <h3 className={styles.ledgerTitle}>The Four Core Legal Documents</h3>
-                   <p className={styles.ledgerIntro}>
-                     Comprehensive protection for your family, your health, and your assets.
-                   </p>
-                 </div>
-               </div>
-               <div className={styles.ledgerColRight}>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Islamic Last Will &amp; Testament</h4>
-                    <p className={styles.ledgerItemDesc}>Document your final wishes, inheritance intentions, charitable bequests, executor choices, and family instructions through a will pathway designed for Muslim families in Ontario.</p>
-                  </div>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Minor Guardianship Directions</h4>
-                    <p className={styles.ledgerItemDesc}>Document who you would want to care for your minor children if both parents were no longer able to do so, helping reduce uncertainty for your family.</p>
-                  </div>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Power of Attorney for Property</h4>
-                    <p className={styles.ledgerItemDesc}>Appoint a trusted person to manage financial, property, banking, and business matters if you become unable to manage them yourself.</p>
-                  </div>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Power of Attorney for Personal Care</h4>
-                    <p className={styles.ledgerItemDesc}>Appoint a trusted person to make healthcare and personal-care decisions if you are unable to communicate or decide for yourself.</p>
-                  </div>
-               </div>
-            </div>
-
-            {/* Ledger Row 2 */}
-            <div className={styles.ledgerRow}>
-               <div className={styles.ledgerColLeft}>
-                 <div className={styles.ledgerNumber}>02</div>
-                 <div className={styles.ledgerTitleHeader}>
-                   <span className={styles.ledgerEyebrow}>Validation</span>
-                   <h3 className={styles.ledgerTitle}>The Review &amp; Compliance Layer</h3>
-                   <p className={styles.ledgerIntro}>
-                     Expert checks to ensure your documents meet faith principles and secular laws.
-                   </p>
-
-                   <div className={sharedStyles.scholarMiniBlockLight} style={{ marginTop: '1.5rem' }}>
-                     <Image src="/Images/Dr.Soliman.png" alt="Dr. Sulayman Al-Murayr" width={48} height={48} className={sharedStyles.scholarMiniPhoto} />
-                     <div className={sharedStyles.scholarMiniInfo}>
-                       <span className={sharedStyles.scholarMiniNameLight}>Islamic Review Authority</span>
-                       <span className={sharedStyles.scholarMiniCredentialLight}>Sulayman Al-Murayr</span>
-                       <Link href="/about/sulayman-al-murayr" className={sharedStyles.scholarMiniLinkLight}>Read scholar bio &rarr;</Link>
-                     </div>
-                   </div>
-                 </div>
-               </div>
-               <div className={styles.ledgerColRight}>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Qualified Islamic Scholar Review</h4>
-                    <p className={styles.ledgerItemDesc}>Reviewed by <Link href="/about/sulayman-al-murayr" style={{ color: 'var(--color-gold)', textDecoration: 'underline', textUnderlineOffset: '2px' }}>qualified Islamic scholars</Link> for inheritance considerations. This review supports faith-conscious planning and does not replace a personal fatwa for complex individual circumstances.</p>
-                  </div>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Ontario Legal Workflow Support</h4>
-                    <p className={styles.ledgerItemDesc}>Your documents move through a workflow designed around Ontario legal requirements, with legal review and execution support built into the process.</p>
-                  </div>
-               </div>
-            </div>
-
-            {/* Ledger Row 3 */}
-            <div className={styles.ledgerRow}>
-               <div className={styles.ledgerColLeft}>
-                 <div className={styles.ledgerNumber}>03</div>
-                 <div className={styles.ledgerTitleHeader}>
-                   <span className={styles.ledgerEyebrow}>Completion</span>
-                   <h3 className={styles.ledgerTitle}>The Guided Execution</h3>
-                   <p className={styles.ledgerIntro}>
-                     Remote coordination to successfully sign your documents from home.
-                   </p>
-                 </div>
-               </div>
-               <div className={styles.ledgerColRight}>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Pre-Attestation Briefing</h4>
-                    <p className={styles.ledgerItemDesc}>Before final signing, our team helps you understand what is needed for the attestation session, including witnesses, ID, signing steps, and readiness.</p>
-                  </div>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Guided Final Zoom Attestation</h4>
-                    <p className={styles.ledgerItemDesc}>Attend a guided final Zoom attestation session where the required parties complete the signing and witnessing process according to Ontario remote execution requirements.</p>
-                  </div>
-                  <div className={styles.ledgerItem}>
-                    <h4 className={styles.ledgerItemTitle}>Final Document Delivery</h4>
-                    <p className={styles.ledgerItemDesc}>Once properly signed and witnessed, your completed package is delivered with the relevant final documents and completion guidance.</p>
-                  </div>
-               </div>
-            </div>
-
-          </div>
         </div>
       </section>
 
-      {/* 3. Pricing Cards Section */}
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionCream}`}>
-        <div className={sharedStyles.container}>
-          <div className={sharedStyles.sectionHeader}>
-            <h2 className={sharedStyles.sectionH2}>Choose the package that matches your household.</h2>
-            <p className={sharedStyles.sectionIntro}>
-              Planning together should feel clear from the start. The individual package is designed for one person, while the couples package helps spouses complete their planning through one coordinated household process.
-            </p>
-          </div>
-          
-          <div className={styles.pricingCardsContainer}>
-            {/* Individual Card */}
-            <div className={styles.priceCard}>
-              <div className={styles.cardLabel}>Complete Islamic Estate Protection Package</div>
-              <div className={styles.priceAmount}>$350 <span style={{fontSize: '1.25rem'}}>CAD</span></div>
-              <div className={styles.paymentNote}>One-time flat fee for one individual</div>
-              
-              <ul className={styles.checklist}>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Islamic Last Will &amp; Testament</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Minor guardianship directions</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Power of Attorney for Property</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Power of Attorney for Personal Care</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Qualified Islamic scholar review for inheritance considerations</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Ontario legal workflow support</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Pre-attestation briefing</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Guided final Zoom attestation</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Final document delivery</span></li>
-              </ul>
-              
-              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" style={{ width: '100%' }} eventName="start_will_individual_click" eventParams={{ location: 'pricing_cards' }}>Start Your Will</TrackedButton>
-            </div>
+      {/* ── SECTION 1: Main Pricing Cards ── */}
+      <section className={styles.plansSection}>
+        <div className={styles.container}>
 
-            {/* Couples Card (Recommended) */}
-            <div className={`${styles.priceCard} ${styles.priceCardRecommended}`}>
-              <div className={styles.cardLabel}>Couples Estate Protection Package</div>
-              <div className={styles.priceAmount}>$550 <span style={{fontSize: '1.25rem'}}>CAD</span></div>
-              <div className={styles.paymentNote}>One coordinated package for both spouses</div>
-              
-              <ul className={styles.checklist}>
-                <li className={styles.checklistItem}><CheckIcon/> <span><strong>Two individual</strong> Islamic Last Will &amp; Testament documents</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Household guardianship planning coordinated together</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Power of Attorney for Property for <strong>each spouse</strong></span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Power of Attorney for Personal Care for <strong>each spouse</strong></span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Qualified Islamic scholar review for inheritance considerations</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Ontario legal workflow support</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Pre-attestation briefing</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Guided final Zoom attestation support</span></li>
-                <li className={styles.checklistItem}><CheckIcon/> <span>Final document delivery for both spouses</span></li>
-              </ul>
-              
-              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="primary" size="lg" style={{ width: '100%' }} eventName="start_will_couples_click" eventParams={{ location: 'pricing_cards' }}>Start As A Couple</TrackedButton>
-            </div>
-          </div>
-          
-          <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
-            <div style={{ display: 'inline-block', padding: '1rem 1.5rem', background: 'var(--color-surface)', border: '1px solid var(--color-border)', borderRadius: 'var(--radius-md)', boxShadow: 'var(--shadow-sm)' }}>
-              <span style={{ fontWeight: 600, color: 'var(--color-text-main)' }}>✓ Includes scholar-reviewed inheritance considerations.</span> <Link href="/about/sulayman-al-murayr" style={{ color: 'var(--color-navy)', fontWeight: 600, textDecoration: 'underline', textUnderlineOffset: '2px', marginLeft: '0.5rem' }}>Read scholar bio &rarr;</Link>
-            </div>
-          </div>
-          
-          <div className={styles.pricingFootnote}>
-            <p style={{marginBottom: '0.5rem'}}>Legal validity depends on accurate information, appropriate review, and correct signing and witnessing under applicable Ontario requirements.</p>
-            <p><strong>Couples Legal Note:</strong> Each spouse receives their own will and supporting documents. The couples package makes the household process clearer, more coordinated, and easier to complete together while still providing individual documents for each spouse.</p>
-          </div>
-        </div>
-      </section>
-      {/* 3.5. Common Feedback Themes */}
-      <section className={`${sharedStyles.section}`} style={{ backgroundColor: '#ffffff' }}>
-        <div className={sharedStyles.container}>
-          <div className={sharedStyles.sectionHeader}>
-            <h2 className={sharedStyles.sectionH2}>What families often value most is clarity, structure, and momentum.</h2>
-            <p className={sharedStyles.sectionIntro}>
-              These are the themes our pricing and process are designed to support. Your experience will depend on your circumstances, responsiveness, and file complexity.
-            </p>
-          </div>
-          
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2.5rem' }}>
-            <Card variant="premium">
-              <CardContent style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '2.5rem' }}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="var(--color-gold)" stroke="none" style={{ opacity: 0.6, marginBottom: '1.5rem' }}>
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <div style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--color-text-main)', flexGrow: 1, fontWeight: 400, marginBottom: '2rem' }}>
-                  Families often want enough clarity to stop delaying and move their wishes from intention into written, reviewable documents.
+          {/* ── THE BRIDGE (featured — full width top) ── */}
+          <div className={styles.bridgeCard}>
+            <div className={styles.bridgeAccent} />
+            <div className={styles.bridgeLayout}>
+
+              {/* Left: price + badge + CTA */}
+              <div className={styles.bridgeLeft}>
+                <div className={styles.bridgeBadge}>✦ Most Complete</div>
+                <div className={styles.bridgeName}>The Bridge</div>
+                <div className={styles.bridgePriceRow}>
+                  <span className={styles.bridgePrice}>$5.99</span>
+                  <span className={styles.bridgePricePer}> / month</span>
                 </div>
-                <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '1.5rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-navy)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
-                    AM
+                <p className={styles.bridgeTagline}>
+                  Everything your family needs. An Islamic will, a private Vault, and the tools to protect your legacy — in one complete subscription.
+                </p>
+                <Link href="/apply" className={styles.bridgeCta}>
+                  Start For $5.99/month →
+                </Link>
+                <p className={styles.bridgeMicro}>Free to register. Full access from $5.99/month. Cancel anytime.</p>
+              </div>
+
+              {/* Right: feature columns */}
+              <div className={styles.bridgeRight}>
+                <div className={styles.bridgeFeatureGroup}>
+                  <div className={styles.bridgeGroupLabel}>
+                    <span className={styles.bridgeGroupIcon}>📋</span> Your Islamic Will
                   </div>
-                  <div>
-                    <strong style={{ display: 'block', color: 'var(--color-heading)' }}>Clarity first</strong>
-                    <span style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>A common reason families decide to begin</span>
-                  </div>
+                  {[
+                    'Last Will & Testament — built on Faraid inheritance principles, Ontario-compliant',
+                    'Guardianship documentation for minor children',
+                    'Charitable bequest — up to 1/3 of your estate',
+                    'Executor appointment',
+                  ].map((f) => (
+                    <div key={f} className={styles.bridgeFeatureItem}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {f}
+                    </div>
+                  ))}
                 </div>
-              </CardContent>
-            </Card>
 
-            <Card variant="premium">
-              <CardContent style={{ display: 'flex', flexDirection: 'column', height: '100%', padding: '2.5rem' }}>
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="var(--color-gold)" stroke="none" style={{ opacity: 0.6, marginBottom: '1.5rem' }}>
-                  <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
-                </svg>
-                <div style={{ fontSize: '1.25rem', lineHeight: '1.5', color: 'var(--color-text-main)', flexGrow: 1, fontWeight: 400, marginBottom: '2rem' }}>
-                  Families also want a process that feels guided and manageable, especially when document review, witnessing, and final steps are unfamiliar.
-                </div>
-                <div style={{ marginTop: 'auto', display: 'flex', alignItems: 'center', gap: '1rem', borderTop: '1px solid rgba(0,0,0,0.08)', paddingTop: '1.5rem' }}>
-                  <div style={{ width: '48px', height: '48px', borderRadius: '50%', backgroundColor: 'var(--color-navy)', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: '600', fontSize: '1.125rem', flexShrink: 0 }}>
-                    AM
+                <div className={styles.bridgeFeatureGroup}>
+                  <div className={styles.bridgeGroupLabel}>
+                    <span className={styles.bridgeGroupIcon}>🔐</span> Your Private Vault
                   </div>
-                  <div>
-                    <strong style={{ display: 'block', color: 'var(--color-heading)' }}>Guided support</strong>
-                    <span style={{ fontSize: '0.875rem', color: 'var(--color-text-muted)' }}>Why many families prefer a managed workflow over DIY</span>
-                  </div>
+                  {[
+                    'Obligations Register — every debt your estate needs to settle',
+                    'Estate Inventory — every asset your executor needs to find',
+                    'Sealed Disclosures — private documents for specific recipients',
+                    'Final Words — written letters, voice notes, and video messages',
+                  ].map((f) => (
+                    <div key={f} className={styles.bridgeFeatureItem}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {f}
+                    </div>
+                  ))}
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-          <div style={{ marginTop: '1.25rem', textAlign: 'center', fontSize: '0.85rem', color: 'var(--color-text-muted)' }}>
-            These are generalized planning themes, not guarantees of outcome or testimonials for every user.
-          </div>
-        </div>
-      </section>
 
+                <div className={styles.bridgeFeatureGroup}>
+                  <div className={styles.bridgeGroupLabel}>
+                    <span className={styles.bridgeGroupIcon}>⚙️</span> Everything Else
+                  </div>
+                  {[
+                    'Unlimited updates — any time, no extra cost',
+                    'Secure executor release process with full audit trail',
+                    'Powers of Attorney available as add-ons',
+                  ].map((f) => (
+                    <div key={f} className={styles.bridgeFeatureItem}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {f}
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-      {/* 4. Comparison Table Section */}
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionLight}`}>
-        <div className={sharedStyles.container}>
-          <div className={sharedStyles.sectionHeader}>
-            <h2 className={sharedStyles.sectionH2}>Compare the package, not just the price.</h2>
-            <p className={sharedStyles.sectionIntro}>
-              Most families are not comparing one document to one document. They are comparing how much clarity, review, and support they receive before signing. Muslim Will is designed to combine the core documents, Islamic inheritance review, legal workflow support, and guided final attestation in one clear package.
-            </p>
-          </div>
-          
-          <div className={styles.tableWrapper}>
-            <table className={styles.comparisonTable}>
-              <thead>
-                <tr>
-                  <th>Feature</th>
-                  <th>Free / DIY Template</th>
-                  <th>Traditional Law Firm</th>
-                  <th className={styles.highlightColHeader}>Muslim Will</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Islamic Last Will</td>
-                  <td>Generic or self-managed</td>
-                  <td>Depends on lawyer/instructions</td>
-                  <td className={styles.highlightCol}><div className={styles.highlightColCenter}><CheckIcon /></div></td>
-                </tr>
-                <tr>
-                  <td>Minor guardianship</td>
-                  <td>May be missing or self-managed</td>
-                  <td>Often available, depends on scope</td>
-                  <td className={styles.highlightCol}><div className={styles.highlightColCenter}><CheckIcon /></div></td>
-                </tr>
-                <tr>
-                  <td>PoA for Property</td>
-                  <td>Usually not included</td>
-                  <td>Often priced or scoped separately</td>
-                  <td className={styles.highlightCol}><div className={styles.highlightColCenter}><CheckIcon /></div></td>
-                </tr>
-                <tr>
-                  <td>PoA for Personal Care</td>
-                  <td>Usually not included</td>
-                  <td>Often priced or scoped separately</td>
-                  <td className={styles.highlightCol}><div className={styles.highlightColCenter}><CheckIcon /></div></td>
-                </tr>
-                <tr>
-                  <td>Islamic inheritance review</td>
-                  <td>No</td>
-                  <td>Usually requires separate scholar</td>
-                  <td className={styles.highlightCol}><div className={styles.highlightColCenter}><CheckIcon /></div></td>
-                </tr>
-                <tr>
-                  <td>Qualified scholar review</td>
-                  <td>No</td>
-                  <td>Usually not included by default</td>
-                  <td className={styles.highlightCol}><div className={styles.highlightColCenter}><CheckIcon /></div></td>
-                </tr>
-                <tr>
-                  <td>Ontario legal workflow support</td>
-                  <td>No / self-managed</td>
-                  <td>Yes, depending on engagement</td>
-                  <td className={styles.highlightCol}><div className={styles.highlightColCenter}><CheckIcon /></div></td>
-                </tr>
-                <tr>
-                  <td>Guided final attestation</td>
-                  <td>No / self-managed</td>
-                  <td>Depends on the firm</td>
-                  <td className={styles.highlightCol}><div className={styles.highlightColCenter}><CheckIcon /></div></td>
-                </tr>
-                <tr>
-                  <td>Couples / spousal planning</td>
-                  <td>Self-managed separately</td>
-                  <td>Priced as two wills or custom</td>
-                  <td className={styles.highlightCol} style={{ fontSize: '0.85rem' }}>Dedicated package recommended</td>
-                </tr>
-                <tr>
-                  <td>Clear flat fee</td>
-                  <td>Free or low cost, but limited</td>
-                  <td>Often hourly or custom quote</td>
-                  <td className={`${styles.highlightCol} ${styles.highlightColLast}`} style={{ fontSize: '0.9rem' }}>$350 CAD individual<br/>$550 CAD couples</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div style={{ marginTop: '1.5rem', fontSize: '0.85rem', color: 'var(--color-text-muted)', textAlign: 'center' }}>
-            Traditional law firms remain important for complex estates, disputes, tax planning, corporate structures, or unusual legal needs. Muslim Will is designed as a guided Islamic estate protection package for families who need a clearer, more complete pathway.
-          </div>
-        </div>
-      </section>
-
-      {/* 5. Information Grids (Why Flat Fee / Future Changes / Tools) */}
-      <section className={sharedStyles.section}>
-        <div className={sharedStyles.container}>
-          <div className={styles.policyGrid}>
-            {/* Why Flat Fee */}
-            <div className={styles.policyItem}>
-              <h3 className={styles.policyTitle}>Clear pricing helps families stop delaying.</h3>
-              <p className={styles.policyIntro}>Many families delay estate planning because they are unsure what the process will cost, what documents are needed, or whether Islamic inheritance review is included.</p>
-              <ul className={styles.policyList}>
-                <li><strong>No hourly lawyer-fee anxiety:</strong> You know the package price before you begin.</li>
-                <li><strong>No surprise add-ons:</strong> The will, guardianship directions, and both Powers of Attorney are included.</li>
-                <li><strong>No guessing:</strong> Includes guided intake, review, preparation, attestation support, and delivery.</li>
-              </ul>
             </div>
+          </div>
 
-            {/* Future Changes */}
-            <div className={styles.policyItem}>
-              <h3 className={styles.policyTitle}>Future changes are handled separately.</h3>
-              <p className={styles.policyIntro}>Your package covers the complete initial estate protection setup. If your life changes later and you request updates, amendment or update fees may apply only when confirmed.</p>
-              <ul className={styles.policyList}>
-                <li>Marriage or divorce</li>
-                <li>Birth or adoption of a child</li>
-                <li>Property purchase or major asset changes</li>
-                <li>Change of executor, guardian, or charity</li>
-              </ul>
-              <div style={{ fontSize: '0.85rem', color: 'var(--color-text-muted)', marginTop: '1.5rem', fontStyle: 'italic' }}>Any future update cost should be explained before additional work begins.</div>
-            </div>
+          {/* ── FAMILY + FULL PACKAGE (two-column below) ── */}
+          <div className={styles.secondaryCards}>
 
-            {/* Free Tools */}
-            <div className={styles.policyItem}>
-              <h3 className={styles.policyTitle}>Free tools vs Completed package.</h3>
-              <p className={styles.policyIntro}>Educational tools, checklists, and calculators can help you understand the basics before you begin, but they do not replace a completed will package.</p>
-              <ul className={styles.policyList}>
-                <li>Islamic inheritance education</li>
-                <li>Readiness checklists</li>
-                <li>Future inheritance calculators</li>
-              </ul>
-              <div className={styles.noticeBox} style={{ marginTop: '1.5rem', background: 'transparent', padding: '0 0 0 1.5rem', fontSize: '0.85rem' }}>
-                Free tools are for education and preparation only. They do not create a legal will and do not replace professional legal or Islamic review.
+            {/* Family Package */}
+            <div className={styles.secondaryCard}>
+              <div className={styles.secondaryCardInner}>
+                <div className={styles.secondaryBadge} data-family>👨‍👩‍👧‍👦 Family Package</div>
+                <div className={styles.secondaryPriceRow}>
+                  <span className={styles.secondaryPrice}>$4.19</span>
+                  <span className={styles.secondaryPricePer}> / person / month</span>
+                </div>
+                <div className={styles.secondarySavings}>30% off the individual price</div>
+                <p className={styles.secondaryTagline}>
+                  One subscription for every member of your family. Every account private and independent.
+                </p>
+                <div className={styles.secondaryFeatures}>
+                  {[
+                    'The Bridge for each family member',
+                    'Husband, wife, adult children — all covered',
+                    'Every account fully private — no shared vault, no shared documents',
+                    'Shared billing, individual protection',
+                  ].map((f) => (
+                    <div key={f} className={styles.secondaryFeatureItem}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {f}
+                    </div>
+                  ))}
+                </div>
+                <Link href="/apply?plan=family" className={styles.secondaryCta}>
+                  Protect Your Family →
+                </Link>
+                <p className={styles.secondaryMicro}>Billed per person. Minimum 2 members. Each account stays private.</p>
               </div>
             </div>
+
+            {/* Full Package */}
+            <div className={styles.secondaryCard} data-full>
+              <div className={styles.secondaryCardInner}>
+                <div className={styles.secondaryBadge} data-full>🎯 Full Package</div>
+                <div className={styles.secondaryPriceRow}>
+                  <span className={styles.secondaryPrice}>$350</span>
+                  <span className={styles.secondaryPricePer}> one-time</span>
+                </div>
+                <div className={styles.secondarySavings}>Combined value: $594</div>
+                <p className={styles.secondaryTagline}>
+                  For specific situations that call for individual expert attention — complex estates, multiple assets, or those who want a dedicated professional reviewing their case from start to finish.
+                </p>
+                <div className={styles.secondaryFeatures}>
+                  {[
+                    'Everything in The Bridge',
+                    '12 months of Vault access',
+                    'Last Will & Testament — individual expert preparation ($149)',
+                    'Power of Attorney for Personal Care ($99)',
+                    'Power of Attorney for Property ($99)',
+                    'Scholar Review — individual Islamic inheritance review ($49)',
+                    'Admin & Legal Review ($49)',
+                    'Digital Attestation — Zoom signing session with paralegal ($149)',
+                  ].map((f) => (
+                    <div key={f} className={styles.secondaryFeatureItem}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      {f}
+                    </div>
+                  ))}
+                </div>
+                <Link href="/apply?plan=full" className={styles.secondaryCtaFull}>
+                  Get The Full Package →
+                </Link>
+                <p className={styles.secondaryMicro}>One-time payment. Includes 12 months of Vault access.</p>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
 
-      {/* 6. FAQ Preview */}
-      <section className={`${sharedStyles.section} ${sharedStyles.sectionLight}`}>
-        <div className={sharedStyles.container}>
-          <div className={sharedStyles.sectionHeader}>
-            <h2 className={sharedStyles.sectionH2}>Pricing questions, answered clearly.</h2>
-          </div>
-          
-          <div className={sharedStyles.faqContainer}>
-            <Accordion items={pricingFaqItems} />
-          </div>
-        </div>
-      </section>
-
-      {/* 7. Final CTA */}
-      <section className={`${sharedStyles.section} ${sharedStyles.ctaSectionPadding}`}>
-        <div className={sharedStyles.container}>
-          <div className={sharedStyles.ctaBox}>
-            <h2>Start with clear pricing and a complete package.</h2>
-            <p className={sharedStyles.ctaText}>
-              Move forward with a guided Islamic will process, transparent pricing, and the four core documents your family may need.
+      {/* ── SECTION 2: Add-Ons ── */}
+      <section className={styles.addOnsSection}>
+        <div className={styles.container}>
+          <div className={styles.addOnsHeader}>
+            <div className={styles.sectionLabel}>Add-Ons</div>
+            <h2 className={styles.sectionH2}>For specific situations — not to complete The Bridge.</h2>
+            <p className={styles.addOnsIntro}>
+              The Bridge gives you everything most Muslim families need. These add-ons exist for specific legal, religious, or personal circumstances — not because The Bridge is missing anything.
             </p>
-            <div style={{ marginBottom: '1.5rem', fontSize: '1.125rem', opacity: 0.9 }}>
-              Clear pricing. Clear next steps.
+          </div>
+
+          <div className={styles.addOnsTable}>
+            <div className={styles.addOnsTableHead}>
+              <div>Add-On</div>
+              <div>Who it&apos;s for</div>
+              <div className={styles.addOnsPriceHead}>Price</div>
             </div>
-            <div className={sharedStyles.ctaActions}>
-              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" className={sharedStyles.ctaButtonPrimary} eventName="start_your_will_click" eventParams={{ location: 'pricing_final_cta' }}>Start Your Will</TrackedButton>
-              <TrackedButton href="/how-it-works" size="lg" variant="outlineLight" className={sharedStyles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: 'pricing_final_cta' }}>See How It Works</TrackedButton>
+            {ADD_ONS.map((addon, i) => (
+              <div key={i} className={styles.addOnsTableRow}>
+                <div className={styles.addOnName}>{addon.name}</div>
+                <div className={styles.addOnContext}>{addon.context}</div>
+                <div className={styles.addOnPrice}>{addon.price}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── SECTION 3: FAQ ── */}
+      <section className={styles.faqSection}>
+        <div className={styles.container}>
+          <div className={styles.faqHeader}>
+            <div className={styles.sectionLabel}>Pricing Questions</div>
+            <h2 className={styles.sectionH2}>Frequently asked pricing questions</h2>
+          </div>
+          <div className={styles.faqList}>
+            {PRICING_FAQ.map((item, i) => (
+              <PricingFaqItem key={i} q={item.q} a={item.a} index={i} />
+            ))}
+          </div>
+          <p className={styles.faqMoreLink}>
+            More questions?{' '}
+            <Link href="/about/faq" className={styles.faqLink}>See the full FAQ →</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* ── FINAL CTA ── */}
+      <section className={styles.ctaSection}>
+        <div className={styles.container}>
+          <div className={styles.ctaContent}>
+            <h2 className={styles.ctaH2}>Start today. Update any time.</h2>
+            <p className={styles.ctaTrust}>
+              Free to register. Full access from $5.99/month. No hidden fees. Islamic will and private Vault included.
+            </p>
+            <div className={styles.ctaActions}>
+              <Link href="/apply" className={styles.ctaPrimary}>
+                Start For $5.99/month →
+              </Link>
+              <Link href="/how-it-works" className={styles.ctaSecondary}>
+                See How It Works →
+              </Link>
             </div>
-            <div style={{ marginTop: '1.25rem', fontSize: '1rem', color: '#ffffff', display: 'flex', flexDirection: 'column', gap: '0.25rem', position: 'relative', zIndex: 1 }}>
-              <span style={{ opacity: 0.9 }}>Your family comes first. Your planning can begin clearly.</span>
+            <div className={styles.ctaLinks}>
+              <Link href="/how-it-works" className={styles.ctaInternalLink}>How It Works</Link>
+              <span>·</span>
+              <Link href="/vault/last-will-testament" className={styles.ctaInternalLink}>The Will</Link>
+              <span>·</span>
+              <Link href="/about/faq" className={styles.ctaInternalLink}>FAQ</Link>
+              <span>·</span>
+              <Link href="/about/compliance" className={styles.ctaInternalLink}>Compliance</Link>
             </div>
           </div>
         </div>
       </section>
-    </main>
+
+    </div>
   );
 }

@@ -173,15 +173,15 @@ export function Header() {
             <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>🤝</span> For Charities &amp; Nonprofits</div>
             <div className={styles.dropColSub}>Institutional giving and donor estate planning</div>
           </div>
-          <Link href="/charity-partnership" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+          <Link href="/community/charity-partnership" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
             <span className={styles.dropItemTitle}>Charity Partnership</span>
             <span className={styles.dropItemDesc}>Co-brand a dedicated will planning page</span>
           </Link>
-          <Link href="/sponsored-seats" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+          <Link href="/community/sponsored-seats" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
             <span className={styles.dropItemTitle}>Sponsored Seats</span>
             <span className={styles.dropItemDesc}>Fund will preparation for families who need it</span>
           </Link>
-          <Link href="/planned-giving" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+          <Link href="/community/planned-giving" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
             <span className={styles.dropItemTitle}>Planned Giving</span>
             <span className={styles.dropItemDesc}>Help your donors structure meaningful bequests</span>
           </Link>
@@ -192,11 +192,11 @@ export function Header() {
               <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>🕌</span> For Masjids &amp; Islamic Centres</div>
               <div className={styles.dropColSub}>Community-rooted partnerships</div>
             </div>
-            <Link href="/mosque-ambassador" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+            <Link href="/community/mosque-ambassador" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
               <span className={styles.dropItemTitle}>Mosque Ambassador Programme</span>
               <span className={styles.dropItemDesc}>Bring a trusted will planning service to your congregation</span>
             </Link>
-            <Link href="/community-resources" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+            <Link href="/community/community-resources" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
               <span className={styles.dropItemTitle}>Community Resources</span>
               <span className={styles.dropItemDesc}>Khutbah guides and awareness materials</span>
             </Link>
@@ -204,7 +204,7 @@ export function Header() {
           <div className={styles.smallCtaBlock}>
             <div className={styles.ctaEyebrow}>✦ Partner With Us</div>
             <div className={styles.ctaBody}>Book a walkthrough with our partnerships team.</div>
-            <Link href="/request-demo" className={styles.ctaBtn} style={{ marginTop: '4px', padding: '10px 0' }} onClick={() => setActiveDropdown(null)}>Request a Demo →</Link>
+            <Link href="/community/request-demo" className={styles.ctaBtn} style={{ marginTop: '4px', padding: '10px 0' }} onClick={() => setActiveDropdown(null)}>Request a Demo →</Link>
           </div>
         </div>
       </div>
@@ -217,11 +217,11 @@ export function Header() {
               <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>📊</span> Wealth &amp; Planning</div>
               <div className={styles.dropColSub}>For advisors managing the broader financial picture</div>
             </div>
-            <Link href="/financial-advisors" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+            <Link href="/professionals/financial-advisors" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
               <span className={styles.dropItemTitle}>For Financial Advisors</span>
               <span className={styles.dropItemDesc}>Help clients complete the estate planning picture</span>
             </Link>
-            <Link href="/estate-planners" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+            <Link href="/professionals/estate-planners" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
               <span className={styles.dropItemTitle}>For Estate Planners &amp; Trustees</span>
               <span className={styles.dropItemDesc}>Integrate Islamic inheritance compliance</span>
             </Link>
@@ -231,11 +231,11 @@ export function Header() {
               <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>⚖️</span> Legal</div>
               <div className={styles.dropColSub}>For practitioners who work with estate documents</div>
             </div>
-            <Link href="/lawyers" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+            <Link href="/professionals/lawyers" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
               <span className={styles.dropItemTitle}>For Lawyers</span>
               <span className={styles.dropItemDesc}>A structured referral pathway for clients</span>
             </Link>
-            <Link href="/paralegals" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+            <Link href="/professionals/paralegals" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
               <span className={styles.dropItemTitle}>For Paralegals</span>
               <span className={styles.dropItemDesc}>Support your supervising lawyer's estate clients</span>
             </Link>
@@ -245,11 +245,11 @@ export function Header() {
               <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>🕌</span> Community &amp; Faith</div>
               <div className={styles.dropColSub}>For those who serve Muslim communities</div>
             </div>
-            <Link href="/for-imams" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+            <Link href="/professionals/for-imams" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
               <span className={styles.dropItemTitle}>For Imams</span>
               <span className={styles.dropItemDesc}>Mosque Ambassador Programme</span>
             </Link>
-            <Link href="/for-scholars" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+            <Link href="/professionals/for-scholars" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
               <span className={styles.dropItemTitle}>For Scholars</span>
               <span className={styles.dropItemDesc}>Join our network of qualified Islamic scholars</span>
             </Link>
@@ -262,11 +262,11 @@ export function Header() {
           </div>
           <div className={styles.dropFooterBottom}>
             <div className={styles.dropFooterLinks}>
-              <Link href="/legal-islamic-compliance" className={styles.dropFooterLink} onClick={() => setActiveDropdown(null)}>Our Compliance Framework ›</Link>
-              <Link href="/our-scholars" className={styles.dropFooterLink} onClick={() => setActiveDropdown(null)}>Meet Our Scholars ›</Link>
-              <Link href="/contact" className={styles.dropFooterLink} onClick={() => setActiveDropdown(null)}>Contact Our Team ›</Link>
+              <Link href="/about/compliance" className={styles.dropFooterLink} onClick={() => setActiveDropdown(null)}>Our Compliance Framework ›</Link>
+              <Link href="/about/our-scholars" className={styles.dropFooterLink} onClick={() => setActiveDropdown(null)}>Meet Our Scholars ›</Link>
+              <Link href="/about/contact" className={styles.dropFooterLink} onClick={() => setActiveDropdown(null)}>Contact Our Team ›</Link>
             </div>
-            <Link href="/request-demo" className={`${styles.ctaBtn} ${styles.dropFooterCta}`} onClick={() => setActiveDropdown(null)}>Request a Demo →</Link>
+            <Link href="/community/request-demo" className={`${styles.ctaBtn} ${styles.dropFooterCta}`} onClick={() => setActiveDropdown(null)}>Request a Demo →</Link>
           </div>
         </div>
       </div>
@@ -278,15 +278,15 @@ export function Header() {
             <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>✨</span> Our Company</div>
             <div className={styles.dropColSub}>The people, mission, and principles</div>
           </div>
-          <Link href="/about" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('about', 'header_mega'); }}>
+          <Link href="/about/our-story" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('about', 'header_mega'); }}>
             <span className={styles.dropItemTitle}>Our Story</span>
             <span className={styles.dropItemDesc}>How The Muslim Will came to be</span>
           </Link>
-          <Link href="/our-team" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+          <Link href="/about/our-team" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
             <span className={styles.dropItemTitle}>Our Team</span>
             <span className={styles.dropItemDesc}>Estate planning specialists and experts</span>
           </Link>
-          <Link href="/our-scholars" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
+          <Link href="/about/our-scholars" className={styles.dropItem} onClick={() => setActiveDropdown(null)}>
             <span className={styles.dropItemTitle}>Our Scholars</span>
             <span className={styles.dropItemDesc}>Meet the qualified Islamic scholars who review every application</span>
           </Link>
@@ -297,11 +297,11 @@ export function Header() {
               <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>🛡️</span> Trust &amp; Transparency</div>
               <div className={styles.dropColSub}>How we are structured and how we operate</div>
             </div>
-            <Link href="/legal-islamic-compliance" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('compliance', 'header_mega'); }}>
+            <Link href="/about/compliance" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('compliance', 'header_mega'); }}>
               <span className={styles.dropItemTitle}>Compliance</span>
               <span className={styles.dropItemDesc}>How The Muslim Will is structured to meet provincial requirements</span>
             </Link>
-            <Link href="/faq" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('faq', 'header_mega'); }}>
+            <Link href="/about/faq" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('faq', 'header_mega'); }}>
               <span className={styles.dropItemTitle}>FAQ</span>
               <span className={styles.dropItemDesc}>Clear answers to the questions families ask most</span>
             </Link>
@@ -309,7 +309,7 @@ export function Header() {
           <div className={styles.smallCtaBlock}>
             <div className={styles.ctaEyebrow}>✦ Get In Touch</div>
             <div className={styles.ctaBody}>Reach the right team — whether you are a prospective client, an organisation, or a professional.</div>
-            <Link href="/contact" className={styles.ctaBtn} style={{ marginTop: '4px', padding: '10px 0' }} onClick={() => setActiveDropdown(null)}>Contact Us →</Link>
+            <Link href="/about/contact" className={styles.ctaBtn} style={{ marginTop: '4px', padding: '10px 0' }} onClick={() => setActiveDropdown(null)}>Contact Us →</Link>
           </div>
         </div>
       </div>
@@ -383,29 +383,29 @@ export function Header() {
             <div className={styles.mobileCtaEyebrow}>✦ Partner With Us</div>
             <div className={styles.mobileCtaTitle}>Protect the families you serve.</div>
             <div className={styles.mobileCtaBody}>Co-branded programmes, sponsored seats, and community outreach tools.</div>
-            <Link href="/request-demo" className={styles.mobileCtaBtn} onClick={() => setMobileMenuOpen(false)}>Request a Demo →</Link>
+            <Link href="/community/request-demo" className={styles.mobileCtaBtn} onClick={() => setMobileMenuOpen(false)}>Request a Demo →</Link>
           </div>
           
           <div className={styles.mobileSubgroupLabel}>🤝 For Charities &amp; Nonprofits</div>
-          <Link href="/charity-partnership" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/community/charity-partnership" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Charity Partnership</div>
             <div className={styles.mobileItemDesc}>Co-brand a dedicated will planning page for your community</div>
           </Link>
-          <Link href="/sponsored-seats" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/community/sponsored-seats" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Sponsored Seats</div>
             <div className={styles.mobileItemDesc}>Fund will preparation for families who need it</div>
           </Link>
-          <Link href="/planned-giving" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/community/planned-giving" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Planned Giving</div>
             <div className={styles.mobileItemDesc}>Help your donors structure meaningful bequests</div>
           </Link>
 
           <div className={styles.mobileSubgroupLabel}>🕌 For Masjids &amp; Islamic Centres</div>
-          <Link href="/mosque-ambassador" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/community/mosque-ambassador" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Mosque Ambassador Programme</div>
             <div className={styles.mobileItemDesc}>Bring a trusted service to your congregation</div>
           </Link>
-          <Link href="/community-resources" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/community/community-resources" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Community Resources</div>
             <div className={styles.mobileItemDesc}>Khutbah guides and outreach materials</div>
           </Link>
@@ -419,30 +419,30 @@ export function Header() {
             <div className={styles.mobileCtaEyebrow}>✦ Partner With Us</div>
             <div className={styles.mobileCtaTitle}>Serve your clients better.</div>
             <div className={styles.mobileCtaBody}>A structured referral and partnership programme built for professionals in estate planning, law, and community leadership.</div>
-            <Link href="/request-demo" className={styles.mobileCtaBtn} onClick={() => setMobileMenuOpen(false)}>Request a Demo →</Link>
+            <Link href="/community/request-demo" className={styles.mobileCtaBtn} onClick={() => setMobileMenuOpen(false)}>Request a Demo →</Link>
           </div>
           
           <div className={styles.mobileSubgroupLabel}>📊 Wealth &amp; Planning</div>
-          <Link href="/financial-advisors" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/professionals/financial-advisors" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>For Financial Advisors</div>
           </Link>
-          <Link href="/estate-planners" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/professionals/estate-planners" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>For Estate Planners &amp; Trustees</div>
           </Link>
 
           <div className={styles.mobileSubgroupLabel}>⚖️ Legal</div>
-          <Link href="/lawyers" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/professionals/lawyers" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>For Lawyers</div>
           </Link>
-          <Link href="/paralegals" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/professionals/paralegals" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>For Paralegals</div>
           </Link>
 
           <div className={styles.mobileSubgroupLabel}>🕌 Community &amp; Faith</div>
-          <Link href="/for-imams" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/professionals/for-imams" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>For Imams — Mosque Ambassador Programme</div>
           </Link>
-          <Link href="/for-scholars" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/professionals/for-scholars" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>For Scholars</div>
           </Link>
         </div>
@@ -452,24 +452,24 @@ export function Header() {
         </div>
         <div className={`${styles.mobileTabBody} ${activeMobileTab === 'mt4' ? styles.open : ''}`}>
           <div className={styles.mobileSubgroupLabel}>✨ Our Company</div>
-          <Link href="/about" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/about/our-story" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Our Story</div>
           </Link>
-          <Link href="/our-team" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/about/our-team" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Our Team</div>
           </Link>
-          <Link href="/our-scholars" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/about/our-scholars" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Our Scholars</div>
           </Link>
           
           <div className={styles.mobileSubgroupLabel}>🛡️ Trust &amp; Transparency</div>
-          <Link href="/legal-islamic-compliance" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/about/compliance" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Compliance</div>
           </Link>
-          <Link href="/faq" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/about/faq" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>FAQ</div>
           </Link>
-          <Link href="/contact" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+          <Link href="/about/contact" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Contact Us</div>
           </Link>
         </div>
