@@ -36,7 +36,7 @@ export default function Home() {
                <span className={styles.heroTrustPoint}>Reviewed by verified Islamic scholars</span>
                <span className={styles.heroTrustPoint}>Compliant with Canadian law</span>
                <span className={styles.heroTrustPoint}>Secure private vault</span>
-               <span className={styles.heroTrustPoint}>As low as $5.99/month</span>
+               <span className={styles.heroTrustPoint}>From $5.99/month — Complete Islamic Will &amp; Vault</span>
              </div>
              
              <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginTop: '2rem' }}>
@@ -101,7 +101,7 @@ export default function Home() {
 
           <div className={styles.transitionContainer}>
              <p className={styles.transitionLinePremium}>A will is not just legal protection. It is an Islamic obligation.</p>
-             <div className={styles.transitionHighlightPremium}>The Bridge gives you both — in one place, for less than a coffee per week.</div>
+             <div className={styles.transitionHighlightPremium}>The Bridge gives you both — in one complete subscription, built specifically for Muslim families in Canada.</div>
           </div>
         </div>
       </section>
@@ -126,7 +126,6 @@ export default function Home() {
                 <li><span>Compliant with Canadian law</span></li>
                 <li><span>Covers inheritance, guardianship, charitable bequests</span></li>
                 <li><span>Auto-generated and always up to date</span></li>
-                <li><span>Full human review available as an add-on</span></li>
               </ul>
             </div>
 
@@ -138,7 +137,7 @@ export default function Home() {
               <ul className={styles.checkListPremium}>
                 <li><span>4 private branches (debts, assets, documents, messages)</span></li>
                 <li><span>Secure audio and video messages delivered after death</span></li>
-                <li><span>POA instructions for incapacity scenarios</span></li>
+                <li><span>Private incapacity instructions stored in your Vault</span></li>
                 <li><span>Executor access triggered only by official verification</span></li>
                 <li><span>Audit trail on every access event</span></li>
               </ul>
@@ -255,7 +254,7 @@ export default function Home() {
       <section className={`${styles.section} ${styles.pricingSectionPremium}`}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <h2 className={styles.sectionH2} style={{ color: 'var(--color-navy)' }}>Choose how you want to start.</h2>
+            <h2 className={styles.sectionH2} style={{ color: 'var(--color-navy)' }}>The right option for your situation.</h2>
           </div>
           
           <div className={styles.pricingGridPremium}>
@@ -272,12 +271,12 @@ export default function Home() {
                <ul className={styles.checkListPricingPrimary}>
                  <li>
                    <span>
-                     Islamic Last Will & Testament
-                     <span style={{ display: 'block', fontSize: '0.85em', opacity: 0.75, fontWeight: 'normal', marginTop: '2px' }}>(Scholar & lawyer pre-approved template)</span>
+                     Islamic Last Will &amp; Testament
+                     <span style={{ display: 'block', fontSize: '0.85em', opacity: 0.75, fontWeight: 'normal', marginTop: '2px' }}>Built by Islamic scholars and structured to meet Canadian legal requirements</span>
                    </span>
                  </li>
                  <li><span>Muslim Will Vault (all 4 branches)</span></li>
-                 <li><span>POA vault for incapacity</span></li>
+                 <li><span>Private incapacity instructions stored in your Vault</span></li>
                  <li><span>Secure audio & video messages</span></li>
                  <li><span>Executor access workflow</span></li>
                  <li><span>Unlimited updates anytime</span></li>
