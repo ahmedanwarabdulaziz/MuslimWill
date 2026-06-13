@@ -1,5 +1,5 @@
 import { redirect } from 'next/navigation';
 
-export default function ContactRedirectPage() {
+export default function ContactRedirect() {
   redirect('/about/contact');
 }

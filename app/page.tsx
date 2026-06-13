@@ -375,7 +375,7 @@ export default function Home() {
                  <p>Who should make medical decisions for you? Who should manage your finances? What do you want your family to do?</p>
                </div>
                <div className={styles.poaTextColumn}>
-                 <p>The Bridge includes a private <strong>POA vault</strong> — where you store your instructions, appoint your decision-makers, and leave private guidance for the people who may need to act on your behalf.</p>
+                 <p>The Bridge includes a private <strong>incapacity vault</strong> — where you store your instructions, appoint your decision-makers, and leave private guidance for the people who may need to act on your behalf.</p>
                  <p className={styles.poaHighlightText}>Because planning for life matters as much as planning for death.</p>
                </div>
              </div>
