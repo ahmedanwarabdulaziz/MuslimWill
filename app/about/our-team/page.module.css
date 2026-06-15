@@ -19,7 +19,7 @@
   position: relative;
   overflow: hidden;
   padding: 11rem 2rem 8rem;
-  background-image: url('/Images/09.jpeg');
+  background-image: url('/Images/x19.png');
   background-size: cover;
   background-position: center 35%;
 }
@@ -142,6 +142,13 @@
   justify-content: center;
   box-shadow: 0 16px 40px rgba(10, 37, 64, 0.15), 0 0 0 6px rgba(212, 175, 55, 0.1);
   flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.leaderAvatar img {
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .leaderAvatar span {

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import styles from './page.module.css';
@@ -32,26 +33,7 @@ export default function POAPersonalPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <div className={styles.trustBar}>
-        <div className={styles.trustAnchors}>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Legally valid under Ontario law
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Appoint the person you trust most
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Covers healthcare, personal care, and living decisions
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Paired with your private Vault for incapacity instructions
-          </div>
-        </div>
-      </div>
+      <TrustBar items={['Legally valid under Ontario law', 'Appoint the person you trust most', 'Covers healthcare, personal care, and living decisions', 'Paired with your private Vault for incapacity instructions']} />
 
       {/* ── SECTION 1: What a POA Covers ── */}
       <section className={styles.section}>

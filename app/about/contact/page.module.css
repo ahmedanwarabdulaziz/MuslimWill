@@ -16,7 +16,7 @@
   position: relative;
   overflow: hidden;
   padding: 10rem 2rem 7rem;
-  background-image: url('/Images/04.jpeg');
+  background-image: url('/Images/x22.png');
   background-size: cover;
   background-position: center 35%;
 }
@@ -339,9 +339,9 @@
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  background: rgba(34, 197, 94, 0.12);
-  border: 2px solid rgba(34, 197, 94, 0.3);
-  color: #22c55e;
+  background: rgba(10, 37, 64, 0.12);
+  border: 2px solid rgba(10, 37, 64, 0.3);
+  color: var(--color-navy);
   font-size: 1.75rem;
   font-weight: 700;
   display: flex;

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import styles from './page.module.css';
@@ -32,26 +33,7 @@ export default function SealedDisclosuresPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <div className={styles.trustBar}>
-        <div className={styles.trustAnchors}>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Each disclosure assigned to a specific recipient — not shared broadly
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Released only after your passing is verified
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Full audit trail — who accessed what, and when
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Encrypted and held privately — inaccessible to anyone until the moment arrives
-          </div>
-        </div>
-      </div>
+      <TrustBar items={['Each disclosure assigned to a specific recipient — not shared broadly', 'Released only after your passing is verified', 'Full audit trail — who accessed what, and when', 'Encrypted and held privately — inaccessible to anyone until the moment arrives']} />
 
       {/* ── SECTION 1: What Sealed Disclosures Are For ── */}
       <section className={styles.section}>

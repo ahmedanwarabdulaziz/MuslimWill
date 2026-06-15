@@ -25,7 +25,7 @@
   position: relative;
   overflow: hidden;
   padding: 11rem 2rem 8rem;
-  background-image: url('/Images/13.jpeg');
+  background-image: url('/Images/x20.png');
   background-size: cover;
   background-position: center 40%;
 }
@@ -463,15 +463,15 @@
   gap: 0.5rem;
   font-size: 0.8rem;
   font-weight: 600;
-  color: #22c55e;
+  color: var(--color-navy);
 }
 
 .ontarioStatusDot {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #22c55e;
-  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+  background: var(--color-navy);
+  box-shadow: 0 0 0 3px rgba(10, 37, 64, 0.2);
 }
 
 .ontarioJurisStatus[data-planned] {

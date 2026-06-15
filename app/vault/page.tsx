@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import styles from './page.module.css';
@@ -23,13 +24,11 @@ export default function VaultOverview() {
             Your Vault holds the records, documents, and messages that your executor and your loved ones will need when you are gone. While you are alive, only you can see it. After your passing is officially verified, the right people receive access to exactly what you intended — no more, no less.
           </p>
           
-          <div className={styles.heroTrustPoints}>
-            <span className={styles.trustPoint}>✓ Included in The Bridge — $5.99/month</span>
-            <span className={styles.trustPoint}>✓ Private while you are alive — no one else has access</span>
-            <span className={styles.trustPoint}>✓ Executor access only after official verification</span>
-          </div>
         </div>
       </section>
+
+      {/* ── TRUST ANCHORS ── */}
+      <TrustBar items={['Included in The Bridge — $5.99/month', 'Private while you are alive — no one else has access', 'Executor access only after official verification']} />
 
       {/* 2. What the Vault holds */}
       <section className={`${styles.section} ${styles.grayBg}`}>

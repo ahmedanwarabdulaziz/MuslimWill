@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import { InquiryForm } from '@/components/forms/InquiryForm';
@@ -45,26 +46,7 @@ export default function CharityPartnershipPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <div className={styles.trustBar}>
-        <div className={styles.trustAnchors}>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Co-branded will planning page — your name, your mission
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Donors guided through a complete Islamic will — not just a bequest form
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            You lead with trust. We provide the platform.
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            No legal or religious liability transfers to your organisation
-          </div>
-        </div>
-      </div>
+      <TrustBar items={['Co-branded will planning page — your name, your mission', 'Donors guided through a complete Islamic will — not just a bequest form', 'You lead with trust. We provide the platform.', 'No legal or religious liability transfers to your organisation']} />
 
       {/* ── SECTION 1: What a Charity Partnership Looks Like ── */}
       <section className={styles.section}>

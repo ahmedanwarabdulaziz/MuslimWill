@@ -1,8 +1,10 @@
 import type { Metadata } from 'next';
+import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import Image from 'next/image';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import { Card, CardContent, CardTitle } from '@/components/ui/Card';
+import { PiReceiptLight, PiBankLight, PiUsersLight, PiShieldWarningLight, PiQuotesLight, PiScrollLight, PiVaultLight } from 'react-icons/pi';
 import styles from './page.module.css';
 
 const siteUrl = 'https://themuslimwill.com';
@@ -32,14 +34,7 @@ export default function Home() {
                Muslim Will gives you a complete Islamic will and a private secure vault — reviewed by verified scholars and compliant with Canadian law — so your family is never left without answers.
              </p>
              
-             <div className={`${styles.heroTrustPoints} ${styles.fadeUp} ${styles.delay3}`}>
-               <span className={styles.heroTrustPoint}>Reviewed by verified Islamic scholars</span>
-               <span className={styles.heroTrustPoint}>Compliant with Canadian law</span>
-               <span className={styles.heroTrustPoint}>Secure private vault</span>
-               <span className={styles.heroTrustPoint}>From $5.99/month — Complete Islamic Will &amp; Vault</span>
-             </div>
-             
-             <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginTop: '2rem' }}>
+             <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginTop: '3rem' }}>
                 <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" variant="secondary" className={styles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'home_hero' }}>Start For $5.99/month</TrackedButton>
                 <TrackedButton href="#included" size="lg" variant="outline" className={styles.invertedOutline} eventName="see_whats_included_click" eventParams={{ location: 'home_hero' }}>See What&apos;s Included</TrackedButton>
              </div>
@@ -51,49 +46,56 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── TRUST ANCHORS ── */}
+      <TrustBar items={['Reviewed by verified Islamic scholars', 'Compliant with Canadian law', 'Secure private vault', 'From $5.99/month — Complete Islamic Will & Vault']} />
+
       {/* 2. The Problem - REDESIGNED */}
       <section className={`${styles.section} ${styles.problemSection}`}>
         <div className={styles.container}>
-          <div className={styles.sectionHeader} style={{ maxWidth: '800px' }}>
-            <h2 className={styles.sectionH2} style={{ color: 'var(--color-navy)' }}>Most Muslim families are left unprepared.</h2>
-            <p className={styles.sectionIntro} style={{ color: 'var(--color-text-muted)' }}>When a Muslim passes away without a clear will and proper records, the consequences are immediate and severe:</p>
-          </div>
-          
-          <div className={styles.problemGrid}>
-             <div className={styles.problemCardPremium}>
-                <div className={styles.problemIconWrapper}>
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                </div>
-                <h3>Debts may go unpaid</h3>
-                <p>A major sin in Islam, often left unresolved due to lack of documentation.</p>
-             </div>
-             <div className={styles.problemCardPremium}>
-                <div className={styles.problemIconWrapper}>
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-                </div>
-                <h3>Assets go missing</h3>
-                <p>Hidden accounts or properties are lost, leaving families in financial distress.</p>
-             </div>
-             <div className={styles.problemCardPremium}>
-                <div className={styles.problemIconWrapper}>
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                </div>
-                <h3>Family members fight</h3>
-                <p>Without clear legal instruction, inheritance becomes a source of deep conflict.</p>
-             </div>
-             <div className={styles.problemCardPremium}>
-                <div className={styles.problemIconWrapper}>
-                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
-                <h3>Unclear guardianship</h3>
-                <p>The courts may decide who raises your minor children, ignoring your values.</p>
-             </div>
+          <div className={styles.problemLayout}>
+            <div className={styles.problemLeft}>
+              <h2>Most Muslim families are left <span>unprepared.</span></h2>
+              <p>When a Muslim passes away without a clear will and proper records, the consequences are immediate and severe:</p>
+            </div>
+            
+            <div className={styles.problemRight}>
+              <div className={styles.problemGrid}>
+                 <div className={styles.problemCardPremium}>
+                    <div className={styles.problemIconWrapper}>
+                       <PiReceiptLight size={32} />
+                    </div>
+                    <h3>Debts may go unpaid</h3>
+                    <p>A major sin in Islam, often left unresolved due to lack of documentation.</p>
+                 </div>
+                 <div className={styles.problemCardPremium}>
+                    <div className={styles.problemIconWrapper}>
+                       <PiBankLight size={32} />
+                    </div>
+                    <h3>Assets go missing</h3>
+                    <p>Hidden accounts or properties are lost, leaving families in financial distress.</p>
+                 </div>
+                 <div className={styles.problemCardPremium}>
+                    <div className={styles.problemIconWrapper}>
+                       <PiUsersLight size={32} />
+                    </div>
+                    <h3>Family members fight</h3>
+                    <p>Without clear legal instruction, inheritance becomes a source of deep conflict.</p>
+                 </div>
+                 <div className={styles.problemCardPremium}>
+                    <div className={styles.problemIconWrapper}>
+                       <PiShieldWarningLight size={32} />
+                    </div>
+                    <h3>Unclear guardianship</h3>
+                    <p>The courts may decide who raises your minor children, ignoring your values.</p>
+                 </div>
+              </div>
+            </div>
           </div>
           
           <div className={styles.hadithPremiumBlock}>
-             <div className={styles.hadithQuoteMark}>&ldquo;</div>
+             <PiQuotesLight className={styles.hadithQuoteMarkIcon} />
              <p className={styles.hadithTextPremium}>
-               It is not permissible for any Muslim who has something to bequeath to sleep two nights without having his last will and testament written and kept ready with him.
+               "It is not permissible for any Muslim who has something to bequeath to sleep two nights without having his last will and testament written and kept ready with him."
              </p>
              <div className={styles.hadithDivider}></div>
              <span className={styles.hadithSourcePremium}>The Prophet ﷺ — Sahih al-Bukhari, Sahih Muslim</span>
@@ -118,7 +120,9 @@ export default function Home() {
           <div className={styles.bridgeColumnsPremium}>
             <div className={styles.bridgeCardPremium}>
               <div className={styles.bridgeCardHeader}>
-                <div className={styles.bridgeIconPremium}>📜</div>
+                <div className={styles.bridgeIconPremium}>
+                  <PiScrollLight size={36} color="var(--color-gold)" />
+                </div>
                 <h3 className={styles.bridgeCardTitle}>The Will</h3>
               </div>
               <ul className={styles.checkListPremium}>
@@ -131,7 +135,9 @@ export default function Home() {
 
             <div className={styles.bridgeCardPremium}>
               <div className={styles.bridgeCardHeader}>
-                <div className={styles.bridgeIconPremium}>🔐</div>
+                <div className={styles.bridgeIconPremium}>
+                  <PiVaultLight size={36} color="var(--color-gold)" />
+                </div>
                 <h3 className={styles.bridgeCardTitle}>The Vault</h3>
               </div>
               <ul className={styles.checkListPremium}>
@@ -387,18 +393,7 @@ export default function Home() {
       </section>
 
       {/* 8. Trust Bar & Social Proof */}
-      <section className={`${styles.section} ${styles.sectionCream}`}>
-         <div className={styles.container}>
-            <div className={styles.trustBannerPremium}>
-               <span>Trusted by hundreds of Muslim families across Canada</span>
-               <div className={styles.trustLogosPremium}>
-                  <div className={styles.trustLogoPremium}>Scholar Verified</div>
-                  <div className={styles.trustLogoPremium}>Ontario Compliant</div>
-                  <div className={styles.trustLogoPremium}>Bank-Level Encryption</div>
-               </div>
-            </div>
-         </div>
-      </section>
+      <TrustBar items={['Trusted by hundreds of Muslim families across Canada', 'Scholar Verified', 'Ontario Compliant', 'Bank-Level Encryption']} />
 
       {/* 9. Final CTA */}
       <section className={`${styles.section} ${styles.ctaSectionPadding}`}>

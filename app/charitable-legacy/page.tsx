@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import styles from './page.module.css';
@@ -32,26 +33,7 @@ export default function CharitableLegacyPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <div className={styles.trustBar}>
-        <div className={styles.trustAnchors}>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Built around the Islamic 1/3 bequest framework
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Family inheritance shares remain fully protected
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Sadaqah Jariyah documented and legally structured
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Stored securely in your Vault — your intention protected
-          </div>
-        </div>
-      </div>
+      <TrustBar items={['Built around the Islamic 1/3 bequest framework', 'Family inheritance shares remain fully protected', 'Sadaqah Jariyah documented and legally structured', 'Stored securely in your Vault — your intention protected']} />
 
       {/* ── SECTION 1: How Charitable Legacy Works in Islamic Law ── */}
       <section className={styles.section}>

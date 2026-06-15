@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
+import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import styles from './page.module.css';
+import { PiCheckCircleLight } from 'react-icons/pi';
 
 const siteUrl = 'https://themuslimwill.com';
 const pageTitle = 'Islamic Will Ontario | Faraid-Based, Ontario Legal | The Muslim Will';
@@ -32,26 +34,7 @@ export default function LastWillPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <div className={styles.trustBar}>
-        <div className={styles.trustAnchors}>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Built on Islamic inheritance principles (Faraid)
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Prepared to meet Ontario legal requirements
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Reviewed by qualified Islamic scholars
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Updated any time your circumstances change
-          </div>
-        </div>
-      </div>
+      <TrustBar items={['Built on Faraid Principles', 'Ontario Legal Compliance', 'Scholar Reviewed', 'Unlimited Updates']} />
 
       {/* ── SECTION 1: What Your Will Covers ── */}
       <section className={styles.section}>

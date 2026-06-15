@@ -112,7 +112,7 @@ export function Header() {
       <div className={`${styles.dropdown} ${styles.dropdownTriple} ${activeDropdown === 'd1' ? styles.open : ''}`} style={{ left: 'max(0px, calc(50% - 600px + 230px))' }}>
         <div className={styles.dropCol}>
           <div className={styles.dropColHeader}>
-            <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>🌉</span> My Bridge</div>
+            <Link href="/my-bridge" className={styles.dropColLabel} style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => { setActiveDropdown(null); trackNavigateClick('my_bridge_hub', 'header_mega'); }}><span className={styles.dropColLabelIcon}>🌉</span> My Bridge</Link>
             <div className={styles.dropColSub}>Your will, powers of attorney, and charitable legacy</div>
           </div>
           <Link href="/last-will" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('last_will', 'header_mega'); }}>
@@ -134,7 +134,7 @@ export function Header() {
         </div>
         <div className={`${styles.dropCol} ${styles.dropColBorderLeft}`}>
           <div className={styles.dropColHeader}>
-            <div className={styles.dropColLabel}><span className={styles.dropColLabelIcon}>🔒</span> My Vault</div>
+            <Link href="/vault" className={styles.dropColLabel} style={{ textDecoration: 'none', color: 'inherit' }} onClick={() => { setActiveDropdown(null); trackNavigateClick('vault_hub', 'header_mega'); }}><span className={styles.dropColLabelIcon}>🔒</span> My Vault</Link>
             <div className={styles.dropColSub}>Private records, documents, and messages</div>
           </div>
           <Link href="/vault/obligations-register" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('obligations', 'header_mega'); }}>
@@ -330,7 +330,7 @@ export function Header() {
             <Link href="https://app.themuslimwill.com/Account/Login" className={styles.mobileCtaBtn} onClick={() => { setMobileMenuOpen(false); trackStartYourWillClick('header_mobile'); }}>Start My Application →</Link>
           </div>
           
-          <div className={styles.mobileSubgroupLabel}>🌉 My Bridge</div>
+          <Link href="/my-bridge" className={styles.mobileSubgroupLabel} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }} onClick={() => setMobileMenuOpen(false)}>🌉 My Bridge ›</Link>
           <Link href="/last-will" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Last Will &amp; Testament</div>
             <div className={styles.mobileItemDesc}>Your documented wishes for how your estate is distributed</div>
@@ -348,7 +348,7 @@ export function Header() {
             <div className={styles.mobileItemDesc}>Waqf and Sadaqah Jariyah designations</div>
           </Link>
 
-          <div className={styles.mobileSubgroupLabel}>🔒 My Vault</div>
+          <Link href="/vault" className={styles.mobileSubgroupLabel} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }} onClick={() => setMobileMenuOpen(false)}>🔒 My Vault ›</Link>
           <Link href="/vault/obligations-register" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Obligations Register</div>
             <div className={styles.mobileItemDesc}>Debts, loans, and personal obligations</div>

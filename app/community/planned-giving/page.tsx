@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import { InquiryForm } from '@/components/forms/InquiryForm';
@@ -45,26 +46,7 @@ export default function PlannedGivingPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <div className={styles.trustBar}>
-        <div className={styles.trustAnchors}>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Built around the Islamic 1/3 bequest framework
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Donors receive a complete Islamic will — the bequest is part of a proper plan
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            Your organisation presented as a natural choice — not a pressured ask
-          </div>
-          <div className={styles.trustAnchor}>
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-            No legal or religious complexity for your team to manage
-          </div>
-        </div>
-      </div>
+      <TrustBar items={['Built around the Islamic 1/3 bequest framework', 'Donors receive a complete Islamic will — the bequest is part of a proper plan', 'Your organisation presented as a natural choice — not a pressured ask', 'No legal or religious complexity for your team to manage']} />
 
       {/* ── SECTION 1: What Planned Giving Through Muslim Will Looks Like ── */}
       <section className={styles.section}>

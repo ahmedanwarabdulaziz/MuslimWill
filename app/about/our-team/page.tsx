@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import styles from './page.module.css';
 
@@ -41,8 +42,8 @@ export default function OurTeamPage() {
           {/* Ahmed Gohar */}
           <div className={styles.leaderCard}>
             <div className={styles.leaderAvatarCol}>
-              <div className={styles.leaderAvatar} data-initials="AG">
-                <span>AG</span>
+              <div className={styles.leaderAvatar}>
+                <Image src="/Images/05.jpeg" alt="Ahmed Gohar" fill />
               </div>
               <div className={styles.leaderMeta}>
                 <div className={styles.leaderMetaItem}>
@@ -78,8 +79,8 @@ export default function OurTeamPage() {
           {/* Dr. Yasser Aboutaha */}
           <div className={styles.leaderCard} data-reverse>
             <div className={styles.leaderAvatarCol}>
-              <div className={styles.leaderAvatar} data-initials="YA">
-                <span>YA</span>
+              <div className={styles.leaderAvatar}>
+                <Image src="/Images/04.jpeg" alt="Dr. Yasser Aboutaha" fill />
               </div>
               <div className={styles.leaderMeta}>
                 <div className={styles.leaderMetaItem}>
@@ -109,6 +110,74 @@ export default function OurTeamPage() {
               </p>
               <Link href="/about/yasser-aboutaha" className={styles.leaderBioLink}>
                 Read Dr. Yasser&apos;s full bio →
+              </Link>
+            </div>
+          </div>
+
+          {/* Mohamed Aly */}
+          <div className={styles.leaderCard}>
+            <div className={styles.leaderAvatarCol}>
+              <div className={styles.leaderAvatar}>
+                <Image src="/Images/15.jpeg" alt="Mohamed Aly" fill />
+              </div>
+              <div className={styles.leaderMeta}>
+                <div className={styles.leaderMetaItem}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Canada
+                </div>
+                <div className={styles.leaderMetaItem}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                  </svg>
+                  Finance &amp; Operations
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.leaderBody}>
+              <div className={styles.leaderRole}>Chief Financial Officer</div>
+              <h2 className={styles.leaderName}>Mohamed Aly</h2>
+              <p className={styles.leaderBio}>
+                Mohamed brings over 18 years of corporate finance, strategic planning, controllership, and M&amp;A experience. With a background bridging Computer Science and an MBA in Finance, he oversees the platform&apos;s fiscal strategy and operational growth.
+              </p>
+              <Link href="/about/mohamed-aly" className={styles.leaderBioLink}>
+                Read Mohamed&apos;s full bio →
+              </Link>
+            </div>
+          </div>
+
+          {/* Dr. Sulayman Al-Murayr */}
+          <div className={styles.leaderCard} data-reverse>
+            <div className={styles.leaderAvatarCol}>
+              <div className={styles.leaderAvatar}>
+                <Image src="/Images/Dr.Soliman.png" alt="Dr. Sulayman Al-Murayr" fill />
+              </div>
+              <div className={styles.leaderMeta}>
+                <div className={styles.leaderMetaItem}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Canada
+                </div>
+                <div className={styles.leaderMetaItem}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                  </svg>
+                  Islamic Review
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.leaderBody}>
+              <div className={styles.leaderRole}>Islamic Review Authority</div>
+              <h2 className={styles.leaderName}>Dr. Sulayman Al-Murayr</h2>
+              <p className={styles.leaderBio}>
+                Sulayman Al-Murayr provides the scholarly anchor for the Islamic review of inheritance structures at Muslim Will. He holds traditional ijazat and ensures the platform&apos;s standard logic aligns with established Islamic principles.
+              </p>
+              <Link href="/about/sulayman-al-murayr" className={styles.leaderBioLink}>
+                Read Dr. Sulayman&apos;s full bio →
               </Link>
             </div>
           </div>

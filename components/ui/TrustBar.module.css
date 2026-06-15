@@ -1,0 +1,56 @@
+/* ── TRUST BAR (Premium Minimalist Marquee) ── */
+.trustBar {
+  background-color: var(--color-gold);
+  border-bottom: none;
+  padding: 0.85rem 0;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marqueeTrack {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.marqueeContent {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 1.5rem; /* Ensure gap exists between last element and loop reset */
+  width: max-content;
+  animation: scroll 35s linear infinite;
+}
+
+.trustAnchor {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+}
+
+.trustDivider {
+  color: var(--color-navy);
+  font-weight: 700;
+  font-size: 0.9rem;
+  opacity: 0.4;
+}
+
+/* Slightly faster on mobile */
+@media (max-width: 768px) {
+  .trustAnchor {
+    font-size: 0.75rem;
+  }
+  .marqueeContent {
+    animation: scroll 25s linear infinite;
+  }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

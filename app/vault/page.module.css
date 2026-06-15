@@ -9,8 +9,15 @@
 }
 
 .heroSection {
-  background: var(--color-surface);
-  padding-top: 6rem;
+  position: relative;
+  overflow: hidden;
+  padding: 10rem 2rem 8rem;
+  background-image: 
+    linear-gradient(90deg, rgba(10, 37, 64, 0.95) 0%, rgba(10, 37, 64, 0.8) 50%, rgba(10, 37, 64, 0.2) 100%),
+    url('/Images/x06.png');
+  background-size: cover;
+  background-position: center 30%;
+  color: var(--color-surface);
 }
 
 .grayBg {
@@ -40,30 +47,33 @@
 }
 
 .heroEyebrow {
+  display: inline-block;
   color: var(--color-gold);
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
-  font-size: 0.85rem;
-  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  background: rgba(212, 175, 55, 0.15);
+  padding: 0.4rem 1.25rem;
+  border-radius: 100px;
 }
 
 .heroH1 {
   font-family: var(--font-heading);
-  font-size: 3.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 600;
-  color: var(--color-navy);
   line-height: 1.1;
   margin-bottom: 1.5rem;
-  max-width: 900px;
+  color: var(--color-surface);
 }
 
 .heroIntro {
   font-size: 1.25rem;
-  color: var(--color-text-muted);
   line-height: 1.6;
-  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.85);
   max-width: 800px;
+  margin-bottom: 2.5rem;
 }
 
 .heroTrustPoints {

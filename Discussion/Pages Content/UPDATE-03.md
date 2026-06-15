@@ -45,6 +45,31 @@ Current text:
 
 ---
 
+### 3. New page — My Bridge Overview (`/my-bridge`)
+**Brief:** `Discussion/Pages Content/33-my-bridge-overview.md`
+
+Create a new file at `/app/my-bridge/page.tsx`. This is the hub/entry page for the My Bridge section — mirroring what `/vault` does for the Vault. Presents all 4 document types (Last Will, Charitable Legacy, POA Personal Care, POA Property) in one place with clear included vs add-on distinction.
+
+**Key points:**
+- Last Will and Charitable Legacy: "✓ Included in The Bridge" badge
+- POA Personal Care and POA Property: "Available as add-on" badge
+- Short POA framing block explaining when POAs are relevant — not as a missing feature
+- Final CTA anchored to The Bridge
+- Read the full brief for all copy and design details
+
+---
+
+### 4. Header navigation — My Bridge and My Vault now link to hub pages
+**File:** `/components/ui/Header.tsx` ✅ ALREADY UPDATED
+
+The "My Bridge" and "My Vault" section labels in the Individuals & Families dropdown are now clickable links:
+- **Desktop:** "🌉 My Bridge" label → `/my-bridge`, "🔒 My Vault" label → `/vault`
+- **Mobile:** Same labels now navigate to hub pages (with `›` arrow added for clarity)
+
+This change has already been applied directly to `Header.tsx` — no action needed from Antigravity for item 4.
+
+---
+
 ## Summary
 
 | # | File | Change |
@@ -52,3 +77,5 @@ Current text:
 | 1 | `/app/faq/page.tsx` | Replace with redirect → `/about/faq` |
 | 1 | `/app/contact/page.tsx` | Replace with redirect → `/about/contact` |
 | 2 | `/app/page.tsx` | "POA vault" → "incapacity vault" in Section 7 |
+| 3 | `/app/my-bridge/page.tsx` | New page — My Bridge hub (see brief 33) |
+| 4 | `/components/ui/Header.tsx` | ✅ Done — My Bridge and My Vault labels are now nav links |
