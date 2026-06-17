@@ -69,6 +69,9 @@ export default function CharityPartnershipPage() {
               <p className={styles.partnershipDesc}>
                 Your donors visit a will planning page that carries your name, your mission, and your voice. The Muslim Will handles the guided application, the Islamic inheritance structure, the legal workflow, and the Vault. Your organisation is the trusted gateway that brought them there.
               </p>
+              <Link href="/community/partners/bhope" className={styles.formLink} style={{ display: 'inline-block', marginTop: '1.25rem' }}>
+                See a live example: BHOPE &rarr;
+              </Link>
             </div>
 
             <div className={styles.partnershipCard}>
@@ -206,6 +209,7 @@ export default function CharityPartnershipPage() {
 
               <div className={styles.formLinks}>
                 <div className={styles.formLinksLabel}>Related pages</div>
+                <Link href="/community/partners/bhope" className={styles.formLink}>Featured partner: BHOPE →</Link>
                 <Link href="/charitable-legacy" className={styles.formLink}>Charitable Legacy →</Link>
                 <Link href="/for-charities" className={styles.formLink}>For Charities &amp; Nonprofits →</Link>
               </div>

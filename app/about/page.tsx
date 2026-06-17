@@ -143,7 +143,7 @@ export default function AboutPage() {
                 Dr. Yasser is a prominent community leader and Islamic scholar who bridges the gap between Islamic inheritance mandates and the realities Canadian families face. He ensures that Muslim Will serves as a responsible, faith-conscious tool.
               </p>
               <div className={styles.teamFooter}>
-                <TrackedButton variant="outline" size="md" href="/about/dr-yasser-aboutaha" eventName="view_bio_aboutaha_click" eventParams={{ location: 'about' }}>Read Biography</TrackedButton>
+                <TrackedButton variant="outline" size="md" href="/about/yasser-aboutaha" eventName="view_bio_aboutaha_click" eventParams={{ location: 'about' }}>Read Biography</TrackedButton>
               </div>
             </div>
 

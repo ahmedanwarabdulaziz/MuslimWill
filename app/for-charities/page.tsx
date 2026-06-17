@@ -111,7 +111,7 @@ export default function ForCharitiesPage() {
               </p>
             </div>
             <div style={{ flexShrink: 0, marginTop: '1.5rem', alignSelf: 'flex-start' }}>
-              <TrackedButton variant="outline" size="md" href="/about/dr-yasser-aboutaha" eventName="view_yasser_bio_click" eventParams={{ location: 'for_charities' }}>
+              <TrackedButton variant="outline" size="md" href="/about/yasser-aboutaha" eventName="view_yasser_bio_click" eventParams={{ location: 'for_charities' }}>
                 View Dr. Yasser's Bio &rarr;
               </TrackedButton>
             </div>

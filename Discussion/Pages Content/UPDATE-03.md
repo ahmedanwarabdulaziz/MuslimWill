@@ -70,6 +70,31 @@ This change has already been applied directly to `Header.tsx` — no action need
 
 ---
 
+### 5. New page — BHope Partner Page (`/community/partners/bhope`)
+**Brief:** `Discussion/Pages Content/34-bhope-partner-page.md`
+
+Create a new file at `/app/community/partners/bhope/page.tsx`. This is the co-branded partner page for Building Hope International — a dual-audience page serving BHope members (to claim their sponsored seat) and other charities (to see the partnership model as a live example).
+
+**Key points:**
+- Co-branded hero: BHope logo + Muslim Will wordmark, "in partnership with"
+- BHope logo SVG: `https://irp.cdn-website.com/45d9c0f0/dms3rep/multi/BHope+Logo+Main.svg`
+- Use BHope's real images from their CDN (URLs in the brief) for the emotional Section 3 background
+- Two sponsored plan cards (Bridge + Full Package) with strikethrough pricing and "Sponsored by BHope" badge
+- 3-step redemption: get code from BHope → register → complete will
+- Emotional legacy section (Section 3) using BHope's imagery — full-width with dark overlay
+- "Why BHope did this" section (Section 4) written in BHope's voice — links to bhope.ca
+- Charity CTA section (Section 6) with dark/navy background — visually separated from member content
+- Read the full brief for all copy, images, and design details
+
+**External links on this page:**
+- `https://www.bhope.ca/contact-us` — for members to get their code
+- `https://www.bhope.ca` — BHope attribution link
+- `https://app.themuslimwill.com/Account/Login` — to start after getting code
+- `/community/charity-partnership` — charity CTA
+- `/community/request-demo` — charity secondary CTA
+
+---
+
 ## Summary
 
 | # | File | Change |
@@ -79,3 +104,4 @@ This change has already been applied directly to `Header.tsx` — no action need
 | 2 | `/app/page.tsx` | "POA vault" → "incapacity vault" in Section 7 |
 | 3 | `/app/my-bridge/page.tsx` | New page — My Bridge hub (see brief 33) |
 | 4 | `/components/ui/Header.tsx` | ✅ Done — My Bridge and My Vault labels are now nav links |
+| 5 | `/app/community/partners/bhope/page.tsx` | New page — BHope co-branded partner page (see brief 34) |

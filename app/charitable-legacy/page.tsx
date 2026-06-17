@@ -154,6 +154,10 @@ export default function CharitableLegacyPage() {
             <p className={styles.sectionIntro} style={{ maxWidth: '800px', margin: '0 auto' }}>
               If you are connected to a charity or masjid that has partnered with The Muslim Will, your bequest can be structured to direct giving to their specific programmes — clearly documented, correctly positioned within your estate.
             </p>
+            <p className={styles.sectionIntro} style={{ maxWidth: '800px', margin: '1.5rem auto 0' }}>
+              Featured partner:{' '}
+              <Link href="/community/partners/bhope" className={styles.stepLink} style={{ display: 'inline' }}>Building Hope International (BHOPE) &rarr;</Link>
+            </p>
           </div>
 
           <div className={styles.legalNotePremium} style={{ borderLeftColor: 'var(--color-gold)' }}>
