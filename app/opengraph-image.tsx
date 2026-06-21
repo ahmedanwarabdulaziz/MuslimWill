@@ -1,17 +1,14 @@
 import { ImageResponse } from 'next/og'
-import { promises as fs } from 'fs'
-import path from 'path'
 
-export const runtime = 'nodejs'
+export const runtime = 'edge'
 
 export const alt = 'Muslim Will'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
 export default async function OpenGraphImage() {
-  const logoPath = path.join(process.cwd(), 'public/Images/Logo source without background.png')
-  const logoData = await fs.readFile(logoPath)
-  const base64Logo = Buffer.from(logoData).toString('base64')
+  const logoUrl = new URL('../public/Images/Logo source without background.png', import.meta.url)
+  const logoData = await fetch(logoUrl).then((res) => res.arrayBuffer())
 
   return new ImageResponse(
     (
@@ -27,7 +24,7 @@ export default async function OpenGraphImage() {
         }}
       >
         <img
-          src={`data:image/png;base64,${base64Logo}`}
+          src={logoData as any}
           style={{ width: '600px' }}
         />
       </div>
