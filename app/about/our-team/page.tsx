@@ -181,6 +181,40 @@ export default function OurTeamPage() {
               </Link>
             </div>
           </div>
+
+          {/* Ehab Kelani */}
+          <div className={styles.leaderCard}>
+            <div className={styles.leaderAvatarCol}>
+              <div className={styles.leaderAvatar}>
+                <Image src="/Images/x23.png" alt="Ehab Kelani" fill />
+              </div>
+              <div className={styles.leaderMeta}>
+                <div className={styles.leaderMetaItem}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+                  </svg>
+                  Canada
+                </div>
+                <div className={styles.leaderMetaItem}>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                  </svg>
+                  Islamic Review
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.leaderBody}>
+              <div className={styles.leaderRole}>Imam &amp; Scholar</div>
+              <h2 className={styles.leaderName}>Ehab Kelani</h2>
+              <p className={styles.leaderBio}>
+                Ehab Kelani brings over three decades of experience in Qur&apos;anic Sciences, Islamic Studies, and digital programs. He serves as an Imam and Family Counselor, offering extensive expertise in Usul al-Fiqh and classical text editing.
+              </p>
+              <Link href="/about/ehab-kelani" className={styles.leaderBioLink}>
+                Read Ehab&apos;s full bio →
+              </Link>
+            </div>
+          </div>
         </div>
       </section>
 

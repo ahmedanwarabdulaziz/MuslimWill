@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import styles from './page.module.css';
 
@@ -13,32 +14,28 @@ export const metadata: Metadata = {
   alternates: { canonical: `${siteUrl}/about/our-scholars` },
 };
 
-/* ── placeholder scholar profiles (to be replaced when network is confirmed) ── */
-const SCHOLAR_PLACEHOLDERS = [
+/* ── Scholar Profiles ── */
+const SCHOLARS = [
   {
-    initials: 'SH',
-    name: 'Scholar Name',
-    title: 'Islamic Inheritance Scholar',
-    madhab: 'Madhab',
+    image: '/Images/Dr.Soliman.png',
+    name: 'Dr. Sulayman Al-Murayr',
+    title: 'Islamic Review Authority',
+    madhab: 'All Madhabs',
     languages: 'Arabic, English',
     community: 'Canada',
+    summary: 'Sulayman Al-Murayr provides the scholarly anchor for the Islamic review of inheritance structures at Muslim Will. He holds traditional ijazat and ensures the platform\'s standard logic aligns with established Islamic principles.',
+    link: '/about/sulayman-al-murayr'
   },
   {
-    initials: 'SH',
-    name: 'Scholar Name',
-    title: 'Fiqh al-Mawarith Specialist',
-    madhab: 'Madhab',
-    languages: 'Arabic, French, English',
+    image: '/Images/x23.png',
+    name: 'Ehab Kelani',
+    title: 'Imam & Scholar',
+    madhab: 'All Madhabs',
+    languages: 'Arabic, English',
     community: 'Canada',
-  },
-  {
-    initials: 'SH',
-    name: 'Scholar Name',
-    title: 'Islamic Inheritance Scholar',
-    madhab: 'Madhab',
-    languages: 'Arabic, Urdu, English',
-    community: 'Canada',
-  },
+    summary: 'Ehab Kelani brings over three decades of experience in Qur\'anic Sciences, Islamic Studies, and digital programs. He serves as an Imam and Family Counselor, offering extensive expertise in Usul al-Fiqh and classical text editing.',
+    link: '/about/ehab-kelani'
+  }
 ];
 
 export default function OurScholarsPage() {
@@ -161,22 +158,23 @@ export default function OurScholarsPage() {
           </div>
 
           {/* Scholar Profile Cards */}
-          <div className={styles.scholarsGrid}>
-            {SCHOLAR_PLACEHOLDERS.map((scholar, i) => (
-              <div key={i} className={styles.scholarCard}>
-                <div className={styles.scholarCardHeader}>
-                  <div className={styles.scholarAvatar}>
-                    <span>{scholar.initials}</span>
-                  </div>
-                  <div className={styles.scholarHeaderMeta}>
-                    <div className={styles.scholarBadge}>Ijazah Certified</div>
-                    <div className={styles.scholarMadhab}>{scholar.madhab}</div>
-                  </div>
+          <div className={styles.scholarsList}>
+            {SCHOLARS.map((scholar, i) => (
+              <div key={i} className={styles.scholarListCard}>
+                <div className={styles.scholarListImage}>
+                  <Image src={scholar.image} alt={scholar.name} fill style={{ objectFit: 'cover', objectPosition: 'top center' }} />
                 </div>
-                <div className={styles.scholarCardBody}>
-                  <div className={styles.scholarPlaceholderTag}>Profile to be confirmed</div>
-                  <div className={styles.scholarName}>{scholar.name}</div>
-                  <div className={styles.scholarTitle}>{scholar.title}</div>
+                <div className={styles.scholarListContent}>
+                  <div className={styles.scholarListHeader}>
+                    <div>
+                      <div className={styles.scholarName}>{scholar.name}</div>
+                      <div className={styles.scholarTitle}>{scholar.title}</div>
+                    </div>
+                    <div className={styles.scholarBadge}>Ijazah Certified</div>
+                  </div>
+                  
+                  <p className={styles.scholarSummary}>{scholar.summary}</p>
+                  
                   <div className={styles.scholarDetails}>
                     <div className={styles.scholarDetail}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -190,15 +188,23 @@ export default function OurScholarsPage() {
                       </svg>
                       {scholar.languages}
                     </div>
+                    <div className={styles.scholarDetail}>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                      </svg>
+                      {scholar.madhab}
+                    </div>
+                  </div>
+                  <div style={{ marginTop: '1.5rem' }}>
+                    <Link href={scholar.link} className={styles.scholarLinkButton}>
+                      Read full bio →
+                    </Link>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          <p className={styles.profilesNote}>
-            Scholar profiles are published as our network is formally confirmed. Contact us to request documentation of scholar credentials for a specific review.
-          </p>
         </div>
       </section>
 
