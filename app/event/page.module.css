@@ -1,0 +1,664 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ── HERO ── */
+.heroSection {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0 4.5rem;
+  background: linear-gradient(160deg, var(--color-navy) 0%, var(--color-navy-light) 100%);
+  text-align: center;
+}
+
+.heroGlow {
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.16) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.partnerRow {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.partnerLogoIssc {
+  height: 140px;
+  width: auto;
+  object-fit: contain;
+}
+
+@media (max-width: 560px) {
+  .partnerLogoIssc {
+    height: 110px;
+  }
+}
+
+.heroEyebrow {
+  position: relative;
+  display: inline-block;
+  color: var(--color-gold);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.8rem;
+  margin-bottom: 1.5rem;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.45rem 1.25rem;
+  border-radius: 100px;
+}
+
+.heroH1 {
+  position: relative;
+  font-size: clamp(2.25rem, 5.5vw, 3.5rem);
+  line-height: 1.1;
+  color: var(--color-surface);
+  margin-bottom: 1.25rem;
+}
+
+.heroH1Gold {
+  color: var(--color-gold);
+}
+
+.heroSub {
+  position: relative;
+  max-width: 620px;
+  margin: 0 auto 2.25rem;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.heroSub strong {
+  color: var(--color-gold);
+}
+
+.heroActions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.heroCtaGold {
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+}
+
+.heroBadges {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+}
+
+.heroBadges span {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+.heroBadges span::before {
+  content: '✓ ';
+  color: var(--color-gold);
+}
+
+/* ── SECTION HEADERS ── */
+.sectionHeader {
+  max-width: 680px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+
+.sectionLabel {
+  color: var(--color-gold);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  margin-bottom: 0.75rem;
+}
+
+.sectionLabelLight {
+  composes: sectionLabel;
+  color: var(--color-gold);
+}
+
+.sectionH2 {
+  color: var(--color-navy);
+  margin-bottom: 1rem;
+}
+
+.sectionH2Light {
+  composes: sectionH2;
+  color: var(--color-surface);
+}
+
+.sectionIntro {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.sectionIntroLight {
+  composes: sectionIntro;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ── OFFER ── */
+.offerSection {
+  padding: 5rem 0;
+  background: var(--color-cream-light);
+}
+
+.offerGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
+}
+
+@media (max-width: 860px) {
+  .offerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.offerCardFeatured {
+  position: relative;
+  background: var(--color-navy);
+  border-radius: var(--radius-xl);
+  padding: 2.75rem 2.5rem;
+  box-shadow: 0 24px 60px rgba(10, 37, 64, 0.22);
+  color: var(--color-surface);
+}
+
+.offerBadge {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: rgba(212, 175, 55, 0.15);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--color-gold);
+  padding: 0.3rem 0.85rem;
+  border-radius: 100px;
+  margin-bottom: 1.25rem;
+}
+
+.offerName {
+  color: var(--color-surface);
+  font-size: 1.75rem;
+  margin-bottom: 0.6rem;
+}
+
+.offerTagline {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.65;
+  margin-bottom: 1.75rem;
+}
+
+.offerPriceRow {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.75rem;
+}
+
+.offerPriceWas {
+  font-size: 1.35rem;
+  color: rgba(255, 255, 255, 0.45);
+  text-decoration: line-through;
+}
+
+.offerPriceNow {
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-gold);
+}
+
+.offerPriceNote {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 0.25rem 0.65rem;
+  border-radius: 100px;
+  align-self: center;
+}
+
+.offerList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.offerList li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+}
+
+.offerList li svg {
+  flex-shrink: 0;
+  color: var(--color-gold);
+  font-size: 1.1rem;
+}
+
+.offerCtaGold {
+  width: 100%;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.3);
+}
+
+.offerMicro {
+  margin-top: 0.85rem;
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: center;
+}
+
+.offerCardSide {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.offerNameSide {
+  color: var(--color-navy);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.offerTaglineSide {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.offerPriceRowSide {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  margin-bottom: 1.5rem;
+}
+
+.offerPriceSide {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-navy);
+}
+
+.offerPricePerSide {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+}
+
+.offerListSide {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  flex-grow: 1;
+}
+
+.offerListSide li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-text-main);
+  font-size: 0.92rem;
+}
+
+.offerListSide li svg {
+  flex-shrink: 0;
+  color: var(--color-gold);
+  font-size: 1.1rem;
+}
+
+.offerCtaOutline {
+  width: 100%;
+  justify-content: center;
+}
+
+.offerMicroSide {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+/* ── PACKAGE (4-part) ── */
+.packageSection {
+  padding: 5.5rem 0;
+  background: var(--color-navy);
+}
+
+.packageGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .packageGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .packageGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.packageCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.packageCard:hover {
+  border-color: var(--color-gold);
+  transform: translateY(-4px);
+}
+
+.packageIcon {
+  color: var(--color-gold);
+  margin-bottom: 1rem;
+}
+
+.packageCard h4 {
+  color: var(--color-surface);
+  font-size: 1.05rem;
+  margin-bottom: 0.6rem;
+}
+
+.packageCard p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* ── STEPS ── */
+.stepsSection {
+  padding: 5.5rem 0;
+  background: var(--color-cream-light);
+}
+
+.stepsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 860px) {
+  .stepsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .stepsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stepCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--color-navy);
+  color: var(--color-gold);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.stepCard p {
+  color: var(--color-text-main);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+/* ── BOOTH SUPPORT ── */
+.helpSection {
+  padding: 4rem 0;
+  background: var(--color-surface);
+}
+
+.helpBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background: var(--color-cream-light);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 2.5rem;
+}
+
+.helpH2 {
+  color: var(--color-navy);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.helpCopy {
+  color: var(--color-text-muted);
+  max-width: 480px;
+}
+
+.helpContacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.helpContactLink {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--color-navy);
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+.helpContactLink svg {
+  color: var(--color-gold);
+  font-size: 1.3rem;
+}
+
+/* ── FINAL CTA ── */
+.finalCtaSection {
+  padding: 5rem 0 6rem;
+  background: var(--color-cream-light);
+}
+
+.finalCtaBox {
+  background: var(--color-navy);
+  border-radius: var(--radius-xl);
+  padding: 4rem 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.finalCtaBox h2 {
+  color: var(--color-surface);
+  max-width: 640px;
+  margin: 0 auto 1rem;
+}
+
+.finalCtaText {
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 560px;
+  margin: 0 auto 2rem;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.finalCtaActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.finalCtaSecondary {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ── MOBILE ── */
+@media (max-width: 640px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .heroSection {
+    padding: 3.25rem 0 2.75rem;
+  }
+
+  .heroGlow {
+    width: 500px;
+    height: 500px;
+  }
+
+  .heroSub {
+    font-size: 1rem;
+  }
+
+  .heroActions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .heroActions > a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .heroBadges {
+    gap: 0.5rem 1rem;
+  }
+
+  .heroBadges span {
+    font-size: 0.72rem;
+  }
+
+  .sectionHeader {
+    margin-bottom: 2rem;
+  }
+
+  .offerSection,
+  .packageSection,
+  .stepsSection {
+    padding: 3.5rem 0;
+  }
+
+  .offerGrid {
+    gap: 1.25rem;
+  }
+
+  .offerCardFeatured,
+  .offerCardSide {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .offerPriceRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .offerPriceNote {
+    align-self: flex-start;
+  }
+
+  .helpSection {
+    padding: 3rem 0;
+  }
+
+  .helpBox {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.75rem;
+    gap: 1.5rem;
+  }
+
+  .helpContacts {
+    width: 100%;
+  }
+
+  .finalCtaSection {
+    padding: 3.5rem 0 4rem;
+  }
+
+  .finalCtaBox {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .finalCtaActions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .finalCtaActions > a {
+    width: 100%;
+    text-align: center;
+  }
+}
