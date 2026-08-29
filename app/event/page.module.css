@@ -420,53 +420,97 @@
 
 /* ── STEPS ── */
 .stepsSection {
-  padding: 5.5rem 0;
-  background: var(--color-cream-light);
+  padding: 6.5rem 0;
+  background: var(--color-surface);
+  position: relative;
 }
 
 .stepsGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  position: relative;
+}
+
+/* Connecting Line */
+.stepsGrid::before {
+  content: '';
+  position: absolute;
+  top: 4.25rem;
+  left: 15%;
+  right: 15%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.3), transparent);
+  z-index: 1;
 }
 
 @media (max-width: 860px) {
   .stepsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 500px) {
-  .stepsGrid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  .stepsGrid::before {
+    display: none;
   }
 }
 
 .stepCard {
-  background: var(--color-surface);
+  position: relative;
+  background: var(--color-cream-light);
   border: 1px solid var(--color-border);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.5rem;
+  border-radius: var(--radius-xl);
+  padding: 2.5rem 2rem;
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), border-color 0.4s ease;
+  z-index: 2;
+}
+
+.stepCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(13, 35, 64, 0.06);
+  border-color: rgba(212, 175, 55, 0.5);
+}
+
+.stepHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  margin-bottom: 1.25rem;
 }
 
 .stepNumber {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background: var(--color-navy);
+  background: var(--color-surface);
   color: var(--color-gold);
+  font-size: 1.4rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border: 2px solid rgba(212, 175, 55, 0.2);
+  box-shadow: 0 8px 16px rgba(13, 35, 64, 0.04);
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
-.stepCard p {
-  color: var(--color-text-main);
-  font-size: 0.95rem;
-  line-height: 1.55;
+.stepCard:hover .stepNumber {
+  background: var(--color-gold);
+  color: var(--color-surface);
+}
+
+.stepTitle {
+  color: var(--color-navy);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.stepDesc {
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  text-align: center;
 }
 
 /* ── BOOTH SUPPORT ── */

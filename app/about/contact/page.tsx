@@ -48,6 +48,7 @@ type FormState = 'idle' | 'submitting' | 'success' | 'error';
 
 function ContactForm() {
   const [formState, setFormState] = useState<FormState>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const [form, setForm] = useState({ name: '', email: '', type: '', message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -57,8 +58,36 @@ function ContactForm() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setFormState('submitting');
-    await new Promise((r) => setTimeout(r, 1200));
-    setFormState('success');
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          type: 'general',
+          fullName: form.name,
+          email: form.email,
+          phone: 'Not provided',
+          province: 'Not provided',
+          country: 'Not provided',
+          reason: form.type,
+          message: form.message,
+        }),
+      });
+
+      if (!res.ok) {
+        const result = await res.json();
+        throw new Error(result.error || 'Failed to submit form');
+      }
+
+      setFormState('success');
+      setForm({ name: '', email: '', type: '', message: '' });
+    } catch (err: any) {
+      console.error('Contact form error:', err);
+      setFormState('error');
+      setErrorMessage(err.message || 'An unexpected error occurred. Please try again.');
+    }
   };
 
   if (formState === 'success') {
@@ -69,12 +98,20 @@ function ContactForm() {
         <p className={styles.formSuccessDesc}>
           A member of our team will read your message and reply within one business day. We do not use automated responses.
         </p>
+        <button onClick={() => setFormState('idle')} className={styles.submitBtn} style={{ marginTop: '2rem', width: 'auto', padding: '0.75rem 2rem' }}>
+          Send another message
+        </button>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} className={styles.form} noValidate>
+    <form onSubmit={handleSubmit} className={styles.form}>
+      {formState === 'error' && (
+        <div style={{ backgroundColor: 'var(--color-surface)', color: '#d93025', padding: '1rem', borderRadius: '8px', marginBottom: '1.5rem', border: '1px solid #fce8e6' }}>
+          {errorMessage}
+        </div>
+      )}
       <div className={styles.formRow}>
         <div className={styles.formField}>
           <label className={styles.formLabel} htmlFor="contact-name">Full name</label>

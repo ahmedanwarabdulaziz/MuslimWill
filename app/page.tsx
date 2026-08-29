@@ -61,31 +61,39 @@ export default function Home() {
             <div className={styles.problemRight}>
               <div className={styles.problemGrid}>
                  <div className={styles.problemCardPremium}>
-                    <div className={styles.problemIconWrapper}>
-                       <PiReceiptLight size={32} />
+                    <div className={styles.problemCardHeader}>
+                       <div className={styles.problemIconWrapper}>
+                          <PiReceiptLight size={28} />
+                       </div>
+                       <h3>Debts may go unpaid</h3>
                     </div>
-                    <h3>Debts may go unpaid</h3>
                     <p>A major sin in Islam, often left unresolved due to lack of documentation.</p>
                  </div>
                  <div className={styles.problemCardPremium}>
-                    <div className={styles.problemIconWrapper}>
-                       <PiBankLight size={32} />
+                    <div className={styles.problemCardHeader}>
+                       <div className={styles.problemIconWrapper}>
+                          <PiBankLight size={28} />
+                       </div>
+                       <h3>Assets go missing</h3>
                     </div>
-                    <h3>Assets go missing</h3>
                     <p>Hidden accounts or properties are lost, leaving families in financial distress.</p>
                  </div>
                  <div className={styles.problemCardPremium}>
-                    <div className={styles.problemIconWrapper}>
-                       <PiUsersLight size={32} />
+                    <div className={styles.problemCardHeader}>
+                       <div className={styles.problemIconWrapper}>
+                          <PiUsersLight size={28} />
+                       </div>
+                       <h3>Family members fight</h3>
                     </div>
-                    <h3>Family members fight</h3>
                     <p>Without clear legal instruction, inheritance becomes a source of deep conflict.</p>
                  </div>
                  <div className={styles.problemCardPremium}>
-                    <div className={styles.problemIconWrapper}>
-                       <PiShieldWarningLight size={32} />
+                    <div className={styles.problemCardHeader}>
+                       <div className={styles.problemIconWrapper}>
+                          <PiShieldWarningLight size={28} />
+                       </div>
+                       <h3>Unclear guardianship</h3>
                     </div>
-                    <h3>Unclear guardianship</h3>
                     <p>The courts may decide who raises your minor children, ignoring your values.</p>
                  </div>
               </div>

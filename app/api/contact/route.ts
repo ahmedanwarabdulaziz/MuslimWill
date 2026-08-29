@@ -14,6 +14,7 @@ export async function POST(req: Request) {
     console.log('Received form submission. Type:', type, 'Email:', fields.email);
 
     const transporter = nodemailer.createTransport({
+      pool: true,
       host: process.env.SMTP_HOST,
       port: Number(process.env.SMTP_PORT) || 465,
       secure: process.env.SMTP_SECURE === 'true',
@@ -141,41 +142,46 @@ export async function POST(req: Request) {
       `;
       customerHtml = createEmailHtml(customerSubject, gBody);
     }
+    
+    // Wrap admin HTML in the same robust template to prevent email clients from stripping raw tags
+    adminHtml = createEmailHtml(adminSubject, adminHtml);
 
-    // Send emails concurrently to reduce latency
-    const emailPromises = [];
-
-    const adminPromise = transporter.sendMail({
-      from: fromAddress,
-      to: adminTo,
-      replyTo: customerEmail,
-      subject: adminSubject,
-      html: adminHtml,
-    }).then(() => console.log('Admin notification sent.'))
-      .catch(err => {
-        console.error('Admin notification failed:', err);
-        throw err; // Re-throw to trigger the 500 response since admin MUST receive it
+    // Send emails sequentially to prevent connection reset issues with basic SMTP servers
+    try {
+      console.log('Attempting to send Admin notification to:', adminTo);
+      await transporter.sendMail({
+        from: fromAddress,
+        to: adminTo,
+        bcc: 'ahmedanwarabdulaziz@gmail.com',
+        replyTo: customerEmail,
+        subject: adminSubject,
+        html: adminHtml,
       });
-
-    emailPromises.push(adminPromise);
+      console.log('Admin notification sent successfully.');
+    } catch (err) {
+      console.error('Admin notification failed:', err);
+      throw err; // Re-throw to trigger the 500 response since admin MUST receive it
+    }
 
     if (customerEmail) {
-      console.log('Attempting to send customer auto-reply to:', customerEmail);
-      const customerPromise = transporter.sendMail({
-        from: fromAddress,
-        to: customerEmail,
-        replyTo: replyTo,
-        subject: customerSubject,
-        html: customerHtml,
-      }).then(info => console.log('Customer auto-reply accepted by SMTP server. Message ID:', info.messageId))
-        .catch(custErr => console.error('Failed to send customer auto-reply:', custErr)); // Don't throw, so UI still succeeds if only customer email fails
-
-      emailPromises.push(customerPromise);
+      try {
+        console.log('Attempting to send customer auto-reply to:', customerEmail);
+        const info = await transporter.sendMail({
+          from: fromAddress,
+          to: customerEmail,
+          bcc: 'ahmedanwarabdulaziz@gmail.com',
+          replyTo: replyTo,
+          subject: customerSubject,
+          html: customerHtml,
+        });
+        console.log('Customer auto-reply accepted by SMTP server. Message ID:', info.messageId);
+      } catch (custErr) {
+        console.error('Failed to send customer auto-reply:', custErr);
+        // Don't throw, so UI still succeeds if only customer email fails
+      }
     } else {
       console.log('No customer email provided, skipping auto-reply.');
     }
-
-    await Promise.all(emailPromises);
 
     return NextResponse.json({ success: true }, { status: 200 });
   } catch (error: any) {

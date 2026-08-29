@@ -15,13 +15,25 @@ export default function RequestDemoPage() {
 
     const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries());
-    data.type = 'demo-request';
+    
+    // Map form fields to what route.ts expects for partnership
+    const payload = {
+      type: 'partnership',
+      organizationName: data.organizationName,
+      contactName: data.contactName,
+      role: data.role,
+      email: data.email,
+      phone: data.phone || 'Not provided',
+      orgType: data.orgType,
+      interestType: data.interest, // Mapping 'interest' from form to 'interestType'
+      message: data.referral ? `Referral: ${data.referral}` : 'No additional message',
+    };
 
     try {
       const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data),
+        body: JSON.stringify(payload),
       });
 
       if (!res.ok) {

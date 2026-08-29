@@ -50,10 +50,9 @@ const PACKAGE_PARTS = [
 ];
 
 const HOW_IT_WORKS = [
-  'Answer a guided wizard.',
-  'Scholar review for Islamic inheritance alignment.',
-  'Drafted & finalized by licensed Canadian lawyers.',
-  'Signing instructions to make it legally valid in Canada.',
+  'Create: Complete your guided application',
+  'Review: Move through the review process',
+  'Finalize: Your documents are drafted and finalized by Canadian lawyers',
 ];
 
 export default function EventPage() {
@@ -82,7 +81,7 @@ export default function EventPage() {
           </h1>
           <p className={styles.heroSub}>
             Don&apos;t just leave a Will. Leave a complete plan. Because you&apos;re here with us today,
-            your full estate protection package is <strong>$300</strong>{' '}
+            your full estate protection package is <strong>$275</strong>{' '}
             instead of $350 — available only while you&apos;re at this event.
           </p>
 
@@ -95,7 +94,7 @@ export default function EventPage() {
               eventName="event_cta_click"
               eventParams={{ location: 'event_hero', plan: 'full' }}
             >
-              Claim My $300 Event Offer →
+              Claim My $275 Event Offer →
             </TrackedButton>
             <TrackedButton
               href="#offer"
@@ -122,74 +121,103 @@ export default function EventPage() {
       <section id="offer" className={styles.offerSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <div className={styles.sectionLabel}>Today&apos;s Event Pricing</div>
-            <h2 className={styles.sectionH2}>Two ways to get protected today.</h2>
+            <div className={styles.sectionLabel}>Your Exclusive Event Offer</div>
+            <h2 className={styles.sectionH2}>Take the next step today.</h2>
             <p className={styles.sectionIntro}>
-              Whether you want everything reviewed by a dedicated expert or want to start now and
-              build at your own pace — both options are available at your exclusive event guest rate.
+              You&apos;ve seen why the Will is your foundation. Choose how you want to secure it with our exclusive event guest rates.
             </p>
           </div>
 
           <div className={styles.offerGrid}>
-            {/* Full Package — featured */}
+            {/* Vault Subscription — featured */}
             <div className={styles.offerCardFeatured}>
-              <div className={styles.offerBadge}>Recommended For Today</div>
-              <h3 className={styles.offerName}>The Full Package</h3>
+              <div className={styles.offerBadge}>Saturday Only</div>
+              <h3 className={styles.offerName}>Vault Subscription</h3>
               <p className={styles.offerTagline}>
-                A dedicated expert reviews your case, start to finish — everything drafted,
-                scholar-reviewed, and finalized by licensed Canadian lawyers.
+                Start today, organize your assets, and create a basic Will template when ready.
               </p>
               <div className={styles.offerPriceRow}>
-                <span className={styles.offerPriceWas}>$350</span>
-                <span className={styles.offerPriceNow}>$300</span>
-                <span className={styles.offerPriceNote}>Event Subsidy Applied</span>
+                <span className={styles.offerPriceWas}>$8/mo</span>
+                <span className={styles.offerPriceNow}>$5.99</span>
+                <span className={styles.offerPriceNote}>/month</span>
               </div>
               <ul className={styles.offerList}>
-                <li><PiCheckCircleLight /> Islamic Last Will &amp; Testament</li>
-                <li><PiCheckCircleLight /> PoA for Property &amp; PoA for Personal Care</li>
-                <li><PiCheckCircleLight /> Minor Guardianship designation</li>
-                <li><PiCheckCircleLight /> Scholar Review &amp; Admin/Legal Review</li>
-                <li><PiCheckCircleLight /> 12 months of Vault access included</li>
+                <li><PiCheckCircleLight /> Basic Will Template (Free)</li>
+                <li><PiCheckCircleLight /> Private secure Vault — all 4 branches</li>
+                <li><PiCheckCircleLight /> Unlimited updates any time</li>
+                <li><PiCheckCircleLight /> 1 bonus month for Saturday attendees</li>
               </ul>
               <TrackedButton
-                href={cta('full')}
+                href={cta('bridge')}
                 size="lg"
                 variant="secondary"
                 className={styles.offerCtaGold}
                 eventName="event_cta_click"
-                eventParams={{ location: 'event_offer', plan: 'full' }}
-              >
-                Get The Full Package — $300 →
-              </TrackedButton>
-              <p className={styles.offerMicro}>One-time payment. Today&apos;s ISSC guest rate — regular price $350.</p>
-            </div>
-
-            {/* The Bridge — secondary */}
-            <div className={styles.offerCardSide}>
-              <h3 className={styles.offerNameSide}>The Bridge</h3>
-              <p className={styles.offerTaglineSide}>
-                Start today, build your Will and Vault at your own pace — one simple subscription.
-              </p>
-              <div className={styles.offerPriceRowSide}>
-                <span className={styles.offerPriceSide}>$5.99</span>
-                <span className={styles.offerPricePerSide}>/month</span>
-              </div>
-              <ul className={styles.offerListSide}>
-                <li><PiCheckCircleLight /> Complete Islamic Will</li>
-                <li><PiCheckCircleLight /> Private secure Vault — all 4 branches</li>
-                <li><PiCheckCircleLight /> Unlimited updates any time</li>
-              </ul>
-              <TrackedButton
-                href={cta('bridge')}
-                size="md"
-                variant="outline"
-                className={styles.offerCtaOutline}
-                eventName="event_cta_click"
                 eventParams={{ location: 'event_offer', plan: 'bridge' }}
               >
-                Start For $5.99/month →
+                Claim Subscription — $5.99/mo →
               </TrackedButton>
-              <p className={styles.offerMicroSide}>Free to register. Cancel anytime.</p>
+              <p className={styles.offerMicro}>Cancel anytime.</p>
+            </div>
+
+            {/* Right column for Premium options */}
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
+              {/* Premium Individual */}
+              <div className={styles.offerCardSide} style={{ flex: 1 }}>
+                <h3 className={styles.offerNameSide}>Premium Individual</h3>
+                <p className={styles.offerTaglineSide}>
+                  A dedicated expert reviews your case, start to finish — everything drafted,
+                  scholar-reviewed, and finalized by licensed Canadian lawyers.
+                </p>
+                <div className={styles.offerPriceRowSide} style={{ marginBottom: '0.25rem' }}>
+                  <span className={styles.offerPriceSide}>$275</span>
+                </div>
+                <p style={{ color: 'var(--color-text-muted)', textDecoration: 'line-through', fontSize: '0.85rem', marginBottom: '1rem' }}>instead of $350</p>
+                <ul className={styles.offerListSide}>
+                  <li><PiCheckCircleLight /> Islamic Last Will &amp; Testament</li>
+                  <li><PiCheckCircleLight /> PoAs &amp; Minor Guardianship</li>
+                  <li><PiCheckCircleLight /> Scholar &amp; Legal Review</li>
+                  <li><PiCheckCircleLight /> 12 months Vault included</li>
+                </ul>
+                <TrackedButton
+                  href={cta('full')}
+                  size="md"
+                  variant="outline"
+                  className={styles.offerCtaOutline}
+                  eventName="event_cta_click"
+                  eventParams={{ location: 'event_offer', plan: 'full' }}
+                >
+                  Get Protected — $275 →
+                </TrackedButton>
+              </div>
+
+              {/* Premium Family */}
+              <div className={styles.offerCardSide} style={{ flex: 1 }}>
+                <h3 className={styles.offerNameSide}>Premium Family</h3>
+                <p className={styles.offerTaglineSide}>
+                  Comprehensive protection for both you and your spouse. Two full applications.
+                </p>
+                <div className={styles.offerPriceRowSide} style={{ marginBottom: '0.25rem' }}>
+                  <span className={styles.offerPriceSide}>$500</span>
+                </div>
+                <p style={{ color: 'var(--color-text-muted)', textDecoration: 'line-through', fontSize: '0.85rem', marginBottom: '1rem' }}>instead of $700</p>
+                <ul className={styles.offerListSide}>
+                  <li><PiCheckCircleLight /> 2x Islamic Wills &amp; PoAs</li>
+                  <li><PiCheckCircleLight /> Minor Guardianship designations</li>
+                  <li><PiCheckCircleLight /> Full Expert &amp; Legal Review</li>
+                  <li><PiCheckCircleLight /> 12 months Vault for both</li>
+                </ul>
+                <TrackedButton
+                  href={cta('family')}
+                  size="md"
+                  variant="outline"
+                  className={styles.offerCtaOutline}
+                  eventName="event_cta_click"
+                  eventParams={{ location: 'event_offer', plan: 'family' }}
+                >
+                  Get Family Plan — $500 →
+                </TrackedButton>
+              </div>
             </div>
           </div>
         </div>
@@ -199,12 +227,10 @@ export default function EventPage() {
       <section className={styles.packageSection}>
         <div className={styles.container}>
           <div className={styles.sectionHeader}>
-            <div className={styles.sectionLabelLight}>More Than Just A Will</div>
-            <h2 className={styles.sectionH2Light}>A complete protection package.</h2>
+            <div className={styles.sectionLabelLight}>As Discussed Today</div>
+            <h2 className={styles.sectionH2Light}>Everything in one secure place.</h2>
             <p className={styles.sectionIntroLight}>
-              When you choose Muslim Will, you receive a comprehensive, 4-part estate protection
-              package that covers your family both while you are alive and after you pass —
-              all included in your transparent upfront price.
+              Don&apos;t leave your family searching. With Muslim Will and the Vault, everything you own, everything you owe, and all your critical instructions are organized and protected.
             </p>
           </div>
 
@@ -228,12 +254,18 @@ export default function EventPage() {
             <h2 className={styles.sectionH2}>From this table to a signed plan.</h2>
           </div>
           <div className={styles.stepsGrid}>
-            {HOW_IT_WORKS.map((step, i) => (
-              <div key={step} className={styles.stepCard}>
-                <div className={styles.stepNumber}>{i + 1}</div>
-                <p>{step}</p>
-              </div>
-            ))}
+            {HOW_IT_WORKS.map((step, i) => {
+              const [title, ...descParts] = step.split(':');
+              return (
+                <div key={title} className={styles.stepCard}>
+                  <div className={styles.stepHeader}>
+                    <div className={styles.stepNumber}>{i + 1}</div>
+                    <h3 className={styles.stepTitle}>{title}</h3>
+                  </div>
+                  <p className={styles.stepDesc}>{descParts.join(':').trim()}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -265,23 +297,23 @@ export default function EventPage() {
       <section className={styles.finalCtaSection}>
         <div className={styles.container}>
           <div className={styles.finalCtaBox}>
-            <h2>Your family is waiting for the clarity only you can give them.</h2>
+            <h2>Give your family the direction they need.</h2>
             <p className={styles.finalCtaText}>
-              This exclusive $300 rate is only available while you&apos;re here today with ISSC. It takes less than 10 minutes to start.
+              These exclusive rates are only available while you&apos;re here today. It takes less than 10 minutes to start.
             </p>
             <div className={styles.finalCtaActions}>
               <TrackedButton
-                href={cta('full')}
+                href={cta('bridge')}
                 variant="secondary"
                 size="lg"
                 className={styles.heroCtaGold}
                 eventName="event_cta_click"
-                eventParams={{ location: 'event_final_cta', plan: 'full' }}
+                eventParams={{ location: 'event_final_cta', plan: 'bridge' }}
               >
-                Claim My $300 Event Offer →
+                Start Vault Subscription — $5.99/mo →
               </TrackedButton>
-              <Link href="/pricing" className={styles.finalCtaSecondary}>
-                See Full Pricing Details
+              <Link href="#offer" className={styles.finalCtaSecondary}>
+                See Full Premium Options
               </Link>
             </div>
           </div>
