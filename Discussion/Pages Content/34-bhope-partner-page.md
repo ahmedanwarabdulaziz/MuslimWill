@@ -69,7 +69,7 @@
 - BHope featured as your Sadaqah Jariyah beneficiary
 
 **CTA (primary):** `Get Your Code From BHope →` — links to `https://www.bhope.ca/contact-us`
-**CTA (secondary):** `Already have a code? Start here →` — links to `https://app.themuslimwill.com/Account/Login`
+**CTA (secondary):** `Already have a code? Start here →` — links to `https://app.themuslimwill.com/Account/Register`
 
 ---
 
@@ -198,7 +198,7 @@ Work through the guided application at your own pace. When prompted, you can cho
 
 **CTA:**
 - Primary: `Get Your Code From BHope →` → `https://www.bhope.ca/contact-us`
-- Secondary: `Already have a code? Start here →` → `https://app.themuslimwill.com/Account/Login`
+- Secondary: `Already have a code? Start here →` → `https://app.themuslimwill.com/Account/Register`
 
 ---
 
@@ -240,7 +240,7 @@ Work through the guided application at your own pace. When prompted, you can cho
 | Destination | Used in |
 |---|---|
 | `https://www.bhope.ca/contact-us` | Hero CTA, card CTAs, Step 1 |
-| `https://app.themuslimwill.com/Account/Login` | Hero secondary CTA, Step 2 CTA |
+| `https://app.themuslimwill.com/Account/Register` | Hero secondary CTA, Step 2 CTA |
 | `https://www.bhope.ca` | Section 4 attribution link |
 | `/community/charity-partnership` | Section 6 CTA |
 | `/community/request-demo` | Section 6 secondary CTA |

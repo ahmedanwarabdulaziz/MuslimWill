@@ -135,7 +135,7 @@ No CTA in the hero. This is an orientation page — the user came here to unders
 > You do not need a separate subscription to access your Vault. It is included in The Bridge — one complete subscription at $7.99/month — alongside your Islamic Will.
 
 **CTA buttons:**
-- Primary: `Start For $7.99/month →` → `https://app.themuslimwill.com/Account/Login`
+- Primary: `Start For $7.99/month →` → `https://app.themuslimwill.com/Account/Register`
 - Secondary: `See How It Works →` → `/how-it-works`
 
 **Microcopy:** Free to register. Full access from $7.99/month. Islamic Will and private Vault included.
@@ -150,7 +150,7 @@ No CTA in the hero. This is an orientation page — the user came here to unders
 | `/vault/estate-inventory` | Branch card CTA |
 | `/vault/sealed-disclosures` | Branch card CTA |
 | `/vault/final-words` | Branch card CTA |
-| `https://app.themuslimwill.com/Account/Login` | Final CTA |
+| `https://app.themuslimwill.com/Account/Register` | Final CTA |
 | `/how-it-works` | Final CTA secondary |
 
 ---

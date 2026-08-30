@@ -25,7 +25,7 @@ export default function DrYasserAboutahaPage() {
             Community fundraiser, public speaker, and relationship-builder helping Muslim Will serve families, masajid, charities, and mission-driven organizations across Canada.
           </p>
           <div className={`${styles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'yasser_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
+             <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'yasser_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
                Start Your Will
              </TrackedButton>
              <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/about" eventName="back_to_leadership" eventParams={{ location: 'yasser_landing' }}>
@@ -154,7 +154,7 @@ export default function DrYasserAboutahaPage() {
               Start your will through a pathway shaped by community trust, clear guidance, and responsible planning.
             </p>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
-              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'yasser_landing' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'yasser_landing' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/about" eventName="view_about_footer_click" eventParams={{ location: 'yasser_landing' }}>Back to About</TrackedButton>
             </div>
           </div>

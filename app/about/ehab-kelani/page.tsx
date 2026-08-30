@@ -24,7 +24,7 @@ export default function EhabKelaniPage() {
             An academic, researcher, and published author with over three decades of experience in Qur'anic Sciences, Islamic Studies, and Islamic Digital Programs.
           </p>
           <div className={`${styles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'ehab_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
+             <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'ehab_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
                Start Your Will
              </TrackedButton>
              <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/legal-islamic-compliance" eventName="back_to_compliance" eventParams={{ location: 'ehab_landing' }}>
@@ -156,7 +156,7 @@ export default function EhabKelaniPage() {
               Proceed with confidence, knowing the Islamic structure is backed by qualified scholarly review.
             </p>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
-              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'ehab_landing' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'ehab_landing' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/legal-islamic-compliance" eventName="view_compliance_footer_click" eventParams={{ location: 'ehab_landing' }}>Learn About Compliance</TrackedButton>
             </div>
           </div>

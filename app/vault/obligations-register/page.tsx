@@ -192,7 +192,7 @@ export default function ObligationsRegisterPage() {
             
             <div className={styles.ctaActions}>
               <TrackedButton 
-                href="https://app.themuslimwill.com/Account/Login" 
+                href="https://app.themuslimwill.com/Account/Register" 
                 className={styles.ctaButtonGoldFull}
                 eventName="final_cta_click" 
                 eventParams={{ location: 'obligations_register_final_cta' }}

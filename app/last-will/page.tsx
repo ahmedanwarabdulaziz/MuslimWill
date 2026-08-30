@@ -298,7 +298,7 @@ export default function LastWillPage() {
             
             <div className={styles.ctaActions}>
               <TrackedButton 
-                href="https://app.themuslimwill.com/Account/Login" 
+                href="https://app.themuslimwill.com/Account/Register" 
                 className={styles.ctaButtonGoldFull}
                 eventName="final_cta_click" 
                 eventParams={{ location: 'last_will_final_cta' }}

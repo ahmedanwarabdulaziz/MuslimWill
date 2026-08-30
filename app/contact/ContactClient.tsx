@@ -39,7 +39,7 @@ export default function ContactClient() {
              </p>
              
              <div className={`${sharedStyles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-               <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'contact_page' }}>Start Your Will</TrackedButton>
+               <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'contact_page' }}>Start Your Will</TrackedButton>
                <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} onClick={handleShowCalendar} eventName="book_call_hero_click" eventParams={{ location: 'contact_page' }}>Book A Call</TrackedButton>
              </div>
           </div>
@@ -66,7 +66,7 @@ export default function ContactClient() {
                 If you are ready to begin, you can start your will today.
               </div>
               <div>
-                <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="md" eventName="start_will_pane_click" eventParams={{ location: 'contact_page' }} style={{ backgroundColor: 'white', color: 'var(--color-navy)' }}>
+                <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="md" eventName="start_will_pane_click" eventParams={{ location: 'contact_page' }} style={{ backgroundColor: 'white', color: 'var(--color-navy)' }}>
                   Start Your Will
                 </TrackedButton>
               </div>

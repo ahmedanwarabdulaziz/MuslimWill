@@ -157,7 +157,7 @@ export default function StartPage() {
                     </div>
                   ))}
                 </div>
-                <Link href="https://app.themuslimwill.com/Account/Login?plan=bridge" className={styles.planCta} data-primary>
+                <Link href="https://app.themuslimwill.com/Account/Register?plan=bridge" className={styles.planCta} data-primary>
                   Start For $7.99/month →
                 </Link>
               </div>
@@ -178,7 +178,7 @@ export default function StartPage() {
                 <div className={styles.planDesc}>
                   Will + Both POAs + Scholar Review + Admin Review + Digital Attestation. For complex situations or individual expert attention.
                 </div>
-                <Link href="https://app.themuslimwill.com/Account/Login?plan=full" className={styles.planCta} data-secondary>
+                <Link href="https://app.themuslimwill.com/Account/Register?plan=full" className={styles.planCta} data-secondary>
                   Get The Full Package →
                 </Link>
               </div>

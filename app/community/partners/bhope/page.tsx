@@ -51,7 +51,7 @@ export default function BhopePartnerPage() {
                 Get Your Code From BHope &rarr;
               </TrackedButton>
               <TrackedButton
-                href="https://app.themuslimwill.com/Account/Login"
+                href="https://app.themuslimwill.com/Account/Register"
                 className={styles.ctaButtonOutline}
                 eventName="bhope_learn_click"
                 eventParams={{ location: 'bhope_hero' }}

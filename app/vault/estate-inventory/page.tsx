@@ -203,7 +203,7 @@ export default function EstateInventoryPage() {
 
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="https://app.themuslimwill.com/Account/Login"
+                href="https://app.themuslimwill.com/Account/Register"
                 className={styles.ctaButtonGoldFull}
                 eventName="final_cta_click"
                 eventParams={{ location: 'estate_inventory_final_cta' }}

@@ -11,7 +11,7 @@ contact = contact.replace('<TrackedButton variant="primary" size="md" eventName=
 fs.writeFileSync('e:/CONV/MW/app/contact/page.tsx', contact, 'utf8');
 
 let pricing = fs.readFileSync('e:/CONV/MW/app/pricing/page.tsx', 'utf8');
-pricing = pricing.replace('<TrackedButton variant="primary" size="lg" style={{ width: \'100%\' }} eventName="start_will_couples_click" eventParams={{ location: \'pricing_cards\' }}>Start As A Couple</TrackedButton>', '<TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="primary" size="lg" style={{ width: \'100%\' }} eventName="start_will_couples_click" eventParams={{ location: \'pricing_cards\' }}>Start As A Couple</TrackedButton>');
+pricing = pricing.replace('<TrackedButton variant="primary" size="lg" style={{ width: \'100%\' }} eventName="start_will_couples_click" eventParams={{ location: \'pricing_cards\' }}>Start As A Couple</TrackedButton>', '<TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="primary" size="lg" style={{ width: \'100%\' }} eventName="start_will_couples_click" eventParams={{ location: \'pricing_cards\' }}>Start As A Couple</TrackedButton>');
 pricing = pricing.replace('<TrackedButton size="lg" variant="outlineLight" className={sharedStyles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: \'pricing_final_cta\' }}>See How It Works</TrackedButton>', '<TrackedButton href="/how-it-works" size="lg" variant="outlineLight" className={sharedStyles.ctaButtonOutline} eventName="book_call_click" eventParams={{ location: \'pricing_final_cta\' }}>See How It Works</TrackedButton>');
 fs.writeFileSync('e:/CONV/MW/app/pricing/page.tsx', pricing, 'utf8');
 

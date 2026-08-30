@@ -249,7 +249,7 @@ export default function OurStoryPage() {
             <h2 className={styles.ctaH2}>The gap is closing. Start here.</h2>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="https://app.themuslimwill.com/Account/Login"
+                href="https://app.themuslimwill.com/Account/Register"
                 className={styles.ctaPrimary}
                 eventName="story_start_application"
                 eventParams={{ location: 'our_story_footer' }}

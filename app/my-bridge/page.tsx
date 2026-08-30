@@ -127,7 +127,7 @@ export default function MyBridgeOverview() {
           </p>
           
           <div className={styles.ctaActions}>
-            <TrackedButton href="https://app.themuslimwill.com/Account/Login" className={styles.primaryBtn} eventName="my_bridge_start_click" eventParams={{ location: 'my_bridge_cta' }}>
+            <TrackedButton href="https://app.themuslimwill.com/Account/Register" className={styles.primaryBtn} eventName="my_bridge_start_click" eventParams={{ location: 'my_bridge_cta' }}>
               Start For $7.99/month &rarr;
             </TrackedButton>
             <TrackedButton href="/pricing" className={styles.secondaryBtn} eventName="my_bridge_pricing_click" eventParams={{ location: 'my_bridge_cta' }}>

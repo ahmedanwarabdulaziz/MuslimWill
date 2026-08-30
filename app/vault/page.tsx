@@ -151,7 +151,7 @@ export default function VaultOverview() {
           </p>
           
           <div className={styles.ctaActions}>
-            <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" variant="primary" className={styles.primaryBtn} eventName="vault_hub_start_click" eventParams={{ location: 'vault_hub_cta' }}>
+            <TrackedButton href="https://app.themuslimwill.com/Account/Register" size="lg" variant="primary" className={styles.primaryBtn} eventName="vault_hub_start_click" eventParams={{ location: 'vault_hub_cta' }}>
               Start For $7.99/month &rarr;
             </TrackedButton>
             <TrackedButton href="/how-it-works" size="lg" variant="outline" className={styles.outlineBtn} eventName="vault_hub_how_it_works_click" eventParams={{ location: 'vault_hub_cta' }}>

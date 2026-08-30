@@ -91,7 +91,7 @@ export function Header() {
 
           <div className={styles.headerRight}>
             <Link 
-              href="https://app.themuslimwill.com/Account/Login" 
+              href="https://app.themuslimwill.com/Account/Register" 
               className={styles.navCta}
               onClick={() => trackStartYourWillClick('header_desktop')}
             >
@@ -159,7 +159,7 @@ export function Header() {
             <div className={styles.ctaEyebrow}>✦ Begin Your Journey</div>
             <div className={styles.ctaHeadline}>Protect your family.<br/>Honour your faith.</div>
             <div className={styles.ctaBody}>A guided, professionally managed process — from first question to signed document.</div>
-            <Link href="https://app.themuslimwill.com/Account/Login" className={styles.ctaBtn} onClick={() => { setActiveDropdown(null); trackStartYourWillClick('header_mega'); }}>Start My Application →</Link>
+            <Link href="https://app.themuslimwill.com/Account/Register" className={styles.ctaBtn} onClick={() => { setActiveDropdown(null); trackStartYourWillClick('header_mega'); }}>Start My Application →</Link>
           </div>
           <div className={styles.ctaLinks}>
             <Link href="/how-it-works" className={styles.ctaLink} onClick={() => { setActiveDropdown(null); trackNavigateClick('how_it_works', 'header_mega'); }}><span>How It Works</span><span className={styles.ctaLinkArrow}>›</span></Link>
@@ -327,7 +327,7 @@ export function Header() {
             <div className={styles.mobileCtaEyebrow}>✦ Begin Your Journey</div>
             <div className={styles.mobileCtaTitle}>Protect your family.<br/>Honour your faith.</div>
             <div className={styles.mobileCtaBody}>A guided, professionally managed process — from first question to signed document.</div>
-            <Link href="https://app.themuslimwill.com/Account/Login" className={styles.mobileCtaBtn} onClick={() => { setMobileMenuOpen(false); trackStartYourWillClick('header_mobile'); }}>Start My Application →</Link>
+            <Link href="https://app.themuslimwill.com/Account/Register" className={styles.mobileCtaBtn} onClick={() => { setMobileMenuOpen(false); trackStartYourWillClick('header_mobile'); }}>Start My Application →</Link>
           </div>
           
           <Link href="/my-bridge" className={styles.mobileSubgroupLabel} style={{ textDecoration: 'none', color: 'inherit', display: 'block' }} onClick={() => setMobileMenuOpen(false)}>🌉 My Bridge ›</Link>

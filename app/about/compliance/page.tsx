@@ -360,7 +360,7 @@ export default function CompliancePage() {
             </p>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="https://app.themuslimwill.com/Account/Login"
+                href="https://app.themuslimwill.com/Account/Register"
                 className={styles.ctaPrimary}
                 eventName="compliance_start_application"
                 eventParams={{ location: 'compliance_footer' }}

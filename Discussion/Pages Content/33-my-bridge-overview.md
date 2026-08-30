@@ -126,7 +126,7 @@ This section exists to explain the POA add-ons without making them feel like mis
 > The Bridge gives you a complete Islamic will and a private Vault — reviewed by verified scholars and compliant with Canadian law. Start today and update any time.
 
 **CTA buttons:**
-- Primary: `Start For $7.99/month →` → `https://app.themuslimwill.com/Account/Login`
+- Primary: `Start For $7.99/month →` → `https://app.themuslimwill.com/Account/Register`
 - Secondary: `See Pricing →` → `/pricing`
 
 **Microcopy:** Free to register. Full access from $7.99/month. Cancel anytime.
@@ -142,7 +142,7 @@ This section exists to explain the POA add-ons without making them feel like mis
 | `/poa-personal` | Document card |
 | `/poa-property` | Document card |
 | `/pricing` | POA framing section link + CTA secondary |
-| `https://app.themuslimwill.com/Account/Login` | Final CTA primary |
+| `https://app.themuslimwill.com/Account/Register` | Final CTA primary |
 
 ---
 

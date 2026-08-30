@@ -11,7 +11,7 @@ const PATHWAYS = [
     title: 'For Families and Individuals',
     desc: 'Have questions about the process, pricing, or your specific situation before starting?',
     ctas: [
-      { label: 'Book a call →', href: 'https://app.themuslimwill.com/Account/Login', primary: true },
+      { label: 'Book a call →', href: 'https://app.themuslimwill.com/Account/Register', primary: true },
       { label: 'Email us →', href: 'mailto:hello@themuslimwill.com', primary: false },
     ],
   },

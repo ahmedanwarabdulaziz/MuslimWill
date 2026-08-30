@@ -314,7 +314,7 @@ export default function OurScholarsPage() {
             <h2 className={styles.ctaH2}>Start your application — scholar review included.</h2>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="https://app.themuslimwill.com/Account/Login"
+                href="https://app.themuslimwill.com/Account/Register"
                 className={styles.ctaPrimary}
                 eventName="scholars_start_application"
                 eventParams={{ location: 'our_scholars_footer' }}

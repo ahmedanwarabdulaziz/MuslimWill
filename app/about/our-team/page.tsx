@@ -317,7 +317,7 @@ export default function OurTeamPage() {
             <p className={styles.ctaSub}>Start your Islamic will application — guided by our platform, reviewed by our scholars, and built to last.</p>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="https://app.themuslimwill.com/Account/Login"
+                href="https://app.themuslimwill.com/Account/Register"
                 className={styles.ctaPrimary}
                 eventName="team_start_application"
                 eventParams={{ location: 'our_team_footer' }}

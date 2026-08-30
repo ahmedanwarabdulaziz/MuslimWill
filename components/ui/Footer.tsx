@@ -49,7 +49,7 @@ export function Footer() {
           <div className={styles.column}>
             <div className={styles.colHeading}>Start Planning</div>
             <div className={styles.linkList}>
-              <Link href="https://app.themuslimwill.com/Account/Login" className={styles.footerLink} style={{ color: 'var(--color-gold)', fontWeight: 'bold' }}>Start Your Will</Link>
+              <Link href="https://app.themuslimwill.com/Account/Register" className={styles.footerLink} style={{ color: 'var(--color-gold)', fontWeight: 'bold' }}>Start Your Will</Link>
               <Link href="/contact#book" className={styles.footerLink}>Book a Call</Link>
               <a href="mailto:info@themuslimwill.com" className={styles.footerLink}>info@themuslimwill.com</a>
               <a href="tel:+18774169455" className={styles.footerLink}>+1-877-416-WILL</a>

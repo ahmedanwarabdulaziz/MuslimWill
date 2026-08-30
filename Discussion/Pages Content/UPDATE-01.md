@@ -38,9 +38,9 @@ Multiple pages have `"See What's in the Vault →"` CTAs linking to `/vault`. Th
 ### 3. `/apply` Links — Route Doesn't Exist
 **Affected pages:** Our Story, Compliance
 
-Several CTAs link to `/apply` (e.g., "Start My Application →") which is not a valid route. The correct destination is either `/start` or `https://app.themuslimwill.com/Account/Login`.
+Several CTAs link to `/apply` (e.g., "Start My Application →") which is not a valid route. The correct destination is either `/start` or `https://app.themuslimwill.com/Account/Register`.
 
-**Fix:** Replace all `/apply` hrefs with `https://app.themuslimwill.com/Account/Login` (consistent with all other pages that already use this).
+**Fix:** Replace all `/apply` hrefs with `https://app.themuslimwill.com/Account/Register` (consistent with all other pages that already use this).
 
 ---
 

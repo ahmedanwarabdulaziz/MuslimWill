@@ -14,7 +14,7 @@ import {
 } from 'react-icons/pi';
 import styles from './page.module.css';
 
-const APP_URL = 'https://app.themuslimwill.com/Account/Login';
+const APP_URL = 'https://app.themuslimwill.com/Account/Register';
 const cta = (plan?: string) =>
   `${APP_URL}?ref=event&partner=issc${plan ? `&plan=${plan}` : ''}`;
 

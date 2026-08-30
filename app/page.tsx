@@ -35,7 +35,7 @@ export default function Home() {
              </p>
              
              <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginTop: '3rem' }}>
-                <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" variant="secondary" className={styles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'home_hero' }}>Start For $7.99/month</TrackedButton>
+                <TrackedButton href="https://app.themuslimwill.com/Account/Register" size="lg" variant="secondary" className={styles.heroPrimaryBtn} eventName="start_your_will_click" eventParams={{ location: 'home_hero' }}>Start For $7.99/month</TrackedButton>
                 <TrackedButton href="#included" size="lg" variant="outline" className={styles.invertedOutline} eventName="see_whats_included_click" eventParams={{ location: 'home_hero' }}>See What&apos;s Included</TrackedButton>
              </div>
              
@@ -159,7 +159,7 @@ export default function Home() {
           </div>
           
           <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-            <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" className={styles.ctaButtonGold} eventName="start_bridge_click" eventParams={{ location: 'home_bridge' }}>Start For $7.99/month</TrackedButton>
+            <TrackedButton href="https://app.themuslimwill.com/Account/Register" size="lg" className={styles.ctaButtonGold} eventName="start_bridge_click" eventParams={{ location: 'home_bridge' }}>Start For $7.99/month</TrackedButton>
           </div>
         </div>
       </section>
@@ -295,7 +295,7 @@ export default function Home() {
                  <li><span>Unlimited updates anytime</span></li>
                </ul>
                <div className={styles.pricingAction}>
-                 <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" className={styles.ctaButtonGoldFull} eventName="pricing_bridge_click" eventParams={{ location: 'pricing' }}>Start For $7.99/month</TrackedButton>
+                 <TrackedButton href="https://app.themuslimwill.com/Account/Register" size="lg" className={styles.ctaButtonGoldFull} eventName="pricing_bridge_click" eventParams={{ location: 'pricing' }}>Start For $7.99/month</TrackedButton>
                  <div className={styles.pricingMicrocopyPremium}>Free to register. Full access from $7.99/month. Cancel anytime.</div>
                </div>
             </div>
@@ -314,7 +314,7 @@ export default function Home() {
                    <li><span>Digital attestation & Will Directory registration</span></li>
                  </ul>
                  <div className={styles.pricingActionSide}>
-                   <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="outline" size="md" className={styles.ctaButtonOutlineNavy} eventName="pricing_full_click" eventParams={{ location: 'pricing' }}>Get The Full Package</TrackedButton>
+                   <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="outline" size="md" className={styles.ctaButtonOutlineNavy} eventName="pricing_full_click" eventParams={{ location: 'pricing' }}>Get The Full Package</TrackedButton>
                    <div className={styles.pricingMicrocopyPremiumSide}>One-time payment. Value: $594.</div>
                  </div>
               </div>
@@ -331,7 +331,7 @@ export default function Home() {
                    <li><span>Shared billing, individual vaults</span></li>
                  </ul>
                  <div className={styles.pricingActionSide}>
-                   <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="outline" size="md" className={styles.ctaButtonOutlineNavy} eventName="pricing_family_click" eventParams={{ location: 'pricing' }}>Protect Your Family</TrackedButton>
+                   <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="outline" size="md" className={styles.ctaButtonOutlineNavy} eventName="pricing_family_click" eventParams={{ location: 'pricing' }}>Protect Your Family</TrackedButton>
                    <div className={styles.pricingMicrocopyPremiumSide}>Minimum 2 members. 30% off individual price.</div>
                  </div>
               </div>
@@ -394,7 +394,7 @@ export default function Home() {
                </div>
              </div>
              <div style={{ marginTop: '3rem', textAlign: 'center' }}>
-                <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" className={styles.ctaButtonGold} eventName="poa_start_click" eventParams={{ location: 'home_poa' }}>Start For $7.99/month</TrackedButton>
+                <TrackedButton href="https://app.themuslimwill.com/Account/Register" size="lg" className={styles.ctaButtonGold} eventName="poa_start_click" eventParams={{ location: 'home_poa' }}>Start For $7.99/month</TrackedButton>
              </div>
            </div>
         </div>
@@ -412,7 +412,7 @@ export default function Home() {
               It takes less than 10 minutes to start. It lasts a lifetime.
             </p>
             <div className={styles.ctaActions}>
-              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" className={styles.heroPrimaryBtn} eventName="final_cta_click" eventParams={{ location: 'home_final_cta' }}>Start For $7.99/month</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="lg" className={styles.heroPrimaryBtn} eventName="final_cta_click" eventParams={{ location: 'home_final_cta' }}>Start For $7.99/month</TrackedButton>
               <TrackedButton href="/how-it-works" size="lg" variant="outlineLight" className={styles.ctaButtonOutline} eventName="final_cta_how_it_works_click" eventParams={{ location: 'home_final_cta' }}>See How It Works</TrackedButton>
             </div>
             <div style={{ marginTop: '1.25rem', fontSize: '0.95rem', color: '#ffffff', opacity: 0.9, position: 'relative', zIndex: 1 }}>

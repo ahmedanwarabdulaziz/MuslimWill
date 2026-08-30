@@ -25,7 +25,7 @@ export default function AhmedGoharPage() {
             Technology founder on a mission to build structured, scalable systems for Shariah-conscious and legally enforceable estate planning across the West.
           </p>
           <div className={`${styles.heroActions} ${sharedStyles.fadeUp} ${sharedStyles.delay3}`}>
-             <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'ahmed_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
+             <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="lg" eventName="start_will_hero_click" eventParams={{ location: 'ahmed_landing' }} style={{ backgroundColor: 'var(--color-gold)', color: 'var(--color-navy)' }}>
                Start Your Will
              </TrackedButton>
              <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/about" eventName="back_to_leadership" eventParams={{ location: 'ahmed_landing' }}>
@@ -157,7 +157,7 @@ export default function AhmedGoharPage() {
               Start with a guided pathway that brings structure, care, and faith-conscious planning together.
             </p>
             <div className={sharedStyles.ctaButtonGroup} style={{ justifyContent: 'center' }}>
-              <TrackedButton href="https://app.themuslimwill.com/Account/Login" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'ahmed_landing' }}>Start Your Will</TrackedButton>
+              <TrackedButton href="https://app.themuslimwill.com/Account/Register" variant="secondary" size="lg" eventName="start_will_footer_click" eventParams={{ location: 'ahmed_landing' }}>Start Your Will</TrackedButton>
               <TrackedButton variant="outline" size="lg" className={sharedStyles.invertedOutline} href="/about" eventName="view_about_footer_click" eventParams={{ location: 'ahmed_landing' }}>Back to About</TrackedButton>
             </div>
           </div>

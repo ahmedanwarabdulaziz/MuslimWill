@@ -40,7 +40,7 @@ Also update the hero H1 and sub to reflect the sponsored seat offer:
 
 **Hero CTAs (replace current):**
 - Primary: `Get Your Code From BHope →` → `https://www.bhope.ca/contact-us`
-- Secondary: `Already have a code? Start here →` → `https://app.themuslimwill.com/Account/Login`
+- Secondary: `Already have a code? Start here →` → `https://app.themuslimwill.com/Account/Register`
 
 ---
 
@@ -174,7 +174,7 @@ The current "Start My Will →" buttons point to `/start`. This skips the code s
 
 **Fix all primary CTAs on the page:**
 - Change `href="/start"` → `href="https://www.bhope.ca/contact-us"` with label `Get Your Code From BHope →`
-- Add a secondary CTA alongside: `Already have a code? Start here →` → `https://app.themuslimwill.com/Account/Login`
+- Add a secondary CTA alongside: `Already have a code? Start here →` → `https://app.themuslimwill.com/Account/Register`
 
 ---
 

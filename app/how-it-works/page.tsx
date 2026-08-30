@@ -181,7 +181,7 @@ export default function HowItWorksPage() {
                 You do not need exact figures or legal documents to start. The application guides you through what is needed, one step at a time.
               </p>
               <TrackedButton
-                href="https://app.themuslimwill.com/Account/Login"
+                href="https://app.themuslimwill.com/Account/Register"
                 className={styles.beforeCta}
                 eventName="hiw_start_before"
                 eventParams={{ location: 'how_it_works_before' }}
@@ -328,7 +328,7 @@ export default function HowItWorksPage() {
             </p>
             <div className={styles.ctaActions}>
               <TrackedButton
-                href="https://app.themuslimwill.com/Account/Login"
+                href="https://app.themuslimwill.com/Account/Register"
                 className={styles.ctaPrimary}
                 eventName="hiw_start_application_footer"
                 eventParams={{ location: 'how_it_works_footer' }}

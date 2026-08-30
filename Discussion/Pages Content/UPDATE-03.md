@@ -89,7 +89,7 @@ Create a new file at `/app/community/partners/bhope/page.tsx`. This is the co-br
 **External links on this page:**
 - `https://www.bhope.ca/contact-us` — for members to get their code
 - `https://www.bhope.ca` — BHope attribution link
-- `https://app.themuslimwill.com/Account/Login` — to start after getting code
+- `https://app.themuslimwill.com/Account/Register` — to start after getting code
 - `/community/charity-partnership` — charity CTA
 - `/community/request-demo` — charity secondary CTA
 
