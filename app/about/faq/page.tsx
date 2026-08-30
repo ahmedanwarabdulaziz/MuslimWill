@@ -56,7 +56,7 @@ const FAQ_GROUPS = [
       },
       {
         q: 'What is The Bridge?',
-        a: 'The Bridge is The Muslim Will\'s core subscription product — a complete Islamic will and a private secure Vault, together, from $5.99/month. The will covers Faraid inheritance, guardianship, charitable bequests, and executor appointment. The Vault stores your private records, obligations, estate inventory, sealed disclosures, and personal messages — released to the right people at the right moment.',
+        a: 'The Bridge is The Muslim Will\'s core subscription product — a complete Islamic will and a private secure Vault, together, from $7.99/month. The will covers Faraid inheritance, guardianship, charitable bequests, and executor appointment. The Vault stores your private records, obligations, estate inventory, sealed disclosures, and personal messages — released to the right people at the right moment.',
       },
     ],
   },
@@ -67,11 +67,11 @@ const FAQ_GROUPS = [
     questions: [
       {
         q: 'How much does an Islamic will cost?',
-        a: 'The Bridge — a complete Islamic will and private Vault — is available from $5.99/month. The Last Will & Testament document is also available as a standalone for $149. The Full Package, which includes the will, both Powers of Attorney, scholar review, admin review, and digital attestation, is available for $350 — a combined value of $594.',
+        a: 'The Bridge — a complete Islamic will and private Vault — is available from $7.99/month. The Last Will & Testament document is also available as a standalone for $149. The Full Package, which includes the will, both Powers of Attorney, scholar review, admin review, and digital attestation, is available for $350 — a combined value of $594.',
       },
       {
         q: 'What is the difference between The Bridge and the Full Package?',
-        a: 'The Bridge ($5.99/month) gives you a complete Islamic will and private Vault — everything most Muslim families need, with unlimited updates. The Full Package ($350 one-time) adds individual expert review layers — a qualified Islamic scholar reviewing your specific case, an admin and legal review, and digital attestation through a Zoom session with a paralegal. It is the right choice for complex estates or those who want individual expert attention on their case.',
+        a: 'The Bridge ($7.99/month) gives you a complete Islamic will and private Vault — everything most Muslim families need, with unlimited updates. The Full Package ($350 one-time) adds individual expert review layers — a qualified Islamic scholar reviewing your specific case, an admin and legal review, and digital attestation through a Zoom session with a paralegal. It is the right choice for complex estates or those who want individual expert attention on their case.',
       },
       {
         q: 'Is there a family package?',

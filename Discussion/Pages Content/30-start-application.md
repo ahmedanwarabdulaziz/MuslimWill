@@ -41,9 +41,9 @@ Your will is not active until you review it, confirm your intentions, and comple
 **H2:** Select your option
 
 **Card 1 — The Bridge** ← Primary
-$5.99/month — Islamic Will + Private Vault
+$7.99/month — Islamic Will + Private Vault
 Everything most Muslim families need. Unlimited updates. Cancel anytime.
-`Start For $5.99/month →`
+`Start For $7.99/month →`
 
 **Card 2 — Full Package**
 $350 one-time — Will + Both POAs + Scholar Review + Admin Review + Digital Attestation
@@ -64,7 +64,7 @@ See what is included and how it works before committing.
 
 ## Trust Note
 
-> Free to register. No payment required to start. Full access from $5.99/month.
+> Free to register. No payment required to start. Full access from $7.99/month.
 > Your information is encrypted and stored securely. We do not share your personal data with third parties.
 
 ---
@@ -81,4 +81,4 @@ See what is included and how it works before committing.
 ## SEO / Title / Meta
 
 **Title tag:** `Start Your Islamic Will | The Muslim Will`
-**Meta description:** `Begin your Islamic will and private Vault — a guided application built for Muslim families in Canada. Free to register, full access from $5.99/month.`
+**Meta description:** `Begin your Islamic will and private Vault — a guided application built for Muslim families in Canada. Free to register, full access from $7.99/month.`

@@ -180,7 +180,7 @@ Authorises a trusted person to manage your financial affairs and property if you
 **Secondary CTA:** `See Pricing`
 
 **Trust microcopy:**
-> The Last Will & Testament is $149 as a standalone — or included in The Bridge from $5.99/month. Full access, unlimited updates, private Vault included.
+> The Last Will & Testament is $149 as a standalone — or included in The Bridge from $7.99/month. Full access, unlimited updates, private Vault included.
 
 ---
 

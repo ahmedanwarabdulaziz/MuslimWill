@@ -12,7 +12,7 @@
 This is the entry point for the My Bridge section — mirroring what `/vault` does for the Vault section. It presents all 4 document types in one place, explains what each one is, and routes the visitor to the right page.
 
 **Important positioning note:** Not all 4 documents are included in The Bridge subscription:
-- ✅ **Last Will & Testament** — included in The Bridge ($5.99/month)
+- ✅ **Last Will & Testament** — included in The Bridge ($7.99/month)
 - ✅ **Charitable Legacy** — part of the will, included in The Bridge
 - ➕ **POA for Personal Care** — add-on ($99) or Full Package ($350)
 - ➕ **POA for Property** — add-on ($99) or Full Package ($350)
@@ -48,7 +48,7 @@ The audience here is either:
 > Your Islamic will is the foundation. It defines how your estate is distributed, who raises your children, and how your charitable intentions are fulfilled. For specific situations, Powers of Attorney extend that protection to cover you while you are still alive.
 
 **Trust bar (3 anchors):**
-- Islamic will included in The Bridge — from $5.99/month
+- Islamic will included in The Bridge — from $7.99/month
 - Faraid-based, Ontario-compliant
 - Powers of Attorney available for specific situations
 
@@ -126,10 +126,10 @@ This section exists to explain the POA add-ons without making them feel like mis
 > The Bridge gives you a complete Islamic will and a private Vault — reviewed by verified scholars and compliant with Canadian law. Start today and update any time.
 
 **CTA buttons:**
-- Primary: `Start For $5.99/month →` → `https://app.themuslimwill.com/Account/Login`
+- Primary: `Start For $7.99/month →` → `https://app.themuslimwill.com/Account/Login`
 - Secondary: `See Pricing →` → `/pricing`
 
-**Microcopy:** Free to register. Full access from $5.99/month. Cancel anytime.
+**Microcopy:** Free to register. Full access from $7.99/month. Cancel anytime.
 
 ---
 

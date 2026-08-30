@@ -85,7 +85,7 @@ export default function BhopePartnerPage() {
             <div className={styles.sponsoredCard}>
               <div className={styles.sponsoredBadge}>✓ Sponsored by BHope</div>
               <h3 className={styles.sponsoredTitle}>The Bridge</h3>
-              <div className={styles.sponsoredPrice}><span className={styles.strikethrough}>$5.99/month</span> <strong>Free or discounted — see BHope for your code</strong></div>
+              <div className={styles.sponsoredPrice}><span className={styles.strikethrough}>$7.99/month</span> <strong>Free or discounted — see BHope for your code</strong></div>
               <ul className={styles.sponsoredIncludes}>
                 <li>Complete Islamic Will & Testament (Faraid-based, Ontario-compliant)</li>
                 <li>Muslim Will Vault — all 4 branches (Obligations, Estate Inventory, Sealed Disclosures, Final Words)</li>

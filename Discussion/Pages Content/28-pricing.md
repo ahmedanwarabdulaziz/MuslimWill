@@ -8,7 +8,7 @@
 
 ## Page Role
 
-This page makes the decision easy. The Bridge at $5.99/month is the primary offer — it must feel complete and premium, not entry-level. The Full Package is for specific situations. The Family Package extends the value. Add-ons are for individual circumstances — not to complete the base offering.
+This page makes the decision easy. The Bridge at $7.99/month is the primary offer — it must feel complete and premium, not entry-level. The Full Package is for specific situations. The Family Package extends the value. Add-ons are for individual circumstances — not to complete the base offering.
 
 ---
 
@@ -34,7 +34,7 @@ This page makes the decision easy. The Bridge at $5.99/month is the primary offe
 ### Card 1 — The Bridge ← PRIMARY
 
 **Name:** The Bridge
-**Price:** $5.99 / month
+**Price:** $7.99 / month
 **Tagline:** Everything your family needs. An Islamic will, a private Vault, and the tools to protect your legacy — in one complete subscription.
 
 **Visual treatment:** Largest card. Most prominent. "Most popular" or "Complete" badge.
@@ -58,8 +58,8 @@ This page makes the decision easy. The Bridge at $5.99/month is the primary offe
 - Secure executor release process with full audit trail
 - Powers of Attorney available as add-ons
 
-**CTA:** `Start For $5.99/month →`
-**Microcopy:** Free to register. Full access from $5.99/month. Cancel anytime.
+**CTA:** `Start For $7.99/month →`
+**Microcopy:** Free to register. Full access from $7.99/month. Cancel anytime.
 
 ---
 
@@ -143,11 +143,11 @@ A: Yes. You can add individual expert services at any point in your journey — 
 
 **H2:** Start today. Update any time.
 
-**Primary CTA:** `Start For $5.99/month →`
+**Primary CTA:** `Start For $7.99/month →`
 **Secondary CTA:** `See How It Works →`
 
 **Trust microcopy:**
-> Free to register. Full access from $5.99/month. No hidden fees. Islamic will and private Vault included.
+> Free to register. Full access from $7.99/month. No hidden fees. Islamic will and private Vault included.
 
 ---
 
@@ -163,4 +163,4 @@ A: Yes. You can add individual expert services at any point in your journey — 
 ## SEO / Title / Meta
 
 **Title tag:** `Pricing | Islamic Will and Vault | The Muslim Will`
-**Meta description:** `The Bridge from $5.99/month — a complete Islamic will and private Vault. Full Package at $350. Clear pricing, no hidden fees, built for Muslim families in Canada.`
+**Meta description:** `The Bridge from $7.99/month — a complete Islamic will and private Vault. Full Package at $350. Clear pricing, no hidden fees, built for Muslim families in Canada.`

@@ -94,16 +94,16 @@ export default function PricingPage() {
                 <div className={styles.bridgeBadge}>✦ Most Complete</div>
                 <div className={styles.bridgeName}>The Bridge</div>
                 <div className={styles.bridgePriceRow}>
-                  <span className={styles.bridgePrice}>$5.99</span>
+                  <span className={styles.bridgePrice}>$7.99</span>
                   <span className={styles.bridgePricePer}> / month</span>
                 </div>
                 <p className={styles.bridgeTagline}>
                   Everything your family needs. An Islamic will, a private Vault, and the tools to protect your legacy — in one complete subscription.
                 </p>
                 <Link href="https://app.themuslimwill.com/Account/Login?plan=bridge" className={styles.bridgeCta}>
-                  Start For $5.99/month →
+                  Start For $7.99/month →
                 </Link>
-                <p className={styles.bridgeMicro}>Free to register. Full access from $5.99/month. Cancel anytime.</p>
+                <p className={styles.bridgeMicro}>Free to register. Full access from $7.99/month. Cancel anytime.</p>
               </div>
 
               {/* Right: feature columns */}
@@ -300,11 +300,11 @@ export default function PricingPage() {
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaH2}>Start today. Update any time.</h2>
             <p className={styles.ctaTrust}>
-              Free to register. Full access from $5.99/month. No hidden fees. Islamic will and private Vault included.
+              Free to register. Full access from $7.99/month. No hidden fees. Islamic will and private Vault included.
             </p>
             <div className={styles.ctaActions}>
               <Link href="https://app.themuslimwill.com/Account/Login" className={styles.ctaPrimary}>
-                Start For $5.99/month →
+                Start For $7.99/month →
               </Link>
               <Link href="/how-it-works" className={styles.ctaSecondary}>
                 See How It Works →

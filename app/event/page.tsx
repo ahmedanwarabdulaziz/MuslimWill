@@ -138,7 +138,7 @@ export default function EventPage() {
               </p>
               <div className={styles.offerPriceRow}>
                 <span className={styles.offerPriceWas}>$8/mo</span>
-                <span className={styles.offerPriceNow}>$5.99</span>
+                <span className={styles.offerPriceNow}>$7.99</span>
                 <span className={styles.offerPriceNote}>/month</span>
               </div>
               <ul className={styles.offerList}>
@@ -155,7 +155,7 @@ export default function EventPage() {
                 eventName="event_cta_click"
                 eventParams={{ location: 'event_offer', plan: 'bridge' }}
               >
-                Claim Subscription — $5.99/mo →
+                Claim Subscription — $7.99/mo →
               </TrackedButton>
               <p className={styles.offerMicro}>Cancel anytime.</p>
             </div>
@@ -310,7 +310,7 @@ export default function EventPage() {
                 eventName="event_cta_click"
                 eventParams={{ location: 'event_final_cta', plan: 'bridge' }}
               >
-                Start Vault Subscription — $5.99/mo →
+                Start Vault Subscription — $7.99/mo →
               </TrackedButton>
               <Link href="#offer" className={styles.finalCtaSecondary}>
                 See Full Premium Options

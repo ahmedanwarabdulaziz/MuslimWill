@@ -1,22 +1,22 @@
 # Update 02 — Bridge Positioning Review ✅ COMPLETED 2026-06-13
 **Date:** 2026-06-13
-**Focus:** Making sure the $5.99 Bridge subscriber feels complete, not entry-level.
+**Focus:** Making sure the $7.99 Bridge subscriber feels complete, not entry-level.
 
 ## The Core Rule
-> The $5.99 subscriber is a normal Muslim family who has everything they need.
+> The $7.99 subscriber is a normal Muslim family who has everything they need.
 > Upgrades exist only for specific, unusual, or complex situations.
 > The Bridge must never feel cheap, lite, or like a stepping stone.
 
 ---
 
-## 🔴 Critical — Undermines the $5.99 Position
+## 🔴 Critical — Undermines the $7.99 Position
 
-### 1. "As low as $5.99/month" — Homepage Hero Trust Bar
+### 1. "As low as $7.99/month" — Homepage Hero Trust Bar
 **File:** `/app/page.tsx` — hero section trust points
 
 "As low as" is classic budget/entry-level language. It signals "this is the cheapest option" not "this is the complete option."
 
-**Fix:** Change to simply `$5.99/month — Complete Islamic Will & Vault` or just `From $5.99/month`.
+**Fix:** Change to simply `$7.99/month — Complete Islamic Will & Vault` or just `From $7.99/month`.
 
 ---
 
@@ -37,7 +37,7 @@ This is the most damaging line on the entire site. "Less than a coffee" is the l
 
 > *"Full human review available as an add-on"*
 
-This bullet appears inside The Bridge features list — which means a visitor reads the complete list of what they get and the last item tells them something important is NOT included. It makes the $5.99 product feel like it lacks expert human involvement.
+This bullet appears inside The Bridge features list — which means a visitor reads the complete list of what they get and the last item tells them something important is NOT included. It makes the $7.99 product feel like it lacks expert human involvement.
 
 **Fix:** Remove this bullet from the Bridge feature list. Add-ons should never be mentioned inside the main product's feature list. The add-on section handles this separately.
 
@@ -46,7 +46,7 @@ This bullet appears inside The Bridge features list — which means a visitor re
 ### 4. "Choose how you want to start" — Homepage Pricing Section Header
 **File:** `/app/page.tsx` — pricing section H2
 
-"How you want to start" implies The Bridge is the beginning of a journey toward something bigger. It positions $5.99 as a trial, not a destination.
+"How you want to start" implies The Bridge is the beginning of a journey toward something bigger. It positions $7.99 as a trial, not a destination.
 
 **Fix:** Change to:
 > *"The right option for your situation."*
@@ -115,7 +115,7 @@ This implies the will is a template that was pre-approved in general, not review
 |---|---|
 | "I have everything I need." | "I got the basic version." |
 | "Upgrades are for unusual situations." | "I should probably get an add-on." |
-| "$5.99 is the normal, complete choice." | "$5.99 is the cheap entry point." |
+| "$7.99 is the normal, complete choice." | "$7.99 is the cheap entry point." |
 | "The Bridge is a serious product." | "It's less than a coffee." |
 
 ---
@@ -124,7 +124,7 @@ This implies the will is a template that was pre-approved in general, not review
 
 | # | File | Change |
 |---|---|---|
-| 1 | `/app/page.tsx` | "As low as $5.99" → remove "as low as" |
+| 1 | `/app/page.tsx` | "As low as $7.99" → remove "as low as" |
 | 2 | `/app/page.tsx` | Remove "for less than a coffee per week" |
 | 3 | `/app/page.tsx` | Remove "Full human review available as an add-on" from Bridge features |
 | 4 | `/app/page.tsx` | Pricing H2: "Choose how you want to start" → "The right option for your situation" |

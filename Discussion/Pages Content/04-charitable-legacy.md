@@ -153,7 +153,7 @@ Your complete Islamic will — built on Faraid inheritance principles, Ontario-c
 **Secondary CTA:** `See Pricing`
 
 **Trust microcopy:**
-> Charitable Legacy is built into every will prepared through The Bridge — from $5.99/month. Your giving is part of the plan from the start.
+> Charitable Legacy is built into every will prepared through The Bridge — from $7.99/month. Your giving is part of the plan from the start.
 
 ---
 
@@ -175,7 +175,7 @@ Your complete Islamic will — built on Faraid inheritance principles, Ontario-c
 **Secondary:** `Sadaqah Jariyah will Canada`, `Islamic 1/3 rule bequest`, `Muslim charitable legacy Ontario`, `Waqf bequest Canada`
 
 **Title tag:** `Charitable Legacy in an Islamic Will | Sadaqah Jariyah | The Muslim Will`
-**Meta description:** `Document your charitable intentions as a legally structured bequest in your Islamic will — Sadaqah Jariyah, Waqf, and the 1/3 rule, built into The Bridge from $5.99/month.`
+**Meta description:** `Document your charitable intentions as a legally structured bequest in your Islamic will — Sadaqah Jariyah, Waqf, and the 1/3 rule, built into The Bridge from $7.99/month.`
 
 ---
 

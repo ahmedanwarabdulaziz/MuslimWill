@@ -28,7 +28,7 @@ export default function VaultOverview() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <TrustBar items={['Included in The Bridge — $5.99/month', 'Private while you are alive — no one else has access', 'Executor access only after official verification']} />
+      <TrustBar items={['Included in The Bridge — $7.99/month', 'Private while you are alive — no one else has access', 'Executor access only after official verification']} />
 
       {/* 2. What the Vault holds */}
       <section className={`${styles.section} ${styles.grayBg}`}>
@@ -147,19 +147,19 @@ export default function VaultOverview() {
         <div className={styles.containerNarrow}>
           <h2 className={styles.sectionH2}>The Vault is included in The Bridge.</h2>
           <p className={styles.ctaBody}>
-            You do not need a separate subscription to access your Vault. It is included in The Bridge — one complete subscription at $5.99/month — alongside your Islamic Will.
+            You do not need a separate subscription to access your Vault. It is included in The Bridge — one complete subscription at $7.99/month — alongside your Islamic Will.
           </p>
           
           <div className={styles.ctaActions}>
             <TrackedButton href="https://app.themuslimwill.com/Account/Login" size="lg" variant="primary" className={styles.primaryBtn} eventName="vault_hub_start_click" eventParams={{ location: 'vault_hub_cta' }}>
-              Start For $5.99/month &rarr;
+              Start For $7.99/month &rarr;
             </TrackedButton>
             <TrackedButton href="/how-it-works" size="lg" variant="outline" className={styles.outlineBtn} eventName="vault_hub_how_it_works_click" eventParams={{ location: 'vault_hub_cta' }}>
               See How It Works &rarr;
             </TrackedButton>
           </div>
           <div className={styles.ctaMicro}>
-            Free to register. Full access from $5.99/month. Islamic Will and private Vault included.
+            Free to register. Full access from $7.99/month. Islamic Will and private Vault included.
           </div>
         </div>
       </section>

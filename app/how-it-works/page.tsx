@@ -159,7 +159,7 @@ export default function HowItWorksPage() {
               </div>
               <div className={styles.heroStatDivider} />
               <div className={styles.heroStat}>
-                <div className={styles.heroStatNum}>$5.99</div>
+                <div className={styles.heroStatNum}>$7.99</div>
                 <div className={styles.heroStatLabel}>per month from</div>
               </div>
             </div>
@@ -324,7 +324,7 @@ export default function HowItWorksPage() {
           <div className={styles.ctaContent}>
             <h2 className={styles.ctaH2}>Ready to start?</h2>
             <p className={styles.ctaMicro}>
-              Free to register. Full access from $5.99/month. Save and return at any point.
+              Free to register. Full access from $7.99/month. Save and return at any point.
             </p>
             <div className={styles.ctaActions}>
               <TrackedButton

@@ -34,7 +34,7 @@ A Muslim with financial accounts, property, insurance, investments, or any asset
 - ✓ Private — only you can access it while you are alive
 - ✓ Covers accounts, property, investments, insurance, and physical assets
 - ✓ Gives your executor a complete picture — not a guessing game
-- ✓ Part of The Bridge — included from $5.99/month
+- ✓ Part of The Bridge — included from $7.99/month
 
 ---
 
@@ -127,7 +127,7 @@ Record every debt, personal loan, Maher obligation, and financial commitment you
 **Secondary CTA:** `See What's in the Vault`
 
 **Trust microcopy:**
-> The Estate Inventory is included in The Bridge from $5.99/month — private, unlimited entries, updated any time.
+> The Estate Inventory is included in The Bridge from $7.99/month — private, unlimited entries, updated any time.
 
 ---
 

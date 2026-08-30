@@ -154,7 +154,7 @@ Designates a trusted person to make healthcare and personal decisions on your be
 **Secondary CTA:** `See Pricing`
 
 **Trust microcopy:**
-> POA for Property is $99 as a standalone — or included in The Bridge from $5.99/month alongside your Islamic Will and private Vault.
+> POA for Property is $99 as a standalone — or included in The Bridge from $7.99/month alongside your Islamic Will and private Vault.
 
 ---
 

@@ -9,7 +9,7 @@ Working document. Reflects all confirmed strategic decisions as of June 2026.
 
 - Product name: **The Bridge** (will + vault combined)
 - No free tier — free registration only, access requires paid subscription
-- Entry offer: $5.99/month
+- Entry offer: $7.99/month
 - Premium offer: $350 one-time full package
 - Hero angle: fear of leaving chaos + Islamic compliance
 - H1 confirmed: *"If something happened to you today, would your family know what to do?"*
@@ -19,7 +19,7 @@ Working document. Reflects all confirmed strategic decisions as of June 2026.
 
 ## Critical Pricing Psychology Rule
 
-The $5.99/month package must feel **complete and premium**, not entry-level or cheap.
+The $7.99/month package must feel **complete and premium**, not entry-level or cheap.
 
 The add-ons must be framed as **"for special or complex situations"** — not as upgrades that complete the package.
 
@@ -36,7 +36,7 @@ Examples of wrong framing:
 - ✗ "Make your will complete with attestation"
 - ✗ "Add what's missing"
 
-The customer who picks $5.99 should feel they made the smart, complete choice — not that they picked the budget option.
+The customer who picks $7.99 should feel they made the smart, complete choice — not that they picked the budget option.
 
 ---
 
@@ -80,16 +80,16 @@ This question stops the user. It is personal, immediate, and impossible to dismi
 - ✓ Reviewed by verified Islamic scholars
 - ✓ Compliant with Canadian law
 - ✓ Secure private vault
-- ✓ As low as $5.99/month
+- ✓ As low as $7.99/month
 
 ### Primary CTA
-`Start For $5.99/month`
+`Start For $7.99/month`
 
 ### Secondary CTA
 `See What's Included`
 
 ### Microcopy under CTA
-`Free to register. Full access from $5.99/month. No hidden fees.`
+`Free to register. Full access from $7.99/month. No hidden fees.`
 
 ---
 
@@ -152,7 +152,7 @@ Name the product, explain what it is, make it feel premium and simple at the sam
 - Audit trail on every access event
 
 ### CTA
-`Start For $5.99/month`
+`Start For $7.99/month`
 
 ---
 
@@ -219,7 +219,7 @@ Address the two biggest trust objections: is this Islamically valid? Is this leg
 ## 7. Section 6 — Pricing
 
 ### Purpose
-Show the two clear options. Make $5.99 feel like an obvious yes. Make $350 feel like a great deal.
+Show the two clear options. Make $7.99 feel like an obvious yes. Make $350 feel like a great deal.
 
 ### H2
 `Choose how you want to start.`
@@ -227,7 +227,7 @@ Show the two clear options. Make $5.99 feel like an obvious yes. Make $350 feel 
 ### Card 1 — The Bridge (Subscription) ← PRIMARY FOCUS
 
 **Name:** The Bridge
-**Price:** $5.99/month
+**Price:** $7.99/month
 **Tagline:** Everything your family needs. One complete Islamic will. One private secure vault.
 
 **Visual treatment:** This card should be the largest, most prominent, most visually confident card on the page. It is NOT the "basic" option — it is the MAIN offer.
@@ -240,8 +240,8 @@ Included:
 - Executor access workflow with audit trail
 - Unlimited updates — update any time, as many times as needed
 
-**CTA:** `Start For $5.99/month`
-**Microcopy:** Free to register. Full access from $5.99/month. Cancel anytime.
+**CTA:** `Start For $7.99/month`
+**Microcopy:** Free to register. Full access from $7.99/month. Cancel anytime.
 
 ---
 
@@ -267,7 +267,7 @@ Included:
 ### Card 3 — Family Package
 
 **Name:** Family Package
-**Price:** $4.19/person/month *(30% off the individual price of $5.99)*
+**Price:** $4.19/person/month *(30% off the individual price of $7.99)*
 **Tagline:** One subscription. Every member protected. Every account private.
 
 Included:
@@ -276,7 +276,7 @@ Included:
 - Shared billing, individual vaults
 - Ideal for families who want to plan together without sharing their private vault
 
-**Pricing note:** Billed per person. Minimum 2 members. Each member pays $4.19/month instead of $5.99/month.
+**Pricing note:** Billed per person. Minimum 2 members. Each member pays $4.19/month instead of $7.99/month.
 
 **CTA:** `Protect Your Family`
 **Microcopy:** Each family member keeps their own private, secure account. 30% off per person.
@@ -318,7 +318,7 @@ Expand relevance beyond death. Reach younger users who don't think about death b
 > Because planning for life matters as much as planning for death.
 
 ### CTA
-`Start For $5.99/month`
+`Start For $7.99/month`
 
 ---
 
@@ -345,13 +345,13 @@ Reduce final hesitation before the CTA.
 > It takes less than 10 minutes to start. It lasts a lifetime.
 
 ### Primary CTA
-`Start For $5.99/month`
+`Start For $7.99/month`
 
 ### Secondary CTA
 `See How It Works`
 
 ### Microcopy
-`Free to register. Full access from $5.99/month. Islamic will and private vault included.`
+`Free to register. Full access from $7.99/month. Islamic will and private vault included.`
 
 ---
 

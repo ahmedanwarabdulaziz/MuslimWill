@@ -27,7 +27,7 @@ A man quietly puts his affairs in order while he's alive and well — and months
 | 0:34–0:41 | BRANCH 4 — Final Words | He props his phone against a lamp, sits back, presses record. His expression softens. We hear only a fragment before it cuts. | *"And the words you never said out loud — finally heard."* Fragment of his voice: *"...and I need you to know that I—"* | The words you never said. |
 | 0:41–0:49 | EMOTIONAL PEAK | Time jump. A young woman — his daughter, a few years older now — alone in her room, headphones in, watching that same video on her phone. Her eyes well up. She exhales, then smiles through tears. | *"Your family will always know what mattered most to you."* | Delivered only when they need it. |
 | 0:49–0:55 | RESOLUTION | Wide, golden-hour shot: the same family — the daughter, the brother, the mother — seated together at a table, calm, at ease. No grief, just quiet peace. | *"A private vault. Verified by scholars. Protected by Canadian law."* | Private. Verified. Protected. |
-| 0:55–1:00 | CTA / END CARD | Clean end card: soft green and cream background, phone mockup showing the Vault app, logo settles center. | *"Start your Vault today — for less than a coffee a week."* | themuslimwill.com — Start for $5.99/month |
+| 0:55–1:00 | CTA / END CARD | Clean end card: soft green and cream background, phone mockup showing the Vault app, logo settles center. | *"Start your Vault today — for less than a coffee a week."* | themuslimwill.com — Start for $7.99/month |
 
 **Total: 60 seconds.**
 
@@ -100,15 +100,15 @@ AI video tools generate each clip independently, so the same "characters" will d
 8. The words you never said.
 9. Delivered only when they need it.
 10. Private. Verified. Protected.
-11. themuslimwill.com — Start for $5.99/month
+11. themuslimwill.com — Start for $7.99/month
 
 ---
 
 ## 7. End Card Copy (matches current pricing/positioning)
 
 **Primary line:** Start your Vault today.
-**Price line:** From $5.99/month — Islamic will + private vault included.
-**CTA:** Start For $5.99/month → themuslimwill.com
+**Price line:** From $7.99/month — Islamic will + private vault included.
+**CTA:** Start For $7.99/month → themuslimwill.com
 
 ---
 

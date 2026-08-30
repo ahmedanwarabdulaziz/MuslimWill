@@ -29,7 +29,7 @@
 
 ## The Partnership Deal
 
-- **50 Bridge subscriptions** ($5.99/month) reserved and paid for by BHope — some free for qualifying members, some at a discount depending on membership and case
+- **50 Bridge subscriptions** ($7.99/month) reserved and paid for by BHope — some free for qualifying members, some at a discount depending on membership and case
 - **30 Full Package** ($350) spots reserved and paid for by BHope — same model
 - Members claim via **personal codes** provided directly by BHope
 - BHope is **pre-suggested as a Sadaqah Jariyah beneficiary** in the will builder (member can accept or change)
@@ -91,7 +91,7 @@
 - Icon: 🌉
 - Label: `✓ Sponsored by BHope`
 - Title: The Bridge
-- Price display: ~~$5.99/month~~ **Free or discounted — see BHope for your code**
+- Price display: ~~$7.99/month~~ **Free or discounted — see BHope for your code**
 - Includes:
   - Complete Islamic Will & Testament (Faraid-based, Ontario-compliant)
   - Muslim Will Vault — Obligations Register, Estate Inventory, Sealed Disclosures, Final Words
@@ -263,4 +263,4 @@ Work through the guided application at your own pace. When prompted, you can cho
 - Use BHope's actual images in Section 3 (the emotional section) — the child at camp or the medical staff image works best as a full-width background
 - Section 6 (charity CTA) should be visually distinct — darker background — so it reads as a separate audience section
 - The two sponsored cards in Section 2 should have a "sponsored" badge in BHope's green/teal colour if possible, or a gold badge that matches the Muslim Will brand
-- Strikethrough pricing (~~$5.99~~ / ~~$350~~) makes the sponsored value tangible
+- Strikethrough pricing (~~$7.99~~ / ~~$350~~) makes the sponsored value tangible

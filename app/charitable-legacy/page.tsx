@@ -6,7 +6,7 @@ import styles from './page.module.css';
 
 const siteUrl = 'https://themuslimwill.com';
 const pageTitle = 'Charitable Legacy in an Islamic Will | Sadaqah Jariyah | The Muslim Will';
-const pageDescription = 'Document your charitable intentions as a legally structured bequest in your Islamic will — Sadaqah Jariyah, Waqf, and the 1/3 rule, built into The Bridge from $5.99/month.';
+const pageDescription = 'Document your charitable intentions as a legally structured bequest in your Islamic will — Sadaqah Jariyah, Waqf, and the 1/3 rule, built into The Bridge from $7.99/month.';
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -263,7 +263,7 @@ export default function CharitableLegacyPage() {
             </div>
             
             <p className={styles.ctaMicrocopy}>
-              Charitable Legacy is built into every will prepared through The Bridge — from $5.99/month. Your giving is part of the plan from the start.
+              Charitable Legacy is built into every will prepared through The Bridge — from $7.99/month. Your giving is part of the plan from the start.
             </p>
           </div>
         </div>

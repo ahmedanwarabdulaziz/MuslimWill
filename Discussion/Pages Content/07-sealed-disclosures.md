@@ -125,7 +125,7 @@ Your executor is instructed to deliver the disclosure to the designated recipien
 **Secondary CTA:** `See What's in the Vault`
 
 **Trust microcopy:**
-> Sealed Disclosures are included in The Bridge from $5.99/month — encrypted, audited, and released only to the people you choose.
+> Sealed Disclosures are included in The Bridge from $7.99/month — encrypted, audited, and released only to the people you choose.
 
 ---
 

@@ -62,7 +62,7 @@ This is the most important missing section. Insert it immediately after the trus
 **Card A — The Bridge (Sponsored)**
 - Badge: `✓ Sponsored by BHope`
 - Title: The Bridge
-- Price: ~~$5.99/month~~ → **Free or discounted — see BHope for your code**
+- Price: ~~$7.99/month~~ → **Free or discounted — see BHope for your code**
 - Includes:
   - Complete Islamic Will & Testament (Faraid-based, Ontario-compliant)
   - Muslim Will Vault — all 4 branches (Obligations, Estate Inventory, Sealed Disclosures, Final Words)

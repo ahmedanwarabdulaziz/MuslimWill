@@ -28,7 +28,7 @@ export default function MyBridgeOverview() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <TrustBar items={['Islamic will included in The Bridge — from $5.99/month', 'Faraid-based, Ontario-compliant', 'Powers of Attorney available for specific situations']} />
+      <TrustBar items={['Islamic will included in The Bridge — from $7.99/month', 'Faraid-based, Ontario-compliant', 'Powers of Attorney available for specific situations']} />
 
       {/* 2. The documents */}
       <section className={`${styles.section} ${styles.grayBg}`}>
@@ -128,14 +128,14 @@ export default function MyBridgeOverview() {
           
           <div className={styles.ctaActions}>
             <TrackedButton href="https://app.themuslimwill.com/Account/Login" className={styles.primaryBtn} eventName="my_bridge_start_click" eventParams={{ location: 'my_bridge_cta' }}>
-              Start For $5.99/month &rarr;
+              Start For $7.99/month &rarr;
             </TrackedButton>
             <TrackedButton href="/pricing" className={styles.secondaryBtn} eventName="my_bridge_pricing_click" eventParams={{ location: 'my_bridge_cta' }}>
               See Pricing &rarr;
             </TrackedButton>
           </div>
           <div className={styles.ctaMicro}>
-            Free to register. Full access from $5.99/month. Cancel anytime.
+            Free to register. Full access from $7.99/month. Cancel anytime.
           </div>
         </div>
       </section>

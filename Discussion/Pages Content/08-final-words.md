@@ -34,7 +34,7 @@ Every Muslim with people they love. A parent who has never told their children w
 - ✓ Written letters, voice notes, and video messages
 - ✓ Each message assigned to one specific person
 - ✓ Delivered privately — not shared with the broader family
-- ✓ Part of The Bridge — included from $5.99/month
+- ✓ Part of The Bridge — included from $7.99/month
 
 ---
 
@@ -118,7 +118,7 @@ Your executor is notified of each message and its intended recipient. The delive
 **Secondary CTA:** `See What's in the Vault`
 
 **Trust microcopy:**
-> Final Words is included in The Bridge from $5.99/month — written, voice, and video messages, private, encrypted, and delivered only after your passing.
+> Final Words is included in The Bridge from $7.99/month — written, voice, and video messages, private, encrypted, and delivered only after your passing.
 
 ---
 

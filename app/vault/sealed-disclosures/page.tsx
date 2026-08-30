@@ -234,7 +234,7 @@ export default function SealedDisclosuresPage() {
             </div>
 
             <p className={styles.ctaMicrocopy}>
-              Sealed Disclosures are included in The Bridge from $5.99/month — encrypted, audited, and released only to the people you choose.
+              Sealed Disclosures are included in The Bridge from $7.99/month — encrypted, audited, and released only to the people you choose.
             </p>
 
             <div style={{ marginTop: '2rem', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>

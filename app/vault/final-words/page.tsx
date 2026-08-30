@@ -34,7 +34,7 @@ export default function FinalWordsPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <TrustBar items={['Written letters, voice notes, and video messages', 'Each message assigned to one specific person', 'Delivered privately — not shared with the broader family', 'Part of The Bridge — included from $5.99/month']} />
+      <TrustBar items={['Written letters, voice notes, and video messages', 'Each message assigned to one specific person', 'Delivered privately — not shared with the broader family', 'Part of The Bridge — included from $7.99/month']} />
 
       {/* ── SECTION 1: What You Can Leave ── */}
       <section className={styles.section}>
@@ -252,7 +252,7 @@ export default function FinalWordsPage() {
             </div>
 
             <p className={styles.ctaMicrocopy}>
-              Final Words is included in The Bridge from $5.99/month — written, voice, and video messages, private, encrypted, and delivered only after your passing.
+              Final Words is included in The Bridge from $7.99/month — written, voice, and video messages, private, encrypted, and delivered only after your passing.
             </p>
 
             <div style={{ marginTop: '2rem', display: 'flex', gap: '1.5rem', justifyContent: 'center', flexWrap: 'wrap' }}>

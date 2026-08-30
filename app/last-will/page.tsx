@@ -316,7 +316,7 @@ export default function LastWillPage() {
             </div>
             
             <p className={styles.ctaMicrocopy}>
-              The Last Will &amp; Testament is $149 as a standalone — or included in The Bridge from $5.99/month. Full access, unlimited updates, private Vault included.
+              The Last Will &amp; Testament is $149 as a standalone — or included in The Bridge from $7.99/month. Full access, unlimited updates, private Vault included.
             </p>
           </div>
         </div>

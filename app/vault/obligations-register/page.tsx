@@ -33,7 +33,7 @@ export default function ObligationsRegisterPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <TrustBar items={['Private and secure — visible only to your executor', 'Covers financial debts, personal loans, and Islamic obligations', 'Gives your executor clear instructions', 'Part of The Bridge — included from $5.99/month']} />
+      <TrustBar items={['Private and secure — visible only to your executor', 'Covers financial debts, personal loans, and Islamic obligations', 'Gives your executor clear instructions', 'Part of The Bridge — included from $7.99/month']} />
 
       {/* ── SECTION 1: Why Undocumented Debts Are a Serious Risk ── */}
       <section className={styles.section} style={{ backgroundColor: 'var(--color-cream-light)' }}>
@@ -228,7 +228,7 @@ export default function ObligationsRegisterPage() {
             </div>
             
             <p className={styles.ctaMicrocopy}>
-              The Obligations Register is included in The Bridge from $5.99/month — private, secure, and updated any time your circumstances change.
+              The Obligations Register is included in The Bridge from $7.99/month — private, secure, and updated any time your circumstances change.
             </p>
             
             <div style={{ marginTop: '2rem', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>

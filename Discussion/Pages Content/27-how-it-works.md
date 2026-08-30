@@ -109,7 +109,7 @@ Your will formally witnessed and legally certified over Zoom with a paralegal â€
 **Secondary CTA:** `See Pricing â†’`
 
 **Trust microcopy:**
-> Free to register. Full access from $5.99/month. Save and return at any point.
+> Free to register. Full access from $7.99/month. Save and return at any point.
 
 ---
 

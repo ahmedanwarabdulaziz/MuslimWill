@@ -33,7 +33,7 @@ export default function EstateInventoryPage() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <TrustBar items={['Private — only you can access it while you are alive', 'Covers accounts, property, investments, insurance, and physical assets', 'Gives your executor a complete picture — not a guessing game', 'Part of The Bridge — included from $5.99/month']} />
+      <TrustBar items={['Private — only you can access it while you are alive', 'Covers accounts, property, investments, insurance, and physical assets', 'Gives your executor a complete picture — not a guessing game', 'Part of The Bridge — included from $7.99/month']} />
 
       {/* ── SECTION 1: The Problem No One Talks About ── */}
       <section className={styles.section} style={{ backgroundColor: 'var(--color-cream-light)' }}>
@@ -239,7 +239,7 @@ export default function EstateInventoryPage() {
             </div>
 
             <p className={styles.ctaMicrocopy}>
-              The Estate Inventory is included in The Bridge from $5.99/month — private, unlimited entries, updated any time.
+              The Estate Inventory is included in The Bridge from $7.99/month — private, unlimited entries, updated any time.
             </p>
 
             <div style={{ marginTop: '2rem', display: 'flex', gap: '1.5rem', justifyContent: 'center' }}>

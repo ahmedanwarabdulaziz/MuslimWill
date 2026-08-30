@@ -5,7 +5,7 @@ import styles from './page.module.css';
 export const metadata: Metadata = {
   title: 'Start Your Islamic Will | The Muslim Will',
   description:
-    'Begin your Islamic will and private Vault — a guided application built for Muslim families in Canada. Free to register, full access from $5.99/month.',
+    'Begin your Islamic will and private Vault — a guided application built for Muslim families in Canada. Free to register, full access from $7.99/month.',
   alternates: { canonical: 'https://themuslimwill.com/start' },
 };
 
@@ -94,7 +94,7 @@ export default function StartPage() {
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 </svg>
-                Free to register. No payment required to start. Full access from $5.99/month.
+                Free to register. No payment required to start. Full access from $7.99/month.
               </div>
               <div className={styles.trustRow}>
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -136,7 +136,7 @@ export default function StartPage() {
                 </div>
                 <div className={styles.planName}>The Bridge</div>
                 <div className={styles.planPriceRow}>
-                  <span className={styles.planPrice}>$5.99</span>
+                  <span className={styles.planPrice}>$7.99</span>
                   <span className={styles.planPricePer}>/month</span>
                 </div>
                 <div className={styles.planDesc}>
@@ -158,7 +158,7 @@ export default function StartPage() {
                   ))}
                 </div>
                 <Link href="https://app.themuslimwill.com/Account/Login?plan=bridge" className={styles.planCta} data-primary>
-                  Start For $5.99/month →
+                  Start For $7.99/month →
                 </Link>
               </div>
             </div>

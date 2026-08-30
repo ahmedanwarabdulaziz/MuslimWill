@@ -152,7 +152,7 @@ Authorises a trusted person to manage your financial affairs and property if you
 **Secondary CTA:** `See Pricing`
 
 **Trust microcopy:**
-> POA for Personal Care is $99 as a standalone — or included in The Bridge from $5.99/month alongside your Islamic Will and private Vault.
+> POA for Personal Care is $99 as a standalone — or included in The Bridge from $7.99/month alongside your Islamic Will and private Vault.
 
 ---
 

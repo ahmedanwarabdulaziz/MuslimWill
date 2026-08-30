@@ -30,7 +30,7 @@ The $350 one-time offer faces direct market resistance because:
 The new model solves this by:
 
 - removing the upfront $350 decision entirely
-- letting the user enter for $5.99/month
+- letting the user enter for $7.99/month
 - building trust and emotional investment through the vault
 - making the $350 full package feel like a natural and obvious upgrade later
 
@@ -38,11 +38,11 @@ The new model solves this by:
 
 ## 3. The Two Products
 
-### A. My Vault — $5.99 / month
+### A. My Vault — $7.99 / month
 
 The entry offer. Low friction. Designed for volume.
 
-**Included at $5.99/month:**
+**Included at $7.99/month:**
 
 - Islamic Last Will & Testament
   - Professionally built template
@@ -53,7 +53,7 @@ The entry offer. Low friction. Designed for volume.
 - Muslim Will Vault (all 4 branches — see Section 4)
 - POA structure (incapacity scenario — see Section 5)
 
-**Not included at $5.99/month:**
+**Not included at $7.99/month:**
 - Human case-by-case scholar review
 - Human legal/admin review
 - Digital attestation
@@ -162,7 +162,7 @@ This expands the product beyond a will company into a full life-continuity produ
 
 ## 6. Add-Ons (One-Time Purchases)
 
-These are available to $5.99/month subscribers who want to upgrade specific parts:
+These are available to $7.99/month subscribers who want to upgrade specific parts:
 
 | Add-On | Suggested Price |
 |---|---|
@@ -198,7 +198,7 @@ Purpose: increase household conversion, increase retention, and make Muslim Will
 - Billing: monthly and annual options
 - Annual billing should offer a discount (locks in commitment while protecting professionalism)
 - The $350 full package should include 12 months of vault access
-- Free tier: TBD — needs discussion on whether a free tier makes sense or whether $5.99 is already the entry
+- Free tier: TBD — needs discussion on whether a free tier makes sense or whether $7.99 is already the entry
 
 ---
 
@@ -235,8 +235,8 @@ These are the remaining items that need decisions before website work begins:
 - [ ] Free tier: yes or no? If yes, what is included?
 - [ ] Family package: exact pricing?
 - [ ] Annual subscription discount: what percentage?
-- [ ] Does the $5.99 include POA documents or only POA guidance/messages?
-- [ ] Video message storage: how much is included in $5.99, what triggers the upgrade?
+- [ ] Does the $7.99 include POA documents or only POA guidance/messages?
+- [ ] Video message storage: how much is included in $7.99, what triggers the upgrade?
 - [ ] Product name confirmation: is "The Bridge" the final name, or is it still "Muslim Vault"?
 - [ ] Homepage hero direction: what is the single strongest line that leads with?
 

@@ -43,7 +43,7 @@ This is not a product sales page — it is an orientation hub. The user arriving
 > Your Vault holds the records, documents, and messages that your executor and your loved ones will need when you are gone. While you are alive, only you can see it. After your passing is officially verified, the right people receive access to exactly what you intended — no more, no less.
 
 **Trust bar (3 anchors):**
-- Included in The Bridge — $5.99/month
+- Included in The Bridge — $7.99/month
 - Private while you are alive — no one else has access
 - Executor access only after official verification
 
@@ -132,13 +132,13 @@ No CTA in the hero. This is an orientation page — the user came here to unders
 > The Vault is included in The Bridge.
 
 **Body:**
-> You do not need a separate subscription to access your Vault. It is included in The Bridge — one complete subscription at $5.99/month — alongside your Islamic Will.
+> You do not need a separate subscription to access your Vault. It is included in The Bridge — one complete subscription at $7.99/month — alongside your Islamic Will.
 
 **CTA buttons:**
-- Primary: `Start For $5.99/month →` → `https://app.themuslimwill.com/Account/Login`
+- Primary: `Start For $7.99/month →` → `https://app.themuslimwill.com/Account/Login`
 - Secondary: `See How It Works →` → `/how-it-works`
 
-**Microcopy:** Free to register. Full access from $5.99/month. Islamic Will and private Vault included.
+**Microcopy:** Free to register. Full access from $7.99/month. Islamic Will and private Vault included.
 
 ---
 

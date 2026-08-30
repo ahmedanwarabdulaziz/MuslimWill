@@ -11,7 +11,7 @@
 **Affected pages:** `/poa-personal` and `/poa-property`
 
 The final CTA microcopy on both pages currently reads:
-> *"POA for Personal Care is $99 as a standalone — or included in The Bridge from $5.99/month alongside your Islamic Will and private Vault."*
+> *"POA for Personal Care is $99 as a standalone — or included in The Bridge from $7.99/month alongside your Islamic Will and private Vault."*
 
 **This is wrong.** POA is NOT included in The Bridge. The Bridge is Will + Vault only.
 

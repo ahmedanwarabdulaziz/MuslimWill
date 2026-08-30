@@ -34,7 +34,7 @@ A Muslim who knows that debts carry serious weight in Islam — but has never fo
 - ✓ Private and secure — visible only to your executor, released after your passing
 - ✓ Covers financial debts, personal loans, and Islamic-specific obligations
 - ✓ Gives your executor clear instructions — not guesswork
-- ✓ Part of The Bridge — included from $5.99/month
+- ✓ Part of The Bridge — included from $7.99/month
 
 ---
 
@@ -126,7 +126,7 @@ Record the assets, accounts, and money owed to you — so your executor has a co
 **Secondary CTA:** `See What's in the Vault`
 
 **Trust microcopy:**
-> The Obligations Register is included in The Bridge from $5.99/month — private, secure, and updated any time your circumstances change.
+> The Obligations Register is included in The Bridge from $7.99/month — private, secure, and updated any time your circumstances change.
 
 ---
 
