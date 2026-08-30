@@ -66,7 +66,7 @@ This page makes the decision easy. The Bridge at $7.99/month is the primary offe
 ### Card 2 — Family Package
 
 **Name:** Family Package
-**Price:** $4.19 / person / month *(30% off the individual price)*
+**Price:** $13.99 / person / month *(30% off the individual price)*
 **Tagline:** One subscription for every member of your family. Every account private and independent.
 
 **What's included:**

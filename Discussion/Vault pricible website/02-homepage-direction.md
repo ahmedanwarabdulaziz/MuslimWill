@@ -267,7 +267,7 @@ Included:
 ### Card 3 — Family Package
 
 **Name:** Family Package
-**Price:** $4.19/person/month *(30% off the individual price of $7.99)*
+**Price:** $13.99/person/month *(30% off the individual price of $7.99)*
 **Tagline:** One subscription. Every member protected. Every account private.
 
 Included:
@@ -276,7 +276,7 @@ Included:
 - Shared billing, individual vaults
 - Ideal for families who want to plan together without sharing their private vault
 
-**Pricing note:** Billed per person. Minimum 2 members. Each member pays $4.19/month instead of $7.99/month.
+**Pricing note:** Billed per person. Minimum 2 members. Each member pays $13.99/month instead of $7.99/month.
 
 **CTA:** `Protect Your Family`
 **Microcopy:** Each family member keeps their own private, secure account. 30% off per person.

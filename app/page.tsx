@@ -322,7 +322,7 @@ export default function Home() {
               <div className={styles.pricingCardPremiumSide}>
                  <div className={styles.pricingHeaderSide}>
                    <h3 className={styles.pricingNamePremiumSide}>Family Package</h3>
-                   <div className={styles.pricingPricePremiumSide}>$4.19<span>/mo</span></div>
+                   <div className={styles.pricingPricePremiumSide}>$13.99<span>/mo</span></div>
                  </div>
                  <p className={styles.pricingTaglinePremiumSide}>One subscription. Every member protected. Every account private.</p>
                  <ul className={styles.checkListPricingSecondary}>

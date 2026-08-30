@@ -176,7 +176,7 @@ export default function PricingPage() {
               <div className={styles.secondaryCardInner}>
                 <div className={styles.secondaryBadge} data-family>👨‍👩‍👧‍👦 Family Package</div>
                 <div className={styles.secondaryPriceRow}>
-                  <span className={styles.secondaryPrice}>$4.19</span>
+                  <span className={styles.secondaryPrice}>$13.99</span>
                   <span className={styles.secondaryPricePer}> / person / month</span>
                 </div>
                 <div className={styles.secondarySavings}>30% off the individual price</div>
