@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import { Card, CardContent, CardTitle } from '@/components/ui/Card';
+import { EventsHomeSection } from '@/components/home/EventsHomeSection';
 import { PiReceiptLight, PiBankLight, PiUsersLight, PiShieldWarningLight, PiQuotesLight, PiScrollLight, PiVaultLight } from 'react-icons/pi';
 import styles from './page.module.css';
 
@@ -16,6 +17,8 @@ export const metadata: Metadata = {
   description: homepageDescription,
   alternates: { canonical: siteUrl },
 };
+
+export const revalidate = 60;
 
 export default function Home() {
   return (
@@ -402,6 +405,9 @@ export default function Home() {
 
       {/* 8. Trust Bar & Social Proof */}
       <TrustBar items={['Trusted by hundreds of Muslim families across Canada', 'Scholar Verified', 'Ontario Compliant', 'Bank-Level Encryption']} />
+
+      {/* 8.5 Community Events */}
+      <EventsHomeSection />
 
       {/* 9. Final CTA */}
       <section className={`${styles.section} ${styles.ctaSectionPadding}`}>

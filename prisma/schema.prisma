@@ -1,0 +1,77 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum EventStatus {
+  DRAFT
+  UPCOMING
+  PAST
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+}
+
+model Event {
+  id     String      @id @default(cuid())
+  slug   String      @unique
+  status EventStatus @default(DRAFT)
+  // The one event shown at the static, pre-printed /event URL (QR codes).
+  // Only one Event should have this true at a time; enforced in application code.
+  isCurrent Boolean @default(false)
+
+  title          String
+  eventDate      DateTime?
+  location       String?
+  partnerName    String?
+  partnerLogoUrl String?
+
+  heroEyebrow        String?
+  heroHeadline       String
+  heroHeadlineAccent String?
+  heroSubcopy        String?
+  heroBadges         String[]
+  trustBarItems      String[]
+
+  offers       Json
+  packageParts Json
+  howItWorks   Json
+
+  helpPhone String?
+  helpEmail String?
+
+  metaTitle       String?
+  metaDescription String?
+  ogImageUrl      String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  media Media[]
+
+  @@index([status, eventDate])
+}
+
+model Media {
+  id      String    @id @default(cuid())
+  eventId String
+  event   Event     @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  type    MediaType
+
+  url          String
+  thumbnailUrl String?
+  publicId     String
+  caption      String?
+  order        Int     @default(0)
+
+  createdAt DateTime @default(now())
+
+  @@index([eventId, order])
+  @@index([type])
+}

@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { TrackingScripts } from "@/components/analytics/TrackingScripts";
-import { Header } from "@/components/ui/Header";
-import { Footer } from "@/components/ui/Footer";
+import { AppChrome } from "@/components/layout/AppChrome";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,9 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={inter.variable}>
       <body style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-        <Header />
-        <main style={{ flex: 1 }}>{children}</main>
-        <Footer />
+        <AppChrome>{children}</AppChrome>
         <TrackingScripts />
       </body>
     </html>

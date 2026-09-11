@@ -203,6 +203,14 @@ export function Header() {
               <span className={styles.dropItemTitle}>Community Resources</span>
               <span className={styles.dropItemDesc}>Khutbah guides and awareness materials</span>
             </Link>
+            <Link href="/events" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('events', 'header_mega'); }}>
+              <span className={styles.dropItemTitle}>Events</span>
+              <span className={styles.dropItemDesc}>Upcoming and past community events</span>
+            </Link>
+            <Link href="/gallery" className={styles.dropItem} onClick={() => { setActiveDropdown(null); trackNavigateClick('gallery', 'header_mega'); }}>
+              <span className={styles.dropItemTitle}>Gallery</span>
+              <span className={styles.dropItemDesc}>Photos and videos from past events</span>
+            </Link>
           </div>
           <div className={styles.smallCtaBlock}>
             <div className={styles.ctaEyebrow}>✦ Partner With Us</div>
@@ -411,6 +419,14 @@ export function Header() {
           <Link href="/community/community-resources" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
             <div className={styles.mobileItemTitle}>Community Resources</div>
             <div className={styles.mobileItemDesc}>Khutbah guides and outreach materials</div>
+          </Link>
+          <Link href="/events" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+            <div className={styles.mobileItemTitle}>Events</div>
+            <div className={styles.mobileItemDesc}>Upcoming and past community events</div>
+          </Link>
+          <Link href="/gallery" className={styles.mobileItem} onClick={() => setMobileMenuOpen(false)}>
+            <div className={styles.mobileItemTitle}>Gallery</div>
+            <div className={styles.mobileItemDesc}>Photos and videos from past events</div>
           </Link>
         </div>
 

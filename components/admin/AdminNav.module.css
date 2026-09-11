@@ -1,0 +1,44 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-5);
+  background: var(--color-navy);
+  color: white;
+}
+
+.brand {
+  font-weight: 700;
+  color: white;
+  font-size: 1rem;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: 0.9rem;
+}
+
+.links a {
+  color: white;
+  opacity: 0.85;
+}
+
+.links a:hover {
+  opacity: 1;
+}
+
+.logoutBtn {
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.8rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

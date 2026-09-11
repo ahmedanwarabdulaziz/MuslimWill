@@ -1,0 +1,158 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  max-width: 880px;
+}
+
+.section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  font-size: 1.1rem;
+  margin-bottom: var(--space-1);
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: var(--space-3);
+  background: var(--color-surface-soft);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+@media (max-width: 640px) {
+  .row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 0.9rem;
+  margin-top: var(--space-4);
+}
+
+.input,
+.select,
+.textarea {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  padding: 0.55rem 0.75rem;
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  color: var(--color-text-main);
+  background: var(--color-surface);
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.listRow {
+  display: flex;
+  gap: var(--space-2);
+  align-items: center;
+}
+
+.listRow .input {
+  flex: 1;
+}
+
+.addBtn {
+  align-self: flex-start;
+  background: none;
+  border: 1px dashed var(--color-gold);
+  color: var(--color-navy);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background: var(--color-cream-light);
+}
+
+.removeBtn {
+  background: none;
+  border: none;
+  color: #b23b3b;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.removeBtn:hover {
+  text-decoration: underline;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.saveBtn {
+  background: var(--color-navy);
+  color: white;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 0.7rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.saveBtn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.statusMessage {
+  font-size: 0.9rem;
+}
+
+.statusMessage.error {
+  color: #b23b3b;
+}
+
+.statusMessage.success {
+  color: #1f7a3d;
+}

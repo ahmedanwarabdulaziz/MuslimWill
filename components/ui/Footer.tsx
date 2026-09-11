@@ -28,6 +28,8 @@ export function Footer() {
               <Link href="/charitable-legacy" className={styles.footerLink}>Charitable Legacy</Link>
               <Link href="/faq" className={styles.footerLink}>FAQ</Link>
               <Link href="/for-charities" className={styles.footerLink}>For Charities</Link>
+              <Link href="/events" className={styles.footerLink}>Events</Link>
+              <Link href="/gallery" className={styles.footerLink}>Gallery</Link>
               <Link href="/about" className={styles.footerLink}>About Muslim Will</Link>
             </div>
           </div>
