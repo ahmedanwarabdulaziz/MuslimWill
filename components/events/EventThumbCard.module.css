@@ -1,0 +1,44 @@
+.cardLink {
+  display: block;
+  height: 100%;
+}
+
+.cardImageWrap {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--color-surface-soft);
+}
+
+.cardImageWrap img {
+  object-fit: cover;
+}
+
+.cardImagePlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-border);
+  font-size: 2rem;
+}
+
+.cardMeta {
+  color: var(--color-text-muted);
+  font-size: 0.85rem;
+  margin-top: var(--space-1);
+}
+
+.cardBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-gold-light);
+  background: var(--color-navy);
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  margin-bottom: var(--space-1);
+}

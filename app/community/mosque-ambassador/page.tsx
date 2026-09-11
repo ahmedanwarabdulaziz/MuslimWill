@@ -3,6 +3,7 @@ import { TrustBar } from '@/components/ui/TrustBar';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
 import { InquiryForm } from '@/components/forms/InquiryForm';
+import { CommunityEventsStrip } from '@/components/events/CommunityEventsStrip';
 import styles from './page.module.css';
 
 const siteUrl = 'https://themuslimwill.com';
@@ -188,6 +189,12 @@ export default function MosqueAmbassadorPage() {
           </div>
         </div>
       </section>
+
+      {/* ── SECTION 3.5: Proof — Events at other masjids ── */}
+      <CommunityEventsStrip
+        title="Already Serving Masjids Like Yours"
+        subtitle="A look at recent and upcoming mosque partnerships — see what the programme looks like in your community."
+      />
 
       {/* ── SECTION 4: Who This Is For ── */}
       <section className={styles.section}>

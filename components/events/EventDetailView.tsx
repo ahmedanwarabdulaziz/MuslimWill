@@ -5,6 +5,7 @@ import { TrustBar } from '@/components/ui/TrustBar';
 import { PiCheckCircleLight, PiPhoneLight, PiEnvelopeSimpleLight } from 'react-icons/pi';
 import { PACKAGE_ICON_MAP } from '@/lib/icons';
 import { renderBoldText } from '@/lib/richtext';
+import { CommunityEventsStrip } from '@/components/events/CommunityEventsStrip';
 import type { Offer, PackagePart, Step } from '@/lib/schemas';
 import type { Event } from '@/generated/prisma/client';
 import styles from './EventDetailView.module.css';
@@ -259,6 +260,13 @@ export function EventDetailView({ event }: { event: Event }) {
           </div>
         </section>
       )}
+
+      {/* ── OTHER EVENTS ── */}
+      <CommunityEventsStrip
+        title="Other Events"
+        subtitle="More places to meet the Muslim Will team, past and upcoming."
+        excludeEventId={event.id}
+      />
 
       {/* ── FINAL CTA ── */}
       {featuredOffer && (

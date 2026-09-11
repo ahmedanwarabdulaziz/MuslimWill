@@ -1,49 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { PiCalendarLight, PiMapPinLight, PiImagesLight } from 'react-icons/pi';
-import { prisma } from '@/lib/db';
-import { Card, CardContent, CardTitle } from '@/components/ui/Card';
-import type { Event, Media } from '@/generated/prisma/client';
+import { EventThumbCard } from '@/components/events/EventThumbCard';
+import { getEventsOverview, getThumbnailUrl, formatEventMeta } from '@/lib/events-data';
 import homeStyles from '@/app/page.module.css';
 import styles from './EventsHomeSection.module.css';
 
-type EventWithThumb = Event & { media: Media[] };
-
-function thumbnailUrl(event: EventWithThumb): string | null {
-  const item = event.media[0];
-  if (!item) return null;
-  return item.type === 'IMAGE' ? item.url : item.thumbnailUrl ?? item.url;
-}
-
-function formatMeta(event: Event): string {
-  const parts: string[] = [];
-  if (event.eventDate) parts.push(new Date(event.eventDate).toLocaleDateString(undefined, { dateStyle: 'medium' }));
-  if (event.location) parts.push(event.location);
-  return parts.join(' • ');
-}
-
 export async function EventsHomeSection() {
-  const [current, upcomingRaw, pastRaw] = await Promise.all([
-    prisma.event.findFirst({
-      where: { isCurrent: true },
-      include: { media: { orderBy: { order: 'asc' }, take: 1 } },
-    }),
-    prisma.event.findMany({
-      where: { status: 'UPCOMING' },
-      orderBy: { eventDate: 'asc' },
-      take: 3,
-      include: { media: { orderBy: { order: 'asc' }, take: 1 } },
-    }),
-    prisma.event.findMany({
-      where: { status: 'PAST' },
-      orderBy: [{ eventDate: 'desc' }, { createdAt: 'desc' }],
-      take: 3,
-      include: { media: { orderBy: { order: 'asc' }, take: 1 } },
-    }),
-  ]);
-
-  const upcoming = upcomingRaw.filter((e) => e.id !== current?.id);
-  const past = pastRaw.filter((e) => e.id !== current?.id);
+  const { current, upcoming, past } = await getEventsOverview();
 
   if (!current && upcoming.length === 0 && past.length === 0) return null;
 
@@ -63,8 +27,13 @@ export async function EventsHomeSection() {
         {current && (
           <div className={styles.featured}>
             <div className={styles.featuredImageWrap}>
-              {thumbnailUrl(current) ? (
-                <Image src={thumbnailUrl(current)!} alt={current.title} fill sizes="(max-width: 800px) 100vw, 50vw" />
+              {getThumbnailUrl(current) ? (
+                <Image
+                  src={getThumbnailUrl(current)!}
+                  alt={current.title}
+                  fill
+                  sizes="(max-width: 800px) 100vw, 50vw"
+                />
               ) : current.partnerLogoUrl ? (
                 <Image
                   src={current.partnerLogoUrl}
@@ -82,7 +51,7 @@ export async function EventsHomeSection() {
             <div className={styles.featuredBody}>
               <div className={styles.liveBadge}>● Happening Now</div>
               <h3 className={styles.featuredTitle}>{current.title}</h3>
-              {formatMeta(current) && (
+              {formatEventMeta(current) && (
                 <div className={styles.metaLine}>
                   {current.eventDate && (
                     <span>
@@ -109,7 +78,7 @@ export async function EventsHomeSection() {
             <h3 className={styles.subheading}>Upcoming</h3>
             <div className={styles.grid}>
               {upcoming.map((event) => (
-                <EventCard key={event.id} event={event} />
+                <EventThumbCard key={event.id} event={event} />
               ))}
             </div>
           </>
@@ -120,7 +89,7 @@ export async function EventsHomeSection() {
             <h3 className={styles.subheading}>Past Events</h3>
             <div className={styles.grid}>
               {past.map((event) => (
-                <EventCard key={event.id} event={event} />
+                <EventThumbCard key={event.id} event={event} />
               ))}
             </div>
           </>
@@ -132,28 +101,5 @@ export async function EventsHomeSection() {
         </div>
       </div>
     </section>
-  );
-}
-
-function EventCard({ event }: { event: EventWithThumb }) {
-  const src = thumbnailUrl(event);
-  return (
-    <Link href={`/events/${event.slug}`} className={styles.cardLink}>
-      <Card variant="interactive" style={{ height: '100%' }}>
-        <div className={styles.cardImageWrap}>
-          {src ? (
-            <Image src={src} alt={event.title} fill sizes="260px" style={{ objectFit: 'cover' }} />
-          ) : (
-            <div className={styles.cardImagePlaceholder}>
-              <PiImagesLight />
-            </div>
-          )}
-        </div>
-        <CardContent>
-          <CardTitle>{event.title}</CardTitle>
-          {formatMeta(event) && <p className={styles.cardMeta}>{formatMeta(event)}</p>}
-        </CardContent>
-      </Card>
-    </Link>
   );
 }

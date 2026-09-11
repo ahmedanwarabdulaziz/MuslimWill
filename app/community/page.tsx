@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
+import { CommunityEventsStrip } from '@/components/events/CommunityEventsStrip';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
@@ -117,6 +118,12 @@ export default function CommunityOverview() {
           </div>
         </div>
       </section>
+
+      {/* 3.5 Community Events */}
+      <CommunityEventsStrip
+        title="See Us In Your Community"
+        subtitle="From mosque ambassador visits to community estate planning sessions — here's what partnership looks like in practice."
+      />
 
       {/* 4. Request a demo */}
       <section className={`${styles.section} ${styles.ctaSection}`}>
