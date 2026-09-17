@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { PiCalendarLight, PiMapPinLight, PiImagesLight } from 'react-icons/pi';
 import { EventListRow } from '@/components/events/EventListRow';
-import { getEventsOverview, getThumbnailUrl, formatEventMeta } from '@/lib/events-data';
+import { getEventsOverview, getThumbnailUrl, formatEventMeta, type EventWithThumb } from '@/lib/events-data';
 import homeStyles from '@/app/page.module.css';
 import styles from './EventsHomeSection.module.css';
 
