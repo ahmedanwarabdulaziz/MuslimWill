@@ -6,6 +6,7 @@ import { PiCheckCircleLight, PiPhoneLight, PiEnvelopeSimpleLight } from 'react-i
 import { PACKAGE_ICON_MAP } from '@/lib/icons';
 import { renderBoldText } from '@/lib/richtext';
 import { CommunityEventsStrip } from '@/components/events/CommunityEventsStrip';
+import { EventGalleryWrapper } from '@/components/events/EventGalleryWrapper';
 import type { Offer, PackagePart, Step } from '@/lib/schemas';
 import type { Event } from '@/generated/prisma/client';
 import styles from './EventDetailView.module.css';
@@ -26,66 +27,67 @@ export function EventDetailView({ event }: { event: Event }) {
     <div className={styles.main}>
       {/* ── HERO ── */}
       <section className={styles.heroSection}>
+        {event.partnerLogoUrl && (
+          <div className={styles.heroWatermark}>
+            <Image
+              src={event.partnerLogoUrl}
+              alt={event.partnerName ?? event.title}
+              fill
+              className={styles.watermarkImage}
+              priority
+            />
+          </div>
+        )}
         <div className={styles.heroGlow} />
+
         <div className={styles.container}>
-          {event.partnerLogoUrl && (
-            <div className={styles.partnerRow}>
-              <Image
-                src={event.partnerLogoUrl}
-                alt={event.partnerName ?? event.title}
-                width={220}
-                height={220}
-                className={styles.partnerLogoIssc}
-                priority
-              />
+          <div className={styles.heroContent}>
+            {event.heroEyebrow && <div className={styles.heroEyebrow}>{event.heroEyebrow}</div>}
+            <h1 className={styles.heroH1}>
+              {event.heroHeadline}
+              {event.heroHeadlineAccent && (
+                <>
+                  {' '}
+                  <span className={styles.heroH1Gold}>{event.heroHeadlineAccent}</span>
+                </>
+              )}
+            </h1>
+            {event.heroSubcopy && <p className={styles.heroSub}>{renderBoldText(event.heroSubcopy)}</p>}
+
+            <div className={styles.heroActions}>
+              {featuredOffer && (
+                <TrackedButton
+                  href={cta(featuredOffer.ctaPlan)}
+                  size="lg"
+                  variant="secondary"
+                  className={styles.heroCtaGold}
+                  eventName="event_cta_click"
+                  eventParams={{ location: 'event_hero', plan: featuredOffer.ctaPlan }}
+                >
+                  {featuredOffer.ctaLabel}
+                </TrackedButton>
+              )}
+              {offers.length > 0 && (
+                <TrackedButton
+                  href="#offer"
+                  size="lg"
+                  variant="outlineLight"
+                  eventName="event_see_offer_click"
+                  eventParams={{ location: 'event_hero' }}
+                >
+                  See What&apos;s Included
+                </TrackedButton>
+              )}
             </div>
-          )}
 
-          {event.heroEyebrow && <div className={styles.heroEyebrow}>{event.heroEyebrow}</div>}
-          <h1 className={styles.heroH1}>
-            {event.heroHeadline}
-            {event.heroHeadlineAccent && (
-              <>
-                {' '}
-                <span className={styles.heroH1Gold}>{event.heroHeadlineAccent}</span>
-              </>
-            )}
-          </h1>
-          {event.heroSubcopy && <p className={styles.heroSub}>{renderBoldText(event.heroSubcopy)}</p>}
-
-          <div className={styles.heroActions}>
-            {featuredOffer && (
-              <TrackedButton
-                href={cta(featuredOffer.ctaPlan)}
-                size="lg"
-                variant="secondary"
-                className={styles.heroCtaGold}
-                eventName="event_cta_click"
-                eventParams={{ location: 'event_hero', plan: featuredOffer.ctaPlan }}
-              >
-                {featuredOffer.ctaLabel}
-              </TrackedButton>
-            )}
-            {offers.length > 0 && (
-              <TrackedButton
-                href="#offer"
-                size="lg"
-                variant="outlineLight"
-                eventName="event_see_offer_click"
-                eventParams={{ location: 'event_hero' }}
-              >
-                See What&apos;s Included
-              </TrackedButton>
+            {event.heroBadges.length > 0 && (
+              <div className={styles.heroBadges}>
+                {event.heroBadges.map((badge) => (
+                  <span key={badge}>{badge}</span>
+                ))}
+              </div>
             )}
           </div>
-
-          {event.heroBadges.length > 0 && (
-            <div className={styles.heroBadges}>
-              {event.heroBadges.map((badge) => (
-                <span key={badge}>{badge}</span>
-              ))}
-            </div>
-          )}
         </div>
       </section>
 
@@ -260,6 +262,8 @@ export function EventDetailView({ event }: { event: Event }) {
           </div>
         </section>
       )}
+      {/* ── GALLERY ── */}
+      <EventGalleryWrapper currentEventId={event.id} />
 
       {/* ── OTHER EVENTS ── */}
       <CommunityEventsStrip

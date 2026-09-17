@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { EventThumbCard } from './EventThumbCard';
-import { getEventsOverview } from '@/lib/events-data';
+import { getEventsOverview, type EventWithThumb } from '@/lib/events-data';
+import { EventListRow } from '@/components/events/EventListRow';
 import styles from './CommunityEventsStrip.module.css';
 
 interface CommunityEventsStripProps {
@@ -14,7 +14,7 @@ export async function CommunityEventsStrip({
   title = 'Community Events',
   subtitle = "See where we've been and what's coming up next.",
   excludeEventId,
-  limit = 3,
+  limit = 10,
 }: CommunityEventsStripProps) {
   const { current, upcoming, past } = await getEventsOverview({ excludeEventId, upcomingLimit: limit, pastLimit: limit });
 
@@ -34,13 +34,20 @@ export async function CommunityEventsStrip({
           <h2 className={styles.title}>{title}</h2>
           <p className={styles.subtitle}>{subtitle}</p>
         </div>
+      </div>
 
-        <div className={styles.grid}>
-          {items.map(({ event, badge }) => (
-            <EventThumbCard key={event.id} event={event} badge={badge} />
+      <div className={styles.tickerWrapper}>
+        <div className={styles.tickerTrack}>
+          {[...items, ...items, ...items].map(({ event, badge }, i) => (
+            <div key={`${event.id}-${i}`} className={styles.tickerCardWrap}>
+               {badge === 'Live Now' && <div className={styles.tickerBadgeLiveAbsolute}>● Live Now</div>}
+               <EventListRow event={event as EventWithThumb} />
+            </div>
           ))}
         </div>
+      </div>
 
+      <div className={styles.container}>
         <div className={styles.footer}>
           <Link href="/events">See all events →</Link>
         </div>

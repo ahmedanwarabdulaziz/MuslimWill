@@ -15,9 +15,13 @@ interface MediaUploaderProps {
   eventId: string;
   media: MediaItem[];
   onMediaChange: (media: MediaItem[]) => void;
+  mainImageUrl?: string | null;
+  onMainImageSelect?: (url: string) => void;
+  partnerLogoUrl?: string | null;
+  onPartnerLogoSelect?: (url: string) => void;
 }
 
-export function MediaUploader({ eventId, media, onMediaChange }: MediaUploaderProps) {
+export function MediaUploader({ eventId, media, onMediaChange, mainImageUrl, onMainImageSelect, partnerLogoUrl, onPartnerLogoSelect }: MediaUploaderProps) {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState('');
 
@@ -105,19 +109,45 @@ export function MediaUploader({ eventId, media, onMediaChange }: MediaUploaderPr
       {error && <p className={styles.error}>{error}</p>}
 
       <div className={styles.grid}>
-        {media.map((item) => (
-          <div key={item.id} className={styles.item}>
-            {item.type === 'VIDEO' ? (
-              <video src={item.url} poster={item.thumbnailUrl ?? undefined} controls className={styles.thumb} />
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img src={item.url} alt={item.caption ?? ''} className={styles.thumb} />
-            )}
-            <button type="button" className={styles.deleteBtn} onClick={() => handleDelete(item.id)}>
-              Remove
-            </button>
-          </div>
-        ))}
+        {media.map((item) => {
+          const isMain = item.url === mainImageUrl;
+          const isLogo = item.url === partnerLogoUrl;
+          return (
+            <div key={item.id} className={styles.item}>
+              {item.type === 'VIDEO' ? (
+                <video src={item.url} poster={item.thumbnailUrl ?? undefined} controls className={styles.thumb} />
+              ) : (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={item.url} alt={item.caption ?? ''} className={styles.thumb} />
+              )}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem', width: '100%', marginTop: '0.5rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '0.5rem', width: '100%' }}>
+                  <button
+                    type="button"
+                    className={styles.deleteBtn}
+                    style={{ flex: 1, backgroundColor: isMain ? 'var(--color-primary)' : 'var(--color-background-alt)', color: isMain ? '#fff' : 'inherit', border: isMain ? 'none' : '1px solid var(--color-border)' }}
+                    onClick={() => onMainImageSelect?.(item.url)}
+                  >
+                    {isMain ? '★ Main Image' : 'Set Main'}
+                  </button>
+                  <button type="button" className={styles.deleteBtn} onClick={() => handleDelete(item.id)}>
+                    Remove
+                  </button>
+                </div>
+                {item.type === 'IMAGE' && onPartnerLogoSelect && (
+                  <button
+                    type="button"
+                    className={styles.deleteBtn}
+                    style={{ backgroundColor: isLogo ? 'var(--color-gold)' : 'var(--color-background-alt)', color: isLogo ? 'var(--color-navy)' : 'inherit', border: isLogo ? 'none' : '1px solid var(--color-border)' }}
+                    onClick={() => onPartnerLogoSelect(item.url)}
+                  >
+                    {isLogo ? '★ Partner Logo' : 'Set as Partner Logo'}
+                  </button>
+                )}
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

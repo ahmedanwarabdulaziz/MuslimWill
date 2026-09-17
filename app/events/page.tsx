@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import { prisma } from '@/lib/db';
-import { Card, CardContent, CardTitle } from '@/components/ui/Card';
+import { EventListRow } from '@/components/events/EventListRow';
+import { EventGalleryWrapper } from '@/components/events/EventGalleryWrapper';
+import type { EventWithThumb } from '@/lib/events-data';
+import homeStyles from '@/app/page.module.css';
 import styles from './page.module.css';
 
 export const revalidate = 60;
@@ -14,64 +16,65 @@ export const metadata: Metadata = {
 
 export default async function EventsPage() {
   const [upcoming, past] = await Promise.all([
-    prisma.event.findMany({ where: { status: 'UPCOMING' }, orderBy: { eventDate: 'asc' } }),
-    prisma.event.findMany({ where: { status: 'PAST' }, orderBy: { eventDate: 'desc' } }),
+    prisma.event.findMany({ 
+      where: { status: 'UPCOMING' }, 
+      orderBy: { eventDate: 'asc' },
+      include: { media: { orderBy: { order: 'asc' }, take: 1 } }
+    }),
+    prisma.event.findMany({ 
+      where: { status: 'PAST' }, 
+      orderBy: { eventDate: 'desc' },
+      include: { media: { orderBy: { order: 'asc' }, take: 1 } }
+    }),
   ]);
 
   return (
     <div className={styles.main}>
-      <div className={styles.header}>
-        <h1>Events</h1>
-        <p>Meet the Muslim Will team in person, or look back at where we&apos;ve been.</p>
-      </div>
-
-      {upcoming.length === 0 && past.length === 0 && (
-        <p className={styles.empty}>No events to show right now — check back soon.</p>
-      )}
-
-      {upcoming.length > 0 && (
-        <section>
-          <h2 className={styles.sectionTitle}>Upcoming</h2>
-          <div className={styles.grid}>
-            {upcoming.map((event) => (
-              <Link key={event.id} href={`/events/${event.slug}`} className={styles.cardLink}>
-                <Card variant="interactive">
-                  <CardContent>
-                    <CardTitle>{event.title}</CardTitle>
-                    <p className={styles.eventMeta}>
-                      {event.eventDate ? new Date(event.eventDate).toLocaleDateString() : ''}
-                      {event.location ? ` • ${event.location}` : ''}
-                    </p>
-                    {event.heroEyebrow && <p className={styles.eventTagline}>{event.heroEyebrow}</p>}
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
+      <section className={`${homeStyles.section} ${styles.heroSection}`}>
+        <div className={styles.container}>
+          <div className={styles.heroContent}>
+            <div className={styles.eyebrow}>Community Gatherings</div>
+            <h1 className={styles.heroTitle}>Meet the Team</h1>
+            <p className={styles.heroText}>
+              Find us at a masjid, Islamic centre, or community event near you. 
+              We are constantly traveling to educate communities about Islamic estate planning.
+            </p>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
-      {past.length > 0 && (
-        <section>
-          <h2 className={styles.sectionTitle}>Past Events</h2>
-          <div className={styles.grid}>
-            {past.map((event) => (
-              <Link key={event.id} href={`/events/${event.slug}`} className={styles.cardLink}>
-                <Card>
-                  <CardContent>
-                    <CardTitle>{event.title}</CardTitle>
-                    <p className={styles.eventMeta}>
-                      {event.eventDate ? new Date(event.eventDate).toLocaleDateString() : ''}
-                      {event.location ? ` • ${event.location}` : ''}
-                    </p>
-                    {event.heroEyebrow && <p className={styles.eventTagline}>{event.heroEyebrow}</p>}
-                  </CardContent>
-                </Card>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
+      <section className={`${homeStyles.section} ${styles.eventsSection}`}>
+        <div className={styles.container}>
+          {upcoming.length === 0 && past.length === 0 && (
+            <div className={styles.emptyState}>
+              <p>No events to show right now — check back soon.</p>
+            </div>
+          )}
+
+          {upcoming.length > 0 && (
+            <div className={styles.eventGroup}>
+              <h2 className={styles.groupTitle}>Upcoming Events</h2>
+              <div className={styles.listContainer}>
+                {upcoming.map((event) => (
+                  <EventListRow key={event.id} event={event as EventWithThumb} />
+                ))}
+              </div>
+            </div>
+          )}
+
+          {past.length > 0 && (
+            <div className={styles.eventGroup}>
+              <h2 className={styles.groupTitle}>Past Events</h2>
+              <div className={styles.listContainer}>
+                {past.map((event) => (
+                  <EventListRow key={event.id} event={event as EventWithThumb} />
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </section>
+      <EventGalleryWrapper />
     </div>
   );
 }

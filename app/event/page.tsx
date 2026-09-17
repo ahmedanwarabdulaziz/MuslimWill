@@ -6,7 +6,13 @@ import { EventDetailView } from '@/components/events/EventDetailView';
 export const revalidate = 60;
 
 async function getCurrentEvent() {
-  return prisma.event.findFirst({ where: { isCurrent: true } });
+  const currentEvent = await prisma.event.findFirst({ where: { isCurrent: true } });
+  if (currentEvent) return currentEvent;
+
+  return prisma.event.findFirst({
+    where: { status: 'UPCOMING' },
+    orderBy: { eventDate: 'asc' },
+  });
 }
 
 export async function generateMetadata(): Promise<Metadata> {

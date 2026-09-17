@@ -195,14 +195,7 @@ export function EventForm({ mode, initialEvent }: EventFormProps) {
             />
           </div>
         </div>
-        <div className={styles.field}>
-          <label className={styles.label}>Partner logo URL</label>
-          <input
-            className={styles.input}
-            value={partnerLogoUrl}
-            onChange={(e) => setPartnerLogoUrl(e.target.value)}
-          />
-        </div>
+
       </div>
 
       <div className={styles.section}>
@@ -283,7 +276,16 @@ export function EventForm({ mode, initialEvent }: EventFormProps) {
       {mode === 'edit' && initialEvent && (
         <div className={styles.section}>
           <h3 className={styles.sectionTitle}>Media</h3>
-          <MediaUploader eventId={initialEvent.id} media={media} onMediaChange={setMedia} />
+          <p className={styles.helpText}>Upload images for this event. You can select one to be the main thumbnail and one to be the partner logo.</p>
+          <MediaUploader 
+            eventId={initialEvent.id} 
+            media={media} 
+            onMediaChange={setMedia}
+            mainImageUrl={ogImageUrl}
+            onMainImageSelect={setOgImageUrl}
+            partnerLogoUrl={partnerLogoUrl}
+            onPartnerLogoSelect={setPartnerLogoUrl}
+          />
         </div>
       )}
 

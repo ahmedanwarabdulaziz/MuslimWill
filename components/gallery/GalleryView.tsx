@@ -11,10 +11,11 @@ export interface GalleryEventMedia extends GalleryMediaItem {
 interface GalleryViewProps {
   media: GalleryEventMedia[];
   events: { id: string; title: string }[];
+  defaultSelectedEventId?: string | null;
 }
 
-export function GalleryView({ media, events }: GalleryViewProps) {
-  const [selectedEventId, setSelectedEventId] = useState<string | null>(null);
+export function GalleryView({ media, events, defaultSelectedEventId = null }: GalleryViewProps) {
+  const [selectedEventId, setSelectedEventId] = useState<string | null>(defaultSelectedEventId);
 
   const filtered = useMemo(
     () => (selectedEventId ? media.filter((item) => item.eventId === selectedEventId) : media),

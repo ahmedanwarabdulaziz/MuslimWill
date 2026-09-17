@@ -7,8 +7,6 @@
 
 .header {
   background: var(--color-navy);
-  border-bottom: 4px solid var(--color-gold);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   position: relative;
   z-index: 1000;
 }
