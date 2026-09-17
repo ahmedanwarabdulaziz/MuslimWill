@@ -4,7 +4,7 @@ import nodemailer from 'nodemailer';
 export async function POST(req: Request) {
   try {
     const data = await req.json();
-    
+
     // Basic spam protection (honeypot)
     if (data._gotcha) {
       return NextResponse.json({ success: true }, { status: 200 }); // silently accept but ignore
@@ -26,16 +26,16 @@ export async function POST(req: Request) {
 
     const fromAddress = process.env.MAIL_FROM || '"Muslim Will" <info@themuslimwill.com>';
     const replyTo = process.env.MAIL_REPLY_TO || 'info@themuslimwill.com';
-    
+
     const isPartnership = type === 'partnership';
-    const adminTo = isPartnership 
+    const adminTo = isPartnership
       ? (process.env.PARTNERSHIP_TO_EMAIL || 'info@themuslimwill.com')
       : (process.env.CONTACT_TO_EMAIL || 'info@themuslimwill.com');
 
     // Admin notification
     let adminSubject = '';
     let adminHtml = '';
-    
+
     // Customer auto-reply
     let customerEmail = fields.email;
     let customerSubject = '';
@@ -142,7 +142,7 @@ export async function POST(req: Request) {
       `;
       customerHtml = createEmailHtml(customerSubject, gBody);
     }
-    
+
     // Wrap admin HTML in the same robust template to prevent email clients from stripping raw tags
     adminHtml = createEmailHtml(adminSubject, adminHtml);
 
