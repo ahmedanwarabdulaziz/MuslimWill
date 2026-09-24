@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import { defaultOgImage } from '@/lib/og';
 import Link from 'next/link';
 import Image from 'next/image';
 import sharedStyles from '../page.module.css';
@@ -10,6 +11,7 @@ export const metadata: Metadata = {
   title: 'Legal And Islamic Compliance | Muslim Will Canada',
   description: 'Understand how Muslim Will separates platform workflow, Islamic inheritance structure, and independent legal review within a Canada-first process.',
   openGraph: {
+    images: [defaultOgImage],
     title: 'Legal And Islamic Compliance | Clear Professional Boundaries',
     description: 'Understand how Muslim Will separates platform workflow, Islamic inheritance structure, and independent legal review within a Canada-first process.',
   }

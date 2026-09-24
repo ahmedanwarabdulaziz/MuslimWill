@@ -23,6 +23,12 @@ export const metadata: Metadata = {
     locale: "en_CA",
     type: "website",
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Protect Your Family With Legal & Islamic Clarity | Muslim Will",
+    description:
+      "A guided pathway for Muslim families in Canada to prepare wills with legal structure, Islamic inheritance guidance, and clear next steps.",
+  },
 };
 
 export default function RootLayout({

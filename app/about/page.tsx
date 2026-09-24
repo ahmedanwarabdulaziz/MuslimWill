@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
+import { defaultOgImage } from '@/lib/og';
 import sharedStyles from '../page.module.css';
 import styles from './about.module.css';
 import { TrackedButton } from '@/components/analytics/TrackedButton';
@@ -9,6 +10,7 @@ export const metadata: Metadata = {
   title: 'About Muslim Will | Islamic Will Planning In Canada',
   description: 'Learn why Muslim Will was built, who it serves, and how its Canada-first platform brings legal structure, Islamic inheritance awareness, and family clarity together.',
   openGraph: {
+    images: [defaultOgImage],
     title: 'About Muslim Will | Our Mission and Origin',
     description: 'Learn why Muslim Will was built, who it serves, and how its Canada-first platform brings legal structure, Islamic inheritance awareness, and family clarity together.',
   }

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { defaultOgImage } from '@/lib/og';
 import { LegalPage } from '@/app/_legal/LegalPage';
 import styles from '@/app/_legal/legal.module.css';
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/privacy`,
   },
   openGraph: {
+    images: [defaultOgImage],
     title: 'Privacy Policy | Muslim Will',
     description:
       'Learn how Muslim Will collects, uses, protects, and shares personal information for its website and estate-planning workflow.',

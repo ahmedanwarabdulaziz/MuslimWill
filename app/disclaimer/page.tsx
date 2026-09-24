@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { defaultOgImage } from '@/lib/og';
 import { LegalPage } from '@/app/_legal/LegalPage';
 import styles from '@/app/_legal/legal.module.css';
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/disclaimer`,
   },
   openGraph: {
+    images: [defaultOgImage],
     title: 'Disclaimer | Muslim Will',
     description:
       'Read important disclaimers about the scope of Muslim Will, legal advice, religious advice, and jurisdictional limits.',

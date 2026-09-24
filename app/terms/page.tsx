@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { defaultOgImage } from '@/lib/og';
 import { LegalPage } from '@/app/_legal/LegalPage';
 import styles from '@/app/_legal/legal.module.css';
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     canonical: `${siteUrl}/terms`,
   },
   openGraph: {
+    images: [defaultOgImage],
     title: 'Terms of Service | Muslim Will',
     description:
       'Read the terms governing your use of the Muslim Will website, workflow, and related services.',
