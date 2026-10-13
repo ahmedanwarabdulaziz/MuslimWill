@@ -2040,12 +2040,94 @@
   }
 }
 
-.compareBridgeLine {
+
+.compareList em {
+  font-style: normal;
+  font-size: 0.85em;
+  color: var(--color-text-muted);
+  margin-left: 0.2rem;
+}
+
+.compareList small {
+  font-size: 0.75em;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  margin-left: 0.15rem;
+}
+
+/* Rows where the two systems differ most (parents) */
+.compareList li.compareGapRow {
+  background: rgba(212, 175, 55, 0.1);
+  margin: 0 -0.75rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  border-bottom-color: rgba(212, 175, 55, 0.25);
+}
+
+.compareCard:not(.compareCardIslamic) .compareGapRow strong {
+  color: #b42318;
+}
+
+.compareGap {
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  padding: 1.25rem 1.5rem;
+  background: var(--color-surface);
+  border: 1px solid rgba(212, 175, 55, 0.5);
+  border-left: 5px solid var(--color-gold);
+  border-radius: var(--radius-md);
+}
+
+.compareGapLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-bottom: 0.35rem;
+}
+
+.compareGap p {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+}
+
+.compareGap strong {
+  color: var(--color-navy);
+}
+
+.compareVault {
   max-width: 900px;
   margin: 2rem auto 0;
-  text-align: center;
-  font-family: var(--font-heading);
-  font-size: clamp(1.15rem, 2vw, 1.4rem);
-  font-weight: 600;
-  color: var(--color-navy);
+  padding: 1.75rem 2rem;
+  background: var(--color-navy);
+  color: var(--color-surface);
+  border-radius: var(--radius-md);
+  box-shadow: 0 16px 40px rgba(10, 37, 64, 0.18);
+}
+
+@media (max-width: 600px) {
+  .compareVault {
+    padding: 1.4rem 1.25rem;
+  }
+}
+
+.compareVault h3 {
+  color: var(--color-gold);
+  font-size: 1.35rem;
+  margin: 0 0 0.75rem;
+}
+
+.compareVault p {
+  margin: 0 0 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.compareVault span {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
 }

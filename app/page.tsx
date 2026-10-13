@@ -55,7 +55,7 @@ export default function Home() {
           <div className={styles.sectionHeader} style={{ maxWidth: '820px' }}>
             <h2 className={styles.sectionH2} style={{ color: 'var(--color-navy)' }}>Same family. Two very different outcomes.</h2>
             <p className={styles.sectionIntro}>
-              A husband leaves an estate of $600,000 to his wife, two sons and one daughter. Here is how it is divided without an Islamic will, and with one.
+              A husband leaves a $600,000 estate to his wife, two sons, one daughter and both of his parents. Faraid applies only if a valid Islamic will directs the estate that way. Without one, Ontario&apos;s default rules follow a completely different logic.
             </p>
           </div>
 
@@ -65,11 +65,12 @@ export default function Home() {
               <h3 className={styles.compareTitle}>Ontario&apos;s default rules</h3>
               <ul className={styles.compareList}>
                 <li><span>Wife</span><strong>$433,333</strong></li>
-                <li><span>Son</span><strong>$55,556</strong></li>
-                <li><span>Son</span><strong>$55,556</strong></li>
+                <li><span>Son <em>× 2</em></span><strong>$55,556 <small>each</small></strong></li>
                 <li><span>Daughter</span><strong>$55,556</strong></li>
+                <li className={styles.compareGapRow}><span>Father</span><strong>$0</strong></li>
+                <li className={styles.compareGapRow}><span>Mother</span><strong>$0</strong></li>
               </ul>
-              <p className={styles.compareNote}>The spouse takes a fixed first share, then the rest is split by formula. Parents and Islamic shares are not considered.</p>
+              <p className={styles.compareNote}>The wife takes the first $350,000 plus a third of the rest. The children share the remaining two thirds equally. Parents receive nothing.</p>
             </div>
 
             <div className={`${styles.compareCard} ${styles.compareCardIslamic}`}>
@@ -77,21 +78,33 @@ export default function Home() {
               <h3 className={styles.compareTitle}>Faraid</h3>
               <ul className={styles.compareList}>
                 <li><span>Wife</span><strong>$75,000</strong></li>
-                <li><span>Son</span><strong>$210,000</strong></li>
-                <li><span>Son</span><strong>$210,000</strong></li>
-                <li><span>Daughter</span><strong>$105,000</strong></li>
+                <li><span>Son <em>× 2</em></span><strong>$130,000 <small>each</small></strong></li>
+                <li><span>Daughter</span><strong>$65,000</strong></li>
+                <li className={styles.compareGapRow}><span>Father</span><strong>$100,000</strong></li>
+                <li className={styles.compareGapRow}><span>Mother</span><strong>$100,000</strong></li>
               </ul>
               <p className={styles.compareNote}>Shares set by the Qur&apos;an, after debts are settled and any bequest of up to one third is paid.</p>
             </div>
           </div>
 
+          <div className={styles.compareGap}>
+            <div className={styles.compareGapLabel}>Biggest gap for this family</div>
+            <p>
+              <strong>His parents: $200,000 under Faraid, $0 under Ontario&apos;s default rules.</strong> A third of the estate goes to a completely different place, for the exact same family.
+            </p>
+          </div>
+
           <p className={styles.compareFootnote}>
-            Illustrative example only. Assumes no surviving parents, no debts, and a death on or after March 1, 2021 (Ontario spousal preferential share of $350,000). Every family is different.
+            Illustrative example: $600,000 estate, no debts or bequests, death on or after March 1, 2021 (Ontario spousal preferential share of $350,000). Every family is different.
           </p>
 
-          <p className={styles.compareBridgeLine}>
-            And once your will is written, your Vault keeps it up to date, at no extra cost.
-          </p>
+          <div className={styles.compareVault}>
+            <h3>The part a will alone doesn&apos;t solve</h3>
+            <p>
+              Even with a will, your executor still has to find and list everything you own before probate. If an asset turns up after probate is granted, Ontario requires an amended estate filing and possibly more Estate Administration Tax, and if it becomes contested, legal costs to redo the accounting can run from a few thousand dollars to well over ten thousand. A living, always current record of what you own, kept in your Vault instead of written once and left to go stale, closes that gap.
+            </p>
+            <span>Based on published Ontario Estate Administration Tax rules and typical estate legal fees. Not a quote for any specific estate.</span>
+          </div>
 
           <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
             <TrackedButton href={calculatorUrl} size="lg" className={styles.ctaButtonGold} eventName="calculator_click" eventParams={{ location: 'home_compare' }}>See your own family&apos;s numbers</TrackedButton>
