@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { CURRENT_RSVP_EVENT, getPriorityStatus, isRsvpOpen } from '@/lib/rsvp';
 import { RsvpForm } from './RsvpForm';
 import { StickyRsvpBar } from './StickyRsvpBar';
+import { Countdown } from './Countdown';
 import styles from './page.module.css';
 
 export const dynamic = 'force-dynamic';
@@ -52,6 +53,7 @@ export default async function RsvpPage() {
             </div>
 
             <aside className={styles.eventCard} aria-label="Event details">
+              {open && <Countdown startsAt={event.startsAt} />}
               <div className={styles.eventRow}>
                 <span className={styles.eventIcon} aria-hidden>📅</span>
                 <div>
@@ -69,15 +71,30 @@ export default async function RsvpPage() {
               <div className={styles.perk}>
                 <div className={styles.perkLabel}>RSVP perk</div>
                 <p>RSVP in advance to guarantee priority access to our team that evening, skip the line and start your Wassiyah first.</p>
-                {open && (
-                  <div className={styles.spots}>
-                    {priority.remaining > 0 ? (
-                      <><strong>{priority.remaining}</strong> priority {priority.remaining === 1 ? 'spot' : 'spots'} remaining</>
-                    ) : (
-                      <>Priority spots are full. You can still RSVP, and you&apos;re welcome to join us.</>
-                    )}
+                {open && (priority.remaining > 0 ? (
+                  <div className={styles.meter}>
+                    <div className={styles.meterTop}>
+                      <span className={styles.meterNum}>{priority.remaining}</span>
+                      <span className={styles.meterText}>
+                        <span><span className={styles.liveDot} aria-hidden />priority {priority.remaining === 1 ? 'spot' : 'spots'} left</span>
+                        <small>First come, first served</small>
+                      </span>
+                    </div>
+                    <div
+                      className={styles.meterBar}
+                      role="progressbar"
+                      aria-valuemin={0}
+                      aria-valuemax={priority.capacity}
+                      aria-valuenow={priority.used}
+                      aria-label="Priority spots taken"
+                    >
+                      <div className={styles.meterFill} style={{ width: `${Math.max(4, (priority.used / Math.max(1, priority.capacity)) * 100)}%` }} />
+                    </div>
+                    <a href="#rsvp" className={styles.meterCta}>Claim your priority spot →</a>
                   </div>
-                )}
+                ) : (
+                  <div className={styles.spots}>Priority spots are full. You can still RSVP, and you&apos;re welcome to join us.</div>
+                ))}
               </div>
             </aside>
           </div>
