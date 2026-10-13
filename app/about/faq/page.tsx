@@ -55,8 +55,8 @@ const FAQ_GROUPS = [
         a: 'Yes. Your application is saved as you go. You can return to it at any time, make changes, and continue from where you left off. Your will can also be updated any time your circumstances change — at no extra cost within your subscription.',
       },
       {
-        q: 'What is The Bridge?',
-        a: 'The Bridge is The Muslim Will\'s core subscription product — a complete Islamic will and a private secure Vault, together, from $7.99/month. The will covers Faraid inheritance, guardianship, charitable bequests, and executor appointment. The Vault stores your private records, obligations, estate inventory, sealed disclosures, and personal messages — released to the right people at the right moment.',
+        q: 'What is Will + Vault?',
+        a: 'Will + Vault is The Muslim Will\'s core subscription product — your Islamic will, always up to date, together with a private secure Vault, from $7.99/month. The will covers Faraid inheritance, guardianship, charitable bequests, and executor appointment. The Vault stores your private records, obligations, estate inventory, sealed disclosures, and personal messages — released to the right people at the right moment.',
       },
     ],
   },
@@ -67,15 +67,15 @@ const FAQ_GROUPS = [
     questions: [
       {
         q: 'How much does an Islamic will cost?',
-        a: 'The Bridge — a complete Islamic will and private Vault — is available from $7.99/month. The Last Will & Testament document is also available as a standalone for $149. The Full Package, which includes the will, both Powers of Attorney, scholar review, admin review, and digital attestation, is available for $350 — a combined value of $594.',
+        a: 'Will + Vault — a complete Islamic will and private Vault — is available from $7.99/month. The Last Will & Testament document is also available as a standalone for $149. The Full Package, which includes the will, both Powers of Attorney, scholar review, admin review, and digital attestation, is available for $350 — a combined value of $594.',
       },
       {
-        q: 'What is the difference between The Bridge and the Full Package?',
-        a: 'The Bridge ($7.99/month) gives you a complete Islamic will and private Vault — everything most Muslim families need, with unlimited updates. The Full Package ($350 one-time) adds individual expert review layers — a qualified Islamic scholar reviewing your specific case, an admin and legal review, and digital attestation through a Zoom session with a paralegal. It is the right choice for complex estates or those who want individual expert attention on their case.',
+        q: 'What is the difference between Will + Vault and the Full Package?',
+        a: 'Will + Vault ($7.99/month) gives you a complete Islamic will and private Vault — everything most Muslim families need, with unlimited updates. The Full Package ($350 one-time) adds individual expert review layers — a qualified Islamic scholar reviewing your specific case, an admin and legal review, and digital attestation through a Zoom session with a paralegal. It is the right choice for complex estates or those who want individual expert attention on their case.',
       },
       {
         q: 'Is there a family package?',
-        a: 'Yes. The Family Package offers The Bridge at a reduced per-person rate for families who want to plan together — husband, wife, and adult children — while keeping each account fully private and independent.',
+        a: 'Yes. The Family Package offers Will + Vault at a reduced per-person rate for families who want to plan together — husband, wife, and adult children — while keeping each account fully private and independent.',
       },
     ],
   },
@@ -84,6 +84,10 @@ const FAQ_GROUPS = [
     label: 'About the Vault',
     icon: '🔐',
     questions: [
+      {
+        q: 'Do I need to redo my will when my assets change?',
+        a: 'No. Your will refers to appendices kept in your private Vault — your debts, money owed to you, your assets, and your important documents. When those details change, you update them in your Vault and your will stays current, with no redrafting and no extra cost. If a core decision changes — a new child, a different executor or guardian — the platform guides you through updating the will itself and signing it again.',
+      },
       {
         q: 'What is the Muslim Will Vault?',
         a: 'The Vault is a private, secure repository where you store everything your family and executor will need — your obligations register, estate inventory, sealed disclosures, and personal messages. It is held privately while you are alive and released to the right people after your passing through a verified release process.',
@@ -306,7 +310,7 @@ export default function FAQPage() {
               <Link href="/pricing" className={styles.linkCard}>
                 <div className={styles.linkCardIcon}>💳</div>
                 <div className={styles.linkCardTitle}>Pricing</div>
-                <div className={styles.linkCardDesc}>The Bridge, Full Package, and Family Package — all options →</div>
+                <div className={styles.linkCardDesc}>Will + Vault, Full Package, and Family Package — all options →</div>
               </Link>
               <Link href="/how-it-works" className={styles.linkCard}>
                 <div className={styles.linkCardIcon}>🔄</div>

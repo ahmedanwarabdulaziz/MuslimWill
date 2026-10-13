@@ -57,6 +57,23 @@ Visitors who are not ready to pay need a middle step. Otherwise they leave again
 4. **Secondary CTA:** "Email me my results." Capture the email, send the results, then a short nurture sequence (3–4 emails: why it matters → how Will + Vault works → scholars & legal trust → start).
 5. **Brand:** change page title from "Free Faraid Calculator · Patriva" to Muslim Will branding.
 
+### 3.3 Results page copy (ready to paste)
+
+Place this block directly under the visitor's Ontario vs Faraid results:
+
+> **Will + Vault**
+> **Your Islamic Will, always up to date**
+>
+> Your will can make Ontario law follow the shares you just saw. And once it is written, your Vault keeps it current: your debts, assets and documents are kept as appendices to your will, so you update them any time, with no redrafting and no extra cost.
+>
+> **[Start my will]**  **[Email me my results]**
+>
+> *Built with Islamic scholars · Prepared for Ontario legal requirements · From $7.99/month*
+
+Notes:
+- This is the first place the price appears in the funnel, and only as a small line, not a button.
+- "Email me my results" should send the comparison table plus a link back to the results, then start the nurture sequence.
+
 ---
 
 ## 4. Google Ads — Message Match
@@ -100,6 +117,6 @@ Recheck 2–3 weeks after launch. Use `/admin/clicks` (outbound click log) to se
 
 ## 7. Later
 
-- Update /pricing, /my-bridge and header menu CTAs to the new tone
+- Update /my-bridge and header menu CTAs to the new tone (/pricing and FAQ renamed to "Will + Vault" on October 13, 2026)
 - Keyword landing pages ("Islamic will Ontario", "Muslim will Canada") using the same hook and comparison
 - Decide the family package price

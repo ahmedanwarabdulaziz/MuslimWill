@@ -17,15 +17,15 @@ const ADD_ONS = [
 /* ── PRICING FAQ ── */
 const PRICING_FAQ = [
   {
-    q: 'Is The Bridge really complete — or will I need add-ons?',
-    a: 'For the vast majority of Muslim families, The Bridge is everything you need. The add-ons exist for specific situations — a complex estate, an unusual inheritance structure, or a family that wants individual expert review. If you are unsure whether your situation calls for an add-on, start with The Bridge and add what you need as the process progresses.',
+    q: 'Is Will + Vault really complete — or will I need add-ons?',
+    a: 'For the vast majority of Muslim families, Will + Vault is everything you need. The add-ons exist for specific situations — a complex estate, an unusual inheritance structure, or a family that wants individual expert review. If you are unsure whether your situation calls for an add-on, start with Will + Vault and add what you need as the process progresses.',
   },
   {
     q: 'What is included in the $350 Full Package?',
-    a: 'The Full Package includes everything in The Bridge plus 12 months of Vault access, Powers of Attorney for both Personal Care and Property, individual Scholar Review, Admin & Legal Review, and Digital Attestation — a combined value of $594.',
+    a: 'The Full Package includes everything in Will + Vault plus 12 months of Vault access, Powers of Attorney for both Personal Care and Property, individual Scholar Review, Admin & Legal Review, and Digital Attestation — a combined value of $594.',
   },
   {
-    q: 'Can I add Powers of Attorney to The Bridge?',
+    q: 'Can I add Powers of Attorney to Will + Vault?',
     a: 'Yes. POA for Personal Care and POA for Property are each available as add-ons at $99 each — or both are included in the Full Package.',
   },
   {
@@ -33,7 +33,7 @@ const PRICING_FAQ = [
     a: 'Yes — annual billing is available at a discounted rate. Details available at checkout.',
   },
   {
-    q: 'Can I upgrade from The Bridge to the Full Package later?',
+    q: 'Can I upgrade from Will + Vault to the Full Package later?',
     a: 'Yes. You can add individual expert services at any point in your journey — they do not need to be purchased upfront.',
   },
 ];
@@ -92,13 +92,14 @@ export default function PricingPage() {
               {/* Left: price + badge + CTA */}
               <div className={styles.bridgeLeft}>
                 <div className={styles.bridgeBadge}>✦ Most Complete</div>
-                <div className={styles.bridgeName}>The Bridge</div>
+                <div className={styles.bridgeName}>Will + Vault</div>
+                <div className={styles.bridgeSubName}>Your Islamic Will, always up to date</div>
                 <div className={styles.bridgePriceRow}>
                   <span className={styles.bridgePrice}>$7.99</span>
                   <span className={styles.bridgePricePer}> / month</span>
                 </div>
                 <p className={styles.bridgeTagline}>
-                  Everything your family needs. An Islamic will, a private Vault, and the tools to protect your legacy — in one complete subscription.
+                  Everything your family needs. Your will holds your decisions; your Vault keeps the details current as appendices to it — debts, assets, documents. Update any time, with no redrafting and no extra cost.
                 </p>
                 <Link href="https://app.themuslimwill.com/Account/Register?plan=bridge" className={styles.bridgeCta}>
                   Start For $7.99/month →
@@ -151,7 +152,7 @@ export default function PricingPage() {
                     <span className={styles.bridgeGroupIcon}>⚙️</span> Everything Else
                   </div>
                   {[
-                    'Unlimited updates — any time, no extra cost',
+                    'Always up to date — update your Vault any time, no redrafting, no extra cost',
                     'Secure executor release process with full audit trail',
                     'Powers of Attorney available as add-ons',
                   ].map((f) => (
@@ -185,7 +186,7 @@ export default function PricingPage() {
                 </p>
                 <div className={styles.secondaryFeatures}>
                   {[
-                    'The Bridge for each family member',
+                    'Will + Vault for each family member',
                     'Husband, wife, adult children — all covered',
                     'Every account fully private — no shared vault, no shared documents',
                     'Shared billing, individual protection',
@@ -219,7 +220,7 @@ export default function PricingPage() {
                 </p>
                 <div className={styles.secondaryFeatures}>
                   {[
-                    'Everything in The Bridge',
+                    'Everything in Will + Vault',
                     '12 months of Vault access',
                     'Last Will & Testament — individual expert preparation ($149)',
                     'Power of Attorney for Personal Care ($99)',
@@ -252,9 +253,9 @@ export default function PricingPage() {
         <div className={styles.container}>
           <div className={styles.addOnsHeader}>
             <div className={styles.sectionLabel}>Add-Ons</div>
-            <h2 className={styles.sectionH2}>For specific situations — not to complete The Bridge.</h2>
+            <h2 className={styles.sectionH2}>For specific situations — not to complete Will + Vault.</h2>
             <p className={styles.addOnsIntro}>
-              The Bridge gives you everything most Muslim families need. These add-ons exist for specific legal, religious, or personal circumstances — not because The Bridge is missing anything.
+              Will + Vault gives you everything most Muslim families need. These add-ons exist for specific legal, religious, or personal circumstances — not because Will + Vault is missing anything.
             </p>
           </div>
 

@@ -127,8 +127,15 @@
   font-size: 1.85rem;
   font-weight: 700;
   color: var(--color-surface);
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   line-height: 1;
+}
+
+.bridgeSubName {
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .bridgePriceRow {

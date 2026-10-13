@@ -9,7 +9,7 @@ import styles from './page.module.css';
 const siteUrl = 'https://themuslimwill.com';
 const calculatorUrl = 'https://app.themuslimwill.com/calculator';
 const homepageTitle = 'Islamic Will in Canada | See How Ontario Law Differs From Faraid | Muslim Will';
-const homepageDescription = 'Without an Islamic will, Ontario’s default rules decide who inherits — and they don’t follow Faraid. Check the difference for your family in about 3 minutes, free.';
+const homepageDescription = 'Ontario’s default rules don’t follow Faraid. See the difference for your family, free in 3 minutes. Your Islamic will, always up to date through your Vault.';
 
 export const metadata: Metadata = {
   title: homepageTitle,
@@ -87,6 +87,10 @@ export default function Home() {
 
           <p className={styles.compareFootnote}>
             Illustrative example only. Assumes no surviving parents, no debts, and a death on or after March 1, 2021 (Ontario spousal preferential share of $350,000). Every family is different.
+          </p>
+
+          <p className={styles.compareBridgeLine}>
+            And once your will is written, your Vault keeps it up to date, at no extra cost.
           </p>
 
           <div style={{ textAlign: 'center', marginTop: '2.5rem' }}>
@@ -340,7 +344,7 @@ export default function Home() {
           <div className={styles.ctaBox}>
             <h2>See the difference you can make for your family.</h2>
             <p className={styles.ctaText}>
-              Answer a few questions about your family. See how Ontario&apos;s rules and Faraid would divide your estate.
+              Write your Islamic will once, and your Vault keeps it current for life. Start by seeing how Ontario&apos;s rules and Faraid would divide your estate.
             </p>
             <div className={styles.ctaActions}>
               <TrackedButton href={calculatorUrl} variant="secondary" size="lg" className={styles.heroPrimaryBtn} eventName="calculator_click" eventParams={{ location: 'home_final_cta' }}>Check the difference</TrackedButton>
