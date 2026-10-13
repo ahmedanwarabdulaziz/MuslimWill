@@ -36,7 +36,7 @@ export default function Home() {
 
              <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginTop: '2.5rem' }}>
                 <TrackedButton href={calculatorUrl} size="lg" variant="secondary" className={styles.heroPrimaryBtn} eventName="calculator_click" eventParams={{ location: 'home_hero' }}>Check the difference for your family</TrackedButton>
-                <TrackedButton href="/how-it-works" size="lg" variant="outline" className={styles.invertedOutline} eventName="how_it_works_click" eventParams={{ location: 'home_hero' }}>How it works</TrackedButton>
+                <TrackedButton href="/how-it-works" size="lg" variant="outline" className={`${styles.invertedOutline} ${styles.noWrapBtn}`} eventName="how_it_works_click" eventParams={{ location: 'home_hero' }}>How it works</TrackedButton>
              </div>
 
              <div className={`${styles.fadeUp} ${styles.delay5} ${styles.heroMicrocopy}`}>
