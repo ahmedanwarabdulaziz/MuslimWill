@@ -6,6 +6,14 @@ const PUBLIC_ADMIN_PATHS = ['/admin/login', '/api/admin/login'];
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
+  // The flyer prints /RSVP; send anyone who types it in lowercase to the same page.
+  if (pathname === '/rsvp') {
+    return NextResponse.redirect(new URL('/RSVP' + request.nextUrl.search, request.url));
+  }
+  if (!pathname.startsWith('/admin') && !pathname.startsWith('/api/admin')) {
+    return NextResponse.next();
+  }
+
   if (PUBLIC_ADMIN_PATHS.some((path) => pathname === path)) {
     return NextResponse.next();
   }
@@ -26,5 +34,5 @@ export async function proxy(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/admin/:path*', '/api/admin/:path*'],
+  matcher: ['/admin/:path*', '/api/admin/:path*', '/rsvp'],
 };

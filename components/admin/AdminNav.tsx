@@ -23,6 +23,7 @@ export function AdminNav() {
       </Link>
       <div className={styles.links}>
         <Link href="/admin">Events</Link>
+        <Link href="/admin/rsvps">RSVPs</Link>
         <Link href="/" target="_blank">
           View site
         </Link>

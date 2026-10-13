@@ -75,3 +75,42 @@ model Media {
   @@index([eventId, order])
   @@index([type])
 }
+
+// An RSVP-able event (e.g. a mosque session). Content lives in lib/rsvp.ts;
+// this row holds what admins change live: how many priority spots exist.
+model RsvpEvent {
+  slug             String   @id
+  priorityCapacity Int      @default(20)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  rsvps Rsvp[]
+}
+
+model Rsvp {
+  id        String    @id @default(cuid())
+  createdAt DateTime  @default(now())
+  eventSlug String
+  event     RsvpEvent @relation(fields: [eventSlug], references: [slug], onDelete: Cascade)
+
+  passNumber Int
+  priority   Boolean
+
+  name      String
+  email     String
+  phone     String
+  partySize Int     @default(1)
+
+  marketingConsent Boolean @default(false)
+  consentText      String?
+
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+
+  checkedInAt DateTime?
+
+  @@unique([eventSlug, passNumber])
+  @@unique([eventSlug, email])
+  @@index([eventSlug, createdAt])
+}
