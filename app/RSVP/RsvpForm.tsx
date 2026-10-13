@@ -93,7 +93,7 @@ export function RsvpForm({ dateLabel, ics }: { dateLabel: string; ics: IcsInfo }
           <p>
             {result.priority
               ? 'You have priority access. Show this pass when you arrive and our team will see you first.'
-              : 'Priority spots were full, but your place is reserved. Show this pass when you arrive to check in.'}
+              : 'Priority seats were full, but your seat is saved. Show this pass when you arrive to check in.'}
           </p>
         </div>
         <p className={styles.confirmText}>
@@ -118,7 +118,7 @@ export function RsvpForm({ dateLabel, ics }: { dateLabel: string; ics: IcsInfo }
   return (
     <form className={styles.form} onSubmit={handleSubmit} noValidate={false}>
       <div className={styles.formHead}>
-        <h2>Reserve your spot</h2>
+        <h2>Save your seat</h2>
         <p>Takes 30 seconds. Your pass arrives by email.</p>
       </div>
 
@@ -157,11 +157,11 @@ export function RsvpForm({ dateLabel, ics }: { dateLabel: string; ics: IcsInfo }
       {error && <p className={styles.error} role="alert">{error}</p>}
 
       <button type="submit" className={styles.submitBtn} disabled={submitting}>
-        {submitting ? 'Reserving…' : 'Reserve My Spot'}
+        {submitting ? 'Saving your seat…' : 'Save My Seat'}
       </button>
 
       <p className={styles.privacy}>
-        We use your details to manage your RSVP and send your pass. See our <a href="/privacy">privacy policy</a>.
+        We use your details to save your seat and send your pass. See our <a href="/privacy">privacy policy</a>.
       </p>
     </form>
   );

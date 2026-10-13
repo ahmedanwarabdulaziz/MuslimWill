@@ -9,9 +9,9 @@ import styles from './page.module.css';
 export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
-  title: 'RSVP: Islamic Will Session at MAC Waterloo | The Muslim Will',
+  title: 'Save Your Seat: Islamic Will Session at MAC Waterloo | The Muslim Will',
   description:
-    'Join MAC Islamic Centre of Waterloo on Friday, October 23 after Maghrib. Our team will help you start, and finish, your Islamic will that same evening. RSVP for priority access.',
+    'Join MAC Islamic Centre of Waterloo on Friday, October 23 after Maghrib. Our team will help you start, and finish, your Islamic will that same evening. Save your seat early for priority access.',
   alternates: { canonical: 'https://www.themuslimwill.com/RSVP' },
   robots: { index: false, follow: true },
 };
@@ -48,7 +48,7 @@ export default async function RsvpPage() {
                 Join {event.partner} for a community session on Islamic wills and family protection. Our team will be there to help you start, and finish, your Wassiyah that same evening.
               </p>
               {open && (
-                <a href="#rsvp" className={styles.primaryBtn}>RSVP Now</a>
+                <a href="#rsvp" className={styles.primaryBtn}>Save My Seat</a>
               )}
             </div>
 
@@ -69,14 +69,14 @@ export default async function RsvpPage() {
                 </div>
               </div>
               <div className={styles.perk}>
-                <div className={styles.perkLabel}>RSVP perk</div>
-                <p>RSVP in advance to guarantee priority access to our team that evening, skip the line and start your Wassiyah first.</p>
+                <div className={styles.perkLabel}>Priority perk</div>
+                <p>Save your seat in advance to guarantee priority access to our team that evening, skip the line and start your Wassiyah first.</p>
                 {open && (priority.remaining > 0 ? (
                   <div className={styles.meter}>
                     <div className={styles.meterTop}>
                       <span className={styles.meterNum}>{priority.remaining}</span>
                       <span className={styles.meterText}>
-                        <span><span className={styles.liveDot} aria-hidden />priority {priority.remaining === 1 ? 'spot' : 'spots'} left</span>
+                        <span><span className={styles.liveDot} aria-hidden />priority {priority.remaining === 1 ? 'seat' : 'seats'} left</span>
                         <small>First come, first served</small>
                       </span>
                     </div>
@@ -86,14 +86,14 @@ export default async function RsvpPage() {
                       aria-valuemin={0}
                       aria-valuemax={priority.capacity}
                       aria-valuenow={priority.used}
-                      aria-label="Priority spots taken"
+                      aria-label="Priority seats taken"
                     >
                       <div className={styles.meterFill} style={{ width: `${Math.max(4, (priority.used / Math.max(1, priority.capacity)) * 100)}%` }} />
                     </div>
-                    <a href="#rsvp" className={styles.meterCta}>Claim your priority spot →</a>
+                    <a href="#rsvp" className={styles.meterCta}>Save my priority seat →</a>
                   </div>
                 ) : (
-                  <div className={styles.spots}>Priority spots are full. You can still RSVP, and you&apos;re welcome to join us.</div>
+                  <div className={styles.spots}>Priority seats are full. You can still save a seat, and you&apos;re welcome to join us.</div>
                 ))}
               </div>
             </aside>
@@ -176,7 +176,7 @@ export default async function RsvpPage() {
               />
             ) : (
               <div className={styles.closed}>
-                <h2>RSVPs for this session are closed.</h2>
+                <h2>Seat reservations for this session are closed.</h2>
                 <p>Thank you to everyone who joined us. Follow our events page for upcoming sessions.</p>
                 <Link href="/events" className={styles.primaryBtn}>See upcoming events</Link>
               </div>

@@ -128,7 +128,7 @@ async function sendConfirmation(
   const firstName = escapeHtml(rsvp.name.split(/\s+/)[0]);
   const passNote = rsvp.priority
     ? 'You have <strong>priority access</strong>. Show this pass when you arrive and our team will see you first.'
-    : 'Priority spots were full when you registered, but your place is reserved. Show this pass when you arrive to check in.';
+    : 'Priority seats were full when you registered, but your seat is saved. Show this pass when you arrive to check in.';
 
   const p = 'font-size: 16px; color: #444444; margin: 0 0 16px;';
   const li = 'font-size: 15px; color: #444444; margin-bottom: 6px;';
@@ -195,7 +195,7 @@ async function sendConfirmation(
     `Your pass: ${rsvp.pass}`,
     rsvp.priority
       ? 'You have priority access. Show this pass when you arrive and our team will see you first.'
-      : 'Priority spots were full when you registered, but your place is reserved. Show this pass when you arrive.',
+      : 'Priority seats were full when you registered, but your seat is saved. Show this pass when you arrive.',
     '',
     `${event.dateLabel} · ${event.timeLabel}`,
     `${event.venue}, ${event.address}`,

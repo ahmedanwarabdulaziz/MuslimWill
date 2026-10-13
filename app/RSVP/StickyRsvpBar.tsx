@@ -24,7 +24,7 @@ export function StickyRsvpBar() {
 
   return (
     <div className={`${styles.stickyBar} ${hidden ? styles.stickyHidden : ''}`}>
-      <a href="#rsvp" className={styles.primaryBtn}>RSVP Now</a>
+      <a href="#rsvp" className={styles.primaryBtn}>Save My Seat</a>
     </div>
   );
 }
