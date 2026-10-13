@@ -40,8 +40,10 @@ export async function ensureRsvpEvent(event: RsvpEventConfig = CURRENT_RSVP_EVEN
 
 export async function getPriorityStatus(event: RsvpEventConfig = CURRENT_RSVP_EVENT) {
   const row = await ensureRsvpEvent(event);
-  const used = await prisma.rsvp.count({ where: { eventSlug: event.slug, priority: true } });
-  return { capacity: row.priorityCapacity, used, remaining: Math.max(0, row.priorityCapacity - used) };
+  const online = await prisma.rsvp.count({ where: { eventSlug: event.slug, priority: true } });
+  const manual = row.manualReserved;
+  const used = online + manual;
+  return { capacity: row.priorityCapacity, online, manual, used, remaining: Math.max(0, row.priorityCapacity - used) };
 }
 
 export function formatPass(passNumber: number) {

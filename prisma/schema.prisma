@@ -81,6 +81,8 @@ model Media {
 model RsvpEvent {
   slug             String   @id
   priorityCapacity Int      @default(20)
+  // Priority seats booked outside the website (e.g. by phone), entered by admins.
+  manualReserved   Int      @default(0)
   createdAt        DateTime @default(now())
   updatedAt        DateTime @updatedAt
 

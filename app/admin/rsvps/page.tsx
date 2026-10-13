@@ -12,12 +12,17 @@ async function requireAdmin() {
   if (!(await verifyAdminSessionToken(token))) throw new Error('Unauthorized');
 }
 
-async function updateCapacity(formData: FormData) {
+async function updateSeats(formData: FormData) {
   'use server';
   await requireAdmin();
   const capacity = Number.parseInt(String(formData.get('capacity')), 10);
+  const manual = Number.parseInt(String(formData.get('manualReserved')), 10);
   if (!Number.isFinite(capacity) || capacity < 0 || capacity > 1000) return;
-  await prisma.rsvpEvent.update({ where: { slug: CURRENT_RSVP_EVENT.slug }, data: { priorityCapacity: capacity } });
+  if (!Number.isFinite(manual) || manual < 0 || manual > 1000) return;
+  await prisma.rsvpEvent.update({
+    where: { slug: CURRENT_RSVP_EVENT.slug },
+    data: { priorityCapacity: capacity, manualReserved: manual },
+  });
   revalidatePath('/admin/rsvps');
   revalidatePath('/RSVP');
 }
@@ -71,18 +76,30 @@ export default async function RsvpsAdminPage({ searchParams }: { searchParams: P
 
       <div className={styles.stats}>
         <div className={styles.stat}><span>RSVPs</span><strong>{totals._count._all}</strong></div>
-        <div className={styles.stat}><span>People expected</span><strong>{totals._sum.partySize ?? 0}</strong></div>
-        <div className={styles.stat}><span>Priority used</span><strong>{priority.used} / {priority.capacity}</strong></div>
+        <div className={styles.stat}><span>People expected</span><strong>{(totals._sum.partySize ?? 0) + priority.manual}</strong><small>online party sizes + phone bookings</small></div>
+        <div className={styles.stat}>
+          <span>Priority seats left (public)</span>
+          <strong>{priority.remaining}</strong>
+          <small>{priority.capacity} total · {priority.online} online · {priority.manual} by phone</small>
+        </div>
         <div className={styles.stat}><span>Checked in</span><strong>{checkedIn}</strong></div>
       </div>
 
-      <form action={updateCapacity} className={styles.capacity}>
+      <form action={updateSeats} className={styles.capacity}>
         <label>
           <span>Priority capacity</span>
           <input type="number" name="capacity" min={0} max={1000} defaultValue={priority.capacity} />
         </label>
+        <label>
+          <span>Reserved by phone</span>
+          <input type="number" name="manualReserved" min={0} max={1000} defaultValue={priority.manual} />
+        </label>
         <button type="submit">Save</button>
-        <p>How many people your team can serve first. The public page shows <strong>{priority.remaining}</strong> remaining. Raise this when you add team members.</p>
+        <p>
+          <strong>Priority capacity</strong>: how many people your team can serve first. Raise it when you add team members.{' '}
+          <strong>Reserved by phone</strong>: priority seats booked outside the website; enter the running total.{' '}
+          The public page shows <strong>{priority.capacity} − {priority.online} online − {priority.manual} by phone = {priority.remaining}</strong> seats left.
+        </p>
       </form>
 
       <form className={styles.search}>

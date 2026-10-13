@@ -68,7 +68,7 @@ export async function POST(req: Request) {
           data: {
             eventSlug: event.slug,
             passNumber: Math.max(last._max.passNumber ?? 0, event.firstPassNumber - 1) + 1,
-            priority: priorityUsed < settings.priorityCapacity,
+            priority: priorityUsed + settings.manualReserved < settings.priorityCapacity,
             name,
             email,
             phone,
