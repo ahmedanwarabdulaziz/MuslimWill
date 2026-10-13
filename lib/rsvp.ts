@@ -18,6 +18,8 @@ export const CURRENT_RSVP_EVENT = {
   // RSVPs stay open until the end of the event day.
   closesAt: '2026-10-24T00:00:00-04:00',
   defaultPriorityCapacity: 20,
+  // First pass handed out for this event (MW-23, MW-24, ...).
+  firstPassNumber: 23,
 } as const;
 
 export type RsvpEventConfig = typeof CURRENT_RSVP_EVENT;
@@ -43,7 +45,7 @@ export async function getPriorityStatus(event: RsvpEventConfig = CURRENT_RSVP_EV
 }
 
 export function formatPass(passNumber: number) {
-  return `MW-${String(passNumber).padStart(3, '0')}`;
+  return `MW-${passNumber}`;
 }
 
 export function escapeHtml(value: string) {

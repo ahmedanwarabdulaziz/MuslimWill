@@ -67,7 +67,7 @@ export async function POST(req: Request) {
         return tx.rsvp.create({
           data: {
             eventSlug: event.slug,
-            passNumber: (last._max.passNumber ?? 0) + 1,
+            passNumber: Math.max(last._max.passNumber ?? 0, event.firstPassNumber - 1) + 1,
             priority: priorityUsed < settings.priorityCapacity,
             name,
             email,

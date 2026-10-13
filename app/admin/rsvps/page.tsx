@@ -86,7 +86,7 @@ export default async function RsvpsAdminPage({ searchParams }: { searchParams: P
       </form>
 
       <form className={styles.search}>
-        <input type="search" name="q" defaultValue={query} placeholder="Search name, email, phone or pass (MW-007)" />
+        <input type="search" name="q" defaultValue={query} placeholder="Search name, email, phone or pass (MW-23)" />
         <button type="submit">Search</button>
         {query && <a href="/admin/rsvps">Clear</a>}
       </form>
