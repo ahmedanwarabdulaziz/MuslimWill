@@ -3,8 +3,13 @@ import Link from 'next/link';
 import { PiCalendarLight, PiMapPinLight, PiImagesLight } from 'react-icons/pi';
 import { EventListRow } from '@/components/events/EventListRow';
 import { getEventsOverview, getThumbnailUrl, formatEventMeta, type EventWithThumb } from '@/lib/events-data';
+import { CURRENT_RSVP_EVENT, isRsvpOpen } from '@/lib/rsvp';
 import homeStyles from '@/app/page.module.css';
 import styles from './EventsHomeSection.module.css';
+
+function isUpcoming(date: Date | null) {
+  return date !== null && new Date(date).getTime() > Date.now();
+}
 
 export async function EventsHomeSection() {
   const { current, upcoming, past } = await getEventsOverview({ upcomingLimit: 12, pastLimit: 12 });
@@ -48,7 +53,9 @@ export async function EventsHomeSection() {
                 )}
               </div>
               <div className={styles.featuredBody}>
-                <div className={styles.liveBadge}>● Happening Now</div>
+                <div className={styles.liveBadge}>
+                  ● {isUpcoming(current.eventDate) ? 'Coming Up' : 'Happening Now'}
+                </div>
                 <h3 className={styles.featuredTitle}>{current.title}</h3>
                 {formatEventMeta(current) && (
                   <div className={styles.metaLine}>
@@ -65,9 +72,15 @@ export async function EventsHomeSection() {
                     )}
                   </div>
                 )}
-                <Link href={`/events/${current.slug}`} className={styles.featuredCta}>
-                  View Offer →
-                </Link>
+                {current.slug === CURRENT_RSVP_EVENT.eventSlug && isRsvpOpen() ? (
+                  <Link href="/RSVP" className={styles.featuredCta}>
+                    Save My Seat →
+                  </Link>
+                ) : (
+                  <Link href={`/events/${current.slug}`} className={styles.featuredCta}>
+                    See Event Details →
+                  </Link>
+                )}
               </div>
             </div>
           )}

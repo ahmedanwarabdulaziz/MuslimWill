@@ -6,6 +6,8 @@ export { MARKETING_CONSENT_TEXT } from '@/lib/rsvp-copy';
 // session, change this object; RSVPs are kept per slug.
 export const CURRENT_RSVP_EVENT = {
   slug: 'mac-waterloo-2026-10-23',
+  // The matching entry in the Events admin; its homepage card links here.
+  eventSlug: 'mac-icw-2026',
   partner: 'MAC Islamic Centre of Waterloo',
   dateLabel: 'Friday, October 23, 2026',
   timeLabel: 'After Maghrib Prayer',
