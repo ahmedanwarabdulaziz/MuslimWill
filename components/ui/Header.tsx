@@ -91,7 +91,7 @@ export function Header() {
 
           <div className={styles.headerRight}>
             <Link 
-              href="https://app.themuslimwill.com/Account/Register" 
+              href="https://app.themuslimwill.com/Account/Login"
               className={styles.navCta}
               onClick={() => trackStartYourWillClick('header_desktop')}
             >

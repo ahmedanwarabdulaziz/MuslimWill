@@ -1930,3 +1930,83 @@
   box-shadow: 0 12px 30px rgba(212, 175, 55, 0.4) !important;
   transform: translateY(-2px);
 }
+
+/* Ontario vs Faraid comparison */
+.compareGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .compareGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.compareCard {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.compareCardIslamic {
+  border: 2px solid var(--color-gold);
+}
+
+.compareLabel {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.compareCardIslamic .compareLabel {
+  color: var(--color-gold);
+}
+
+.compareTitle {
+  color: var(--color-navy);
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.compareList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.25rem;
+}
+
+.compareList li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 1.05rem;
+  color: var(--color-text-main);
+}
+
+.compareList strong {
+  color: var(--color-navy);
+  font-variant-numeric: tabular-nums;
+}
+
+.compareNote {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.compareFootnote {
+  max-width: 900px;
+  margin: 1.5rem auto 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  text-align: center;
+}
