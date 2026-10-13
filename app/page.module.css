@@ -2014,3 +2014,28 @@
 .noWrapBtn {
   white-space: nowrap;
 }
+
+/* Hero CTA pair: sentence case, one line, equal height */
+.heroActions {
+  align-items: stretch;
+}
+
+.heroCtaBtn {
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  font-size: 1.05rem !important;
+  font-weight: 700 !important;
+  padding: 1rem 1.75rem !important;
+  white-space: nowrap;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .heroActions .heroCtaBtn {
+    width: 100%;
+    white-space: normal;
+  }
+}
