@@ -108,7 +108,7 @@ export default async function RsvpPage() {
             <div className={styles.label}>Why this matters</div>
             <h2 className={styles.h2}>Most families don&apos;t know this.</h2>
             <p className={styles.intro}>
-              Without an Islamic will, an Ontario estate is divided by the province&apos;s default rules, not by Faraid. Take a $600,000 estate left to a wife, two sons and one daughter:
+              Faraid applies only if a valid Islamic will directs the estate that way. Without one, Ontario&apos;s default rules follow a completely different logic. Take a $600,000 estate left to a wife, two sons, one daughter and both parents:
             </p>
           </div>
 
@@ -118,8 +118,10 @@ export default async function RsvpPage() {
               <h3>Ontario&apos;s default rules</h3>
               <ul>
                 <li><span>Wife</span><strong>$433,333</strong></li>
-                <li><span>Each son</span><strong>$55,556</strong></li>
+                <li><span>Son <em>× 2</em></span><strong>$55,556 <small>each</small></strong></li>
                 <li><span>Daughter</span><strong>$55,556</strong></li>
+                <li className={styles.gapRow}><span>Father</span><strong>$0</strong></li>
+                <li className={styles.gapRow}><span>Mother</span><strong>$0</strong></li>
               </ul>
             </div>
             <div className={`${styles.compareCard} ${styles.compareIslamic}`}>
@@ -127,13 +129,23 @@ export default async function RsvpPage() {
               <h3>Faraid</h3>
               <ul>
                 <li><span>Wife</span><strong>$75,000</strong></li>
-                <li><span>Each son</span><strong>$210,000</strong></li>
-                <li><span>Daughter</span><strong>$105,000</strong></li>
+                <li><span>Son <em>× 2</em></span><strong>$130,000 <small>each</small></strong></li>
+                <li><span>Daughter</span><strong>$65,000</strong></li>
+                <li className={styles.gapRow}><span>Father</span><strong>$100,000</strong></li>
+                <li className={styles.gapRow}><span>Mother</span><strong>$100,000</strong></li>
               </ul>
             </div>
           </div>
+
+          <div className={styles.gapCallout}>
+            <div className={styles.gapLabel}>Biggest gap for this family</div>
+            <p>
+              <strong>The parents: $200,000 under Faraid, $0 under Ontario&apos;s default rules.</strong> A third of the estate goes to a completely different place, for the exact same family.
+            </p>
+          </div>
+
           <p className={styles.footnote}>
-            Illustrative example. Assumes no surviving parents, no debts, and Ontario&apos;s $350,000 spousal preferential share. Every family is different, and that is what we will walk through together.
+            Illustrative example: no debts or bequests, death on or after March 1, 2021 (Ontario spousal preferential share of $350,000). Every family is different, and that is what we will walk through together.
           </p>
         </div>
       </section>
