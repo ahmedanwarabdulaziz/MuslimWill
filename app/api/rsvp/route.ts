@@ -10,6 +10,7 @@ import {
   ensureRsvpEvent,
   escapeHtml,
   formatPass,
+  getPriorityStatus,
   isRsvpOpen,
   type RsvpEventConfig,
 } from '@/lib/rsvp';
@@ -103,27 +104,116 @@ export async function POST(req: Request) {
   // Send the email after responding so the visitor sees their pass immediately.
   // The RSVP is already saved; a mail outage must not lose the reservation.
   const confirmation = { name, email, pass, priority: rsvp.priority };
+  const notice = {
+    ...confirmation,
+    phone,
+    partySize,
+    marketingConsent,
+    source: [rsvp.utmSource, rsvp.utmCampaign].filter(Boolean).join(' / '),
+  };
   after(async () => {
-    try {
-      await sendConfirmation(event, confirmation);
-    } catch (error) {
-      console.error('RSVP confirmation email failed', error);
-    }
+    const [toAttendee, toTeam] = await Promise.allSettled([
+      sendConfirmation(event, confirmation),
+      sendTeamNotice(event, notice),
+    ]);
+    if (toAttendee.status === 'rejected') console.error('RSVP confirmation email failed', toAttendee.reason);
+    if (toTeam.status === 'rejected') console.error('RSVP team notification failed', toTeam.reason);
   });
 
   return NextResponse.json({ ok: true, pass, priority: rsvp.priority });
+}
+
+function createTransport() {
+  return nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: Number(process.env.SMTP_PORT) || 465,
+    secure: process.env.SMTP_SECURE === 'true',
+    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
+  });
+}
+
+// Who hears about each new booking. Override with RSVP_NOTIFY_TO (comma-separated).
+const TEAM_NOTIFY_TO = process.env.RSVP_NOTIFY_TO || 'ahmedanwarabdulaziz@gmail.com';
+
+async function sendTeamNotice(
+  event: RsvpEventConfig,
+  rsvp: {
+    name: string;
+    email: string;
+    phone: string;
+    pass: string;
+    priority: boolean;
+    partySize: number;
+    marketingConsent: boolean;
+    source: string;
+  },
+) {
+  const [seats, total] = await Promise.all([
+    getPriorityStatus(event),
+    prisma.rsvp.aggregate({ where: { eventSlug: event.slug }, _count: { _all: true }, _sum: { partySize: true } }),
+  ]);
+  const people = (total._sum.partySize ?? 0) + seats.manual;
+  const name = escapeHtml(rsvp.name);
+  const phone = escapeHtml(rsvp.phone);
+  const email = escapeHtml(rsvp.email);
+
+  const row = (label: string, value: string) =>
+    `<tr><td style="padding: 8px 12px; color: #666666; font-size: 14px; border-bottom: 1px solid #eeeeee;">${label}</td>` +
+    `<td style="padding: 8px 12px; color: #111111; font-size: 15px; font-weight: 600; border-bottom: 1px solid #eeeeee;">${value}</td></tr>`;
+
+  const html = `<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><title>New seat booked</title></head>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background-color: #f5f5ee; margin: 0; padding: 24px 12px;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 560px; margin: 0 auto; background-color: #ffffff; border-radius: 12px; overflow: hidden;">
+    <tr><td style="background-color: #0A2540; padding: 20px 24px;">
+      <div style="color: #d4af37; font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;">New seat booked</div>
+      <div style="color: #ffffff; font-size: 22px; font-weight: 700; margin-top: 4px;">${rsvp.pass} · ${name}</div>
+    </td></tr>
+    <tr><td style="padding: 16px 12px;">
+      <table width="100%" cellpadding="0" cellspacing="0">
+        ${row('Phone', `<a href="tel:${phone}" style="color: #0A2540;">${phone}</a>`)}
+        ${row('Email', `<a href="mailto:${email}" style="color: #0A2540;">${email}</a>`)}
+        ${row('Number attending', String(rsvp.partySize))}
+        ${row('Priority seat', rsvp.priority ? 'Yes' : 'No (priority seats were full)')}
+        ${row('Email consent', rsvp.marketingConsent ? 'Yes' : 'No')}
+        ${row('Source', escapeHtml(rsvp.source || 'Direct'))}
+      </table>
+      <div style="margin: 18px 12px 4px; padding: 14px 16px; background-color: #f5f5ee; border-radius: 8px; font-size: 14px; color: #333333;">
+        <strong>${total._count._all}</strong> online bookings · <strong>${people}</strong> people expected (incl. phone) · <strong>${seats.remaining}</strong> of ${seats.capacity} priority seats left
+      </div>
+      <div style="padding: 12px;"><a href="https://www.themuslimwill.com/admin/rsvps" style="display: inline-block; background-color: #0A2540; color: #d4af37; font-weight: 700; text-decoration: none; padding: 10px 18px; border-radius: 8px;">Open RSVPs admin</a></div>
+    </td></tr>
+  </table>
+</body></html>`;
+
+  const text = [
+    `New seat booked: ${rsvp.pass} ${rsvp.name}`,
+    `Phone: ${rsvp.phone}`,
+    `Email: ${rsvp.email}`,
+    `Number attending: ${rsvp.partySize}`,
+    `Priority seat: ${rsvp.priority ? 'Yes' : 'No'}`,
+    `Email consent: ${rsvp.marketingConsent ? 'Yes' : 'No'}`,
+    `Source: ${rsvp.source || 'Direct'}`,
+    '',
+    `${total._count._all} online bookings, ${people} people expected, ${seats.remaining} of ${seats.capacity} priority seats left`,
+    'https://www.themuslimwill.com/admin/rsvps',
+  ].join('\n');
+
+  await createTransport().sendMail({
+    from: process.env.MAIL_FROM || '"Muslim Will" <info@themuslimwill.com>',
+    to: TEAM_NOTIFY_TO,
+    replyTo: rsvp.email,
+    subject: `New seat booked: ${rsvp.pass} ${rsvp.name}${rsvp.priority ? ' (priority)' : ''} · ${seats.remaining} priority seats left`,
+    html,
+    text,
+  });
 }
 
 async function sendConfirmation(
   event: RsvpEventConfig,
   rsvp: { name: string; email: string; pass: string; priority: boolean },
 ) {
-  const transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST,
-    port: Number(process.env.SMTP_PORT) || 465,
-    secure: process.env.SMTP_SECURE === 'true',
-    auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASS },
-  });
+  const transporter = createTransport();
 
   const firstName = escapeHtml(rsvp.name.split(/\s+/)[0]);
   const passNote = rsvp.priority
