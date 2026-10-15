@@ -76,6 +76,32 @@ model Media {
   @@index([type])
 }
 
+// One row per click on a link to app.themuslimwill.com, logged server-side by
+// the /go redirect so it is recorded even when client analytics drop it.
+model OutboundClick {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  destination String
+  sourcePage  String?
+  linkText    String?
+
+  utmSource   String?
+  utmMedium   String?
+  utmCampaign String?
+  utmContent  String?
+  utmTerm     String?
+  fbclid      String?
+  landingPage String?
+
+  clarityUserId String?
+  device        String?
+  country       String?
+  userAgent     String?
+
+  @@index([createdAt])
+}
+
 // An RSVP-able event (e.g. a mosque session). Content lives in lib/rsvp.ts;
 // this row holds what admins change live: how many priority spots exist.
 model RsvpEvent {

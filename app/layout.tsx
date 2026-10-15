@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { TrackingScripts } from "@/components/analytics/TrackingScripts";
+import { OutboundLinkTracker } from "@/components/analytics/OutboundLinkTracker";
 import { AppChrome } from "@/components/layout/AppChrome";
 
 const inter = Inter({
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
         <AppChrome>{children}</AppChrome>
         <TrackingScripts />
+        <OutboundLinkTracker />
       </body>
     </html>
   );
