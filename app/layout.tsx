@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   description:
     "A guided pathway for Muslim families in Canada to prepare wills with legal structure, Islamic inheritance guidance, and clear next steps.",
   openGraph: {
-    title: "The Muslim Will | Will + Vault",
+    title: "Protect Your Family With Legal & Islamic Clarity | Muslim Will",
     description:
       "A guided pathway for Muslim families in Canada to prepare wills with legal structure, Islamic inheritance guidance, and clear next steps.",
     url: "https://www.themuslimwill.com",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Muslim Will | Will + Vault",
+    title: "Protect Your Family With Legal & Islamic Clarity | Muslim Will",
     description:
       "A guided pathway for Muslim families in Canada to prepare wills with legal structure, Islamic inheritance guidance, and clear next steps.",
   },

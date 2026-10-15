@@ -13,6 +13,21 @@ export const metadata: Metadata = {
   description:
     'Join MAC Islamic Centre of Waterloo on Friday, October 23 after Maghrib. Our team will help you start, and finish, your Islamic will that same evening. Save your seat early for priority access.',
   alternates: { canonical: 'https://www.themuslimwill.com/RSVP' },
+  openGraph: {
+    title: 'Wasiyyah Workshop | MAC Islamic Centre of Waterloo',
+    description:
+      'Friday, October 23 after Maghrib. Write your Islamic will in one evening with our team. RSVP in advance for priority access.',
+    url: 'https://www.themuslimwill.com/RSVP',
+    siteName: 'Muslim Will',
+    locale: 'en_CA',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Wasiyyah Workshop | MAC Islamic Centre of Waterloo',
+    description:
+      'Friday, October 23 after Maghrib. Write your Islamic will in one evening with our team. RSVP in advance for priority access.',
+  },
   robots: { index: false, follow: true },
 };
 

@@ -2,35 +2,27 @@ import { ImageResponse } from 'next/og'
 import { readFile } from 'node:fs/promises'
 import { join } from 'node:path'
 
-export const alt = 'The Muslim Will'
+export const alt = "Canadian law has a plan for your estate. It isn't the Islamic one."
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
+const NAVY = '#0B1F3A'
+const FRAME = '#07243F'
 const GOLD = '#C8A063'
+const GOLD_DARK = '#A8742F'
+const CREAM = '#FBF7EE'
 
-// Faint diamond lattice drawn as one SVG so it can sit behind the content.
-function diamondPattern() {
-  const step = 44
-  const r = 11
-  let paths = ''
-  for (let y = 0; y <= size.height + step; y += step) {
-    const offset = (y / step) % 2 === 0 ? 0 : step / 2
-    for (let x = -step; x <= size.width + step; x += step) {
-      const cx = x + offset
-      paths += `M${cx} ${y - r}L${cx + r} ${y}L${cx} ${y + r}L${cx - r} ${y}Z`
-    }
-  }
-  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${size.width}" height="${size.height}"><path d="${paths}" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1.2"/></svg>`
-  return `data:image/svg+xml;base64,${Buffer.from(svg).toString('base64')}`
-}
+const file = (p: string) => readFile(join(process.cwd(), p))
 
-// Logo and name are kept inside the centre square: WhatsApp and other
-// messengers crop the card to a centred square thumbnail, while Facebook,
-// LinkedIn and X show the full wide card.
+// Share card for the homepage, carrying the hero message in the same
+// navy-frame / cream-panel style as the RSVP card.
 export default async function OpenGraphImage() {
-  const [logo, interBold] = await Promise.all([
-    readFile(join(process.cwd(), 'public/Images/logo-mark.png'), 'base64'),
-    readFile(join(process.cwd(), 'node_modules/@fontsource/inter/files/inter-latin-700-normal.woff')),
+  const [logo, photo, serif, inter, interSemi] = await Promise.all([
+    file('public/Images/logo-mark.png'),
+    file('public/Images/share/family-room.jpg'),
+    file('node_modules/@fontsource/playfair-display/files/playfair-display-latin-800-normal.woff'),
+    file('node_modules/@fontsource/inter/files/inter-latin-400-normal.woff'),
+    file('node_modules/@fontsource/inter/files/inter-latin-600-normal.woff'),
   ])
 
   return new ImageResponse(
@@ -40,42 +32,85 @@ export default async function OpenGraphImage() {
           width: '100%',
           height: '100%',
           display: 'flex',
-          position: 'relative',
           flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          backgroundColor: '#0B1F3A',
-          backgroundImage: 'radial-gradient(circle at 50% 45%, #14305A 0%, #0B1F3A 55%, #081629 100%)',
+          backgroundColor: FRAME,
           fontFamily: 'Inter',
         }}
       >
-        <img
-          src={diamondPattern()}
-          width={size.width}
-          height={size.height}
-          style={{ position: 'absolute', top: 0, left: 0 }}
-        />
-        <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: 6, backgroundColor: GOLD }} />
-        <div style={{ position: 'absolute', bottom: 0, left: 0, width: '100%', height: 6, backgroundColor: GOLD }} />
+        {/* Header: brand + Will + Vault */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 104 }}>
+          <img src={`data:image/png;base64,${logo.toString('base64')}`} width={48} height={51} />
+          <div style={{ marginLeft: 14, fontFamily: 'Playfair', fontSize: 30, color: '#FFFFFF', letterSpacing: '0.02em' }}>
+            THE MUSLIM WILL
+          </div>
+          <div style={{ display: 'flex', width: 2, height: 54, margin: '0 34px', backgroundColor: GOLD }} />
+          <div style={{ fontFamily: 'Playfair', fontSize: 30, color: GOLD, letterSpacing: '0.04em' }}>WILL + VAULT</div>
+        </div>
 
-        <img src={`data:image/png;base64,${logo}`} width={254} height={270} />
+        {/* Cream panel */}
         <div
           style={{
-            marginTop: 34,
-            fontSize: 44,
-            fontWeight: 700,
-            color: '#FFFFFF',
-            letterSpacing: '0.03em',
-            whiteSpace: 'nowrap',
+            display: 'flex',
+            flex: 1,
+            margin: '0 36px',
+            padding: '28px 28px 28px 40px',
+            borderRadius: 22,
+            border: `3px solid ${GOLD}`,
+            backgroundColor: CREAM,
+            alignItems: 'center',
           }}
         >
-          THE MUSLIM WILL
+          <div style={{ display: 'flex', flexDirection: 'column', width: 500 }}>
+            <div style={{ fontSize: 17, fontWeight: 600, color: GOLD_DARK, letterSpacing: '0.08em' }}>
+              ISLAMIC WILLS FOR MUSLIM FAMILIES IN CANADA
+            </div>
+            <div style={{ display: 'flex', flexDirection: 'column', marginTop: 16, fontFamily: 'Playfair', fontSize: 46, lineHeight: 1.12 }}>
+              <span style={{ color: NAVY }}>Canadian law has a plan for your estate.</span>
+              <span style={{ marginTop: 8, color: GOLD_DARK }}>It isn&apos;t the Islamic one.</span>
+            </div>
+            <div style={{ display: 'flex', height: 2, width: 120, marginTop: 22, backgroundColor: GOLD }} />
+            <div style={{ marginTop: 18, fontSize: 21, lineHeight: 1.4, color: '#4A5466' }}>
+              Ontario&apos;s default rules don&apos;t follow Faraid. Your will can make both work together.
+            </div>
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              flex: 1,
+              height: '100%',
+              marginLeft: 24,
+              borderRadius: 16,
+              border: `3px solid ${GOLD}`,
+              overflow: 'hidden',
+            }}
+          >
+            <img
+              src={`data:image/jpeg;base64,${photo.toString('base64')}`}
+              width={520}
+              height={380}
+              style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 40%' }}
+            />
+          </div>
+        </div>
+
+        {/* Footer call to action, matching the hero button */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: 92 }}>
+          <div style={{ fontFamily: 'Playfair', fontSize: 32, color: GOLD, letterSpacing: '0.02em' }}>
+            Check the difference for your family
+          </div>
+          <div style={{ marginLeft: 26, fontSize: 21, color: '#E8E1D3' }}>
+            Free  •  about 3 minutes  •  no names or assets needed
+          </div>
         </div>
       </div>
     ),
     {
       ...size,
-      fonts: [{ name: 'Inter', data: interBold, weight: 700, style: 'normal' }],
+      fonts: [
+        { name: 'Playfair', data: serif, weight: 800, style: 'normal' },
+        { name: 'Inter', data: inter, weight: 400, style: 'normal' },
+        { name: 'Inter', data: interSemi, weight: 600, style: 'normal' },
+      ],
     }
   )
 }

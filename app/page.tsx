@@ -9,12 +9,26 @@ import styles from './page.module.css';
 const siteUrl = 'https://themuslimwill.com';
 const calculatorUrl = 'https://app.themuslimwill.com/calculator';
 const homepageTitle = 'Islamic Will in Canada | See How Ontario Law Differs From Faraid | Muslim Will';
+const homepageShareTitle = 'Canadian law has a plan for your estate. It isn’t the Islamic one. | Muslim Will';
 const homepageDescription = 'Ontario’s default rules don’t follow Faraid. See the difference for your family, free in 3 minutes. Your Islamic will, always up to date through your Vault.';
 
 export const metadata: Metadata = {
   title: homepageTitle,
   description: homepageDescription,
   alternates: { canonical: siteUrl },
+  openGraph: {
+    title: homepageShareTitle,
+    description: homepageDescription,
+    url: 'https://www.themuslimwill.com',
+    siteName: 'Muslim Will',
+    locale: 'en_CA',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: homepageShareTitle,
+    description: homepageDescription,
+  },
 };
 
 export const revalidate = 60;
