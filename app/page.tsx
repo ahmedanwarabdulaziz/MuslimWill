@@ -42,7 +42,8 @@ export default function Home() {
           <div className={styles.heroTextWrapper}>
              <div className={`${styles.heroEyebrow} ${styles.fadeUp} ${styles.delay1}`}>Islamic wills for Muslim families in Canada</div>
              <h1 className={`${styles.heroH1} ${styles.fadeUp} ${styles.delay1}`}>
-               Canadian law has a plan for your estate. It isn&apos;t the Islamic one.
+               Canadian law has a plan for your estate.{' '}
+               <span className={styles.heroH1Accent}>It isn&apos;t the Islamic one.</span>
              </h1>
              <p className={`${styles.heroCopy} ${styles.fadeUp} ${styles.delay2}`}>
                If you pass away without an Islamic will, Ontario&apos;s default rules decide who inherits, and they don&apos;t follow Faraid. Your will can make both work together.
