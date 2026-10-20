@@ -50,12 +50,12 @@ export default function CharitableLegacyPage() {
               <div className={styles.featureIconWrapper}>⚖️</div>
               <h3 className={styles.featureTitle}>The 1/3 Rule</h3>
               <p className={styles.featureDesc}>
-                Under Islamic inheritance principles, up to one third of your estate may be directed outside the Faraid shares — to charitable causes, non-heirs, or specific purposes you have chosen. Your family&apos;s shares are calculated from the remaining two thirds. The two intentions do not conflict. They coexist by design.
+                Under Islamic inheritance principles, up to one third of your estate may be directed outside the Islamic inheritance shares — to charitable causes, non-heirs, or specific purposes you have chosen. Your family&apos;s shares are calculated from the remaining two thirds. The two intentions do not conflict. They coexist by design.
               </p>
             </div>
             <div className={styles.featureCardPremium}>
               <div className={styles.featureIconWrapper}>🛡️</div>
-              <h3 className={styles.featureTitle}>Faraid Stays Protected</h3>
+              <h3 className={styles.featureTitle}>Family Shares Stay Protected</h3>
               <p className={styles.featureDesc}>
                 Your heirs receive what Islamic law designates for them. The charitable bequest does not reduce those shares — it sits alongside them, within the permitted boundary. Your family is not diminished by your generosity.
               </p>
@@ -217,7 +217,7 @@ export default function CharitableLegacyPage() {
                 <div className={styles.crossSellPrice} style={{ fontSize: '1.25rem', color: 'var(--color-navy)' }}>Included in The Bridge</div>
               </div>
               <p className={styles.crossSellDesc}>
-                Your complete Islamic will — built on Faraid inheritance principles, Ontario-compliant, and including your charitable bequest, guardianship, and executor appointment.
+                Your complete Islamic will — built on Islamic inheritance principles, Ontario-compliant, and including your charitable bequest, guardianship, and executor appointment.
               </p>
               <Link href="/last-will" className={styles.crossSellLink}>Learn more →</Link>
             </div>

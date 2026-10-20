@@ -114,7 +114,7 @@ export default function PricingPage() {
                     <span className={styles.bridgeGroupIcon}>📋</span> Your Islamic Will
                   </div>
                   {[
-                    'Last Will & Testament — built on Faraid inheritance principles, Ontario-compliant',
+                    'Last Will & Testament — built on Islamic inheritance principles, Ontario-compliant',
                     'Guardianship documentation for minor children',
                     'Charitable bequest — up to 1/3 of your estate',
                     'Executor appointment',

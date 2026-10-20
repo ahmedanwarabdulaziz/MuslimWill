@@ -8,9 +8,9 @@ import styles from './page.module.css';
 
 const siteUrl = 'https://themuslimwill.com';
 const calculatorUrl = 'https://app.themuslimwill.com/calculator';
-const homepageTitle = 'Islamic Will in Canada | See How Ontario Law Differs From Faraid | Muslim Will';
+const homepageTitle = 'Islamic Will in Canada | See How Ontario Law Differs From Islamic Inheritance | Muslim Will';
 const homepageShareTitle = 'Canadian law has a plan for your estate. It isn’t the Islamic one. | Muslim Will';
-const homepageDescription = 'Ontario’s default rules don’t follow Faraid. See the difference for your family, free in 3 minutes. Your Islamic will, always up to date through your Vault.';
+const homepageDescription = 'Ontario’s default rules don’t follow Islamic inheritance law. See the difference for your family, free in 3 minutes. Your Islamic will, always up to date through your Vault.';
 
 export const metadata: Metadata = {
   title: homepageTitle,
@@ -46,7 +46,7 @@ export default function Home() {
                <span className={styles.heroH1Accent}>It isn&apos;t the Islamic one.</span>
              </h1>
              <p className={`${styles.heroCopy} ${styles.fadeUp} ${styles.delay2}`}>
-               If you pass away without an Islamic will, Ontario&apos;s default rules decide who inherits, and they don&apos;t follow Faraid. Your will can make both work together.
+               If you pass away without an Islamic will, Ontario&apos;s default rules decide who inherits, and they don&apos;t follow Islamic inheritance law. Your will can make both work together.
              </p>
 
              <div className={`${styles.heroActions} ${styles.fadeUp} ${styles.delay4}`} style={{ marginTop: '2.5rem' }}>
@@ -62,7 +62,7 @@ export default function Home() {
       </section>
 
       {/* Trust anchors */}
-      <TrustBar items={['Built with Islamic scholars', 'Prepared for Ontario legal requirements', 'Faraid calculated for your family', 'Always up to date through your Vault']} />
+      <TrustBar items={['Built with Islamic scholars', 'Prepared for Ontario legal requirements', 'Islamic shares calculated for your family', 'Always up to date through your Vault']} />
 
       {/* 2. The gap — one worked example */}
       <section className={`${styles.section} ${styles.sectionCream}`}>
@@ -70,7 +70,7 @@ export default function Home() {
           <div className={styles.sectionHeader} style={{ maxWidth: '820px' }}>
             <h2 className={styles.sectionH2} style={{ color: 'var(--color-navy)' }}>Same family. Two very different outcomes.</h2>
             <p className={styles.sectionIntro}>
-              A husband leaves a $600,000 estate to his wife, two sons, one daughter and both of his parents. Faraid applies only if a valid Islamic will directs the estate that way. Without one, Ontario&apos;s default rules follow a completely different logic.
+              A husband leaves a $600,000 estate to his wife, two sons, one daughter and both of his parents. Islamic inheritance applies only if a valid Islamic will directs the estate that way. Without one, Ontario&apos;s default rules follow a completely different logic.
             </p>
           </div>
 
@@ -90,7 +90,7 @@ export default function Home() {
 
             <div className={`${styles.compareCard} ${styles.compareCardIslamic}`}>
               <div className={styles.compareLabel}>With an Islamic will</div>
-              <h3 className={styles.compareTitle}>Faraid</h3>
+              <h3 className={styles.compareTitle}>Islamic inheritance</h3>
               <ul className={styles.compareList}>
                 <li><span>Wife</span><strong>$75,000</strong></li>
                 <li><span>Son <em>× 2</em></span><strong>$130,000 <small>each</small></strong></li>
@@ -105,7 +105,7 @@ export default function Home() {
           <div className={styles.compareGap}>
             <div className={styles.compareGapLabel}>Biggest gap for this family</div>
             <p>
-              <strong>His parents: $200,000 under Faraid, $0 under Ontario&apos;s default rules.</strong> A third of the estate goes to a completely different place, for the exact same family.
+              <strong>His parents: $200,000 under Islamic inheritance, $0 under Ontario&apos;s default rules.</strong> A third of the estate goes to a completely different place, for the exact same family.
             </p>
           </div>
 
@@ -143,7 +143,7 @@ export default function Home() {
                        <div className={styles.problemIconWrapper}>
                           <PiUsersThreeLight size={28} />
                        </div>
-                       <h3>Faraid shares</h3>
+                       <h3>Islamic inheritance shares</h3>
                     </div>
                     <p>Your estate divided according to the Qur&apos;anic shares for your family.</p>
                  </div>
@@ -214,7 +214,7 @@ export default function Home() {
                 <h3 className={styles.bridgeCardTitle}>The Will: your decisions</h3>
               </div>
               <ul className={styles.checkListPremium}>
-                <li><span>Faraid shares calculated for your family</span></li>
+                <li><span>Islamic inheritance shares calculated for your family</span></li>
                 <li><span>Executor and guardians for minor children</span></li>
                 <li><span>Charitable bequest of up to one third</span></li>
                 <li><span>Prepared for Ontario signing and witnessing</span></li>
@@ -338,7 +338,7 @@ export default function Home() {
                </div>
                <ul className={styles.checkListPremiumDark}>
                  <li><span>Will structure built with qualified Islamic scholars</span></li>
-                 <li><span>Designed to reflect Islamic inheritance principles (Faraid)</span></li>
+                 <li><span>Designed to reflect Islamic inheritance principles</span></li>
                  <li><span>Charitable bequests within the one-third limit</span></li>
                  <li><span>Debts settled before distribution</span></li>
                </ul>
@@ -372,7 +372,7 @@ export default function Home() {
           <div className={styles.ctaBox}>
             <h2>See the difference you can make for your family.</h2>
             <p className={styles.ctaText}>
-              Write your Islamic will once, and your Vault keeps it current for life. Start by seeing how Ontario&apos;s rules and Faraid would divide your estate.
+              Write your Islamic will once, and your Vault keeps it current for life. Start by seeing how Ontario&apos;s rules and Islamic inheritance would divide your estate.
             </p>
             <div className={styles.ctaActions}>
               <TrackedButton href={calculatorUrl} variant="secondary" size="lg" className={styles.heroPrimaryBtn} eventName="calculator_click" eventParams={{ location: 'home_final_cta' }}>Check the difference</TrackedButton>

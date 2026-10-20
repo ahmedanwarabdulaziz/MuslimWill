@@ -53,9 +53,9 @@ const HELP_CATEGORIES = [
   },
   {
     icon: '⚖️',
-    title: 'Islamic Inheritance & Faraid',
-    desc: 'Understanding how Islamic inheritance law works, what Faraid means for your family, and how your shares are calculated.',
-    href: '/help/faraid',
+    title: 'Islamic Inheritance',
+    desc: 'Understanding how Islamic inheritance law works, what it means for your family, and how your shares are calculated.',
+    href: '/help/islamic-inheritance',
     count: 8,
   },
   {
@@ -95,8 +95,8 @@ const FAQ_PREVIEW = [
     a: 'An Islamic will can be legally valid in Canada when it is properly prepared, signed, and witnessed in accordance with provincial requirements. The Muslim Will structures every document to meet Ontario\'s legal requirements.',
   },
   {
-    q: 'What is Faraid?',
-    a: 'Faraid is the Islamic law of inheritance — a precise system that defines the share of the estate allocated to each category of heir based on the deceased\'s family structure. The Muslim Will builds Faraid calculations into every will it prepares.',
+    q: 'What is Islamic inheritance law?',
+    a: 'Islamic inheritance law is the precise, Qur\'anic system that defines the share of the estate allocated to each category of heir based on the deceased\'s family structure. The Muslim Will builds Islamic inheritance calculations into every will it prepares.',
   },
   {
     q: 'Is The Bridge really complete — or will I need add-ons?',

@@ -65,7 +65,7 @@ export default function BhopePartnerPage() {
 
       {/* ── TRUST ANCHORS ── */}
       <TrustBar items={[
-        'Complete Islamic will — reviewed for Faraid compliance',
+        'Complete Islamic will — reviewed for Islamic inheritance compliance',
         'Family provided for first, always',
         'Optional bequest to BHOPE within the Islamic 1/3',
         'BHOPE is a registered Canadian charity — official tax receipts',
@@ -87,7 +87,7 @@ export default function BhopePartnerPage() {
               <h3 className={styles.sponsoredTitle}>The Bridge</h3>
               <div className={styles.sponsoredPrice}><span className={styles.strikethrough}>$7.99/month</span> <strong>Free or discounted — see BHope for your code</strong></div>
               <ul className={styles.sponsoredIncludes}>
-                <li>Complete Islamic Will & Testament (Faraid-based, Ontario-compliant)</li>
+                <li>Complete Islamic Will & Testament (Islamic and Ontario-compliant)</li>
                 <li>Muslim Will Vault — all 4 branches (Obligations, Estate Inventory, Sealed Disclosures, Final Words)</li>
                 <li>Unlimited updates</li>
                 <li>Executor release process</li>
@@ -232,7 +232,7 @@ export default function BhopePartnerPage() {
               <div className={styles.stepNum}>1</div>
               <h3 className={styles.stepTitle}>Plan your Islamic will</h3>
               <p className={styles.stepDesc}>
-                A guided application walks you through your estate. Fixed shares for your heirs are calculated according to Faraid &mdash; your family is always provided for first.
+                A guided application walks you through your estate. Fixed shares for your heirs are calculated according to Islamic inheritance law &mdash; your family is always provided for first.
               </p>
             </div>
             <div className={styles.stepCard}>

@@ -50,7 +50,7 @@ export default function OurStoryPage() {
               </p>
 
               <p className={styles.sectionPara}>
-                The reason is rarely indifference. It is the absence of a clear pathway. Islamic will preparation sits at the intersection of two complex systems — Faraid inheritance law and Canadian provincial requirements. Most families do not know where to start. Most legal professionals do not have the Islamic expertise to guide them. Most Islamic scholars are not equipped to handle the legal side. The two worlds rarely meet.
+                The reason is rarely indifference. It is the absence of a clear pathway. Islamic will preparation sits at the intersection of two complex systems — Islamic inheritance law and Canadian provincial requirements. Most families do not know where to start. Most legal professionals do not have the Islamic expertise to guide them. Most Islamic scholars are not equipped to handle the legal side. The two worlds rarely meet.
               </p>
 
               <div className={styles.consequenceGrid}>
@@ -58,7 +58,7 @@ export default function OurStoryPage() {
                   <div className={styles.consequenceIcon}>📜</div>
                   <div>
                     <div className={styles.consequenceTitle}>Estates distributed incorrectly</div>
-                    <div className={styles.consequenceDesc}>Without Faraid, provincial intestacy rules apply — not the deceased&apos;s wishes</div>
+                    <div className={styles.consequenceDesc}>Without an Islamic will, provincial intestacy rules apply — not the deceased&apos;s wishes</div>
                   </div>
                 </div>
                 <div className={styles.consequenceItem}>
@@ -115,14 +115,14 @@ export default function OurStoryPage() {
               </p>
 
               <p className={styles.sectionPara}>
-                Every will prepared through The Muslim Will is built on Faraid calculations, structured to meet Ontario legal requirements, reviewed by qualified Islamic scholars, and supported by a private Vault that gives families the tools to protect and communicate their legacy beyond the document itself.
+                Every will prepared through The Muslim Will is built on Islamic inheritance calculations, structured to meet Ontario legal requirements, reviewed by qualified Islamic scholars, and supported by a private Vault that gives families the tools to protect and communicate their legacy beyond the document itself.
               </p>
 
               <div className={styles.platformPillars}>
                 <div className={styles.platformPillar}>
                   <div className={styles.platformPillarDot} />
                   <div>
-                    <div className={styles.platformPillarTitle}>Faraid-grounded</div>
+                    <div className={styles.platformPillarTitle}>Islamically grounded</div>
                     <div className={styles.platformPillarDesc}>Every calculation reflects Islamic inheritance law — not approximation</div>
                   </div>
                 </div>

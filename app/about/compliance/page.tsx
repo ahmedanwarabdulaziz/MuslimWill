@@ -90,7 +90,7 @@ export default function CompliancePage() {
                   <div className={styles.whatStep}>
                     <div className={styles.whatStepNum}>2</div>
                     <div>
-                      <div className={styles.whatStepTitle}>Faraid Calculation</div>
+                      <div className={styles.whatStepTitle}>Islamic Inheritance Calculation</div>
                       <div className={styles.whatStepDesc}>Islamic inheritance shares calculated from the provided family structure</div>
                     </div>
                   </div>
@@ -144,7 +144,7 @@ export default function CompliancePage() {
                 </div>
                 <h3 className={styles.layerCardTitle}>The Platform</h3>
                 <p className={styles.layerCardDesc}>
-                  The Muslim Will manages the intake workflow, Faraid calculations, document generation, secure Vault storage, and the coordination between the client and the professional review layers.
+                  The Muslim Will manages the intake workflow, Islamic inheritance calculations, document generation, secure Vault storage, and the coordination between the client and the professional review layers.
                 </p>
                 <div className={styles.layerCardBoundary}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -163,7 +163,7 @@ export default function CompliancePage() {
                 </div>
                 <h3 className={styles.layerCardTitle}>Islamic Inheritance Review</h3>
                 <p className={styles.layerCardDesc}>
-                  Qualified Islamic scholars within our network review inheritance calculations for Islamic correctness — verifying Faraid shares and identifying complex situations requiring additional guidance.
+                  Qualified Islamic scholars within our network review inheritance calculations for Islamic correctness — verifying Islamic inheritance shares and identifying complex situations requiring additional guidance.
                 </p>
                 <div className={styles.layerCardBoundary}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>

@@ -28,7 +28,7 @@ export default function FinancialAdvisorsPage() {
               Your Muslim clients trust you with their financial future. Islamic estate planning is part of that picture.
             </h1>
             <p className={styles.heroSub}>
-              For Muslim clients, a complete wealth strategy includes an Islamic will — one that reflects Faraid inheritance principles and holds up under Canadian law. If that piece is missing, the plan is incomplete. The Muslim Will gives you a structured, professional referral pathway to fill that gap — without stepping outside your scope.
+              For Muslim clients, a complete wealth strategy includes an Islamic will — one that reflects Islamic inheritance principles and holds up under Canadian law. If that piece is missing, the plan is incomplete. The Muslim Will gives you a structured, professional referral pathway to fill that gap — without stepping outside your scope.
             </p>
             <div className={styles.heroActions}>
               <TrackedButton
@@ -56,7 +56,7 @@ export default function FinancialAdvisorsPage() {
       <div className={styles.statStrip}>
         <div className={styles.statStripInner}>
           <div className={styles.stat}>
-            <div className={styles.statValue}>Faraid</div>
+            <div className={styles.statValue}>Islamic</div>
             <div className={styles.statLabel}>Islamic inheritance shares — built into every will</div>
           </div>
           <div className={styles.statDivider} />
@@ -84,7 +84,7 @@ export default function FinancialAdvisorsPage() {
             <div className={styles.gapText}>
               <h2 className={styles.sectionH2}>A will that ignores Islamic inheritance is not a complete will</h2>
               <p className={styles.sectionPara}>
-                Many Muslim clients have wills. Far fewer have wills that correctly reflect Islamic inheritance principles — the Faraid shares that define how their estate should be distributed according to their faith. When those principles are missing, families face confusion, disputes, and outcomes their loved one never intended.
+                Many Muslim clients have wills. Far fewer have wills that correctly reflect Islamic inheritance principles — the Islamic inheritance shares that define how their estate should be distributed according to their faith. When those principles are missing, families face confusion, disputes, and outcomes their loved one never intended.
               </p>
               <p className={styles.sectionPara}>
                 As a financial advisor, you cannot prepare that document. But you can be the person who made sure your client got it done — through a structured referral to a platform built specifically for this purpose.
@@ -97,7 +97,7 @@ export default function FinancialAdvisorsPage() {
                 <ul className={styles.gapList}>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-                    Estate distributed under provincial intestacy — not Faraid
+                    Estate distributed under provincial intestacy — not Islamic inheritance
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -119,7 +119,7 @@ export default function FinancialAdvisorsPage() {
                 <ul className={styles.gapList}>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    Faraid shares calculated and documented correctly
+                    Islamic inheritance shares calculated and documented correctly
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -176,7 +176,7 @@ export default function FinancialAdvisorsPage() {
               </div>
               <h3 className={styles.referralStepTitle}>We handle everything</h3>
               <p className={styles.referralStepDesc}>
-                The client is guided through a complete Islamic will and private Vault — Faraid calculations, Ontario legal compliance, guardianship, charitable bequests, and executor appointment. You do not need to understand Islamic inheritance law to make this referral.
+                The client is guided through a complete Islamic will and private Vault — Islamic inheritance calculations, Ontario legal compliance, guardianship, charitable bequests, and executor appointment. You do not need to understand Islamic inheritance law to make this referral.
               </p>
             </div>
 

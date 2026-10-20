@@ -31,7 +31,7 @@ const STEPS = [
     tag: 'Check',
     time: 'About 3 minutes · free',
     title: 'See the difference for your family',
-    desc: "Answer a few questions about who is in your family — no names, no assets. The calculator shows how Ontario's default rules would divide your estate, and how Faraid would. Most families are surprised by the gap.",
+    desc: "Answer a few questions about who is in your family — no names, no assets. The calculator shows how Ontario's default rules would divide your estate, and how Islamic inheritance would. Most families are surprised by the gap.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <rect x="4" y="2" width="16" height="20" rx="2"/>
@@ -46,7 +46,7 @@ const STEPS = [
     tag: 'Build',
     time: '30–60 min',
     title: 'Build your will in a guided process',
-    desc: "Your family, your executor, guardians for minor children, any charitable bequest. The platform asks the right questions in the right order, calculates your Faraid shares, and lets you save and return at any point.",
+    desc: "Your family, your executor, guardians for minor children, any charitable bequest. The platform asks the right questions in the right order, calculates your Islamic inheritance shares, and lets you save and return at any point.",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
@@ -136,7 +136,7 @@ const PLANS = [
   {
     price: 'from $49',
     title: 'Optional reviews',
-    desc: 'For complex situations: a scholar reviews your Faraid case, or a legal review for multiple properties, business assets or cross-border matters.',
+    desc: 'For complex situations: a scholar reviews your Islamic inheritance case, or a legal review for multiple properties, business assets or cross-border matters.',
     icon: '📋',
     href: '/about/our-scholars',
     linkLabel: 'Meet our scholars →',
@@ -157,7 +157,7 @@ export default function HowItWorksPage() {
               An Islamic will that works under Canadian law, and stays up to date.
             </h1>
             <p className={styles.heroSub}>
-              Ontario has its own default rules for dividing your estate, and they are not Faraid. A properly prepared Islamic will lets both work together. Your Vault keeps it current as your life changes.
+              Ontario has its own default rules for dividing your estate, and they do not follow Islamic inheritance law. A properly prepared Islamic will lets both work together. Your Vault keeps it current as your life changes.
             </p>
             <div className={styles.ctaActions} style={{ justifyContent: 'flex-start', marginBottom: '2.5rem' }}>
               <TrackedButton

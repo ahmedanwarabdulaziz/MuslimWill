@@ -6,8 +6,8 @@ import styles from './page.module.css';
 import { PiCheckCircleLight } from 'react-icons/pi';
 
 const siteUrl = 'https://themuslimwill.com';
-const pageTitle = 'Islamic Will Ontario | Faraid-Based, Ontario Legal | The Muslim Will';
-const pageDescription = 'Prepare an Islamic will in Ontario that reflects Faraid inheritance principles and meets Canadian legal requirements — through a guided application built for Muslim families.';
+const pageTitle = 'Islamic Will Ontario | Islamic Inheritance, Ontario Legal | The Muslim Will';
+const pageDescription = 'Prepare an Islamic will in Ontario that reflects Islamic inheritance principles and meets Canadian legal requirements — through a guided application built for Muslim families.';
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -27,14 +27,14 @@ export default function LastWillPage() {
               Your will is an obligation before Allah — and a protection your family can rely on under Canadian law.
             </h1>
             <p className={styles.heroSub}>
-              For many Muslim families, preparing a will is not rejected. It is delayed. The Muslim Will gives you a guided, Faraid-based will — structured to meet Ontario legal requirements and built around your family, your heirs, and your intentions.
+              For many Muslim families, preparing a will is not rejected. It is delayed. The Muslim Will gives you a guided Islamic will — structured to meet Ontario legal requirements and built around your family, your heirs, and your intentions.
             </p>
           </div>
         </div>
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <TrustBar items={['Built on Faraid Principles', 'Ontario Legal Compliance', 'Scholar Reviewed', 'Unlimited Updates']} />
+      <TrustBar items={['Built on Islamic Principles', 'Ontario Legal Compliance', 'Scholar Reviewed', 'Unlimited Updates']} />
 
       {/* ── SECTION 1: What Your Will Covers ── */}
       <section className={styles.section}>
@@ -49,7 +49,7 @@ export default function LastWillPage() {
           <div className={styles.grid4}>
             <div className={styles.featureCardPremium}>
               <div className={styles.featureIconWrapper}>⚖️</div>
-              <h3 className={styles.featureTitle}>Islamic Inheritance (Faraid)</h3>
+              <h3 className={styles.featureTitle}>Islamic Inheritance</h3>
               <p className={styles.featureDesc}>
                 Your estate is distributed according to the shares defined under Islamic inheritance law — calculated based on your heirs, your family structure, and the assets you leave behind. The platform guides you through this step by step.
               </p>
@@ -97,7 +97,7 @@ export default function LastWillPage() {
                 <h3 className={styles.complianceTitle}>Islamic Structure</h3>
               </div>
               <p className={styles.complianceDesc}>
-                Your will is built around the Faraid inheritance framework — the shares defined under Islamic law for each category of heir. The platform calculates this based on your specific family and estate, and your document reflects those shares clearly.
+                Your will is built around the Islamic inheritance framework — the shares defined under Islamic law for each category of heir. The platform calculates this based on your specific family and estate, and your document reflects those shares clearly.
               </p>
             </div>
             <div className={styles.complianceBlock}>
@@ -185,7 +185,7 @@ export default function LastWillPage() {
                 <div className={styles.pricingPricePremiumSide}>$49</div>
               </div>
               <p className={styles.pricingTaglinePremiumSide}>
-                A qualified Islamic scholar personally reviews your inheritance calculation — for large estates, unusual asset structures, or complex family situations that go beyond the standard Faraid framework.
+                A qualified Islamic scholar personally reviews your inheritance calculation — for large estates, unusual asset structures, or complex family situations that go beyond the standard Islamic inheritance framework.
               </p>
               <Link href="/about/our-scholars" className={styles.stepLink} style={{ marginTop: 'auto', paddingTop: '1.5rem', fontSize: '1rem' }}>Meet Our Scholars →</Link>
             </div>
@@ -226,7 +226,7 @@ export default function LastWillPage() {
             </div>
             <div className={styles.stepCard}>
               <div className={styles.stepNumber}>2</div>
-              <h3 className={styles.stepTitle}>Faraid is calculated</h3>
+              <h3 className={styles.stepTitle}>Islamic shares are calculated</h3>
               <p className={styles.stepDesc}>the platform structures your inheritance shares based on Islamic law</p>
             </div>
             <div className={styles.stepCard}>

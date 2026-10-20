@@ -123,7 +123,7 @@ export default async function RsvpPage() {
             <div className={styles.label}>Why this matters</div>
             <h2 className={styles.h2}>Most families don&apos;t know this.</h2>
             <p className={styles.intro}>
-              Faraid applies only if a valid Islamic will directs the estate that way. Without one, Ontario&apos;s default rules follow a completely different logic. Take a $600,000 estate left to a wife, two sons, one daughter and both parents:
+              Islamic inheritance applies only if a valid Islamic will directs the estate that way. Without one, Ontario&apos;s default rules follow a completely different logic. Take a $600,000 estate left to a wife, two sons, one daughter and both parents:
             </p>
           </div>
 
@@ -141,7 +141,7 @@ export default async function RsvpPage() {
             </div>
             <div className={`${styles.compareCard} ${styles.compareIslamic}`}>
               <div className={styles.compareLabel}>With an Islamic will</div>
-              <h3>Faraid</h3>
+              <h3>Islamic inheritance</h3>
               <ul>
                 <li><span>Wife</span><strong>$75,000</strong></li>
                 <li><span>Son <em>× 2</em></span><strong>$130,000 <small>each</small></strong></li>
@@ -155,7 +155,7 @@ export default async function RsvpPage() {
           <div className={styles.gapCallout}>
             <div className={styles.gapLabel}>Biggest gap for this family</div>
             <p>
-              <strong>The parents: $200,000 under Faraid, $0 under Ontario&apos;s default rules.</strong> A third of the estate goes to a completely different place, for the exact same family.
+              <strong>The parents: $200,000 under Islamic inheritance, $0 under Ontario&apos;s default rules.</strong> A third of the estate goes to a completely different place, for the exact same family.
             </p>
           </div>
 

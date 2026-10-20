@@ -66,7 +66,7 @@ export default function PlannedGivingPage() {
               </div>
               <h3 className={styles.bequestTitle}>The 1/3 Bequest Framework</h3>
               <p className={styles.bequestDesc}>
-                Islamic inheritance law permits up to one third of an estate to be directed outside the Faraid shares — to charitable causes the donor chooses. Muslim Will builds this into every will, so donors understand their options and can act on them clearly.
+                Islamic inheritance law permits up to one third of an estate to be directed outside the Islamic inheritance shares — to charitable causes the donor chooses. Muslim Will builds this into every will, so donors understand their options and can act on them clearly.
               </p>
             </div>
 
@@ -80,7 +80,7 @@ export default function PlannedGivingPage() {
               </div>
               <h3 className={styles.bequestTitle}>Family First, Always</h3>
               <p className={styles.bequestDesc}>
-                One of the most common hesitations around charitable bequests is the concern that giving to charity means taking from family. The Muslim Will addresses this directly — family shares under Faraid are protected first. The charitable bequest comes from the permitted portion. Donors never have to choose between generosity and responsibility.
+                One of the most common hesitations around charitable bequests is the concern that giving to charity means taking from family. The Muslim Will addresses this directly — family shares under Islamic inheritance are protected first. The charitable bequest comes from the permitted portion. Donors never have to choose between generosity and responsibility.
               </p>
             </div>
 

@@ -28,7 +28,7 @@ export default function MyBridgeOverview() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <TrustBar items={['Islamic will included in The Bridge — from $7.99/month', 'Faraid-based, Ontario-compliant', 'Powers of Attorney available for specific situations']} />
+      <TrustBar items={['Islamic will included in The Bridge — from $7.99/month', 'Islamic and Ontario-compliant', 'Powers of Attorney available for specific situations']} />
 
       {/* 2. The documents */}
       <section className={`${styles.section} ${styles.grayBg}`}>
@@ -45,7 +45,7 @@ export default function MyBridgeOverview() {
               </div>
               <h3 className={styles.docTitle}>Last Will & Testament</h3>
               <p className={styles.docDesc}>
-                Your Islamic will — built on Faraid inheritance principles, compliant with Canadian law. Covers who inherits, in what shares, who raises your children, and who manages your estate.
+                Your Islamic will — built on Islamic inheritance principles, compliant with Canadian law. Covers who inherits, in what shares, who raises your children, and who manages your estate.
               </p>
               <Link href="/last-will" className={`${styles.docLink} ${styles.linkIncluded}`}>
                 View Last Will &rarr;

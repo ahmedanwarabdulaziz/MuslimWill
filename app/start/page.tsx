@@ -144,7 +144,7 @@ export default function StartPage() {
                 </div>
                 <div className={styles.planIncludes}>
                   {[
-                    'Last Will & Testament — Faraid-based, Ontario-compliant',
+                    'Last Will & Testament — Islamic and Ontario-compliant',
                     'Private Vault — Obligations, Inventory, Disclosures, Final Words',
                     'Unlimited updates at no extra cost',
                     'Secure executor release process',

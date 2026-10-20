@@ -113,7 +113,7 @@ export default function ForScholarsPage() {
             <div className={styles.roleText}>
               <h2 className={styles.sectionH2}>A defined, professional engagement — not an informal consultation</h2>
               <p className={styles.sectionPara}>
-                Every scholar in our network operates within a clearly defined scope. Your role is to review the Islamic inheritance structure of applications referred to you — ensuring Faraid shares are correctly calculated, identifying any complex situations that require additional guidance, and providing a documented scholarly review that families can trust.
+                Every scholar in our network operates within a clearly defined scope. Your role is to review the Islamic inheritance structure of applications referred to you — ensuring Islamic inheritance shares are correctly calculated, identifying any complex situations that require additional guidance, and providing a documented scholarly review that families can trust.
               </p>
               <p className={styles.sectionPara}>
                 You are not asked to provide legal advice, prepare legal documents, or take on liability outside your expertise. Your role is the Islamic inheritance review — and that is where your knowledge has the greatest impact.
@@ -131,7 +131,7 @@ export default function ForScholarsPage() {
                 </div>
                 <h3 className={styles.engagementCardTitle}>Application Review</h3>
                 <p className={styles.engagementCardDesc}>
-                  You review inheritance calculations for applications referred to you — verifying Faraid shares, flagging complex family structures, and providing a documented review that becomes part of the client&apos;s file.
+                  You review inheritance calculations for applications referred to you — verifying Islamic inheritance shares, flagging complex family structures, and providing a documented review that becomes part of the client&apos;s file.
                 </p>
               </div>
 

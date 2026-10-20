@@ -101,9 +101,9 @@ export default function OurScholarsPage() {
           <div className={styles.whyLayout}>
             <div className={styles.whyText}>
               <div className={styles.sectionLabel}>Why It Matters</div>
-              <h2 className={styles.sectionH2}>A Faraid calculation is only as reliable as the person who reviewed it</h2>
+              <h2 className={styles.sectionH2}>An Islamic inheritance calculation is only as reliable as the person who reviewed it</h2>
               <p className={styles.sectionPara}>
-                Islamic inheritance law — Faraid — is precise, structured, and unforgiving of errors. The shares allocated to each heir depend on the exact family structure of the deceased, the nature of the assets, and the specific relationships involved. A calculation that looks correct can still be wrong if the underlying assumptions are misunderstood.
+                Islamic inheritance law is precise, structured, and unforgiving of errors. The shares allocated to each heir depend on the exact family structure of the deceased, the nature of the assets, and the specific relationships involved. A calculation that looks correct can still be wrong if the underlying assumptions are misunderstood.
               </p>
               <p className={styles.sectionPara}>
                 This is why every application prepared through The Muslim Will is available for scholar review. A qualified Islamic scholar with expertise in inheritance law reviews the calculation, verifies the shares, and flags any situation that requires additional guidance. The result is a will that can be trusted — Islamically and legally.
@@ -118,7 +118,7 @@ export default function OurScholarsPage() {
                 <ul className={styles.whyCalloutList}>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    Incorrect Faraid share allocations
+                    Incorrect Islamic inheritance share allocations
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -222,7 +222,7 @@ export default function OurScholarsPage() {
                 <ul className={styles.scopeList}>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    Faraid share calculations — verified against the client&apos;s family structure
+                    Islamic share calculations — verified against the client&apos;s family structure
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>

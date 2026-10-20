@@ -28,7 +28,7 @@ export default function LawyersPage() {
               Your Muslim clients need Islamic will preparation. You need a partner you can trust with that referral.
             </h1>
             <p className={styles.heroSub}>
-              Islamic will preparation sits at the intersection of Faraid inheritance law and Canadian provincial requirements. It is a specialised service — and referring your Muslim clients to the right provider is a mark of professional thoroughness, not a gap. The Muslim Will gives you a structured, professionally managed referral pathway you can stand behind.
+              Islamic will preparation sits at the intersection of Islamic inheritance law and Canadian provincial requirements. It is a specialised service — and referring your Muslim clients to the right provider is a mark of professional thoroughness, not a gap. The Muslim Will gives you a structured, professionally managed referral pathway you can stand behind.
             </p>
             <div className={styles.heroActions}>
               <TrackedButton
@@ -96,7 +96,7 @@ export default function LawyersPage() {
             <div className={styles.referralCaseText}>
               <h2 className={styles.sectionH2}>A gap in your scope does not have to be a gap in your client&apos;s plan</h2>
               <p className={styles.sectionPara}>
-                Many estate and family lawyers receive requests from Muslim clients for Islamic will preparation — documents that reflect Faraid inheritance principles alongside provincial legal requirements. This is not general will drafting. It requires specific Islamic inheritance expertise that most general practice lawyers do not have and should not claim.
+                Many estate and family lawyers receive requests from Muslim clients for Islamic will preparation — documents that reflect Islamic inheritance principles alongside provincial legal requirements. This is not general will drafting. It requires specific Islamic inheritance expertise that most general practice lawyers do not have and should not claim.
               </p>
               <p className={styles.sectionPara}>
                 Referring to The Muslim Will is not losing a client. It is completing their plan — and doing so with a partner whose scope is clearly defined, whose process is professionally managed, and whose documents are structured to work alongside your broader legal work.

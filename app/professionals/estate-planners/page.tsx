@@ -72,7 +72,7 @@ export default function EstatePlannersPage() {
           <div className={styles.scopeCol} data-ours>
             <div className={styles.scopeColLabel}>Our scope</div>
             <div className={styles.scopeItems}>
-              <div className={styles.scopeItem}>Faraid calculation and documentation</div>
+              <div className={styles.scopeItem}>Islamic inheritance calculation and documentation</div>
               <div className={styles.scopeItem}>Islamic will preparation</div>
               <div className={styles.scopeItem}>Scholar review and attestation</div>
               <div className={styles.scopeItem}>Private Vault and executor release</div>
@@ -90,21 +90,21 @@ export default function EstatePlannersPage() {
         <div className={styles.container}>
           <div className={styles.faiqLayout}>
             <div className={styles.faraidExplainer}>
-              <div className={styles.faraidPill}>Faraid — Islamic Inheritance Law</div>
-              <h2 className={styles.sectionH2}>Faraid is not a complication. It is a structure you can build around.</h2>
+              <div className={styles.faraidPill}>Islamic Inheritance Law</div>
+              <h2 className={styles.sectionH2}>Islamic inheritance is not a complication. It is a structure you can build around.</h2>
               <p className={styles.sectionPara}>
-                Islamic inheritance law — Faraid — defines specific shares for each category of heir based on the deceased&apos;s family structure. It is a precise, structured system. When it is handled correctly alongside the legal estate plan, the two frameworks coexist cleanly. When it is ignored or mishandled, it creates conflict.
+                Islamic inheritance law defines specific shares for each category of heir based on the deceased&apos;s family structure. It is a precise, structured system. When it is handled correctly alongside the legal estate plan, the two frameworks coexist cleanly. When it is ignored or mishandled, it creates conflict.
               </p>
               <p className={styles.sectionPara}>
-                The Muslim Will calculates Faraid accurately, integrates it into a legally structured Ontario will, and provides a documented basis for your work as the estate planner or trustee. You always know what the Islamic inheritance structure looks like — and you can build your broader strategy around it.
+                The Muslim Will calculates Islamic inheritance shares accurately, integrates it into a legally structured Ontario will, and provides a documented basis for your work as the estate planner or trustee. You always know what the Islamic inheritance structure looks like — and you can build your broader strategy around it.
               </p>
             </div>
 
             <div className={styles.faraidStructure}>
-              <div className={styles.faraidStructureLabel}>How Faraid and the legal plan coexist</div>
+              <div className={styles.faraidStructureLabel}>How Islamic inheritance and the legal plan coexist</div>
               <div className={styles.faraidRow}>
                 <div className={styles.faraidBlock} data-type="faraid">
-                  <div className={styles.faraidBlockTitle}>Faraid shares</div>
+                  <div className={styles.faraidBlockTitle}>Islamic inheritance shares</div>
                   <div className={styles.faraidBlockDesc}>Calculated by The Muslim Will — Islamically correct, legally documented</div>
                 </div>
                 <div className={styles.faraidPlus}>+</div>
@@ -142,7 +142,7 @@ export default function EstatePlannersPage() {
                 </div>
                 <div className={styles.integrationMetaItem}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                  Full Faraid documentation provided to your team
+                  Full Islamic inheritance documentation provided to your team
                 </div>
                 <div className={styles.integrationMetaItem}>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>

@@ -17,15 +17,15 @@ const FAQ_GROUPS = [
       },
       {
         q: 'How does an Islamic will work in Canada?',
-        a: 'An Islamic will in Canada must work within provincial legal rules while reflecting the inheritance intentions of the person creating it. That means the legal structure and the Islamic inheritance structure — Faraid — must be addressed together, not separately. The Muslim Will is designed to do exactly that.',
+        a: 'An Islamic will in Canada must work within provincial legal rules while reflecting the inheritance intentions of the person creating it. That means the legal structure and the Islamic inheritance structure must be addressed together, not separately. The Muslim Will is designed to do exactly that.',
       },
       {
-        q: 'What is Faraid?',
-        a: 'Faraid is the Islamic law of inheritance — a precise system that defines the share of the estate allocated to each category of heir based on the deceased\'s family structure. It is not optional for Muslims: distributing an estate without reference to Faraid is considered an Islamic obligation unfulfilled. The Muslim Will builds Faraid calculations into every will it prepares.',
+        q: 'What is Islamic inheritance law?',
+        a: 'Islamic inheritance law is the precise, Qur\'anic system that defines the share of the estate allocated to each category of heir based on the deceased\'s family structure. It is not optional for Muslims: distributing an estate without reference to Islamic inheritance law is considered an Islamic obligation unfulfilled. The Muslim Will builds Islamic inheritance calculations into every will it prepares.',
       },
       {
         q: 'Can I include charity in my Islamic will?',
-        a: 'Yes. Islamic inheritance law permits up to one third of your estate to be directed to charitable causes outside the Faraid shares. Your family\'s inheritance shares are calculated from the remaining portion. The Muslim Will guides you through this clearly and builds the charitable bequest into your will document.',
+        a: 'Yes. Islamic inheritance law permits up to one third of your estate to be directed to charitable causes outside the Islamic inheritance shares. Your family\'s inheritance shares are calculated from the remaining portion. The Muslim Will guides you through this clearly and builds the charitable bequest into your will document.',
       },
       {
         q: 'What happens if a Muslim dies without a will in Canada?',
@@ -56,7 +56,7 @@ const FAQ_GROUPS = [
       },
       {
         q: 'What is Will + Vault?',
-        a: 'Will + Vault is The Muslim Will\'s core subscription product — your Islamic will, always up to date, together with a private secure Vault, from $7.99/month. The will covers Faraid inheritance, guardianship, charitable bequests, and executor appointment. The Vault stores your private records, obligations, estate inventory, sealed disclosures, and personal messages — released to the right people at the right moment.',
+        a: 'Will + Vault is The Muslim Will\'s core subscription product — your Islamic will, always up to date, together with a private secure Vault, from $7.99/month. The will covers Islamic inheritance, guardianship, charitable bequests, and executor appointment. The Vault stores your private records, obligations, estate inventory, sealed disclosures, and personal messages — released to the right people at the right moment.',
       },
     ],
   },

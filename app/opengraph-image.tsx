@@ -70,7 +70,7 @@ export default async function OpenGraphImage() {
             </div>
             <div style={{ display: 'flex', height: 2, width: 120, marginTop: 22, backgroundColor: GOLD }} />
             <div style={{ marginTop: 18, fontSize: 21, lineHeight: 1.4, color: '#4A5466' }}>
-              Ontario&apos;s default rules don&apos;t follow Faraid. Your will can make both work together.
+              Ontario&apos;s default rules don&apos;t follow Islamic inheritance law. Your will can make both work together.
             </div>
           </div>
           <div

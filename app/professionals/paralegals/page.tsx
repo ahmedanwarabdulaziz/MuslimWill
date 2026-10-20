@@ -6,7 +6,7 @@ import styles from './page.module.css';
 
 const siteUrl = 'https://themuslimwill.com';
 const pageTitle = 'For Paralegals | Islamic Will Platform | The Muslim Will';
-const pageDescription = 'Support your supervising lawyer\'s Muslim estate clients with a structured platform for Islamic will preparation — guided intake, Faraid calculations, and Ontario-compliant documents.';
+const pageDescription = 'Support your supervising lawyer\'s Muslim estate clients with a structured platform for Islamic will preparation — guided intake, Islamic inheritance calculations, and Ontario-compliant documents.';
 
 export const metadata: Metadata = {
   title: pageTitle,
@@ -28,7 +28,7 @@ export default function ParalegalsPage() {
               A platform built for clean, compliant Islamic will document preparation — so your work is easier and your clients are better served.
             </h1>
             <p className={styles.heroSub}>
-              When your supervising lawyer has Muslim estate clients who need Islamic will preparation, The Muslim Will gives you a structured platform to support that work — guided intake, Faraid calculations, document generation, and Ontario-compliant output. Clean, documented, and built for professional use.
+              When your supervising lawyer has Muslim estate clients who need Islamic will preparation, The Muslim Will gives you a structured platform to support that work — guided intake, Islamic inheritance calculations, document generation, and Ontario-compliant output. Clean, documented, and built for professional use.
             </p>
             <div className={styles.heroActions}>
               <TrackedButton
@@ -62,7 +62,7 @@ export default function ParalegalsPage() {
           <div className={styles.workflowArrow}>→</div>
           <div className={styles.workflowStep}>
             <div className={styles.workflowStepNum}>2</div>
-            <div className={styles.workflowStepLabel}>Faraid calculation</div>
+            <div className={styles.workflowStepLabel}>Islamic inheritance calculation</div>
           </div>
           <div className={styles.workflowArrow}>→</div>
           <div className={styles.workflowStep}>
@@ -119,7 +119,7 @@ export default function ParalegalsPage() {
                   </svg>
                 </div>
                 <div className={styles.featureTag}>Calculation</div>
-                <h3 className={styles.featureTitle}>Faraid calculation</h3>
+                <h3 className={styles.featureTitle}>Islamic inheritance calculation</h3>
                 <p className={styles.featureDesc}>
                   Islamic inheritance shares are calculated automatically based on the client&apos;s family structure — with full documentation of the calculation so your supervising lawyer can review and confirm.
                 </p>
@@ -210,7 +210,7 @@ export default function ParalegalsPage() {
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                    Faraid shares calculated automatically — documented for review
+                    Islamic inheritance shares calculated automatically — documented for review
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -241,7 +241,7 @@ export default function ParalegalsPage() {
                 Our team will walk you through the platform and show you exactly how it supports your work as a paralegal on estate files.
               </p>
               <p className={styles.formMicrocopy}>
-                The demo is practical — we will walk through the intake flow, show you the Faraid calculation output, and show you what the final document looks like before it reaches your lawyer for review.
+                The demo is practical — we will walk through the intake flow, show you the Islamic inheritance calculation output, and show you what the final document looks like before it reaches your lawyer for review.
               </p>
               <div className={styles.formLinks}>
                 <div className={styles.formLinksLabel}>Related pages</div>
