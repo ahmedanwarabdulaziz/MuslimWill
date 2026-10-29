@@ -82,7 +82,7 @@ const HELP_CATEGORIES = [
   {
     icon: '💳',
     title: 'Pricing & Account',
-    desc: 'Questions about The Bridge, the Full Package, add-ons, billing, and your account settings.',
+    desc: 'Questions about The Bridge, Fully Fledged, add-ons, billing, and your account settings.',
     href: '/help/pricing-account',
     count: 5,
   },

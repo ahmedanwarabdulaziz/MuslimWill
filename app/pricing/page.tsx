@@ -7,11 +7,11 @@ import styles from './page.module.css';
 /* ── ADD-ONS TABLE DATA ── */
 const ADD_ONS = [
   { name: 'Last Will & Testament', context: 'Standalone — no subscription required', price: '$149' },
-  { name: 'Power of Attorney for Personal Care', context: 'Standalone', price: '$99' },
-  { name: 'Power of Attorney for Property', context: 'Standalone', price: '$99' },
-  { name: 'Scholar Review', context: 'Complex estates, unusual inheritance situations', price: '$49' },
-  { name: 'Admin & Legal Review', context: 'Multiple properties, business assets, cross-border', price: '$49' },
-  { name: 'Digital Attestation', context: 'Formal legal execution under Ontario law', price: '$149' },
+  { name: 'Notarized POA — Personal Care', context: 'Draft POA included in Will + Vault; this adds notarization', price: '$99' },
+  { name: 'Notarized POA — Property', context: 'Draft POA included in Will + Vault; this adds notarization', price: '$99' },
+  { name: 'Personal Scholar Review', context: 'A scholar reviews your own family\'s inheritance table', price: '$99' },
+  { name: 'Conformity Verification', context: 'Multiple properties, business assets, cross-border', price: '$148' },
+  { name: 'Notarization / Digital Attestation', context: 'Formal legal execution under Ontario law', price: '$149' },
 ];
 
 /* ── PRICING FAQ ── */
@@ -21,19 +21,19 @@ const PRICING_FAQ = [
     a: 'For the vast majority of Muslim families, Will + Vault is everything you need. The add-ons exist for specific situations — a complex estate, an unusual inheritance structure, or a family that wants individual expert review. If you are unsure whether your situation calls for an add-on, start with Will + Vault and add what you need as the process progresses.',
   },
   {
-    q: 'What is included in the $350 Full Package?',
-    a: 'The Full Package includes everything in Will + Vault plus 12 months of Vault access, Powers of Attorney for both Personal Care and Property, individual Scholar Review, Admin & Legal Review, and Digital Attestation — a combined value of $594.',
+    q: 'What is included in Fully Fledged (Notarized)?',
+    a: 'Fully Fledged (Notarized) is $275 one-time, on top of your monthly Will + Vault subscription ($7.99/month individual, or $6.99/month per person on a family plan). It includes Personal Scholar Review, Conformity Verification, Notarization / Digital Attestation, and Notarized Powers of Attorney for both Property and Personal Care — a combined value of $594.',
   },
   {
-    q: 'Can I add Powers of Attorney to Will + Vault?',
-    a: 'Yes. POA for Personal Care and POA for Property are each available as add-ons at $99 each — or both are included in the Full Package.',
+    q: 'Are Powers of Attorney included in Will + Vault?',
+    a: 'Yes. Draft Powers of Attorney for Property and Personal Care are included in Will + Vault. Notarization is available separately ($99 each) or bundled in Fully Fledged.',
   },
   {
     q: 'Is there an annual billing option?',
     a: 'Yes — annual billing is available at a discounted rate. Details available at checkout.',
   },
   {
-    q: 'Can I upgrade from Will + Vault to the Full Package later?',
+    q: 'Can I upgrade from Will + Vault to Fully Fledged later?',
     a: 'Yes. You can add individual expert services at any point in your journey — they do not need to be purchased upfront.',
   },
 ];
@@ -154,7 +154,7 @@ export default function PricingPage() {
                   {[
                     'Always up to date — update your Vault any time, no redrafting, no extra cost',
                     'Secure executor release process with full audit trail',
-                    'Powers of Attorney available as add-ons',
+                    'Draft Powers of Attorney for Property and Personal Care included. Notarization available separately ($99 each) or bundled in Fully Fledged.',
                   ].map((f) => (
                     <div key={f} className={styles.bridgeFeatureItem}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -169,7 +169,7 @@ export default function PricingPage() {
             </div>
           </div>
 
-          {/* ── FAMILY + FULL PACKAGE (two-column below) ── */}
+          {/* ── FAMILY + FULLY FLEDGED (two-column below) ── */}
           <div className={styles.secondaryCards}>
 
             {/* Family Package */}
@@ -177,10 +177,10 @@ export default function PricingPage() {
               <div className={styles.secondaryCardInner}>
                 <div className={styles.secondaryBadge} data-family>👨‍👩‍👧‍👦 Family Package</div>
                 <div className={styles.secondaryPriceRow}>
-                  <span className={styles.secondaryPrice}>$13.99</span>
+                  <span className={styles.secondaryPrice}>$6.99</span>
                   <span className={styles.secondaryPricePer}> / person / month</span>
                 </div>
-                <div className={styles.secondarySavings}>30% off the individual price</div>
+                <div className={styles.secondarySavings}>Save about 12% per person with a family plan</div>
                 <p className={styles.secondaryTagline}>
                   One subscription for every member of your family. Every account private and independent.
                 </p>
@@ -206,13 +206,13 @@ export default function PricingPage() {
               </div>
             </div>
 
-            {/* Full Package */}
+            {/* Fully Fledged (Notarized) */}
             <div className={styles.secondaryCard} data-full>
               <div className={styles.secondaryCardInner}>
-                <div className={styles.secondaryBadge} data-full>🎯 Full Package</div>
+                <div className={styles.secondaryBadge} data-full>🎯 Fully Fledged (Notarized)</div>
                 <div className={styles.secondaryPriceRow}>
-                  <span className={styles.secondaryPrice}>$350</span>
-                  <span className={styles.secondaryPricePer}> one-time</span>
+                  <span className={styles.secondaryPrice}>$275</span>
+                  <span className={styles.secondaryPricePer}> one-time + monthly</span>
                 </div>
                 <div className={styles.secondarySavings}>Combined value: $594</div>
                 <p className={styles.secondaryTagline}>
@@ -220,14 +220,12 @@ export default function PricingPage() {
                 </p>
                 <div className={styles.secondaryFeatures}>
                   {[
-                    'Everything in Will + Vault',
-                    '12 months of Vault access',
-                    'Last Will & Testament — individual expert preparation ($149)',
-                    'Power of Attorney for Personal Care ($99)',
-                    'Power of Attorney for Property ($99)',
-                    'Scholar Review — individual Islamic inheritance review ($49)',
-                    'Admin & Legal Review ($49)',
-                    'Digital Attestation — Zoom signing session with paralegal ($149)',
+                    'Everything in Will + Vault, with your ongoing monthly subscription',
+                    'Personal Scholar Review — a scholar reviews your own inheritance table ($99)',
+                    'Conformity Verification ($148)',
+                    'Notarization / Digital Attestation — Zoom signing session with paralegal ($149)',
+                    'Notarized POA — Property ($99)',
+                    'Notarized POA — Personal Care ($99)',
                   ].map((f) => (
                     <div key={f} className={styles.secondaryFeatureItem}>
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -238,9 +236,9 @@ export default function PricingPage() {
                   ))}
                 </div>
                 <Link href="https://app.themuslimwill.com/Account/Register?plan=full" className={styles.secondaryCtaFull}>
-                  Get The Full Package →
+                  Get Fully Fledged →
                 </Link>
-                <p className={styles.secondaryMicro}>One-time payment. Includes 12 months of Vault access.</p>
+                <p className={styles.secondaryMicro}>$275 one-time, plus Will + Vault at $7.99/month ($6.99/person on a family plan).</p>
               </div>
             </div>
 

@@ -137,7 +137,7 @@ export default function OurStoryPage() {
                   <div className={styles.platformPillarDot} />
                   <div>
                     <div className={styles.platformPillarTitle}>Scholar-reviewed</div>
-                    <div className={styles.platformPillarDesc}>Every application reviewed by a qualified Islamic inheritance scholar</div>
+                    <div className={styles.platformPillarDesc}>Every will built on a Scholar-Reviewed Template, with Personal Scholar Review in our Fully Fledged package</div>
                   </div>
                 </div>
                 <div className={styles.platformPillar}>

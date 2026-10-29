@@ -63,7 +63,7 @@ export default function AboutPage() {
             
             <div className={styles.policyItem}>
               <h3 className={styles.policyTitle}>Qualified Scholar Review</h3>
-              <p className={styles.policyIntro}>Your inheritance structure is reviewed by qualified Islamic scholars for inheritance considerations. This provides necessary faith-conscious oversight before documents are ever finalized.</p>
+              <p className={styles.policyIntro}>Every will is built on a Scholar-Reviewed Template, created and maintained by our lawyers-and-scholars board. Personal Scholar Review of your own inheritance table is available with our Fully Fledged package.</p>
             </div>
 
             <div className={styles.policyItem}>

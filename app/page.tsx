@@ -45,6 +45,9 @@ export default function Home() {
                Canadian law has a plan for your estate.{' '}
                <span className={styles.heroH1Accent}>It isn&apos;t the Islamic one.</span>
              </h1>
+             <p className={`${styles.heroTrustLine} ${styles.fadeUp} ${styles.delay2}`}>
+               Free to start. Plans from $7.99/month, or $6.99/person on a family plan.
+             </p>
              <p className={`${styles.heroCopy} ${styles.fadeUp} ${styles.delay2}`}>
                If you pass away without an Islamic will, Ontario&apos;s default rules decide who inherits, and they don&apos;t follow Islamic inheritance law. Your will can make both work together.
              </p>
@@ -379,7 +382,7 @@ export default function Home() {
               <TrackedButton href="/how-it-works" size="lg" variant="outlineLight" className={styles.ctaButtonOutline} eventName="how_it_works_click" eventParams={{ location: 'home_final_cta' }}>How it works</TrackedButton>
             </div>
             <div style={{ marginTop: '1.25rem', fontSize: '0.95rem', color: '#ffffff', opacity: 0.9, position: 'relative', zIndex: 1 }}>
-              Free · about 3 minutes · <Link href="/pricing" style={{ color: 'inherit', textDecoration: 'underline' }}>See plans and pricing</Link>
+              Free to start. Plans from $7.99/month, or $6.99/person on a family plan. <Link href="/pricing" style={{ color: 'inherit', textDecoration: 'underline' }}>See plans and pricing</Link>
             </div>
           </div>
         </div>

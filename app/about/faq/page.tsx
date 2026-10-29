@@ -67,15 +67,15 @@ const FAQ_GROUPS = [
     questions: [
       {
         q: 'How much does an Islamic will cost?',
-        a: 'Will + Vault — a complete Islamic will and private Vault — is available from $7.99/month. The Last Will & Testament document is also available as a standalone for $149. The Full Package, which includes the will, both Powers of Attorney, scholar review, admin review, and digital attestation, is available for $350 — a combined value of $594.',
+        a: 'Will + Vault — a complete Islamic will and private Vault — is available from $7.99/month. The Last Will & Testament document is also available as a standalone for $149. Fully Fledged (Notarized) is $275 one-time on top of your Will + Vault subscription, and adds Personal Scholar Review, Conformity Verification, Notarization / Digital Attestation, and both Notarized Powers of Attorney — a combined value of $594.',
       },
       {
-        q: 'What is the difference between Will + Vault and the Full Package?',
-        a: 'Will + Vault ($7.99/month) gives you a complete Islamic will and private Vault — everything most Muslim families need, with unlimited updates. The Full Package ($350 one-time) adds individual expert review layers — a qualified Islamic scholar reviewing your specific case, an admin and legal review, and digital attestation through a Zoom session with a paralegal. It is the right choice for complex estates or those who want individual expert attention on their case.',
+        q: 'What is the difference between Will + Vault and Fully Fledged?',
+        a: 'Will + Vault ($7.99/month) gives you a complete Islamic will built on our Scholar-Reviewed Template, draft Powers of Attorney, and a private Vault — everything most Muslim families need, with unlimited updates. Fully Fledged (Notarized) is $275 one-time on top of that subscription and adds individual expert layers — a Personal Scholar Review of your own inheritance table, Conformity Verification, notarized Powers of Attorney, and digital attestation through a Zoom session with a paralegal. It is the right choice for complex estates or those who want individual expert attention on their case.',
       },
       {
         q: 'Is there a family package?',
-        a: 'Yes. The Family Package offers Will + Vault at a reduced per-person rate for families who want to plan together — husband, wife, and adult children — while keeping each account fully private and independent.',
+        a: 'Yes. The Family Package offers Will + Vault at $6.99/month per person (minimum 2 people) — about 12% less per person — for families who want to plan together — husband, wife, and adult children — while keeping each account fully private and independent.',
       },
     ],
   },
@@ -98,7 +98,7 @@ const FAQ_GROUPS = [
       },
       {
         q: 'What happens to my Vault if I cancel my subscription?',
-        a: 'This is an important question we will address clearly in our terms and conditions before launch. Our commitment is that your estate documents and Vault contents are never deleted without a clear, documented process and adequate notice.',
+        a: 'Download anything you want to keep — your will, your Vault documents, everything — before your access ends at the close of your current billing period. If you change your mind, resubscribing within 30 days restores everything from backup. After 30 days, your data is permanently deleted in line with our privacy policy.',
       },
     ],
   },
@@ -310,7 +310,7 @@ export default function FAQPage() {
               <Link href="/pricing" className={styles.linkCard}>
                 <div className={styles.linkCardIcon}>💳</div>
                 <div className={styles.linkCardTitle}>Pricing</div>
-                <div className={styles.linkCardDesc}>Will + Vault, Full Package, and Family Package — all options →</div>
+                <div className={styles.linkCardDesc}>Will + Vault, Fully Fledged, and Family Package — all options →</div>
               </Link>
               <Link href="/how-it-works" className={styles.linkCard}>
                 <div className={styles.linkCardIcon}>🔄</div>

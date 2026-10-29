@@ -247,8 +247,8 @@ export default function OurTeamPage() {
               </div>
               <div className={styles.scholarsCard}>
                 <div className={styles.scholarsCardIcon}>🔍</div>
-                <div className={styles.scholarsCardTitle}>Every application reviewed</div>
-                <div className={styles.scholarsCardDesc}>No will is completed through our platform without a documented scholarly review</div>
+                <div className={styles.scholarsCardTitle}>Scholar-Reviewed Template</div>
+                <div className={styles.scholarsCardDesc}>Every template is built on documented, scholar-reviewed Islamic inheritance logic, with Personal Scholar Review available in our Fully Fledged package</div>
               </div>
             </div>
           </div>

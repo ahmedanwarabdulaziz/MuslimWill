@@ -163,23 +163,23 @@ export default function StartPage() {
               </div>
             </div>
 
-            {/* Card 2 — Full Package */}
+            {/* Card 2 — Fully Fledged (Notarized) */}
             <div className={styles.planCard}>
               <div className={styles.planCardBody}>
                 <div className={styles.planCardTop}>
-                  <div className={styles.planBadge} data-muted>🎯 Full Package</div>
+                  <div className={styles.planBadge} data-muted>🎯 Fully Fledged</div>
                   <div className={styles.planSavings}>Value: $594</div>
                 </div>
-                <div className={styles.planName} data-secondary>Full Package</div>
+                <div className={styles.planName} data-secondary>Fully Fledged (Notarized)</div>
                 <div className={styles.planPriceRow}>
-                  <span className={styles.planPrice} data-secondary>$350</span>
-                  <span className={styles.planPricePer}>one-time</span>
+                  <span className={styles.planPrice} data-secondary>$275</span>
+                  <span className={styles.planPricePer}>one-time + monthly</span>
                 </div>
                 <div className={styles.planDesc}>
-                  Will + Both POAs + Scholar Review + Admin Review + Digital Attestation. For complex situations or individual expert attention.
+                  Personal Scholar Review + Conformity Verification + Notarization / Digital Attestation + both Notarized POAs. For complex situations or individual expert attention.
                 </div>
                 <Link href="https://app.themuslimwill.com/Account/Register?plan=full" className={styles.planCta} data-secondary>
-                  Get The Full Package →
+                  Get Fully Fledged →
                 </Link>
               </div>
             </div>

@@ -99,7 +99,7 @@ export default function CompliancePage() {
                     <div className={styles.whatStepNum}>3</div>
                     <div>
                       <div className={styles.whatStepTitle}>Scholar Review</div>
-                      <div className={styles.whatStepDesc}>Inheritance calculation reviewed by a qualified Islamic scholar</div>
+                      <div className={styles.whatStepDesc}>Calculation built on our Scholar-Reviewed Template; Personal Scholar Review of your own inheritance table with the Fully Fledged package</div>
                     </div>
                   </div>
                   <div className={styles.whatStepArrow}>↓</div>

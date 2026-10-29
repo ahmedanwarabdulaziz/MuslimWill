@@ -261,7 +261,7 @@ export default function LastWillPage() {
             <div className={styles.crossSellCard}>
               <div className={styles.crossSellHeader}>
                 <h3 className={styles.crossSellTitle}>Power of Attorney for Personal Care</h3>
-                <div className={styles.crossSellPrice}>$99</div>
+                <div className={styles.crossSellPrice}>$99 notarized</div>
               </div>
               <p className={styles.crossSellDesc}>
                 Designates a trusted person to make healthcare and personal decisions on your behalf if you are ever unable to do so yourself.
@@ -272,7 +272,7 @@ export default function LastWillPage() {
             <div className={styles.crossSellCard}>
               <div className={styles.crossSellHeader}>
                 <h3 className={styles.crossSellTitle}>Power of Attorney for Property</h3>
-                <div className={styles.crossSellPrice}>$99</div>
+                <div className={styles.crossSellPrice}>$99 notarized</div>
               </div>
               <p className={styles.crossSellDesc}>
                 Authorises a trusted person to manage your financial affairs and property if you become incapacitated or are otherwise unable to act.
@@ -282,7 +282,7 @@ export default function LastWillPage() {
           </div>
 
           <div className={styles.crossSellNote}>
-            <strong>Note:</strong> Both POAs are included in the Full Package ($350) alongside your will, Scholar Review, Admin Review, and Digital Attestation — a combined value of $594.
+            <strong>Note:</strong> Draft Powers of Attorney for Property and Personal Care are included in Will + Vault. Notarization is available separately ($99 each) or bundled in Fully Fledged (Notarized) — $275 one-time plus Will + Vault, a combined value of $594.
           </div>
         </div>
       </section>

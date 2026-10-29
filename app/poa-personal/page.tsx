@@ -206,7 +206,7 @@ export default function POAPersonalPage() {
             <div className={styles.crossSellCard}>
               <div className={styles.crossSellHeader}>
                 <h3 className={styles.crossSellTitle}>Power of Attorney for Property</h3>
-                <div className={styles.crossSellPrice}>$99</div>
+                <div className={styles.crossSellPrice}>$99 notarized</div>
               </div>
               <p className={styles.crossSellDesc}>
                 Authorises a trusted person to manage your financial affairs and property if you become incapacitated or are otherwise unable to act.
@@ -216,7 +216,7 @@ export default function POAPersonalPage() {
           </div>
 
           <div className={styles.crossSellNote} style={{ maxWidth: '800px', margin: '3rem auto 0' }}>
-            <strong>Note:</strong> Both Powers of Attorney are included in the Full Package ($350) alongside your Islamic Will, Scholar Review, Admin Review, and Digital Attestation — a combined value of $594.
+            <strong>Note:</strong> Draft Powers of Attorney for Property and Personal Care are included in Will + Vault. Notarization is available separately ($99 each) or bundled in Fully Fledged (Notarized) — $275 one-time plus Will + Vault, a combined value of $594.
           </div>
         </div>
       </section>
@@ -250,7 +250,7 @@ export default function POAPersonalPage() {
             </div>
             
             <p className={styles.ctaMicrocopy}>
-              POA for Personal Care is $99 as a standalone — or included in the Full Package ($350) alongside your Islamic Will, both POAs, Scholar Review, Admin Review, and Digital Attestation.
+              A draft POA for Personal Care is included in Will + Vault. Notarization is $99 as a standalone — or bundled in Fully Fledged (Notarized) with Personal Scholar Review, Conformity Verification, and Notarization / Digital Attestation.
             </p>
           </div>
         </div>

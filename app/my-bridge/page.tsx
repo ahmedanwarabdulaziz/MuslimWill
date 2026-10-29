@@ -28,7 +28,7 @@ export default function MyBridgeOverview() {
       </section>
 
       {/* ── TRUST ANCHORS ── */}
-      <TrustBar items={['Islamic will included in The Bridge — from $7.99/month', 'Islamic and Ontario-compliant', 'Powers of Attorney available for specific situations']} />
+      <TrustBar items={['Islamic will included in The Bridge — from $7.99/month', 'Islamic and Ontario-compliant', 'Draft Powers of Attorney included']} />
 
       {/* 2. The documents */}
       <section className={`${styles.section} ${styles.grayBg}`}>
@@ -109,11 +109,11 @@ export default function MyBridgeOverview() {
               For most Muslim families, The Bridge covers everything that matters — your will, your estate instructions, your Vault. Powers of Attorney are separate legal documents for a different scenario: what happens if you cannot speak for yourself while you are still alive.
             </p>
             <p>
-              If you have dependants, significant assets, or a complex family situation — or if you simply want complete coverage — adding one or both POAs is worth considering. They are available as add-ons at $99 each, or both are included in the Full Package.
+              If you have dependants, significant assets, or a complex family situation — or if you simply want complete coverage — having one or both POAs is worth considering. Draft Powers of Attorney for Property and Personal Care are included. Notarization is available separately ($99 each) or bundled in Fully Fledged.
             </p>
           </div>
           <Link href="/pricing" className={styles.poaLink}>
-            See the Full Package &rarr;
+            See Fully Fledged &rarr;
           </Link>
         </div>
       </section>

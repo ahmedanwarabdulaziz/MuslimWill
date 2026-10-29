@@ -49,10 +49,10 @@ export default function OurScholarsPage() {
           <div className={styles.heroContent}>
             <div className={styles.heroEyebrow}>Our Company › Our Scholars</div>
             <h1 className={styles.heroH1}>
-              Every application is reviewed by a qualified Islamic scholar. Here is who they are and what they do.
+              Every will is built on a Scholar-Reviewed Template. Here is who our scholars are and what they do.
             </h1>
             <p className={styles.heroSub}>
-              Islamic inheritance review is not a feature — it is a responsibility. The Muslim Will works with a network of Ijazah-certified scholars with expertise in Fiqh al-Mawarith to ensure every inheritance calculation is reviewed by someone with the knowledge to get it right.
+              Every will is built on a Scholar-Reviewed Template, created and maintained by our lawyers-and-scholars board. Personal Scholar Review of your own inheritance table is available with our Fully Fledged package. Our network of Ijazah-certified scholars brings expertise in Fiqh al-Mawarith to both.
             </p>
           </div>
         </div>
@@ -88,8 +88,8 @@ export default function OurScholarsPage() {
           <div className={styles.trustStripItem}>
             <div className={styles.trustStripIcon}>✓</div>
             <div>
-              <div className={styles.trustStripTitle}>Every application</div>
-              <div className={styles.trustStripDesc}>No will completed without documented scholarly review</div>
+              <div className={styles.trustStripTitle}>Every template</div>
+              <div className={styles.trustStripDesc}>Every template is built on documented, scholar-reviewed Islamic inheritance logic</div>
             </div>
           </div>
         </div>
@@ -106,7 +106,7 @@ export default function OurScholarsPage() {
                 Islamic inheritance law is precise, structured, and unforgiving of errors. The shares allocated to each heir depend on the exact family structure of the deceased, the nature of the assets, and the specific relationships involved. A calculation that looks correct can still be wrong if the underlying assumptions are misunderstood.
               </p>
               <p className={styles.sectionPara}>
-                This is why every application prepared through The Muslim Will is available for scholar review. A qualified Islamic scholar with expertise in inheritance law reviews the calculation, verifies the shares, and flags any situation that requires additional guidance. The result is a will that can be trusted — Islamically and legally.
+                This is why every application prepared through The Muslim Will starts from a Scholar-Reviewed Template, with Personal Scholar Review available as part of our Fully Fledged package. In a Personal Scholar Review, a qualified Islamic scholar with expertise in inheritance law reviews your calculation, verifies the shares, and flags any situation that requires additional guidance. The result is a will that can be trusted — Islamically and legally.
               </p>
             </div>
 
@@ -222,7 +222,7 @@ export default function OurScholarsPage() {
                 <ul className={styles.scopeList}>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-                    Islamic share calculations — verified against the client&apos;s family structure
+                    Islamic share calculations — verified against the client&apos;s family structure, as part of a Personal Scholar Review
                   </li>
                   <li>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
